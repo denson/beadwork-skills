@@ -3,26 +3,36 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Beat 1 — Your AI assistant forgets. bw fixes that.</title>
+  <title>Beat 1 — AI assistants forget. There's a tool that helps.</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
     <div class="beat-tag">Beat 1 &middot; The hook</div>
-    <h1>Your AI assistant forgets. bw fixes that.</h1>
+    <h1>AI assistants forget. There's a tool that helps.</h1>
 
-    <p>Chat ends, sessions compact, machines change &mdash; the thread your AI was on is gone, and tomorrow's session starts blank. You spend the first ten minutes re-explaining context you already explained yesterday.</p>
+    <p>You've probably noticed: today's chat with your AI ends, and tomorrow's session starts blank. Open a second session of the same AI and it doesn't know about the first either. You spend the first ten minutes of every fresh session re-explaining context you already explained yesterday.</p>
 
     <div class="image-frame">
       <img src="images/beat1-hook.jpg" alt="A two-panel split scene. Left panel: a generic AI assistant figure looking confused, with a thought bubble reading 'wait — what was I doing?' Around the figure: scattered fragments representing forgotten context (a half-finished list, a question mark, a dimmed conversation bubble drifting away). Right panel: the same AI assistant figure looking calm and resumed, reading from a small ticket card sitting on a desk; a thought bubble reads 'right — yesterday we decided X, the next step is Y.' A small label at the bottom of the right panel reads 'context restored from bw show.'">
       <p class="caption">Sessions end. Context shouldn't.</p>
     </div>
 
-    <p>There's a small tool called <a href="https://github.com/jallum/beadwork"><code>bw</code></a> &mdash; beadwork, written by <a href="https://github.com/jallum">jallum</a> &mdash; that gives your AI durable memory and a shared communication channel with other AIs. It works across every kind of work: engineering, science, operations, customer support, legal, solo business. It works across every AI vendor: Claude, Gemini, OpenAI, anything that can run a small CLI command.</p>
+    <p>There's a small open-source tool called <a href="https://github.com/jallum/beadwork"><code>bw</code></a> &mdash; beadwork, by <a href="https://github.com/jallum">jallum</a> &mdash; that helps with this in many cases. Three things it lets you do:</p>
+
+    <ol>
+      <li><strong>Your AI remembers across sessions.</strong> Tomorrow's chat opens, the AI reads yesterday's notes, and picks up where you left off &mdash; no re-explaining.</li>
+      <li><strong>Multiple AI sessions coordinate as a team.</strong> Your design session, your implementation session, and your review session share one workspace and build on each other's work &mdash; you get a small team of specialist agents instead of one amnesiac generalist. Most often these are sessions of the same model (all Claude, all Gemini, etc.); the same mechanism also works across labs if you ever mix vendors.</li>
+      <li><strong>Your team of humans can share notes too.</strong> If you work with other people, everyone's AI assistants &mdash; and the humans themselves &mdash; can read and write to the same shared notes. One substrate that holds memory for one person, for a team of agents, or for a whole team of humans-plus-agents.</li>
+    </ol>
 
     <div class="callout">
-      <p><strong>The interaction is simple:</strong> you talk to your agent; the agent uses <code>bw</code>; you don't have to know it's there.</p>
-      <p>Tomorrow's session opens, your AI runs <code>bw show</code> on whatever you were working on, and continues from where you left off.</p>
+      <p><strong>Three reassurances up front:</strong></p>
+      <ul>
+        <li><strong>You don't have to learn the tool.</strong> Your AI does. <code>bw</code> ships with instructions that tell the AI how to install and use it; you mostly just authorize the steps.</li>
+        <li><strong>It can stay entirely on your computer.</strong> Nothing has to be uploaded anywhere. Local-only is the default if you want maximum privacy.</li>
+        <li><strong>It's free and open source.</strong> Works with any AI. No SaaS account needed for solo use; team coordination uses a regular GitHub repo.</li>
+      </ul>
     </div>
   </div>
 </body>

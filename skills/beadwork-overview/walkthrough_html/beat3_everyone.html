@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Beat 3 (everyone) — What bw actually is, in plain English.</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .mode-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 1rem 1.1rem;
+      margin-bottom: 0.75rem;
+    }
+    .mode-card h3 {
+      font-size: 1rem;
+      color: #0f172a;
+      margin-bottom: 0.4rem;
+    }
+    .mode-card p { font-size: 0.95rem; margin-bottom: 0.4rem; }
+    .mode-card .price-tag {
+      display: inline-block;
+      background: #e0e7ff;
+      color: #4338ca;
+      padding: 0.1rem 0.5rem;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      margin-left: 0.4rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="beat-tag">Beat 3 &middot; What bw is (plain English)</div>
+    <h1>What bw actually is &mdash; in plain English.</h1>
+
+    <p>If you don't write code, this section explains the parts that the developer version takes for granted. None of this is hard; it's just unfamiliar if it's new.</p>
+
+    <div class="image-frame">
+      <img src="images/beat2-trust.jpg" alt="A stylized diagram of a folder on a personal computer. Inside the folder: regular project files at the top, and a separate compartment at the bottom labeled 'bw notes' containing several note cards. Several AI assistant figures are arrayed around the folder, each reading and writing into the notes compartment. A label reads 'no SaaS, no vendor servers, no signup.'">
+      <p class="caption">Lives in a folder on your computer.</p>
+    </div>
+
+    <h2>What "git" is (it's not bw)</h2>
+    <p><strong>Git</strong> is a free, very-reliable program that records every version of every file in a folder. Programmers use it for code; <code>bw</code> uses it because it's the most trustworthy way humans have figured out to keep notes that don't get lost. Git has been around for nearly twenty years and runs on essentially every computer.</p>
+    <p>You probably don't have it installed yet (most non-programmers don't). The install skill walks your AI through installing it &mdash; it's a one-time, free download from <a href="https://git-scm.com">git-scm.com</a>. It runs in the background; you'll never have to type anything into it yourself.</p>
+
+    <h2>What bw is doing on top of git</h2>
+    <p><code>bw</code> is a small program that uses git to keep a "shelf" of notes inside any folder you point it at. The shelf doesn't interfere with anything else in the folder. Your AI reads from the shelf and writes to the shelf. That's basically it.</p>
+
+    <h2>Where the notes can live &mdash; pick one</h2>
+
+    <div class="callout">
+      <p><strong>The simplest free option:</strong> notes stay on one computer, never uploaded anywhere, no online account needed. That's mode 1 below. If you only ever use one computer and want maximum privacy, you can stop reading after that one.</p>
+    </div>
+
+    <div class="mode-card">
+      <h3>1. On one computer, just yours <span class="price-tag">free</span></h3>
+      <p>Notes never leave your machine. <strong>You don't need a GitHub account or any other online account.</strong> Only git installed. Maximum privacy &mdash; nothing uploaded anywhere, ever. <strong>If your laptop dies, the notes go with it</strong>, so this mode is best when you're either confident in your backups or okay with starting fresh.</p>
+    </div>
+
+    <div class="mode-card">
+      <h3>2. Backed up to the cloud + synced across your computers <span class="price-tag">~$4 / month</span></h3>
+      <p>If you want your notes to <strong>survive a laptop crash</strong> and be available on, say, your desktop too, you push them to a private cloud folder on GitHub. The smoothest path for a non-coder is a <strong>paid GitHub Pro</strong> plan, about $4 a month. Only you can see the contents.</p>
+      <p style="font-size: 0.85rem; color: #64748b;"><em>Technically, a free GitHub account also offers private repos &mdash; but for non-coders the paid plan is the simpler setup, and it's what most people in this situation end up using.</em></p>
+    </div>
+
+    <div class="mode-card">
+      <h3>3. Shared privately with your team <span class="price-tag">~$4 / person / month</span></h3>
+      <p>If you want your team to share notes &mdash; everyone's AI plus the humans, all reading and writing the same shelf &mdash; the notes go in a private cloud folder the team has access to. For a real team, this usually means a paid <strong>GitHub Team</strong> plan (about $4 per person per month) for the team-management features.</p>
+    </div>
+
+    <div class="mode-card">
+      <h3>4. Public &mdash; anyone on the internet can read it <span class="price-tag">free</span></h3>
+      <p>Same as private cloud, but the repo is public. <strong>Don't use this for personal or business notes.</strong> Fine for open-source-style work where the notes are meant to be public.</p>
+    </div>
+
+    <h2>What you're authorizing your AI to do</h2>
+    <p>If you say "yes, set this up," your AI will (with you confirming each step):</p>
+    <ul>
+      <li><strong>Install git</strong> on your computer (if it isn't already there). This is a standard, widely-trusted developer tool &mdash; not something <code>bw</code> made up.</li>
+      <li><strong>Install <code>bw</code></strong> &mdash; a small command-line program, MIT-licensed, source code public on GitHub.</li>
+      <li><strong>Create a folder for your notes</strong> (or use one you already have).</li>
+      <li><strong>Read and write notes inside that folder</strong> going forward.</li>
+    </ul>
+    <p>The AI session itself can do other things you give it permission to do (that's normal AI behavior). But <code>bw</code> the tool only tracks notes &mdash; it can't make purchases, send messages, or touch files outside the folder you point it at.</p>
+
+    <div class="callout">
+      <p><strong>You still don't have to learn anything new.</strong> Your AI runs <code>bw</code> for you. Your only real choices are: which storage mode (above), and (if cloud) which GitHub plan.</p>
+    </div>
+  </div>
+</body>
+</html>

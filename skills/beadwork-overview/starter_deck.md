@@ -1,6 +1,6 @@
 # Starter Deck — beadwork-overview Walkthrough
 
-**STATUS: assembled.** All 8 HTML pages live under `walkthrough_html/`. Image generation pending — image references resolve to placeholder paths until ConceptViz output lands.
+**STATUS: assembled.** All HTML pages live under `walkthrough_html/`. Image references resolve to existing ConceptViz output.
 
 This file is the **navigation map** for the walkthrough — beat IDs, URLs, image filenames, structural notes that the presenter agent reads silently before Beat 1. It is NOT the source of truth for prose; that's `beat_scripts.md` next door.
 
@@ -8,73 +8,100 @@ Read this silently before starting. All hard rules from `SKILL.md` apply.
 
 ---
 
-## Beat 1 — Hook: agents forget; bw fixes that
+## Flow at a glance
 
-**File:** `walkthrough_html/beat1.html`
-**Image:** `walkthrough_html/images/beat1-hook.jpg`
-**Navigate:** `http://localhost:8910/beadwork-overview/walkthrough_html/beat1.html`
-**Chat shape:** 3-4 sentences naming the compaction problem (generic, no agent-team specifics) and bw as the fix. The "talk to your agent" framing introduced. See `beat_scripts.md` Beat 1.
-**Question:** "Recognize the problem?"
+```
+Beat 1 (universal hook)
+   ↓
+Beat 2 (literacy ASK)
+   ↓
+   ├── "writing code"     → Beat 3-coder
+   └── anything else      → Beat 3-everyone
+                              ↓
+                       Beat 4 (use cases — converge)
+                              ↓
+                       Beat 5 (close — terminus)
+```
 
----
-
-## Beat 2 — What bw is (the trust story)
-
-**File:** `walkthrough_html/beat2.html`
-**Image:** `walkthrough_html/images/beat2-trust.jpg`
-**Navigate:** `http://localhost:8910/beadwork-overview/walkthrough_html/beat2.html`
-**Chat shape:** 4-5 sentences walking the five structural advantages over SaaS alternatives. See `beat_scripts.md` Beat 2.
-**Question:** "Want to see who uses it?"
-
----
-
-## Beat 3 — Seven roles, one interaction pattern (HUB)
-
-**File:** `walkthrough_html/beat3.html`
-**Image:** `walkthrough_html/images/beat3-personas.jpg`
-**Navigate:** `http://localhost:8910/beadwork-overview/walkthrough_html/beat3.html`
-**Chat shape:** 5-7 sentences (longer than usual) briefing all seven personas. The unification claim ("you talk to your agent; your agent uses bw") lands here. See `beat_scripts.md` Beat 3.
-**Question (HUB):** "Which sounds closest to your work?" — one of (A) Technical, (B) Operations, (C) Professional, (D) Show me all 7 quickly.
+Single fork. Both paths converge at Beat 4. Beat 5 has no question.
 
 ---
 
-## Dynamic paths after Beat 3
+## Beat 1 — Elevator pitch
 
-The user picks one. Each path is its own short beat that proceeds directly to Beat 5 afterward (no further fork).
-
-### Path A — Technical roles
-
-- **File:** `walkthrough_html/dynamic_technical.html`
-- **Image:** `walkthrough_html/images/dynamic-technical.jpg`
-- **Personas covered:** software engineer, data scientist, logistics analyst.
-- **Theme:** bw as audit substrate — work that has to be correct and defensible.
-
-### Path B — Operations & customer-facing
-
-- **File:** `walkthrough_html/dynamic_operations.html`
-- **Image:** `walkthrough_html/images/dynamic-operations.jpg`
-- **Personas covered:** warehouse manager, customer support manager.
-- **Theme:** bw as durable async channel — coordination across teams, shifts, organizations, time.
-
-### Path C — Independent / professional services
-
-- **File:** `walkthrough_html/dynamic_professional.html`
-- **Image:** `walkthrough_html/images/dynamic-professional.jpg`
-- **Personas covered:** lawyer, solo entrepreneur.
-- **Theme:** bw as personal-OS substrate — solo or small team, audit-critical, low admin overhead.
-
-### Path D — Show me all 7 quickly
-
-- **File:** `walkthrough_html/dynamic_all.html`
-- **Image:** `walkthrough_html/images/dynamic-all.jpg`
-- **Personas covered:** all seven, briefly.
-- **Theme:** the unification pitch — same pattern, seven roles, seven kinds of work.
+- **File:** `walkthrough_html/beat1.html`
+- **Image:** `walkthrough_html/images/beat1-hook.jpg`
+- **Navigate:** `http://localhost:8910/beadwork-overview/walkthrough_html/beat1.html`
+- **Chat shape:** 3-4 sentences naming the AI-forgets pain (universal language, no "compaction" jargon), bw as a tool that helps in many cases, the three-tier escalation (memory across sessions / **team of specialist agents, usually same-lab multi-session** / cross-human team), and the three reassurances (don't have to learn it / can stay on computer / free + open source). See `beat_scripts.md` Beat 1. **Tier 2 leads with same-lab multi-session, not with cross-vendor.**
+- **Question:** "Sound interesting?"
 
 ---
 
-## Beat 5 — Close: pointers to deeper-dive skills
+## Beat 2 — Literacy fork (the only branch)
 
-**File:** `walkthrough_html/beat5.html`
-**Image:** `walkthrough_html/images/beat5-close.jpg`
-**Navigate:** `http://localhost:8910/beadwork-overview/walkthrough_html/beat5.html`
-**Chat shape:** 4-5 sentences listing the five companion skills + the closing attribution. NO `AskUserQuestion` here — Beat 5 is the terminus.
+- **File:** `walkthrough_html/beat2.html`
+- **Image:** none (CSS-only audience cards on the page)
+- **Navigate:** `http://localhost:8910/beadwork-overview/walkthrough_html/beat2.html`
+- **Chat shape:** 2-3 sentences setting up the fork and explaining why we ask. See `beat_scripts.md` Beat 2.
+- **Question (FORK):** "How do you mainly use AI?" — options: writing code / writing-research-learning / business-or-personal / something-else.
+- **Routing:**
+  - "Writing code" → `beat3_coder.html`
+  - Anything else → `beat3_everyone.html`
+
+---
+
+## Beat 3 (coder) — What bw is, SWE version
+
+- **File:** `walkthrough_html/beat3_coder.html`
+- **Image:** `walkthrough_html/images/beat2-trust.jpg` (reused — folder + orphan branch + multi-AI)
+- **Navigate:** `http://localhost:8910/beadwork-overview/walkthrough_html/beat3_coder.html`
+- **Chat shape:** 4-5 sentences with developer vocabulary. Storage = orphan branch + JSON. Single Go binary. Cross-AI portable. MIT-licensed. Survives compaction. The three-tier escalation in dev terms. See `beat_scripts.md` Beat 3-coder.
+- **Question:** "Want to see where this kind of memory + coordination earns its keep?"
+
+---
+
+## Beat 3 (everyone) — What bw is, plain-English version
+
+- **File:** `walkthrough_html/beat3_everyone.html`
+- **Image:** `walkthrough_html/images/beat2-trust.jpg` (reused — but framed in chat as "lives in a folder on your computer")
+- **Navigate:** `http://localhost:8910/beadwork-overview/walkthrough_html/beat3_everyone.html`
+- **Chat shape:** 4-6 sentences explaining git first, then what bw does on top of git, then the four storage modes with empirically-correct pricing, then the authorization stack. See `beat_scripts.md` Beat 3-everyone.
+- **Question:** "Storage mode preference, or skip ahead?"
+
+---
+
+## Beat 4 — Where this kind of memory helps (converge)
+
+- **File:** `walkthrough_html/beat4.html`
+- **Image:** `walkthrough_html/images/beat3-personas.jpg` (reused — seven-persona grid)
+- **Navigate:** `http://localhost:8910/beadwork-overview/walkthrough_html/beat4.html`
+- **Chat shape:** 4-6 sentences walking the seven persona snapshots quickly. Stay neutral on coder/non-coder vocabulary so both forks land cleanly here. See `beat_scripts.md` Beat 4.
+- **Question:** "Want pointers to deeper-dive skills?"
+
+---
+
+## Beat 5 — Where to go from here (terminus)
+
+- **File:** `walkthrough_html/beat5.html`
+- **Image:** `walkthrough_html/images/beat5-close.jpg`
+- **Navigate:** `http://localhost:8910/beadwork-overview/walkthrough_html/beat5.html`
+- **Chat shape:** 3-4 sentences listing the five companion skills + the closing attribution + the non-coder reassurance. NO `AskUserQuestion` here — Beat 5 is the terminus.
+
+---
+
+## Storage-mode pricing reference
+
+### For non-coders (Beat 3-everyone) — simplified narrative
+
+| Mode | Cost | Account needed |
+|---|---|---|
+| **Local-only, one computer** (the headline option) | **free** | **none** |
+| Cloud backup + cross-device sync | ~$4 / month | GitHub Pro |
+| Team cloud | ~$4 / person / month | GitHub Team |
+| Public cloud | free | free GitHub account (warned) |
+
+**Lead with local-only.** Many non-coder users will pick that and be done. Cloud is framed as the paid tier for the smoothest non-coder UX.
+
+### For coders (Beat 3-coder) — empirical, more nuanced
+
+Free GitHub accounts in 2026 actually do include unlimited private repos for individuals, so solo private cloud technically works on free. The paid plans (Pro / Team) add governance features (CODEOWNERS, branch protection, audit log, required reviewers). The coder beat can state this directly; the everyone beat keeps the simpler "free=local, paid=cloud" framing.

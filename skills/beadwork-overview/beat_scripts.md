@@ -2,278 +2,185 @@
 
 This is the **working-doc source of truth** for what each beat says. The HTML pages in `walkthrough_html/` carry the visual presentation; this file carries the words. Chat text in CCD is a 2-4 sentence summary that bridges from the HTML into the AskUserQuestion — write it in your own voice, but use the prose here as the spec.
 
-Structure: 5 beats + a hub fork on Beat 3 with 4 deeper-dive paths (Technical / Operations / Professional / All-Seven). Beat 5 closes. Total ~5-6 beats per traversal.
+**Structure:** 5 beats with a single literacy fork between Beat 2 and Beat 3.
+
+```
+Beat 1 (universal hook)
+   ↓
+Beat 2 (literacy ASK: how do you use AI?)
+   ↓
+   ├── "writing code"     → Beat 3-coder
+   └── anything else      → Beat 3-everyone
+                              ↓
+                       Beat 4 (universal use cases — both paths converge)
+                              ↓
+                       Beat 5 (close)
+```
+
+Tone rules across all beats:
+- **Never claim bw "fixes" anything.** It "helps in many cases." Use "helps" / "addresses" / "lets you" — not "fixes" / "solves."
+- **Three-tier escalation lands early:** one AI's memory across time → multiple AIs sharing notes → multi-human team coordination.
+- **The non-coder doesn't have to learn anything.** Their AI does the work. Repeat this reassurance.
 
 ---
 
-## Beat 1 — Hook: agents forget; bw fixes that
+## Beat 1 — Elevator pitch (universal hook)
 
 ### Chat (3-4 sentences)
 
-Your AI assistant forgets. Chat ends, sessions compact, machines change — the thread your AI was on is gone, and tomorrow's session starts blank. There's a small tool called [`bw`](https://github.com/jallum/beadwork) (beadwork — written by [jallum](https://github.com/jallum)) that gives your AI durable memory and a shared communication channel with other AIs. It works across every kind of work — engineering, science, operations, customer support, legal, solo business — and across every AI vendor. The interaction is simple: you talk to your agent; the agent uses `bw`; you don't have to know it's there.
+You've probably noticed it: today's chat with your AI ends, and tomorrow's session starts blank. There's a small open-source tool called [`bw`](https://github.com/jallum/beadwork) — beadwork, by [jallum](https://github.com/jallum) — that helps with this in many cases. It does three things: gives your AI durable memory across sessions, lets **multiple AI sessions coordinate as a team of specialists** (design + implementation + review, usually sessions of the same lab's model), and lets a team of humans + their AIs all coordinate through one shared substrate. **You don't have to learn the tool — your AI does.** It can also stay entirely on your computer if you want maximum privacy.
 
 ### AskUserQuestion
 
-> Recognize the problem?
+> Sound interesting?
 
 Options:
-- **Yes — show me what bw does** — proceed to Beat 2 (the trust story).
-- **Tell me about where the data lives first** — short detour: explain that bw stores everything in your repo's git database (a special branch, never merged into your code), then proceed to Beat 2.
-- **Not really — explain compaction first** — short detour: explain how Claude (and other AIs) summarize long sessions when context fills, dropping detail in favor of a summary, then proceed to Beat 2.
+- **Yes, tell me more** — proceed to Beat 2 (the literacy fork).
+- **First, what's the catch?** — short detour: it's free and open source, your data stays where you tell it to (your computer or your cloud), it's a small CLI tool that ships with instructions for your AI to install. Then proceed to Beat 2.
+- **Skip ahead — show me the install** — exit overview; switch to `beadwork-install` skill.
 
 ### Image
 
-`walkthrough_html/images/beat1-hook.jpg` — A two-panel split scene. LEFT panel: a generic AI assistant figure (no specific vendor branding) looking confused, with a thought bubble reading *"wait — what was I doing?"* Around the figure: scattered fragments representing forgotten context (a half-finished list, a question mark, a dimmed conversation bubble drifting away). RIGHT panel: the same AI assistant figure looking calm and resumed, reading from a small ticket card sitting on a desk; a thought bubble reads *"right — yesterday we decided X, the next step is Y."* A small label at the bottom of the right panel reads "context restored from `bw show`."
+`walkthrough_html/images/beat1-hook.jpg` — A two-panel split scene. LEFT: a generic AI assistant figure looking confused, thought bubble *"wait — what was I doing?"* RIGHT: same figure, calm, reading from a small ticket card; thought bubble *"right — yesterday we decided X, the next step is Y."* Bottom-right label: *"context restored from `bw show`."*
 
 Caption: *"Sessions end. Context shouldn't."*
 
-Style: editorial illustration, flat design, simple shapes, light warm-gray background. Generic agent figure (NOT branded as our four-role pipeline; no Pliny/Ada/Vera/Cato). Clean and approachable.
-
 ### Tone + length notes
 
-- Punchy, conversational. The reader hasn't read anything else yet.
-- 3-4 sentences in the chat copy; lean toward the shorter end.
-- The "talk to your agent" framing must land here. It threads through every subsequent beat.
+- The **three-tier escalation** lands here. Don't drop any of the three. Specifically:
+  - **Tier 1 — memory across time:** one AI session reads what an earlier session wrote.
+  - **Tier 2 — a team of agents coordinating.** This is **multi-session coordination, usually within the same lab** (multiple Claude sessions, or multiple Gemini sessions) acting as specialist agents — design, implementation, review. **Cross-lab interop (Claude + Gemini sharing one store) is a real but secondary case** — mention it as "and the same mechanism works across vendors too" rather than leading with it.
+  - **Tier 3 — humans on a team plus their agents.** Multiple humans, each with their own AI, all reading and writing the same shared notes.
+- **No "fix" or "solve" language.** "Helps in many cases."
+- The reassurance trio (don't have to learn it / can stay on your computer / free + open source) is part of the elevator pitch, not an afterthought.
+- 3-4 sentences in chat; lean shorter.
 - Cite jallum + bw with a link upfront. Credit the source.
-- DO NOT mention "the four-role agent pipeline" or any agent-team specifics. Generic AI assistant only.
 
 ---
 
-## Beat 2 — What bw is (the trust story)
+## Beat 2 — The literacy fork
 
-### Chat (4-5 sentences)
+### Chat (2-3 sentences)
 
-Five structural things make bw different from the SaaS alternatives most AI-memory tools take. **It lives in your repo** — your disk, your git, your remote of choice. Not on jallum's servers. Not on any vendor's servers. **It's free** — no signup, no quotas, single binary. **It's cross-AI portable** — Claude, Gemini, OpenAI, anything that can run `bw show` reads the same store, so your AI's memory follows you across vendors. **It's open source** — jallum's project, MIT-licensed, plain JSON in a git branch. **And the killer feature: it survives compaction.** Sessions die, machines change, the years pass — the tickets and comments don't.
+Quick question before going deeper. The next page splits two ways: a "you're a developer, you know git" version and a plain-English version that explains everything from scratch. **Same tool, same story — just different vocabulary.**
 
 ### AskUserQuestion
 
-> Want to see who uses it?
+> How do you mainly use AI?
 
 Options:
-- **Yes — show me the breadth** — proceed to Beat 3 (the seven personas + hub fork).
-- **One question first** — invite the user to ask, answer briefly, then proceed to Beat 3.
+- **Writing code** — software development, scripts, infra, automation. → routes to **Beat 3-coder.**
+- **Writing, research, learning** — drafting, analysis, study, summaries. → routes to **Beat 3-everyone.**
+- **Business or personal projects** — operations, customers, finance, legal, life admin. → routes to **Beat 3-everyone.**
+- **Something else** — a mix, or none of the above. → routes to **Beat 3-everyone.**
 
 ### Image
 
-`walkthrough_html/images/beat2-trust.jpg` — A stylized diagram of a developer's repository, shown as a folder labeled "your repo / your disk." Inside the folder: project files visible at the top (a generic source-code icon, a README file, a config file), and a separate compartment at the bottom labeled "beadwork (orphan branch)" containing several ticket cards. Multiple AI assistant icons (different colors / different vendor styles — generic representations of Claude, Gemini, OpenAI, an unspecified fourth) are arrayed around the folder, each with arrows reading and writing into the beadwork compartment. A large arrow points outside the diagram with the label "no SaaS, no vendor servers, no signup."
-
-Caption: *"Lives where your code lives."*
-
-Style: technical-but-friendly diagram. Same flat editorial vocabulary as Beat 1.
+No ConceptViz image — the HTML uses CSS-only audience cards as the visual focus. The question is the centerpiece.
 
 ### Tone + length notes
 
-- Matter-of-fact. List the structural advantages over SaaS alternatives.
-- 4-5 sentences plus the question.
-- "Cross-AI portable" is the under-told story — emphasize. Most "AI memory" tools today are vendor-locked.
-- "Survives compaction" is jallum's headline feature — call it the killer feature.
+- This is a transition beat. Short. Light. The question is the focus.
+- **The default for non-"writing code" answers is the everyone fork.** Don't try to be clever; if there's any ambiguity, route to everyone — it's the more inclusive starting point.
 
 ---
 
-## Beat 3 — Seven roles, one interaction pattern (HUB)
-
-### Chat (5-7 sentences)
-
-Seven kinds of people use bw, all the same way. **Software engineers** — debugging, architecture decisions, multi-agent code review. **Data scientists** — long-running investigations, multi-agent analysis pipelines, reproducibility for stakeholder defense. **Logistics analysts** — performance analytics, vendor scorecards, model iteration. **Warehouse managers** — incident logs, vendor coordination across organizations, supervisor handoffs across shifts. **Customer support managers** — escalation tracking, cross-team coordination with engineering, SLA pattern detection. **Lawyers and paralegals** — case files, multi-agent document review, privilege logs, court-defensible audit. **Solo entrepreneurs and small agency owners** — personal-OS for the business, vendor management, lessons across engagements. The interaction is identical in every case: **you talk to your agent; your agent uses `bw`.** What differs is what each role is tracking, not how they interact with the tool.
-
-### AskUserQuestion (this is the HUB)
-
-> Which sounds closest to your work?
-
-Options:
-- **(A) Technical roles** — engineer, data scientist, logistics analyst. Theme: bw as audit substrate.
-- **(B) Operations & customer-facing** — warehouse manager, customer support manager. Theme: bw as durable async channel.
-- **(C) Independent / professional services** — lawyer, solo entrepreneur. Theme: bw as personal-OS.
-- **(D) Show me all 7 quickly** — the unification pitch (same interaction across every persona).
-
-(After the chosen path, proceed to Beat 5 — no further fork.)
-
-### Image
-
-`walkthrough_html/images/beat3-personas.jpg` — A grid of seven illustrated cards, arranged in a 4-3 layout. Each card has a persona icon, a role name, and a one-line use:
-
-1. **Software engineer** — a developer at a laptop, label *"debugging, decisions, code review."*
-2. **Data scientist** — a figure with charts and a notebook, label *"investigations, pipelines, reproducibility."*
-3. **Logistics analyst** — a figure with route maps and graphs, label *"analytics, scorecards, model iteration."*
-4. **Warehouse manager** — a figure on a warehouse floor with a clipboard, label *"incidents, vendor coordination, shift handoffs."*
-5. **Customer support manager** — a figure at a headset, label *"escalations, cross-team coordination."*
-6. **Lawyer / paralegal** — a figure with a case file, label *"cases, document review, audit."*
-7. **Solo entrepreneur** — a figure at a small desk juggling many hats, label *"personal-OS, lessons across engagements."*
-
-Below the grid: a horizontal banner with the text "**all seven: talk to your agent. agent uses bw.**"
-
-Caption: *"Seven roles. Same interaction."*
-
-Style: clean grid layout, editorial illustration. Each persona icon distinct but stylistically consistent.
-
-### Tone + length notes
-
-- 5-7 sentences (longer than other beats because there are 7 personas to brief).
-- Each persona gets one phrase — no longer.
-- The unification line ("**you talk to your agent; your agent uses bw**") is the load-bearing claim. Make it land.
-- The hub fork at the end is mandatory — this is the only branching point in the walkthrough.
-
----
-
-## Beat 4 — HUB (no own content; just the fork from Beat 3)
-
-The hub itself is just the AskUserQuestion at the end of Beat 3. No new content lives at Beat 4 directly; the user enters one of the four dynamic paths below.
-
----
-
-### Path A — Technical roles (engineer, data scientist, logistics analyst)
-
-#### Chat (5-6 sentences)
-
-Engineers, data scientists, and logistics analysts share one thing: their work has to be correct and defensible — to senior reviewers, to stakeholders, to regulators, or to their future selves six months later. **Engineer:** a debugging session spans three days; today's Claude reads yesterday's `bw show` and resumes. On PR submission, three review agents (security, style, test-coverage) write structured verdicts to a shared ticket; a fourth "conflict-finder" agent reads all three and flags contradictions. **Data scientist:** an investigation into a metric anomaly spans a week; an analysis pipeline of three agents (cleaner → tester → visualizer) all write to bw; a methodology-auditor agent reviews the chain. Six months later, leadership asks *"why did you conclude X?"* — the answer is `bw show`. **Logistics analyst:** vendor scorecard updates weekly; same data feeds the operations team via shared bw; route-model iterations logged so abandoned approaches are explainable. **Common thread:** bw as audit substrate — defensible by construction.
-
-#### AskUserQuestion
-
-> Which deeper-dive skill resonates?
-
-Options:
-- **Memory across sessions** (`beadwork-as-memory`) — the long-running-investigation flavor.
-- **Agent-to-agent communication** (`beadwork-as-bus`) — the multi-agent-pipeline flavor.
-- **Meta-analysis** (`beadwork-for-meta-analysis`) — running an agent over OTHER agents' bw work.
-- **Decision log / audit trail** (`beadwork-for-decisions`) — the *"future-X reads `bw show`"* flavor.
-- **Show me all of them** — proceed to Beat 5 (the closing list).
-
-#### Image
-
-`walkthrough_html/images/dynamic-technical.jpg` — Three vertical lanes, each showing a scenario.
-
-LEFT lane (Engineer): a developer at a laptop with three small AI assistant figures around them. Arrows from each AI converge on a single ticket card labeled "PR-42 review" with three structured-verdict comments visible (one from "security agent," one from "style agent," one from "test-coverage agent"). A fourth AI figure labeled "conflict-finder" stands separately, reading all three verdicts.
-
-MIDDLE lane (Data Scientist): a figure with a notebook. An analysis pipeline of three AI agents arrayed horizontally (data cleaner → statistical tester → visualizer) with arrows between them. A fourth AI figure labeled "methodology auditor" stands above the pipeline, reading the chain.
-
-RIGHT lane (Logistics Analyst): a figure with a dashboard. A vendor scorecard ticket card in the middle. Two AI figures (different colors) on either side of the ticket — one labeled "analyst's AI," one labeled "operations AI" — both reading the same ticket.
-
-Caption: *"Correctness + validation across three roles."*
-
-Style: technical-illustration, three clean lanes, same flat editorial vocabulary.
-
-#### Tone + length notes
-
-- 5-6 sentences in the chat copy.
-- Concrete scenarios, real-feeling. No specific ticket IDs from any actual project (use generic placeholders like "PR-42" or "Q2-anomaly").
-- The "**common thread: bw as audit substrate**" line is the load-bearing claim for this path.
-- Acknowledge SWE/CLI residual without dwelling — *"engineers sometimes still dip into the CLI directly, but that's trending agent-mediated."*
-
----
-
-### Path B — Operations & customer-facing (warehouse manager, customer support manager)
-
-#### Chat (5-6 sentences)
-
-Warehouse managers and customer support managers share another shape: coordination across teams, shifts, and organizations, with record-keeping that has to hold up to compliance audits or SLA disputes. **Warehouse manager:** the day-shift supervisor's AI logs exceptions to bw; the night-shift supervisor's AI reads them on session start and briefs the night supervisor. Vendor agents at logistics partners coordinate pickups asynchronously through shared bw — two organizations' AIs writing back and forth without a common chat thread. OSHA inspector arrives; AI runs `bw show` over safety incidents, formats for the inspector. **Customer support manager:** an escalated complaint opens a bw ticket; engineering's AI reads it, posts findings + fix ETA; manager AI reads engineering's update, drafts customer reply. Pattern detection across hundreds of conversations: *"top 5 pain points this quarter?"* runs `bw list`, synthesizes themes, feeds the product roadmap. **Common thread:** bw as durable async channel — coordination data IS the audit trail, no extra tooling needed.
-
-#### AskUserQuestion
-
-> Which deeper-dive skill resonates?
-
-(Same options as Path A: memory / bus / meta-analysis / decisions / all-of-them. All lead to Beat 5.)
-
-#### Image
-
-`walkthrough_html/images/dynamic-operations.jpg` — A composition with two horizontal scenes.
-
-TOP scene (Warehouse Manager): a warehouse cross-section showing day-shift activity on the left fading into night-shift activity on the right. Both shifts have AI assistant figures; an arrow connects them through a central bw ticket card labeled "shift handoff log." Two separate organization buildings off to the side, with two more AI figures (vendor coordination), arrows between them through another bw ticket card.
-
-BOTTOM scene (Support Manager): a customer service interface on the left; an engineering team workspace on the right. Three AI figures (CS, engineering, manager) all reading and writing to a central ticket card labeled "escalation 2026-Q2-acme." A small inspector/auditor figure on the side with a clipboard, reading from a stack of ticket cards.
-
-Caption: *"Coordination IS record-keeping."*
-
-Style: same flat editorial vocabulary. Two clearly demarcated scenes.
-
-#### Tone + length notes
-
-- 5-6 sentences.
-- These personas never see the CLI — emphasize that the AI is the entire interface.
-- The "two organizations' AIs writing back and forth without a common chat thread" point is novel and worth landing.
-
----
-
-### Path C — Independent / professional services (lawyer, solo entrepreneur)
-
-#### Chat (5-6 sentences)
-
-Lawyers and solo entrepreneurs share a third shape: small team or solo, audit-critical, no admin overhead to set up. **Lawyer:** each case is a ticket epic; child tickets per phase (discovery, deposition prep, filing, settlement). A new associate joining the case reads `bw show` for the full history. A discovery dump of 10,000 documents partitioned across review agents; an audit agent reads the chain to verify inter-agent consistency — bar standing rides on review accuracy, the audit agent is professional insurance. Privilege log preserved with timestamp + drafter + rationale; opposing counsel challenges a redaction six months later — `bw show` produces court-defensible reasoning. **Privacy is non-negotiable** — bw stays local-only or in a strictly-private repo. **Solo entrepreneur:** every domain (sales, ops, finance, knowledge) gets a bw epic. AI logs activity, decisions, vendor notes across all of them. *"You tried this with Acme; didn't work because X. Want a different approach?"* — personal knowledge graph that survives every chat compaction. Tax-time defense: AI runs `bw show` on the year's expense decisions. **Common thread:** bw as personal-OS substrate — durable, auditable, low admin overhead, privacy-respecting.
-
-#### AskUserQuestion
-
-> Which deeper-dive skill resonates?
-
-(Same options as Path A.)
-
-#### Image
-
-`walkthrough_html/images/dynamic-professional.jpg` — A composition with two horizontal scenes.
-
-TOP scene (Lawyer): a small law office. A stack of case-file ticket cards each labeled with a generic case name. Multiple AI assistant figures partitioning a tall stack representing 10,000 documents. A separate AI figure labeled "audit agent" reads the chain. A privilege log card off to the side with a date stamp and a "court-defensible" label. Lock icons around the scene emphasizing privacy.
-
-BOTTOM scene (Solo Entrepreneur): a single figure at a desk surrounded by labels for many domains (sales, ops, finance, marketing, knowledge). A single AI assistant figure beside them with a notebook ticket card labeled "all domains." Arrows showing the AI logging activity across each labeled domain. A small sub-scene showing "lessons learned" tickets being surfaced for a new engagement.
-
-Caption: *"Personal-OS, audit-grade, low overhead."*
-
-Style: same flat editorial vocabulary. Two demarcated scenes; lock icons in the top scene reinforcing privacy.
-
-#### Tone + length notes
-
-- 5-6 sentences.
-- The privacy story for the lawyer is non-negotiable — say so explicitly.
-- "Personal-OS substrate" is the load-bearing claim for this path.
-
----
-
-### Path D — Show me all 7 quickly
-
-#### Chat (5-6 sentences)
-
-The most striking thing about all seven personas is how similar their interaction with bw is. The **engineer** asks Claude *"why did we decide on Auth0?"* — Claude reads `bw show`. The **data scientist** asks *"what was the methodology in March's churn investigation?"* — Claude reads `bw show`. The **warehouse manager** asks *"what incidents this month?"* — AI runs `bw list`. The **support manager** asks *"top 5 pain points?"* — AI runs `bw list`. The **lawyer** asks *"what's the privilege reasoning on document 4789?"* — AI reads `bw show`. The **logistics analyst** asks *"vendor scorecard for Q2?"* — AI reads the bw ticket. The **solo entrepreneur** asks *"what worked with Acme?"* — AI surfaces lessons from bw. **Same pattern, seven roles, seven kinds of work.** The user talks; the agent uses bw; the data persists; the next session resumes where the last one left off. The user almost never types `bw` themselves — and that's the point.
-
-#### AskUserQuestion
-
-> Which deeper-dive skill resonates?
-
-(Same options as Path A.)
-
-#### Image
-
-`walkthrough_html/images/dynamic-all.jpg` — A grid of seven small panels, one per persona, arranged in a 4-3 layout. Each panel shows the same simple shape:
-
-- Persona figure on the left
-- Speech bubble in the middle showing what they ask their agent
-- AI assistant figure on the right
-- bw ticket card emerging from or being read by the AI
-
-The seven panels:
-1. Engineer: speech bubble *"why did we decide on Auth0?"* AI figure reading `bw show`.
-2. Data scientist: *"what was March's churn methodology?"* AI reading `bw show`.
-3. Warehouse manager: *"incidents this month?"* AI running `bw list`.
-4. Support manager: *"top 5 pain points?"* AI running `bw list`.
-5. Lawyer: *"privilege reasoning on doc 4789?"* AI reading `bw show`.
-6. Logistics analyst: *"Q2 vendor scorecard?"* AI reading the bw ticket.
-7. Solo entrepreneur: *"what worked with Acme?"* AI surfacing bw lessons.
-
-Across the bottom: a single banner reading *"one pattern. seven roles. seven kinds of work."*
-
-Caption: *"One pattern. Seven roles."*
-
-Style: small repeated-pattern panels; same flat editorial vocabulary; visually emphasizes the **sameness** across roles.
-
-#### Tone + length notes
-
-- 5-6 sentences.
-- The pattern of "user asks; AI runs `bw show` / `bw list`" repeated across all 7 IS the unification pitch. Don't break it with variation.
-- The closing claim — *"the user almost never types bw themselves — and that's the point"* — is the punchline.
-
----
-
-## Beat 5 — Close: pointers to deeper-dive skills
+## Beat 3-coder — What bw is, SWE-flavored
 
 ### Chat (4-5 sentences)
 
-Where to go from here. Five companion skills go deeper on specific use-case angles. **`beadwork-as-memory`** — bw as durable agent memory across long-running work. **`beadwork-as-bus`** — multi-agent pipelines and cross-team / cross-organization coordination. **`beadwork-for-meta-analysis`** — running an agent over the bw history of *other agents* to audit, check methodology, or synthesize. **`beadwork-for-decisions`** — bw as decision log / ADR / compliance audit trail. **`beadwork-install`** — drive the install end-to-end (Claude can run it for you; the only choice you make is the storage mode). All open source. All authored by Denson Smith. `bw` itself is jallum's project at [github.com/jallum/beadwork](https://github.com/jallum/beadwork).
+Skipping the long version since you're a developer. **Storage:** orphan branch in a git repo, plain JSON files. **Install:** single Go binary, one-line curl or build from source. **Cross-AI portable:** anything that can shell out to `bw show` reads the same store. **License:** MIT, jallum's project. **And the killer feature: it survives compaction** — tickets and comments persist across session boundaries, agent restarts, machine swaps. The three-tier escalation in your terms: persistent context for one session graph → multi-agent async pipelines → push the orphan branch to a shared remote and the team's agents read/write the same store via standard PR/review workflow.
+
+### AskUserQuestion
+
+> Want to see where this kind of memory + coordination earns its keep?
+
+Options:
+- **Yes, show me where it helps** — proceed to Beat 4.
+- **First — install path?** — short detour: bw is jallum's; install via `install.sh` from the repo or `go build` from source. Then proceed to Beat 4.
+
+### Image
+
+`walkthrough_html/images/beat2-trust.jpg` (reused) — folder labeled "your repo / your disk" with project files top, "beadwork (orphan branch)" compartment bottom containing tickets. Multiple AI vendor icons reading/writing into the bw compartment. Label outside: *"no SaaS, no vendor servers, no signup."*
+
+Caption: *"Lives where your code lives."*
+
+### Tone + length notes
+
+- Tight. SWE knows the words. Don't over-explain.
+- The cross-AI portability point is under-told in the wider market — emphasize.
+- "Survives compaction" is jallum's headline feature — call it out.
+
+---
+
+## Beat 3-everyone — What bw is, plain-English
+
+### Chat (4-6 sentences)
+
+Plain-English version. **Git** is a free, very-reliable tool that's been around for nearly twenty years — programmers use it for code, but `bw` uses it because it's the most trustworthy place we have to put notes. You probably don't have it installed yet; that's fine — your AI installs it for you. **`bw` itself is a small program** that uses git to keep a "shelf" of notes in a folder you point it at. **The simplest mode is free:** notes stay on one computer, no online account at all. **If you want cloud backup that survives a laptop crash and syncs across your devices,** that's a paid GitHub plan (~$4/month for personal, or ~$4/person/month for a team). There's also a public-cloud mode (free; only for non-sensitive work). **You're authorizing your AI to install git, install bw, create a notes folder, and read/write inside it. That's all.**
+
+### AskUserQuestion
+
+> Storage mode preference, or skip ahead?
+
+Options:
+- **My computer only — maximum privacy, no online account** — note the preference; reassure them this is the simplest free mode; proceed to Beat 4.
+- **Cloud backup so my laptop dying isn't a disaster** — note the preference; mention this is GitHub Pro (~$4/month); proceed to Beat 4.
+- **Shared with my team** — note the preference; mention GitHub Team (~$4/person/month) for the polished experience; proceed to Beat 4.
+- **Show me where this helps first; I'll pick later** — proceed to Beat 4 without a storage-mode commitment.
+
+### Image
+
+`walkthrough_html/images/beat2-trust.jpg` (reused, framed differently in chat) — same folder + bw + multiple AIs diagram; the "no SaaS" label still applies; in plain-English context, frame it as "this all lives in a folder on your computer."
+
+Caption: *"Lives in a folder on your computer."*
+
+### Tone + length notes
+
+- **No assumed knowledge.** Explain "git" before assuming the reader knows what it is. Explain "repo" if you use the word.
+- **Storage modes (non-coder framing — emphasize the free local-only mode first):**
+  - **Local-only on one computer: free, no online account at all.** This is the headline option. Surface it first and clearly. The trade-off: if the laptop dies, the notes go with it.
+  - **Cloud backup + cross-computer sync: ~$4/month** (paid GitHub Pro). This is what survives a laptop crash and lets the user pick up on another device. *(Technical footnote: free GitHub accounts also support private repos, but the paid plan is the smoother non-coder setup. Don't over-explain this in chat.)*
+  - **Team cloud: ~$4/person/month** (GitHub Team) for the team-management features (CODEOWNERS, branch protection, audit log).
+  - **Public: free; warn explicitly** that "anyone on the internet can read it."
+- **Risk frame** is required: what is the AI authorized to do? Install git, install bw, create a folder, read/write inside it. That's it. The bw tool itself can't make purchases or send messages.
+- Repeat the **"you don't have to learn anything"** reassurance at the end.
+
+---
+
+## Beat 4 — Where this kind of memory helps (universal use cases)
+
+### Chat (4-6 sentences)
+
+This is where both paths converge. The same tool works for very different jobs because the underlying need — *"my AI should remember things and my AIs should be able to share notes"* — shows up everywhere. Quick tour of seven shapes: **engineer** running multi-agent PR review with a synthesizer agent on top; **data scientist** keeping a multi-session investigation that a methodology auditor can review months later; **logistics analyst** with vendor scorecards that explain abandoned approaches; **warehouse manager** with day/night shift handoffs and cross-organization vendor coordination; **support manager** with engineering + manager AIs writing to one escalation ticket; **lawyer** with privilege determinations preserved verbatim for opposing counsel nine months later; **solo entrepreneur** with every business decision logged, ready for tax-time defense. **Same interaction in every case** — you talk to your AI, the AI uses bw on your behalf. What differs is what each role tracks, not how they interact with the tool.
+
+### AskUserQuestion
+
+> Want pointers to deeper-dive skills?
+
+Options:
+- **Yes — show me the companion skills** — proceed to Beat 5.
+- **Just the install** — exit overview; switch to `beadwork-install` skill.
+
+### Image
+
+`walkthrough_html/images/beat3-personas.jpg` (reused — the seven-persona grid). Banner: *"all seven: talk to your agent. agent uses bw."*
+
+Caption: *"Same interaction in every case."*
+
+### Tone + length notes
+
+- Both forks land here, so the prose can't lean too hard on either coder vocabulary or non-coder explanation. Stay neutral; rely on the personas to do the work.
+- The **team angle** (warehouse manager + support manager especially) reinforces the third tier of the escalation — no need to repeat the framing, just let the examples carry it.
+- **Don't oversell.** Each persona gets one phrase.
+
+---
+
+## Beat 5 — Where to go from here
+
+### Chat (3-4 sentences)
+
+This was the overview. Five companion skills go deeper on specific use-case angles, plus an install skill that drives setup end-to-end. **`beadwork-as-memory`** for the durable-agent-memory deep-dive. **`beadwork-as-bus`** for multi-agent + multi-team + multi-org communication patterns. **`beadwork-for-meta-analysis`** for running an agent over the bw history of *other agents*. **`beadwork-for-decisions`** for decision logs / audit trails. **`beadwork-install`** drives the install end-to-end — your AI runs it for you. All open source, MIT-licensed. `bw` itself is [jallum](https://github.com/jallum)'s project at [github.com/jallum/beadwork](https://github.com/jallum/beadwork).
 
 ### AskUserQuestion
 
@@ -281,28 +188,16 @@ Where to go from here. Five companion skills go deeper on specific use-case angl
 
 ### Image
 
-`walkthrough_html/images/beat5-close.jpg` — A "where to next" card.
+`walkthrough_html/images/beat5-close.jpg` — five companion-skill cards in a 3-2 grid (memory, bus, meta-analysis, decisions, install). Bottom caption (desired): *"open source, MIT-licensed. bw by jallum (github.com/jallum/beadwork)."*
 
-Center top: a small bw ticket icon with a checkmark. Below it, five labeled cards arranged in a 3-2 grid representing the five companion skills:
-
-Top row:
-1. Memory icon (a clock + brain shape) labeled "**beadwork-as-memory**"
-2. Network icon (multiple agents connected through a central node) labeled "**beadwork-as-bus**"
-3. Magnifying glass over a stack of tickets, labeled "**beadwork-for-meta-analysis**"
-
-Bottom row:
-4. Decision-tree icon labeled "**beadwork-for-decisions**"
-5. Wrench icon labeled "**beadwork-install**"
-
-Below the grid: a small caption reading "open source. authored by Denson Smith. `bw` itself by jallum (github.com/jallum/beadwork)."
+**NOTE:** The rendered image as of 2026-05-08 shows the older caption *"open source. authored by Denson Smith. bw itself by jallum."* — visual contradicts the no-self-credit rule. Regenerate to match the spec when convenient.
 
 Caption: *"Five companion skills."*
-
-Style: clean grid card; same flat editorial vocabulary.
 
 ### Tone + length notes
 
 - Wrap-up. Forward-pointing.
-- 4-5 sentences plus the skill list.
+- 3-4 sentences plus the skill list.
 - No `AskUserQuestion`.
-- The closing attribution (Denson Smith for the skills; jallum for bw) lands here verbatim. Don't paraphrase.
+- **The closing attribution credits jallum + bw only.** Do NOT credit Denson Smith in the user-facing prose. The metadata authorship (LICENSE, plugin.json, marketplace.json, etc.) stays Denson Smith — that's the immutable rule — but the walkthrough prose itself only credits jallum as the author of `bw` the tool.
+- One sentence reserved for the non-coder reassurance: *"if you're not a coder, the install skill walks your AI through everything — you don't need to know git or run commands yourself."*
