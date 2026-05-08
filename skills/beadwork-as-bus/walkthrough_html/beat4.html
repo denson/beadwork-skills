@@ -3,17 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Beat 4 — Cross-vendor + pointers.</title>
+  <title>Beat 4 — You have a team.</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
     <div class="beat-tag">Beat 4 &middot; Close</div>
-    <h1>Swap vendors freely. The store stays.</h1>
+    <h1>You have a team.</h1>
 
-    <p>The angle that's underrated until you live it: <strong>cross-AI portability.</strong></p>
+    <p>The shift to take away: with <code>bw</code>, your AI isn't one amnesiac generalist anymore. It's one member of a small team of specialist agents &mdash; design, implementation, review, audit &mdash; that share a durable, signed, auditable workspace. <strong>Most of the time those agents are sessions of one lab's model</strong> (all Claude, or all Gemini), each playing a different role.</p>
 
-    <p><code>bw</code> is just shell commands &mdash; <code>bw show</code>, <code>bw comment</code>, <code>bw close</code>, <code>bw list</code>. Any agent that can run a CLI participates. Today's pipeline is Claude end-to-end. If Anthropic raises prices next quarter and you swap some agents to Gemini, the Gemini agents read the same <code>bw</code> store the Claude agents wrote. <strong>Your multi-agent pipeline doesn't break when you swap a vendor.</strong></p>
+    <p>Two extras the substrate gives you for free, both worth knowing about:</p>
+
+    <ul>
+      <li><strong>Humans on a team can join the same workspace.</strong> If you push <code>bw</code>'s orphan branch to a shared private repo, your teammates' agents (and the teammates themselves) read and write the same store.</li>
+      <li><strong>Cross-lab works too.</strong> Because <code>bw</code> is just shell commands, an agent from a different vendor &mdash; Gemini reading a store Claude agents have been writing to &mdash; participates the same way. Most users won't need this; it's a nice insurance policy if you ever swap labs.</li>
+    </ul>
 
     <div class="callout">
       <p><strong>Companion skills:</strong></p>

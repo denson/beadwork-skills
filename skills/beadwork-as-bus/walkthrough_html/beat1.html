@@ -3,27 +3,27 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Beat 1 — Agents need to talk.</title>
+  <title>Beat 1 — A team of specialist agents.</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
     <div class="beat-tag">Beat 1 &middot; The hook</div>
-    <h1>Agents need to talk.</h1>
+    <h1>A team of specialist agents, sharing one workspace.</h1>
 
-    <p>If your AI is one agent in one chat, memory is the whole story. The moment you have two agents working together &mdash; or one agent today and a different agent tomorrow, or your agent and a coworker's agent, or your agent and a vendor's agent &mdash; memory alone isn't enough.</p>
+    <p>If your AI is one agent in one chat, memory is the whole story. The moment you want <em>more than one agent working on something</em> &mdash; a design agent, an implementation agent, a review agent &mdash; memory alone isn't enough. They need to <em>talk to each other</em> in a way that survives.</p>
 
-    <p>They need to <em>talk to each other</em> in a way that survives.</p>
+    <p>Most of the time these agents are sessions of the same model from the same lab &mdash; you're running multiple Claude sessions, or multiple Gemini sessions, each playing a specialist role. <strong>The substrate works the same way across labs too</strong>, but day-to-day it's usually one lab, many sessions.</p>
 
     <div class="image-frame">
-      <img src="images/beat1-hook.jpg" alt="A composition showing several AI assistant figures arranged in a loose ring around a central ticket card. Each AI figure is rendered slightly differently in different colors representing different vendors (Claude, Gemini, OpenAI, generic). Arrows from each AI both into and out of the central ticket — both reading and writing. The ticket card has a stack of comment bubbles inside, each one labeled with a different author and timestamp, showing the conversation across agents. A small label on the ticket reads 'shared bw store.'">
+      <img src="images/beat1-hook.jpg" alt="A composition showing several AI assistant figures arranged in a loose ring around a central ticket card. Arrows from each AI both into and out of the central ticket — both reading and writing. The ticket card has a stack of comment bubbles inside, each one labeled with a different role (designer, coder, reviewer) and timestamp, showing the conversation across agents. A small label on the ticket reads 'shared bw store.'">
       <p class="caption">Many agents. One ticket. Asynchronous, signed, durable.</p>
     </div>
 
-    <p><code>bw</code> (beadwork) is the channel. Multiple agents read and write the same ticket store. Each comment is signed and timestamped. No two agents step on each other's writes.</p>
+    <p><code>bw</code> (beadwork) is the channel. Multiple agents read and write the same ticket store. Each comment is signed (the agent's role + name + timestamp). No two agents step on each other's writes.</p>
 
     <div class="callout">
-      <p>The interaction stays the same: <strong>you talk to your agent.</strong> What's new is that your agent is now part of a team that talks through <code>bw</code>.</p>
+      <p>The interaction stays the same: <strong>you talk to your agent.</strong> What's new is that your agent is now part of a small team that talks through <code>bw</code>.</p>
     </div>
   </div>
 </body>

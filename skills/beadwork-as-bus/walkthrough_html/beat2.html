@@ -21,7 +21,7 @@
     <p>Two agents working on different tickets simultaneously never touch the same bytes &mdash; <code>bw</code> stores each ticket as a separate file under the orphan branch. No merge drivers, no lock files, no coordination overhead. Two agents writing different files at the same time just works.</p>
 
     <div class="callout">
-      <p><strong>Cross-vendor portability:</strong> <code>bw</code> is just shell commands (<code>bw show</code>, <code>bw comment</code>, <code>bw close</code>). Agents from different vendors &mdash; Claude, Gemini, OpenAI, anything that runs a CLI &mdash; all participate the same way. Same store, different brands of agent reading and writing it.</p>
+      <p><strong>The substrate is just shell.</strong> <code>bw</code> exposes a few simple commands (<code>bw show</code>, <code>bw comment</code>, <code>bw close</code>). Any agent that can shell out participates the same way &mdash; whether it's a different session of the same model or, in rarer cases, an agent from a different lab altogether.</p>
     </div>
   </div>
 </body>
