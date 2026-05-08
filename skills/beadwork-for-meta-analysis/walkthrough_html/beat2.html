@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Beat 2 — Read the work, not the chat.</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="beat-tag">Beat 2 &middot; How meta-analysis works in bw</div>
+    <h1>Read the work, not the chat.</h1>
+
+    <p>A meta-analysis agent doesn't watch other agents work. It reads what they wrote afterward.</p>
+
+    <div class="image-frame">
+      <img src="images/beat2-mechanism.jpg" alt="A diagram with a stack of structured tickets on the left side (each ticket showing TITLE plus multiple signed-and-timestamped comments in a clean column layout). On the right, a single audit-agent figure (rendered slightly differently — perhaps with a magnifying-glass icon) reading the stack. Above the audit agent: thought bubbles representing the questions it can ask: 'consistency?', 'drift?', 'contradictions?', 'missing steps?' A small label between the tickets and the audit agent reads 'bw show / bw list'. A note off to the side: 'all author stamps. all timestamps. all structure. = analyzable.'">
+      <p class="caption">Read the work, not the chat.</p>
+    </div>
+
+    <ul>
+      <li><code>bw show &lt;ticket&gt;</code> returns the full thread for one ticket &mdash; title, description, every comment in order, every author, every timestamp.</li>
+      <li><code>bw list</code> returns ranges of tickets matching filters (status, type, label, date range).</li>
+      <li><code>bw history &lt;id&gt;</code> returns the diff history of edits, so you see how a ticket evolved, not just its current state.</li>
+    </ul>
+
+    <p>The audit agent feeds those into its prompt and asks questions a single agent can't answer alone:</p>
+
+    <ul>
+      <li><em>"Did agents A and B apply the same criteria across these 12 reviews?"</em></li>
+      <li><em>"Is there drift on naming convention over the last quarter?"</em></li>
+      <li><em>"Agent C said X; agent D's comment two days later contradicts it &mdash; flag for human review."</em></li>
+    </ul>
+
+    <div class="callout">
+      <p>Same git-backed substrate as memory and the bus. <strong>New analysis layer on top.</strong></p>
+    </div>
+  </div>
+</body>
+</html>

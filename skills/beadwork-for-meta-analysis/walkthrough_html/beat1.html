@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Beat 1 — Agents make mistakes. Chat history can't help.</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="beat-tag">Beat 1 &middot; The hook</div>
+    <h1>Agents make mistakes. Chat history can't help you find them.</h1>
+
+    <p>In any non-trivial agent workflow, agents make mistakes &mdash; they drift on a convention they were supposed to follow, they apply different criteria across similar tasks, they miss things a peer just flagged.</p>
+
+    <div class="image-frame">
+      <img src="images/beat1-hook.jpg" alt="A two-panel split scene. Left panel ('Chat history — can't audit this'): a tangled, noisy conversation thread rendered as a long stream of speech bubbles in different colors, overlapping and crowded together. An audit-agent figure tries to read it, with a confused thought bubble reading 'who said what? when? what did they decide?' Bits of the chat are blurred or fading. Right panel ('bw history — can audit this'): the same content but rendered as a clean stack of structured ticket cards, each card showing TITLE / multiple comments with author + timestamp stamps clearly visible / structured fields (status, priority, type). The audit-agent figure stands in front, with a clear thought bubble reading 'agent A on day 1: <decision>. agent B on day 4: <verdict>. they agree on X but conflict on Y.'">
+      <p class="caption">Same work. Different substrate. Only one is auditable.</p>
+    </div>
+
+    <p>The cheap way to catch those mistakes is <strong>another agent reading the work</strong> &mdash; not the chat that produced it, but the actual decisions and verdicts. Chat history doesn't work for that: unstructured stream-of-consciousness, speaker is implicit, timing is muddied, mostly noise.</p>
+
+    <p><code>bw</code> (beadwork) is structured: every comment records who wrote it, when, on which ticket, in what shape. <strong>An audit agent reading <code>bw show</code> gets the substrate it needs to actually find the mistakes.</strong></p>
+
+    <div class="callout">
+      <p>The structural property: <strong>signed + timestamped + structured</strong>. That's what makes meta-analysis tractable.</p>
+      <p>Chat doesn't have that shape. <code>bw</code> does.</p>
+    </div>
+  </div>
+</body>
+</html>
