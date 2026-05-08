@@ -1,0 +1,22 @@
+{
+  "prompt_key": "beat4-close",
+  "name": "beat4-close",
+  "skill": "beadwork-as-bus",
+  "quality": "2k",
+  "aspectRatio": "16:9",
+  "task_id": "ZBJ2NhSZ6vP2WVEgGUy2M",
+  "saved_files": [
+    "beat4-close.jpg"
+  ],
+  "result": {
+    "status": "completed",
+    "images": [
+      {
+        "url": "https://r2.conceptviz.app/images/Pq3zEc9m9Ek0d6PQxUi9DSiYkSQBUkGr/ZBJ2NhSZ6vP2WVEgGUy2M/0-efa839c5bd436302.jpg",
+        "prompt": "A composition emphasizing cross-vendor portability. Across the top: four AI-assistant figures in different colors arranged horizontally, each labeled generically with vendor styles (\"Claude-style,\" \"Gemini-style,\" \"OpenAI-style,\" \"other\"). NO logos. All four AI figures have arrows pointing downward to a single centered bw-store box labeled \"your repo / your bw store.\" Inside the box, several ticket cards visible. BELOW THE STORE: a small caption \"swap vendors freely. The store stays.\" Below that: four small companion-skill icons arranged horizontally with names: \"beadwork-overview,\" \"beadwork-as-memory,\" \"beadwork-for-meta-analysis,\" \"beadwork-for-decisions,\" plus \"beadwork-install.\" Caption: \"Swap vendors freely. The store stays.\" These images are for the beadwork-as-bus presenter skill — a deep-dive on bw (beadwork — github.com/jallum/beadwork) as agent-to-agent communication across multiple agents, teams, organizations, and AI vendors. Concrete personas in the scenarios: engineer, data scientist, support manager, warehouse manager. Colorblind-friendly, no hex codes. Style: flat design, editorial illustration, simple shapes, bold colors on a light warm-gray background. Think 'product strategy deck illustration,' not whiteboard sketch. Generic AI-assistant figures (NOT vendor-branded; do not include any specific agent names like Pliny, Vera, Cato, Ada, or any company logo).",
+        "imageHash": "efa839c5bd436302a905636d39a0d0adf983188337838f30d5b931872dced90b",
+        "storageKey": "images/Pq3zEc9m9Ek0d6PQxUi9DSiYkSQBUkGr/ZBJ2NhSZ6vP2WVEgGUy2M/0-efa839c5bd436302.jpg"
+      }
+    ]
+  }
+}

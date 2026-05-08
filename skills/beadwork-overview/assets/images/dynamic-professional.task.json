@@ -1,0 +1,22 @@
+{
+  "prompt_key": "dynamic-professional",
+  "name": "dynamic-professional",
+  "skill": "beadwork-overview",
+  "quality": "2k",
+  "aspectRatio": "16:9",
+  "task_id": "4t7Qc29ZupVDBQWEFxmWy",
+  "saved_files": [
+    "dynamic-professional.png"
+  ],
+  "result": {
+    "status": "completed",
+    "images": [
+      {
+        "url": "https://r2.conceptviz.app/images/Pq3zEc9m9Ek0d6PQxUi9DSiYkSQBUkGr/4t7Qc29ZupVDBQWEFxmWy/0-935bdca5308dd9ee.png",
+        "prompt": "A composition with two horizontal scenes stacked vertically. TOP SCENE (Lawyer): a small law office. A stack of three case-file ticket cards labeled with generic case names (\"case-1,\" \"case-2,\" \"case-3\"). Multiple AI-assistant figures partitioning a tall stack of small document-icons (representing 10,000 documents). A separate AI figure off to the side labeled \"audit agent\" reads the chain. A privilege-log ticket card with a date stamp and the label \"court-defensible.\" Several lock icons around the scene emphasizing privacy. BOTTOM SCENE (Solo Entrepreneur): a single figure at a small desk surrounded by small floating labels for many domains: \"sales,\" \"ops,\" \"finance,\" \"marketing,\" \"knowledge.\" A single AI-assistant figure beside them, reading a notebook ticket card labeled \"all domains.\" Arrows from the AI to each domain label, showing the AI logging activity across all of them. A small sub-scene at the bottom-right showing a \"lessons learned\" ticket being surfaced for a new engagement. Caption: \"Personal-OS, audit-grade, low overhead.\" These images are for the beadwork-overview presenter skill — a tour of how seven kinds of users (software engineers, data scientists, logistics analysts, warehouse managers, customer support managers, lawyers, solo entrepreneurs) use beadwork (bw — github.com/jallum/beadwork) through their AI assistants for durable agent memory and agent-to-agent communication. The unifying interaction: 'you talk to your agent; your agent uses bw.' Colorblind-friendly, no hex codes. Style: flat design, editorial illustration, simple shapes, bold colors on a light warm-gray background. Think 'product strategy deck illustration,' not whiteboard sketch. Generic AI-assistant figures (NOT vendor-branded; do not include any specific agent names like Pliny, Vera, Cato, Ada, or any company logo).",
+        "imageHash": "935bdca5308dd9ee97bf42f95ce5d286fccc0752a852e8c432d09c499c54c13a",
+        "storageKey": "images/Pq3zEc9m9Ek0d6PQxUi9DSiYkSQBUkGr/4t7Qc29ZupVDBQWEFxmWy/0-935bdca5308dd9ee.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "prompt_key": "beat3-scenarios",
+  "name": "beat3-scenarios",
+  "skill": "beadwork-for-decisions",
+  "quality": "2k",
+  "aspectRatio": "16:9",
+  "task_id": "rbbNiSy4g_5R2yX37Ghdi",
+  "saved_files": [
+    "beat3-scenarios.jpg"
+  ],
+  "result": {
+    "status": "completed",
+    "images": [
+      {
+        "url": "https://r2.conceptviz.app/images/Pq3zEc9m9Ek0d6PQxUi9DSiYkSQBUkGr/rbbNiSy4g_5R2yX37Ghdi/0-1d83549b1cc5c3ef.jpg",
+        "prompt": "Three vertical lanes, each showing a decision-log scenario in a different professional setting. LEFT LANE (Engineer): a ticket card titled \"Architecture: REST vs gRPC for orders service\" with multiple comments showing trade-off analysis (latency, tooling, team familiarity). Below the ticket: a small \"6 months later\" arrow pointing to a new-engineer figure reading the ticket, with a thought bubble \"now I understand why.\" MIDDLE LANE (Lawyer): a privilege-log ticket card titled \"Doc 4789: work-product privilege\" with a structured comment showing the legal reasoning (cited rule, reasoning chain, signed by an attorney name, dated). Below: a \"9 months later\" arrow pointing to an opposing-counsel figure reading the ticket, with a thought bubble \"reasoning preserved → court-defensible.\" A small gavel icon in the corner of the lane. RIGHT LANE (Solo Entrepreneur): a stack of three small expense-decision ticket cards titled \"MailerLite: vs ConvertKit,\" \"Hetzner: vs DigitalOcean,\" \"Notion Pro: vs free tier,\" each with a brief rationale-comment visible. Below: a \"tax time\" arrow pointing to an accountant figure with a tablet, reading the bw export, thought bubble \"every expense documented + reasoned.\" Caption: \"Three roles. Three flavors of decision log. Same ticket shape.\" These images are for the beadwork-for-decisions presenter skill — a deep-dive on bw (beadwork — github.com/jallum/beadwork) as decision log / ADR / audit trail substrate. Concrete personas in the scenarios: engineer (architecture decision record), lawyer (privilege log), solo entrepreneur (tax-time decision defense). Colorblind-friendly, no hex codes. Style: flat design, editorial illustration, simple shapes, bold colors on a light warm-gray background. Think 'product strategy deck illustration,' not whiteboard sketch. Generic AI-assistant figures (NOT vendor-branded; do not include any specific agent names like Pliny, Vera, Cato, Ada, or any company logo).",
+        "imageHash": "1d83549b1cc5c3efeaefe891c2ba8f099a3fa95effc234857f1bd03d0710c54b",
+        "storageKey": "images/Pq3zEc9m9Ek0d6PQxUi9DSiYkSQBUkGr/rbbNiSy4g_5R2yX37Ghdi/0-1d83549b1cc5c3ef.jpg"
+      }
+    ]
+  }
+}

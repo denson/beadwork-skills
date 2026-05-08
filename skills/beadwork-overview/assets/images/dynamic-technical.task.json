@@ -1,0 +1,22 @@
+{
+  "prompt_key": "dynamic-technical",
+  "name": "dynamic-technical",
+  "skill": "beadwork-overview",
+  "quality": "2k",
+  "aspectRatio": "16:9",
+  "task_id": "s-yGTbRlhfSX-dBMqSevZ",
+  "saved_files": [
+    "dynamic-technical.jpg"
+  ],
+  "result": {
+    "status": "completed",
+    "images": [
+      {
+        "url": "https://r2.conceptviz.app/images/Pq3zEc9m9Ek0d6PQxUi9DSiYkSQBUkGr/s-yGTbRlhfSX-dBMqSevZ/0-7357575f2c170786.jpg",
+        "prompt": "Three vertical lanes, each showing a technical-role scenario. LEFT LANE (cool blue tint, header \"Engineer\"): a developer figure at a laptop with three small AI-assistant figures around them. Arrows from each AI converge on a central ticket card labeled \"PR-42 review\" with three structured-verdict comments below (\"security agent: pass\", \"style agent: needs-revisions\", \"test-coverage agent: pass\"). A fourth AI figure off to the side labeled \"conflict-finder\" reads all three. MIDDLE LANE (warm amber tint, header \"Data Scientist\"): a figure with a notebook and pen. An analysis pipeline of three AI agents arranged horizontally with arrows between them: \"cleaner\" → \"tester\" → \"visualizer.\" A fourth AI figure stands above the pipeline labeled \"methodology auditor\" reading the chain. RIGHT LANE (cool teal tint, header \"Logistics Analyst\"): a figure with a dashboard. A vendor-scorecard ticket card labeled \"Q2 vendor scorecard\" in the middle. Two AI figures in different colors on either side of the ticket — one labeled \"analyst's AI,\" one labeled \"warehouse manager's AI\" — both reading the same ticket. Caption: \"Correctness + validation across three roles.\" These images are for the beadwork-overview presenter skill — a tour of how seven kinds of users (software engineers, data scientists, logistics analysts, warehouse managers, customer support managers, lawyers, solo entrepreneurs) use beadwork (bw — github.com/jallum/beadwork) through their AI assistants for durable agent memory and agent-to-agent communication. The unifying interaction: 'you talk to your agent; your agent uses bw.' Colorblind-friendly, no hex codes. Style: flat design, editorial illustration, simple shapes, bold colors on a light warm-gray background. Think 'product strategy deck illustration,' not whiteboard sketch. Generic AI-assistant figures (NOT vendor-branded; do not include any specific agent names like Pliny, Vera, Cato, Ada, or any company logo).",
+        "imageHash": "7357575f2c1707861388e8a4117cf374991298a70f73a2c4abbed9ba211008af",
+        "storageKey": "images/Pq3zEc9m9Ek0d6PQxUi9DSiYkSQBUkGr/s-yGTbRlhfSX-dBMqSevZ/0-7357575f2c170786.jpg"
+      }
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "prompt_key": "beat4-close",
+  "name": "beat4-close",
+  "skill": "beadwork-for-decisions",
+  "quality": "2k",
+  "aspectRatio": "16:9",
+  "task_id": "kbZRi5DSGbqwyeT8pu3TI",
+  "saved_files": [
+    "beat4-close.jpg"
+  ],
+  "result": {
+    "status": "completed",
+    "images": [
+      {
+        "url": "https://r2.conceptviz.app/images/Pq3zEc9m9Ek0d6PQxUi9DSiYkSQBUkGr/kbZRi5DSGbqwyeT8pu3TI/0-be3fa58559cb4ca8.jpg",
+        "prompt": "A clean closing card. CENTER: a stylized ticket card with the parts clearly labeled and visible: title, description block, three comments with author+timestamp, and a highlighted close-comment-with-rationale at the bottom. BELOW the ticket: a horizontal banner with the bold text \"any decision worth remembering = a bw ticket.\" BELOW THE BANNER: five small companion-skill icons arranged horizontally with their names: 1. compass icon — \"beadwork-overview\" 2. clock + brain icon — \"beadwork-as-memory\" 3. network icon — \"beadwork-as-bus\" 4. magnifying-glass icon — \"beadwork-for-meta-analysis\" 5. wrench icon — \"beadwork-install\" BOTTOM: a small caption in italic \"open source. Denson Smith. bw itself by jallum.\" Caption: \"Any decision worth remembering is a ticket.\" These images are for the beadwork-for-decisions presenter skill — a deep-dive on bw (beadwork — github.com/jallum/beadwork) as decision log / ADR / audit trail substrate. Concrete personas in the scenarios: engineer (architecture decision record), lawyer (privilege log), solo entrepreneur (tax-time decision defense). Colorblind-friendly, no hex codes. Style: flat design, editorial illustration, simple shapes, bold colors on a light warm-gray background. Think 'product strategy deck illustration,' not whiteboard sketch. Generic AI-assistant figures (NOT vendor-branded; do not include any specific agent names like Pliny, Vera, Cato, Ada, or any company logo).",
+        "imageHash": "be3fa58559cb4ca874f1cd21ff6799194e0ad02bec1fa4fce968a5fe6773c9e9",
+        "storageKey": "images/Pq3zEc9m9Ek0d6PQxUi9DSiYkSQBUkGr/kbZRi5DSGbqwyeT8pu3TI/0-be3fa58559cb4ca8.jpg"
+      }
+    ]
+  }
+}

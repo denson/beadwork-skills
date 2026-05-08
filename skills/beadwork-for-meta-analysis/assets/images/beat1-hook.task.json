@@ -1,0 +1,22 @@
+{
+  "prompt_key": "beat1-hook",
+  "name": "beat1-hook",
+  "skill": "beadwork-for-meta-analysis",
+  "quality": "2k",
+  "aspectRatio": "16:9",
+  "task_id": "Hw8qs33uFGymV9r3WHiph",
+  "saved_files": [
+    "beat1-hook.jpg"
+  ],
+  "result": {
+    "status": "completed",
+    "images": [
+      {
+        "url": "https://r2.conceptviz.app/images/Pq3zEc9m9Ek0d6PQxUi9DSiYkSQBUkGr/Hw8qs33uFGymV9r3WHiph/0-73c42dd0cc334c6d.jpg",
+        "prompt": "A two-panel split scene divided vertically. LEFT PANEL (warm pink-red tint, header \"Chat history — can't audit this\"): a tangled, noisy conversation thread rendered as a long stream of speech bubbles in many colors, overlapping and crowded together, no clear order. An audit-agent figure (a stylized AI with a magnifying-glass icon attached) tries to read it, with a confused thought bubble reading \"who said what? when? what did they decide?\" Some bubbles are blurred or fading. RIGHT PANEL (cool blue tint, header \"bw history — can audit this\"): the same content but rendered as a clean stack of structured ticket cards. Each card has TITLE plus several comments with clearly visible author + timestamp stamps. The audit-agent figure stands in front, with a clear thought bubble reading \"agent A on day 1: <decision>. agent B on day 4: <verdict>. they agree on X but conflict on Y.\" Caption: \"Same work. Different substrate. Only one is auditable.\" These images are for the beadwork-for-meta-analysis presenter skill — a deep-dive on running an agent over the bw (beadwork — github.com/jallum/beadwork) history of OTHER agents to audit, check methodology, or synthesize. Concrete personas in the scenarios: engineer (multi-agent code review with conflict-finder), data scientist (analysis pipeline with methodology auditor), lawyer (cross-case consistency check). Colorblind-friendly, no hex codes. Style: flat design, editorial illustration, simple shapes, bold colors on a light warm-gray background. Think 'product strategy deck illustration,' not whiteboard sketch. Generic AI-assistant figures (NOT vendor-branded; do not include any specific agent names like Pliny, Vera, Cato, Ada, or any company logo).",
+        "imageHash": "73c42dd0cc334c6d4c8a457c0ab1a36b2668703ca011d51372dfd08cf5c1e7b8",
+        "storageKey": "images/Pq3zEc9m9Ek0d6PQxUi9DSiYkSQBUkGr/Hw8qs33uFGymV9r3WHiph/0-73c42dd0cc334c6d.jpg"
+      }
+    ]
+  }
+}

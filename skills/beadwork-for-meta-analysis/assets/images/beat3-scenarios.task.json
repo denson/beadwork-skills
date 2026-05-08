@@ -1,0 +1,22 @@
+{
+  "prompt_key": "beat3-scenarios",
+  "name": "beat3-scenarios",
+  "skill": "beadwork-for-meta-analysis",
+  "quality": "2k",
+  "aspectRatio": "16:9",
+  "task_id": "S-qnbPZs8B1pf_JumGlLe",
+  "saved_files": [
+    "beat3-scenarios.jpg"
+  ],
+  "result": {
+    "status": "completed",
+    "images": [
+      {
+        "url": "https://r2.conceptviz.app/images/Pq3zEc9m9Ek0d6PQxUi9DSiYkSQBUkGr/S-qnbPZs8B1pf_JumGlLe/0-f640aaad6b7ebe8b.jpg",
+        "prompt": "Three vertical lanes, each showing a meta-analysis scenario. LEFT LANE (Engineer): a PR-42 review ticket card with three structured-verdict comments visible: \"security agent: require strict CORS,\" \"style agent: strip those headers,\" \"test-coverage agent: OK.\" A fourth AI-assistant figure labeled \"conflict-finder\" stands beside the ticket, with a flag-icon thought bubble reading \"contradiction: security vs style on CORS.\" MIDDLE LANE (Data Scientist): a horizontal pipeline of three day-stamped ticket cards with arrows: \"cleaner (filtered to active users)\" → \"tester (ran t-test on full population)\" → \"visualizer.\" A \"methodology auditor\" AI-assistant figure stands above the pipeline reading all three; thought bubble: \"tester used 'full population'; cleaner had filtered to 'active users' — gap.\" RIGHT LANE (Lawyer): a stack of twelve case-file ticket cards (rendered compactly) each with several review-comment cards visible. An \"audit agent\" AI-assistant figure stands in front of the stack, with a thought bubble reading \"case-3 and case-9 both ruled work-product privilege — different agents, same criterion applied? checking…\" Caption: \"Three roles. Three flavors of audit. One substrate.\" These images are for the beadwork-for-meta-analysis presenter skill — a deep-dive on running an agent over the bw (beadwork — github.com/jallum/beadwork) history of OTHER agents to audit, check methodology, or synthesize. Concrete personas in the scenarios: engineer (multi-agent code review with conflict-finder), data scientist (analysis pipeline with methodology auditor), lawyer (cross-case consistency check). Colorblind-friendly, no hex codes. Style: flat design, editorial illustration, simple shapes, bold colors on a light warm-gray background. Think 'product strategy deck illustration,' not whiteboard sketch. Generic AI-assistant figures (NOT vendor-branded; do not include any specific agent names like Pliny, Vera, Cato, Ada, or any company logo).",
+        "imageHash": "f640aaad6b7ebe8b570daebbde1f44451c7e3fab2502943363dd429155f37ab6",
+        "storageKey": "images/Pq3zEc9m9Ek0d6PQxUi9DSiYkSQBUkGr/S-qnbPZs8B1pf_JumGlLe/0-f640aaad6b7ebe8b.jpg"
+      }
+    ]
+  }
+}

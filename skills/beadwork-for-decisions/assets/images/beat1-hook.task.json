@@ -1,0 +1,22 @@
+{
+  "prompt_key": "beat1-hook",
+  "name": "beat1-hook",
+  "skill": "beadwork-for-decisions",
+  "quality": "2k",
+  "aspectRatio": "16:9",
+  "task_id": "6QF-_iIGYWJt_x_XqV7FU",
+  "saved_files": [
+    "beat1-hook.jpg"
+  ],
+  "result": {
+    "status": "completed",
+    "images": [
+      {
+        "url": "https://r2.conceptviz.app/images/Pq3zEc9m9Ek0d6PQxUi9DSiYkSQBUkGr/6QF-_iIGYWJt_x_XqV7FU/0-89764e5fb347a4fa.jpg",
+        "prompt": "A two-panel scene divided vertically. LEFT PANEL (warm tint, header \"Without a decision log\"): a calendar showing months passing horizontally — labels Jan, Feb, Mar, ..., Aug. At Jan: a small group of three figures with thought bubbles having a discussion — speech bubbles full of detail. By August (right side of calendar): the same scene but the figures have left and the speech bubbles have faded to outlines or fragments. A new person stands at the August mark with a confused thought bubble: \"why did we decide on this?\" RIGHT PANEL (cool tint, header \"With bw decision tickets\"): the same calendar layout. At the Jan position there's a ticket card with TITLE \"Auth: Auth0 vs in-house OAuth\", a description (\"options: Auth0, in-house OAuth, Firebase\"), and a stack of comment-bubbles labeled with author + date. The ticket card extends visually to the August position, unchanged. The new person at August reads the ticket with a clear thought bubble: \"now I understand the rationale.\" Caption: \"What decisions look like in six months.\" These images are for the beadwork-for-decisions presenter skill — a deep-dive on bw (beadwork — github.com/jallum/beadwork) as decision log / ADR / audit trail substrate. Concrete personas in the scenarios: engineer (architecture decision record), lawyer (privilege log), solo entrepreneur (tax-time decision defense). Colorblind-friendly, no hex codes. Style: flat design, editorial illustration, simple shapes, bold colors on a light warm-gray background. Think 'product strategy deck illustration,' not whiteboard sketch. Generic AI-assistant figures (NOT vendor-branded; do not include any specific agent names like Pliny, Vera, Cato, Ada, or any company logo).",
+        "imageHash": "89764e5fb347a4fa16498afe0b442ea458fcd063944558cb213db5c986cf083e",
+        "storageKey": "images/Pq3zEc9m9Ek0d6PQxUi9DSiYkSQBUkGr/6QF-_iIGYWJt_x_XqV7FU/0-89764e5fb347a4fa.jpg"
+      }
+    ]
+  }
+}

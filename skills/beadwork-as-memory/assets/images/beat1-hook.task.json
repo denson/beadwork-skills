@@ -1,0 +1,22 @@
+{
+  "prompt_key": "beat1-hook",
+  "name": "beat1-hook",
+  "skill": "beadwork-as-memory",
+  "quality": "2k",
+  "aspectRatio": "16:9",
+  "task_id": "CLQD12_pXmKAj6Wynwlkr",
+  "saved_files": [
+    "beat1-hook.jpg"
+  ],
+  "result": {
+    "status": "completed",
+    "images": [
+      {
+        "url": "https://r2.conceptviz.app/images/Pq3zEc9m9Ek0d6PQxUi9DSiYkSQBUkGr/CLQD12_pXmKAj6Wynwlkr/0-03aad1214cd33e47.jpg",
+        "prompt": "A stylized horizontal timeline showing two sessions separated by a gap. LEFT SESSION (warm tint): a generic AI-assistant figure at a laptop, with thought bubbles and a small ticket card emerging from the AI. The ticket card has three short comments visible: \"decision: Auth0 with PKCE\", \"constraint: budget < $50/mo\", \"blocker: vendor API down until Wed.\" The session ends with a \"session ended\" mark on the timeline. CENTER (the gap, neutral background): the same ticket card persists prominently, anchored by a small icon labeled \"bw — your repo.\" The ticket card looks unchanged; comments still visible. RIGHT SESSION (cool tint): a fresh session opening. The same AI-assistant figure (or a new one of the same style) reads the ticket card, with a thought bubble reading \"right — picking up where we left off.\" The session timeline starts fresh on the right. Caption: \"Memory isn't the chat. Memory is the few things you wrote down.\" These images are for the beadwork-as-memory presenter skill — a deep-dive on bw (beadwork — github.com/jallum/beadwork) as durable agent memory across sessions, restarts, and time. Concrete personas in the scenarios: data scientist, lawyer, solo entrepreneur. Colorblind-friendly, no hex codes. Style: flat design, editorial illustration, simple shapes, bold colors on a light warm-gray background. Think 'product strategy deck illustration,' not whiteboard sketch. Generic AI-assistant figures (NOT vendor-branded; do not include any specific agent names like Pliny, Vera, Cato, Ada, or any company logo).",
+        "imageHash": "03aad1214cd33e4716e8f0939fe4d5b3d2e85cc4057ece68cd6204da7960c5c9",
+        "storageKey": "images/Pq3zEc9m9Ek0d6PQxUi9DSiYkSQBUkGr/CLQD12_pXmKAj6Wynwlkr/0-03aad1214cd33e47.jpg"
+      }
+    ]
+  }
+}

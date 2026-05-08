@@ -1,0 +1,22 @@
+{
+  "prompt_key": "beat1-hook",
+  "name": "beat1-hook",
+  "skill": "beadwork-overview",
+  "quality": "2k",
+  "aspectRatio": "16:9",
+  "task_id": "1GZlNp3PXjZRNaKcUQODL",
+  "saved_files": [
+    "beat1-hook.jpg"
+  ],
+  "result": {
+    "status": "completed",
+    "images": [
+      {
+        "url": "https://r2.conceptviz.app/images/Pq3zEc9m9Ek0d6PQxUi9DSiYkSQBUkGr/1GZlNp3PXjZRNaKcUQODL/0-05e9a98267d6d151.jpg",
+        "prompt": "A two-panel split scene divided vertically by a thin line. LEFT PANEL (warm red-pink tint, labeled at the top \"Without bw\"): a generic AI-assistant figure in the center looking confused, with a thought bubble reading \"wait — what was I doing?\" Around the figure: scattered fragments representing forgotten context — a half-finished checklist, a stack-trace card with stylized error lines, a question mark, a dimmed conversation bubble drifting away. RIGHT PANEL (cool teal tint, labeled at the top \"With bw\"): the same generic AI-assistant figure standing calm and resumed, reading from a small ticket card sitting on a small desk in front of it. The ticket card has a clean header (TITLE bar) and three small comment-bubbles attached labeled with date stamps. A clear thought bubble reads \"right — yesterday we decided X, the next step is Y.\" A small label at the bottom of the right panel reads \"context restored from `bw show`.\" Caption at the bottom of the full image: \"Sessions end. Context shouldn't.\" These images are for the beadwork-overview presenter skill — a tour of how seven kinds of users (software engineers, data scientists, logistics analysts, warehouse managers, customer support managers, lawyers, solo entrepreneurs) use beadwork (bw — github.com/jallum/beadwork) through their AI assistants for durable agent memory and agent-to-agent communication. The unifying interaction: 'you talk to your agent; your agent uses bw.' Colorblind-friendly, no hex codes. Style: flat design, editorial illustration, simple shapes, bold colors on a light warm-gray background. Think 'product strategy deck illustration,' not whiteboard sketch. Generic AI-assistant figures (NOT vendor-branded; do not include any specific agent names like Pliny, Vera, Cato, Ada, or any company logo).",
+        "imageHash": "05e9a98267d6d1516d00ff759c1475c3de1192bb3ff7ac5ebcc8266933e3f53b",
+        "storageKey": "images/Pq3zEc9m9Ek0d6PQxUi9DSiYkSQBUkGr/1GZlNp3PXjZRNaKcUQODL/0-05e9a98267d6d151.jpg"
+      }
+    ]
+  }
+}

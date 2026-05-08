@@ -1,0 +1,22 @@
+{
+  "prompt_key": "beat2-trust",
+  "name": "beat2-trust",
+  "skill": "beadwork-overview",
+  "quality": "2k",
+  "aspectRatio": "16:9",
+  "task_id": "SSOwjOM63XRQQMd7-_Qwy",
+  "saved_files": [
+    "beat2-trust.jpg"
+  ],
+  "result": {
+    "status": "completed",
+    "images": [
+      {
+        "url": "https://r2.conceptviz.app/images/Pq3zEc9m9Ek0d6PQxUi9DSiYkSQBUkGr/SSOwjOM63XRQQMd7-_Qwy/0-b5352e4988f4820d.jpg",
+        "prompt": "A stylized diagram of a developer's repository, shown as a folder labeled \"your repo / your disk.\" Inside the folder, two compartments visible: TOP COMPARTMENT (labeled \"project files — visible\"): three rounded-rectangle file icons — one labeled README.md, one labeled src/, one labeled docs/. BOTTOM COMPARTMENT (separated by a dashed line labeled \"orphan-branch boundary\", with a soft warm-amber tint to set it apart): three small ticket cards labeled with abbreviated ticket-IDs (e.g. \"auth.7\", \"design.4\", \"deploy.2\"). Around the folder: four AI-assistant icons in different colors (generic, representing different vendors — NO logos, just colored stylized assistant figures), each with arrows pointing INTO and OUT OF the bottom compartment. A label between the four assistants reads \"Claude / Gemini / OpenAI / others — same store.\" A large arrow points outside the folder to empty space, with a prominent label: \"no SaaS, no vendor servers, no signup.\" Caption: \"Lives where your code lives.\" These images are for the beadwork-overview presenter skill — a tour of how seven kinds of users (software engineers, data scientists, logistics analysts, warehouse managers, customer support managers, lawyers, solo entrepreneurs) use beadwork (bw — github.com/jallum/beadwork) through their AI assistants for durable agent memory and agent-to-agent communication. The unifying interaction: 'you talk to your agent; your agent uses bw.' Colorblind-friendly, no hex codes. Style: flat design, editorial illustration, simple shapes, bold colors on a light warm-gray background. Think 'product strategy deck illustration,' not whiteboard sketch. Generic AI-assistant figures (NOT vendor-branded; do not include any specific agent names like Pliny, Vera, Cato, Ada, or any company logo).",
+        "imageHash": "b5352e4988f4820dcaca4979259924a775349fbc6a742c34b98d5c35305e645f",
+        "storageKey": "images/Pq3zEc9m9Ek0d6PQxUi9DSiYkSQBUkGr/SSOwjOM63XRQQMd7-_Qwy/0-b5352e4988f4820d.jpg"
+      }
+    ]
+  }
+}

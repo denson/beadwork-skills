@@ -1,0 +1,22 @@
+{
+  "prompt_key": "beat2-mechanism",
+  "name": "beat2-mechanism",
+  "skill": "beadwork-for-decisions",
+  "quality": "2k",
+  "aspectRatio": "16:9",
+  "task_id": "xGd6Nt29XC14h5aJv1oXs",
+  "saved_files": [
+    "beat2-mechanism.jpg"
+  ],
+  "result": {
+    "status": "completed",
+    "images": [
+      {
+        "url": "https://r2.conceptviz.app/images/Pq3zEc9m9Ek0d6PQxUi9DSiYkSQBUkGr/xGd6Nt29XC14h5aJv1oXs/0-86ebe49dabcbb024.jpg",
+        "prompt": "A single ticket card rendered cleanly with each part labeled. TITLE BAR at top: \"Auth: Auth0 vs in-house OAuth\" with a small label-tag chip reading \"decision\" and a status chip reading \"closed.\" DESCRIPTION BLOCK below the title, in a slightly muted background: \"Question: how do we authenticate users? Options considered: (1) Auth0 SaaS, (2) roll our own OAuth, (3) Firebase Auth.\" COMMENTS section, three comment-bubbles stacked vertically, each with author + date stamps: - \"alice · 2026-04-12\" — \"Auth0 wins on time-to-ship; rolling our own is at least 6 weeks of dev.\" - \"bob · 2026-04-13\" — \"concerned about per-user pricing as we scale; need to model.\" - \"alice · 2026-04-14\" — \"modeled, breakeven is at 50K MAU; we're at 2K.\" CLOSE-COMMENT at the bottom with a special highlighted border (thicker, distinct color): - \"closed: 2026-04-15 by alice — Decision: Auth0. Rationale: time-to-ship dominates at our scale; revisit if we cross 50K MAU.\" Caption: \"Decision = ticket. ADR shape, bw substrate.\" These images are for the beadwork-for-decisions presenter skill — a deep-dive on bw (beadwork — github.com/jallum/beadwork) as decision log / ADR / audit trail substrate. Concrete personas in the scenarios: engineer (architecture decision record), lawyer (privilege log), solo entrepreneur (tax-time decision defense). Colorblind-friendly, no hex codes. Style: flat design, editorial illustration, simple shapes, bold colors on a light warm-gray background. Think 'product strategy deck illustration,' not whiteboard sketch. Generic AI-assistant figures (NOT vendor-branded; do not include any specific agent names like Pliny, Vera, Cato, Ada, or any company logo).",
+        "imageHash": "86ebe49dabcbb0243c64d1b17d421fbe19a0bcbe8beaaef5031daeadf7a6e4d5",
+        "storageKey": "images/Pq3zEc9m9Ek0d6PQxUi9DSiYkSQBUkGr/xGd6Nt29XC14h5aJv1oXs/0-86ebe49dabcbb024.jpg"
+      }
+    ]
+  }
+}

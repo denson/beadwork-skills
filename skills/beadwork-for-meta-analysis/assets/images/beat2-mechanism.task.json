@@ -1,0 +1,22 @@
+{
+  "prompt_key": "beat2-mechanism",
+  "name": "beat2-mechanism",
+  "skill": "beadwork-for-meta-analysis",
+  "quality": "2k",
+  "aspectRatio": "16:9",
+  "task_id": "5YlDhKL6JYk5HZVbVkJ6P",
+  "saved_files": [
+    "beat2-mechanism.jpg"
+  ],
+  "result": {
+    "status": "completed",
+    "images": [
+      {
+        "url": "https://r2.conceptviz.app/images/Pq3zEc9m9Ek0d6PQxUi9DSiYkSQBUkGr/5YlDhKL6JYk5HZVbVkJ6P/0-47fc41bc07bfb5c9.jpg",
+        "prompt": "A diagram with a stack of structured ticket cards on the LEFT side. Each ticket shows TITLE plus several signed-and-timestamped comments in a clean column layout. Three to four tickets stacked vertically. On the RIGHT side: a single audit-agent figure (rendered distinctly with a magnifying-glass icon) reading the stack. Above the audit agent, four thought-bubble questions arranged in a small cluster: - \"consistency?\" - \"drift?\" - \"contradictions?\" - \"missing steps?\" BETWEEN the tickets and the audit agent: a small label \"`bw show / bw list / bw history`.\" BELOW the diagram: a footnote reading \"all author stamps. all timestamps. all structure. = analyzable.\" Caption: \"Read the work, not the chat.\" These images are for the beadwork-for-meta-analysis presenter skill — a deep-dive on running an agent over the bw (beadwork — github.com/jallum/beadwork) history of OTHER agents to audit, check methodology, or synthesize. Concrete personas in the scenarios: engineer (multi-agent code review with conflict-finder), data scientist (analysis pipeline with methodology auditor), lawyer (cross-case consistency check). Colorblind-friendly, no hex codes. Style: flat design, editorial illustration, simple shapes, bold colors on a light warm-gray background. Think 'product strategy deck illustration,' not whiteboard sketch. Generic AI-assistant figures (NOT vendor-branded; do not include any specific agent names like Pliny, Vera, Cato, Ada, or any company logo).",
+        "imageHash": "47fc41bc07bfb5c9d006ef43461e03617bc6e0ee4b298065f4d832dea286b01c",
+        "storageKey": "images/Pq3zEc9m9Ek0d6PQxUi9DSiYkSQBUkGr/5YlDhKL6JYk5HZVbVkJ6P/0-47fc41bc07bfb5c9.jpg"
+      }
+    ]
+  }
+}

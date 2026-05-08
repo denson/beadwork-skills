@@ -1,0 +1,22 @@
+{
+  "prompt_key": "beat4-close",
+  "name": "beat4-close",
+  "skill": "beadwork-as-memory",
+  "quality": "2k",
+  "aspectRatio": "16:9",
+  "task_id": "LFDSRRZ4yBvrLgGR4YZ5_",
+  "saved_files": [
+    "beat4-close.jpg"
+  ],
+  "result": {
+    "status": "completed",
+    "images": [
+      {
+        "url": "https://r2.conceptviz.app/images/Pq3zEc9m9Ek0d6PQxUi9DSiYkSQBUkGr/LFDSRRZ4yBvrLgGR4YZ5_/0-dc4a8a996366de7e.jpg",
+        "prompt": "A simple closing card. Across the top: a row of failure-mode icons in small chip-cards: \"session ended,\" \"/clear,\" \"agent restart,\" \"machine swap,\" \"vendor swap,\" \"+ time passes.\" Each chip has a small downward arrow. All six arrows converge on a single durable ticket card centered below the chips. The ticket is bold, unbroken, with a green checkmark in its corner. Below the ticket: four small pointer-card icons arranged horizontally for the companion skills, each with name and representative icon: \"beadwork-overview\" (compass icon), \"beadwork-as-bus\" (network icon), \"beadwork-for-meta-analysis\" (magnifying-glass icon), \"beadwork-for-decisions\" (decision-tree icon). Caption: \"Memory survives. Pick what to read next.\" These images are for the beadwork-as-memory presenter skill — a deep-dive on bw (beadwork — github.com/jallum/beadwork) as durable agent memory across sessions, restarts, and time. Concrete personas in the scenarios: data scientist, lawyer, solo entrepreneur. Colorblind-friendly, no hex codes. Style: flat design, editorial illustration, simple shapes, bold colors on a light warm-gray background. Think 'product strategy deck illustration,' not whiteboard sketch. Generic AI-assistant figures (NOT vendor-branded; do not include any specific agent names like Pliny, Vera, Cato, Ada, or any company logo).",
+        "imageHash": "dc4a8a996366de7e440fe73016b2d86c658601d5f71279741766e8be4a7b6537",
+        "storageKey": "images/Pq3zEc9m9Ek0d6PQxUi9DSiYkSQBUkGr/LFDSRRZ4yBvrLgGR4YZ5_/0-dc4a8a996366de7e.jpg"
+      }
+    ]
+  }
+}

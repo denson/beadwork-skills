@@ -1,0 +1,22 @@
+{
+  "prompt_key": "beat2-mechanism",
+  "name": "beat2-mechanism",
+  "skill": "beadwork-as-memory",
+  "quality": "2k",
+  "aspectRatio": "16:9",
+  "task_id": "InaIFlfg0rl_7HFS50Iwn",
+  "saved_files": [
+    "beat2-mechanism.jpg"
+  ],
+  "result": {
+    "status": "completed",
+    "images": [
+      {
+        "url": "https://r2.conceptviz.app/images/Pq3zEc9m9Ek0d6PQxUi9DSiYkSQBUkGr/InaIFlfg0rl_7HFS50Iwn/0-7e6bd62b6020a00e.jpg",
+        "prompt": "A diagram of one ticket card, rendered in detail, with a structured layout. TOP BAR of the ticket: TITLE \"Auth0 migration plan\" plus three small chip-tags: \"priority:1\", \"status:open\", \"type:task.\" BODY: a column of comment bubbles, each with a date-stamp on the left and an author label, vertically stacked: - \"claude · 2026-05-01\" — \"investigated three providers; Auth0, Clerk, in-house.\" - \"user · 2026-05-02\" — \"Auth0 it is. Pricing concern at scale; revisit at 50K MAU.\" - \"claude · 2026-05-12\" — \"PKCE flow scaffolded. Test JWT issued. Working.\" OFF TO THE SIDE: a small AI-assistant figure with an arrow pointing into the ticket, labeled \"`bw show <id>` returns the full thread.\" Caption: \"Title + comments + author + timestamp = reconstruction substrate.\" These images are for the beadwork-as-memory presenter skill — a deep-dive on bw (beadwork — github.com/jallum/beadwork) as durable agent memory across sessions, restarts, and time. Concrete personas in the scenarios: data scientist, lawyer, solo entrepreneur. Colorblind-friendly, no hex codes. Style: flat design, editorial illustration, simple shapes, bold colors on a light warm-gray background. Think 'product strategy deck illustration,' not whiteboard sketch. Generic AI-assistant figures (NOT vendor-branded; do not include any specific agent names like Pliny, Vera, Cato, Ada, or any company logo).",
+        "imageHash": "7e6bd62b6020a00e0ab56652fe0da45d883a1319ac12680c963ab09267131149",
+        "storageKey": "images/Pq3zEc9m9Ek0d6PQxUi9DSiYkSQBUkGr/InaIFlfg0rl_7HFS50Iwn/0-7e6bd62b6020a00e.jpg"
+      }
+    ]
+  }
+}

@@ -823,7 +823,7 @@ def load_api_key() -> str:
         sys.exit(1)
     completed = subprocess.run(
         ["op", "read", OP_REFERENCE],
-        capture_output=True, text=True, timeout=30, check=False,
+        capture_output=True, text=True, timeout=60, check=False,
     )
     if completed.returncode != 0:
         print(f"ERROR: `op read {OP_REFERENCE}` failed (exit {completed.returncode}).", file=sys.stderr)

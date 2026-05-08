@@ -1,0 +1,22 @@
+{
+  "prompt_key": "dynamic-operations",
+  "name": "dynamic-operations",
+  "skill": "beadwork-overview",
+  "quality": "2k",
+  "aspectRatio": "16:9",
+  "task_id": "MWdRbOueDxJxPnbMw5jM6",
+  "saved_files": [
+    "dynamic-operations.jpg"
+  ],
+  "result": {
+    "status": "completed",
+    "images": [
+      {
+        "url": "https://r2.conceptviz.app/images/Pq3zEc9m9Ek0d6PQxUi9DSiYkSQBUkGr/MWdRbOueDxJxPnbMw5jM6/0-42f2054321b3a1d4.jpg",
+        "prompt": "A composition with two horizontal scenes stacked vertically. TOP SCENE (Warehouse Manager): a warehouse cross-section with day-shift activity on the left (forklift, pallets) fading into night-shift activity on the right (lower lighting). Both shifts have AI-assistant figures. An arrow connects them through a central ticket card labeled \"shift handoff log.\" Off to the right side: two separate small organization buildings labeled \"warehouse\" and \"logistics partner,\" each with an AI-assistant figure, with arrows between them through another ticket card labeled \"vendor coordination.\" BOTTOM SCENE (Customer Support Manager): a customer service interface on the left (a chat-bubble + headset icon); an engineering team workspace on the right (a code-screen icon). Three AI figures arrayed (one near customer service, one near engineering, one in the middle labeled \"manager's AI\") all reading and writing to a central ticket card labeled \"escalation 2026-Q2-acme.\" A small inspector figure with a clipboard sits off to the side, reading from a stack of ticket cards. Caption: \"Coordination IS record-keeping.\" These images are for the beadwork-overview presenter skill — a tour of how seven kinds of users (software engineers, data scientists, logistics analysts, warehouse managers, customer support managers, lawyers, solo entrepreneurs) use beadwork (bw — github.com/jallum/beadwork) through their AI assistants for durable agent memory and agent-to-agent communication. The unifying interaction: 'you talk to your agent; your agent uses bw.' Colorblind-friendly, no hex codes. Style: flat design, editorial illustration, simple shapes, bold colors on a light warm-gray background. Think 'product strategy deck illustration,' not whiteboard sketch. Generic AI-assistant figures (NOT vendor-branded; do not include any specific agent names like Pliny, Vera, Cato, Ada, or any company logo).",
+        "imageHash": "42f2054321b3a1d432a1840a783191f37df2445c2c36808cdf0e506da3c8e920",
+        "storageKey": "images/Pq3zEc9m9Ek0d6PQxUi9DSiYkSQBUkGr/MWdRbOueDxJxPnbMw5jM6/0-42f2054321b3a1d4.jpg"
+      }
+    ]
+  }
+}

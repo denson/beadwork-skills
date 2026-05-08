@@ -1,0 +1,22 @@
+{
+  "prompt_key": "beat3-scenarios",
+  "name": "beat3-scenarios",
+  "skill": "beadwork-as-memory",
+  "quality": "2k",
+  "aspectRatio": "16:9",
+  "task_id": "yet2aGre7OmXw1B9PFbTt",
+  "saved_files": [
+    "beat3-scenarios.jpg"
+  ],
+  "result": {
+    "status": "completed",
+    "images": [
+      {
+        "url": "https://r2.conceptviz.app/images/Pq3zEc9m9Ek0d6PQxUi9DSiYkSQBUkGr/yet2aGre7OmXw1B9PFbTt/0-3341ad85a9c5119a.jpg",
+        "prompt": "Three vertical lanes, each showing a memory scenario across a different time horizon. LEFT LANE (Data Scientist, cool blue tint): a multi-day timeline labeled \"Day 1 → Day 7\" with daily comment-cards stacking up vertically on a central ticket card labeled \"Q3-churn-investigation.\" On Day 7, an AI-assistant figure reads the full stack and emerges with a doc icon labeled \"executive memo.\" MIDDLE LANE (Lawyer, warm amber tint): a long horizontal case-file ticket labeled \"case-smith-v-jones\" with many comment-cards spanning months (timeline labeled \"March → November\"). A \"new paralegal\" figure appears at the September mark on the timeline, with an AI-assistant figure beside them reading the ticket from the start. RIGHT LANE (Solo Entrepreneur, warm rose tint): two engagement ticket cards labeled \"April client\" and \"October client,\" connected by a curving \"lessons\" arrow from the first to the second. A solo-entrepreneur figure with their AI-assistant figure beside them, reading the connecting lesson. Caption: \"Same mechanism, three shapes of memory.\" These images are for the beadwork-as-memory presenter skill — a deep-dive on bw (beadwork — github.com/jallum/beadwork) as durable agent memory across sessions, restarts, and time. Concrete personas in the scenarios: data scientist, lawyer, solo entrepreneur. Colorblind-friendly, no hex codes. Style: flat design, editorial illustration, simple shapes, bold colors on a light warm-gray background. Think 'product strategy deck illustration,' not whiteboard sketch. Generic AI-assistant figures (NOT vendor-branded; do not include any specific agent names like Pliny, Vera, Cato, Ada, or any company logo).",
+        "imageHash": "3341ad85a9c5119a1599d36ad955c4b4d9aa6b495cecb701ebe1a50e3ea11c55",
+        "storageKey": "images/Pq3zEc9m9Ek0d6PQxUi9DSiYkSQBUkGr/yet2aGre7OmXw1B9PFbTt/0-3341ad85a9c5119a.jpg"
+      }
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "prompt_key": "beat3-scenarios",
+  "name": "beat3-scenarios",
+  "skill": "beadwork-as-bus",
+  "quality": "2k",
+  "aspectRatio": "16:9",
+  "task_id": "3TsEcgC8xSCtbfYKSv1jq",
+  "saved_files": [
+    "beat3-scenarios.png"
+  ],
+  "result": {
+    "status": "completed",
+    "images": [
+      {
+        "url": "https://r2.conceptviz.app/images/Pq3zEc9m9Ek0d6PQxUi9DSiYkSQBUkGr/3TsEcgC8xSCtbfYKSv1jq/0-08b14aa19aba1c59.png",
+        "prompt": "Four small panels arranged in a 2×2 grid, each showing one agent-to-agent communication scenario. TOP-LEFT (Engineer): a PR-42 review ticket card with three structured-verdict comments visible (\"security agent\", \"style agent\", \"test-coverage agent\"). An engineer's AI-assistant figure stands beside the ticket synthesizing the responses. TOP-RIGHT (Data Scientist): three day-stamped tickets connected horizontally by arrows showing the analysis pipeline: cleaner (Monday) → tester (Tuesday) → visualizer (Wednesday). A small AI-assistant figure beside each ticket. BOTTOM-LEFT (Support Manager): three columns (Customer Support, Engineering, Manager) each with an AI-assistant figure, all writing to a central escalation ticket card in the middle. BOTTOM-RIGHT (Warehouse Manager): two organization-building icons (labeled \"warehouse\" and \"logistics partner\"), each with an AI-assistant figure, both writing to a shared pickup-schedule ticket between them. Caption: \"Within a job, across days, across teams, across organizations.\" These images are for the beadwork-as-bus presenter skill — a deep-dive on bw (beadwork — github.com/jallum/beadwork) as agent-to-agent communication across multiple agents, teams, organizations, and AI vendors. Concrete personas in the scenarios: engineer, data scientist, support manager, warehouse manager. Colorblind-friendly, no hex codes. Style: flat design, editorial illustration, simple shapes, bold colors on a light warm-gray background. Think 'product strategy deck illustration,' not whiteboard sketch. Generic AI-assistant figures (NOT vendor-branded; do not include any specific agent names like Pliny, Vera, Cato, Ada, or any company logo).",
+        "imageHash": "08b14aa19aba1c598b462f9f67f6a19ffdf7360b0e67d3f05274969dfa31aeab",
+        "storageKey": "images/Pq3zEc9m9Ek0d6PQxUi9DSiYkSQBUkGr/3TsEcgC8xSCtbfYKSv1jq/0-08b14aa19aba1c59.png"
+      }
+    ]
+  }
+}

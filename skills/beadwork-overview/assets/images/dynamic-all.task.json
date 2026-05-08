@@ -1,0 +1,22 @@
+{
+  "prompt_key": "dynamic-all",
+  "name": "dynamic-all",
+  "skill": "beadwork-overview",
+  "quality": "2k",
+  "aspectRatio": "16:9",
+  "task_id": "ja-okhkyu_7aQ8ghWAc1-",
+  "saved_files": [
+    "dynamic-all.jpg"
+  ],
+  "result": {
+    "status": "completed",
+    "images": [
+      {
+        "url": "https://r2.conceptviz.app/images/Pq3zEc9m9Ek0d6PQxUi9DSiYkSQBUkGr/ja-okhkyu_7aQ8ghWAc1-/0-c321fb2db7afc51a.jpg",
+        "prompt": "A grid of seven small panels, one per persona, arranged in a 4-3 layout. Each panel shows the same simple shape: persona figure on the left, a small speech bubble in the middle showing what they ask their agent, an AI-assistant figure on the right, and a bw ticket card emerging from or being read by the AI. TOP ROW: 1. Engineer — speech bubble \"why did we decide on Auth0?\" — AI reading bw show. 2. Data scientist — speech bubble \"what was March's churn methodology?\" — AI reading bw show. 3. Warehouse manager — speech bubble \"incidents this month?\" — AI running bw list. 4. Support manager — speech bubble \"top 5 pain points?\" — AI running bw list. BOTTOM ROW: 5. Lawyer — speech bubble \"privilege reasoning on doc 4789?\" — AI reading bw show. 6. Logistics analyst — speech bubble \"Q2 vendor scorecard?\" — AI reading the bw ticket. 7. Solo entrepreneur — speech bubble \"what worked with Acme?\" — AI surfacing bw lessons. Across the bottom of the full image: a single banner reading \"one pattern. seven roles. seven kinds of work.\" Caption: \"One pattern. Seven roles.\" These images are for the beadwork-overview presenter skill — a tour of how seven kinds of users (software engineers, data scientists, logistics analysts, warehouse managers, customer support managers, lawyers, solo entrepreneurs) use beadwork (bw — github.com/jallum/beadwork) through their AI assistants for durable agent memory and agent-to-agent communication. The unifying interaction: 'you talk to your agent; your agent uses bw.' Colorblind-friendly, no hex codes. Style: flat design, editorial illustration, simple shapes, bold colors on a light warm-gray background. Think 'product strategy deck illustration,' not whiteboard sketch. Generic AI-assistant figures (NOT vendor-branded; do not include any specific agent names like Pliny, Vera, Cato, Ada, or any company logo).",
+        "imageHash": "c321fb2db7afc51ad2b0844ad51f9be4179fb26e773d0bc5bf28f1aeb7bf9718",
+        "storageKey": "images/Pq3zEc9m9Ek0d6PQxUi9DSiYkSQBUkGr/ja-okhkyu_7aQ8ghWAc1-/0-c321fb2db7afc51a.jpg"
+      }
+    ]
+  }
+}

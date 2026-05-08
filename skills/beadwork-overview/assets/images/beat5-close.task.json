@@ -1,0 +1,22 @@
+{
+  "prompt_key": "beat5-close",
+  "name": "beat5-close",
+  "skill": "beadwork-overview",
+  "quality": "2k",
+  "aspectRatio": "16:9",
+  "task_id": "5JAWiZFbJL0yR6z1CgI5Q",
+  "saved_files": [
+    "beat5-close.jpg"
+  ],
+  "result": {
+    "status": "completed",
+    "images": [
+      {
+        "url": "https://r2.conceptviz.app/images/Pq3zEc9m9Ek0d6PQxUi9DSiYkSQBUkGr/5JAWiZFbJL0yR6z1CgI5Q/0-05ac74f8f9724037.jpg",
+        "prompt": "A clean closing card. At the top center: a small bw ticket icon with a checkmark inside. Below the ticket icon: five labeled cards arranged in a 3-2 grid representing the five companion skills, each card with a representative icon and a name label: TOP ROW (3 cards): 1. A clock + brain icon — label \"beadwork-as-memory.\" 2. A network icon (multiple agents connected through a central node) — label \"beadwork-as-bus.\" 3. A magnifying-glass icon over a stack of tickets — label \"beadwork-for-meta-analysis.\" BOTTOM ROW (2 cards): 4. A decision-tree icon — label \"beadwork-for-decisions.\" 5. A wrench icon — label \"beadwork-install.\" Below the grid: a small caption in italic reading \"open source. authored by Denson Smith. bw itself by jallum (github.com/jallum/beadwork).\" Caption: \"Five companion skills.\" These images are for the beadwork-overview presenter skill — a tour of how seven kinds of users (software engineers, data scientists, logistics analysts, warehouse managers, customer support managers, lawyers, solo entrepreneurs) use beadwork (bw — github.com/jallum/beadwork) through their AI assistants for durable agent memory and agent-to-agent communication. The unifying interaction: 'you talk to your agent; your agent uses bw.' Colorblind-friendly, no hex codes. Style: flat design, editorial illustration, simple shapes, bold colors on a light warm-gray background. Think 'product strategy deck illustration,' not whiteboard sketch. Generic AI-assistant figures (NOT vendor-branded; do not include any specific agent names like Pliny, Vera, Cato, Ada, or any company logo).",
+        "imageHash": "05ac74f8f97240376cdb2b5cb0cf031a6a5285c9f906c1a8ff8281e6c718e1a3",
+        "storageKey": "images/Pq3zEc9m9Ek0d6PQxUi9DSiYkSQBUkGr/5JAWiZFbJL0yR6z1CgI5Q/0-05ac74f8f9724037.jpg"
+      }
+    ]
+  }
+}
