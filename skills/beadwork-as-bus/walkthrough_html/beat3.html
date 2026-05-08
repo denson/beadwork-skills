@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Beat 3 — Four shapes that come up often.</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="beat-tag">Beat 3 &middot; Persona scenarios</div>
+    <h1>Within a job, across days, across teams, across organizations.</h1>
+
+    <p>Four shapes that come up often. Same mechanism in every case.</p>
+
+    <div class="image-frame">
+      <img src="images/beat3-scenarios.jpg" alt="Four small panels arranged in a 2x2 grid, each showing one scenario. Top-left (Engineer): a PR-42 review ticket card with three structured-verdict comments (security agent, style agent, test-coverage agent), and an engineer's AI synthesizing them. Top-right (Data Scientist): three day-stamped tickets connected by arrows showing an analysis pipeline (cleaner Monday → tester Tuesday → visualizer Wednesday). Bottom-left (Support Manager): three columns labeled CS, engineering, manager — each with an AI figure, all writing to a central escalation ticket between them. Bottom-right (Warehouse Manager): two organization buildings (warehouse + logistics partner), each with an AI figure, both writing to a shared pickup-schedule ticket between them.">
+      <p class="caption">Within a job, across days, across teams, across organizations.</p>
+    </div>
+
+    <h2>Multi-agent within one job — engineer's PR review</h2>
+    <p>PR-42 review. Three review agents (security, style, test-coverage) each post a structured verdict to the same ticket. The submitting engineer's AI reads the consolidated ticket and synthesizes the responses into one summary.</p>
+
+    <h2>Multi-agent across days — data scientist analysis pipeline</h2>
+    <p>Monday's data-cleaner agent writes the cleaned dataset's stats to a ticket. Tuesday's tester agent reads those stats and runs the right hypothesis tests. Wednesday's visualizer agent reads both prior comments and generates plots. <strong>The pipeline is async; each step's input is the previous step's bw comment.</strong></p>
+
+    <h2>Cross-team — support manager + engineering</h2>
+    <p>A customer escalation opens a bw ticket. Engineering's AI reads it from shared bw, posts a fix ETA. The support manager's AI reads the update, drafts the customer reply. <strong>Three departments, no Slack thread, no email chain.</strong></p>
+
+    <h2>Cross-org — warehouse manager + logistics partner</h2>
+    <p>The vendor agent at a logistics partner posts pickup schedules to a shared ticket. The warehouse manager's AI reads them, confirms or proposes alternatives. <strong>Two organizations' AIs coordinating asynchronously, no common chat thread, full audit trail.</strong></p>
+
+    <div class="callout">
+      <p>Different scopes &mdash; one job, multi-day, cross-department, cross-organization. <strong>Same mechanism in every case:</strong> agents read each other's bw comments and write their own.</p>
+    </div>
+  </div>
+</body>
+</html>

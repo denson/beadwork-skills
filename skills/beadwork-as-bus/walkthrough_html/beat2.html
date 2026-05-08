@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Beat 2 — How communication works in bw.</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="beat-tag">Beat 2 &middot; The mechanism</div>
+    <h1>Conflict-free by construction.</h1>
+
+    <p>Multiple agents read and write the same <code>bw</code> store. Each comment records who wrote it (a role name, an agent name, a timestamp) &mdash; so when Agent B reads what Agent A wrote yesterday, B knows who said it and when.</p>
+
+    <div class="image-frame">
+      <img src="images/beat2-mechanism.jpg" alt="A diagram showing two ticket cards side by side. Ticket-1 has several comment bubbles inside; ticket-2 has its own different comment bubbles. Two AI assistant figures: Agent A on the left writing to ticket-1; Agent B on the right writing to ticket-2 — both at the same time, drawn with concurrent-action lines. Arrows show no overlap; the writes go to different files. Below: a merged view showing both tickets coexisting in the same bw store labeled 'shared store.' A small caption near the diagram reads 'no merge driver. no lock file. no coordination overhead.'">
+      <p class="caption">Different tickets, different files. No collision.</p>
+    </div>
+
+    <p>Two agents working on different tickets simultaneously never touch the same bytes &mdash; <code>bw</code> stores each ticket as a separate file under the orphan branch. No merge drivers, no lock files, no coordination overhead. Two agents writing different files at the same time just works.</p>
+
+    <div class="callout">
+      <p><strong>Cross-vendor portability:</strong> <code>bw</code> is just shell commands (<code>bw show</code>, <code>bw comment</code>, <code>bw close</code>). Agents from different vendors &mdash; Claude, Gemini, OpenAI, anything that runs a CLI &mdash; all participate the same way. Same store, different brands of agent reading and writing it.</p>
+    </div>
+  </div>
+</body>
+</html>
