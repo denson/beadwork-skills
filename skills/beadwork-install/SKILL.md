@@ -1,6 +1,6 @@
 ---
 name: beadwork-install
-description: "Install and configure beadwork (bw — github.com/jallum/beadwork) in a git repo. Adapts to bw release state: uses install.sh if a release containing PR #117 is available, builds from source on main otherwise. Handles Go toolchain prerequisite. Surfaces platform security prompts (UAC, sudo, Gatekeeper) before they fire so non-technical users aren't surprised. Drives storage-mode choice (local-only / private GitHub / public GitHub) with explicit warning about public-repo exposure. Triggers: install bw, install beadwork, set up beadwork, set up bw, configure bw, initialize beadwork, add bw to this project, get beadwork running."
+description: "Install and configure beadwork (bw — github.com/jallum/beadwork) in a git repo. Adapts to bw release state: uses install.sh if a release containing PR #117 is available, builds from source on main otherwise. Handles Go toolchain prerequisite. Surfaces platform security prompts (UAC, sudo, Gatekeeper) before they fire so non-technical users aren't surprised. Drives storage-mode choice (local-only / private cloud solo / team cloud / public) with explicit warning about public-repo exposure and accurate GitHub pricing context. Triggers: install bw, install beadwork, set up beadwork, set up bw, configure bw, initialize beadwork, add bw to this project, get beadwork running."
 ---
 
 # beadwork-install — Drive the install end-to-end
@@ -333,19 +333,20 @@ This is the choice that affects who can read your tickets. **Surface this explic
 
 Ask the user:
 
-> *"How do you want to store the bw data? Three options, and I want to be explicit about a privacy trade-off."*
+> *"How do you want to store the bw data? Four options, and I want to be explicit about the privacy trade-offs."*
 
-| Mode | What it means | When to choose |
-|---|---|---|
-| **Local-only** | bw data lives in your local clone. The `beadwork` branch is never pushed to a remote. Maximum privacy. | Pick this if (a) you don't need cross-machine sync, or (b) your repo's remote is public and you want tickets to stay off it. |
-| **Private GitHub remote** | The `beadwork` branch is pushed to a private GitHub repo. Cross-machine sync via `bw sync`. | You want the data backed up to GitHub and accessible from multiple machines, and you have a private repo to push to. |
-| **Public GitHub remote** | ⚠️ **The `beadwork` branch is pushed to a public repo. Tickets, comments, and decision history all become publicly visible on GitHub.** | Only suitable for genuinely public projects where you're comfortable with all work history being readable by anyone. |
+| Mode | What it means | Cost | When to choose |
+|---|---|---|---|
+| **Local-only** (the simplest free option) | bw data lives only in your local clone. The `beadwork` branch is never pushed anywhere. Maximum privacy; nothing uploaded. | Free; no online account needed at all. | Pick this if (a) you only use one computer for this work, (b) your repo's remote is public and you want tickets to stay off it, or (c) you want maximum privacy. **Caveat:** if the laptop dies, the notes go with it. |
+| **Private cloud, solo** | The `beadwork` branch is pushed to a private GitHub repo only you can access. Survives a laptop crash; cross-machine sync via `bw sync`. | **GitHub Pro (~$4/month) is the recommended smoother setup for non-coders.** (Technically a free GitHub account also supports private repos, so this can be done for free if the user prefers — but the paid plan is the cleaner experience.) | You want backup against laptop loss and access from multiple machines, but only by you. |
+| **Team cloud** | The `beadwork` branch is pushed to a private GitHub repo shared by your team. Multiple humans + their AIs all read and write the same store. | Technically possible on free accounts, but most teams use **GitHub Team** (~$4/person/month) for governance features (CODEOWNERS, branch protection, audit log). | You're working with other people and want the team's AIs + humans to coordinate through one shared substrate. |
+| **Public GitHub remote** | ⚠️ **The `beadwork` branch is pushed to a public repo. Tickets, comments, and decision history all become publicly visible on GitHub.** | Free. | Only suitable for genuinely public projects where you're comfortable with all work history being readable by anyone. |
 
 ⚠️ **Surface this verbatim if the user chooses public:**
 
 > *"Pushing the beadwork branch to a public GitHub repo makes your tickets, comments, and decision history publicly visible on GitHub. That includes any draft features, internal discussions, customer details, security thoughts, or sensitive context that ends up in tickets. Choose this only for genuinely public projects.*
 >
-> *If you want privacy: use **local-only** (option 1), or use a **private GitHub repo** (option 2). Private repos are free for many GitHub plans; if your account doesn't currently support private repos, **GitHub Pro is ~$4/mo for personal accounts**.*
+> *If you want privacy: use **local-only** (option 1) for the simplest free setup &mdash; nothing uploaded anywhere, no online account needed. Or use a **private cloud repo** (options 2 or 3) if you want backup and cross-device sync; the smoothest non-coder path is **GitHub Pro at about $4/month**. (A free GitHub account technically also supports private repos if cost is critical.) Team coordination uses **GitHub Team** at ~$4 per person per month.*
 >
 > *Are you sure you want public mode?"*
 
@@ -442,7 +443,7 @@ If they want to learn more, point them at the marketplace's other skills:
 
 4. **Don't invent install URLs or release locations.** The canonical install is `curl -fsSL https://raw.githubusercontent.com/jallum/beadwork/main/install.sh | sh` for tagged releases (Path A), or build from source per **Path B** otherwise. Manual binary downloads from `https://github.com/jallum/beadwork/releases`. If a user asks for an alternative install path, point them at the bw README rather than guess.
 
-5. **Authorship is Denson Smith** — this skill, the marketplace, and the patterns it recommends. **`bw` itself is jallum's** at `https://github.com/jallum/beadwork`; credit generously and explicitly.
+5. **Metadata authorship is Denson Smith (immutable)** — this skill, the marketplace, and all backend metadata files. **Do NOT credit Denson Smith in user-facing prose during install** (the walkthroughs that talk to the user). **`bw` itself is jallum's** at `https://github.com/jallum/beadwork`; that source citation is required.
 
 6. **Don't skip the storage-mode question.** Even if the user seems impatient, **Step 6** is load-bearing. Default to local-only if they really won't pick.
 

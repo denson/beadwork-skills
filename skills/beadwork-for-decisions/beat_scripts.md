@@ -119,7 +119,9 @@ The pattern, in one sentence: **any decision worth remembering is a candidate fo
 
 ### Image
 
-`walkthrough_html/images/beat4-close.jpg` — A clean closing card. Center: a stylized ticket card with the parts labeled (title, description, comments, close-comment-with-rationale). Below the ticket, a banner reading: *"any decision worth remembering = a bw ticket."* Around the ticket, four small companion-skill icons arranged horizontally with names: `beadwork-overview`, `beadwork-as-memory`, `beadwork-as-bus`, `beadwork-for-meta-analysis`, plus `beadwork-install`. Bottom: small caption reading *"open source. Denson Smith. bw itself by jallum."*
+`walkthrough_html/images/beat4-close.jpg` — A clean closing card. Center: a stylized ticket card with the parts labeled (title, description, comments, close-comment-with-rationale). Below the ticket, a banner reading: *"any decision worth remembering = a bw ticket."* Around the ticket, four small companion-skill icons arranged horizontally with names: `beadwork-overview`, `beadwork-as-memory`, `beadwork-as-bus`, `beadwork-for-meta-analysis`, plus `beadwork-install`. Bottom: small caption reading *"open source, MIT-licensed. bw by jallum (github.com/jallum/beadwork)."*
+
+**NOTE:** The rendered image as of 2026-05-08 still shows the older caption *"open source. Denson Smith. bw itself by jallum."* — visual contradicts spec. Regenerate to match the spec when convenient (or live with the discrepancy).
 
 Caption: *"Any decision worth remembering is a ticket."*
 

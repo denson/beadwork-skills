@@ -46,7 +46,7 @@ Any decision worth remembering is a candidate for a bw ticket. The "ticket" shap
 
 ## Hard rules
 
-1. **Authorship is Denson Smith.** `bw` is jallum's tool; credit.
+1. **Metadata authorship is Denson Smith (immutable).** Do NOT credit Denson Smith in user-facing walkthrough prose. The prose attributes only `bw` itself to jallum; self-credit is dropped from the closing attribution.
 2. **bw is the subject; users (the seven personas) are the audience; we never appear.** No mention of "the four-role agent pipeline," no Pliny/Vera/Cato, no workspace-specific ticket IDs.
 3. **The unification: "you talk to your agent; your agent uses bw."** Don't break it.
 4. **One beat per message.** Navigate → chat → AskUserQuestion → STOP.
