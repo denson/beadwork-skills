@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Beat 2 — What bw actually is.</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="beat-tag">Beat 2 &middot; What bw is</div>
+    <h1>Five structural things make bw different.</h1>
+
+    <p>Most "AI memory" tools today are SaaS &mdash; you sign up for an account, your AI's notes live on someone else's server, and you pay for the privilege. <code>bw</code> is structurally different.</p>
+
+    <div class="image-frame">
+      <img src="images/beat2-trust.jpg" alt="A stylized diagram of a developer's repository, shown as a folder labeled 'your repo / your disk.' Inside the folder: project files visible at the top (a generic source-code icon, a README file, a config file), and a separate compartment at the bottom labeled 'beadwork (orphan branch)' containing several ticket cards. Multiple AI assistant icons in different colors representing different vendors (Claude, Gemini, OpenAI, generic) are arrayed around the folder, each with arrows reading and writing into the beadwork compartment. A large arrow points outside the diagram with the label 'no SaaS, no vendor servers, no signup.'">
+      <p class="caption">Lives where your code lives.</p>
+    </div>
+
+    <ol>
+      <li><strong>It lives in your repo.</strong> Your disk, your git, your remote of choice. Not on jallum's servers. Not on any vendor's servers. The data goes wherever your code goes &mdash; and stops wherever you stop pushing.</li>
+      <li><strong>It's free.</strong> No signup, no quotas, no per-user pricing. Single binary, install with one curl command. The price is "you already have git."</li>
+      <li><strong>It's cross-AI portable.</strong> Claude, Gemini, OpenAI, Cursor, anything that can shell out to <code>bw show</code> reads the same store. <strong>Your AI's memory is portable across vendors</strong> &mdash; if Anthropic raises prices and you switch to Gemini, your agent memory comes with you.</li>
+      <li><strong>It's open source.</strong> jallum's project, MIT-licensed. The format is plain JSON files in a git branch. If <code>bw</code> disappeared tomorrow, your data is still there.</li>
+      <li><strong>It survives compaction.</strong> The killer feature. Tickets and comments persist across session boundaries, agent restarts, machine swaps, and the years.</li>
+    </ol>
+
+    <div class="callout">
+      <p>This combination &mdash; durable, portable, free, open, in your repo &mdash; is what makes <code>bw</code> different from "AI memory" SaaS tools. <strong>The trust story is structural, not a marketing claim.</strong></p>
+    </div>
+  </div>
+</body>
+</html>
