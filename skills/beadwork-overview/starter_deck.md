@@ -12,7 +12,7 @@ Read this silently before starting. All hard rules from `SKILL.md` apply.
 
 **File:** `walkthrough_html/beat1.html`
 **Image:** `walkthrough_html/images/beat1-hook.jpg`
-**Navigate:** `http://localhost:8910/beat1.html`
+**Navigate:** `http://localhost:8910/beadwork-overview/walkthrough_html/beat1.html`
 **Chat shape:** 3-4 sentences naming the compaction problem (generic, no agent-team specifics) and bw as the fix. The "talk to your agent" framing introduced. See `beat_scripts.md` Beat 1.
 **Question:** "Recognize the problem?"
 
@@ -22,7 +22,7 @@ Read this silently before starting. All hard rules from `SKILL.md` apply.
 
 **File:** `walkthrough_html/beat2.html`
 **Image:** `walkthrough_html/images/beat2-trust.jpg`
-**Navigate:** `http://localhost:8910/beat2.html`
+**Navigate:** `http://localhost:8910/beadwork-overview/walkthrough_html/beat2.html`
 **Chat shape:** 4-5 sentences walking the five structural advantages over SaaS alternatives. See `beat_scripts.md` Beat 2.
 **Question:** "Want to see who uses it?"
 
@@ -32,7 +32,7 @@ Read this silently before starting. All hard rules from `SKILL.md` apply.
 
 **File:** `walkthrough_html/beat3.html`
 **Image:** `walkthrough_html/images/beat3-personas.jpg`
-**Navigate:** `http://localhost:8910/beat3.html`
+**Navigate:** `http://localhost:8910/beadwork-overview/walkthrough_html/beat3.html`
 **Chat shape:** 5-7 sentences (longer than usual) briefing all seven personas. The unification claim ("you talk to your agent; your agent uses bw") lands here. See `beat_scripts.md` Beat 3.
 **Question (HUB):** "Which sounds closest to your work?" — one of (A) Technical, (B) Operations, (C) Professional, (D) Show me all 7 quickly.
 
@@ -76,5 +76,5 @@ The user picks one. Each path is its own short beat that proceeds directly to Be
 
 **File:** `walkthrough_html/beat5.html`
 **Image:** `walkthrough_html/images/beat5-close.jpg`
-**Navigate:** `http://localhost:8910/beat5.html`
+**Navigate:** `http://localhost:8910/beadwork-overview/walkthrough_html/beat5.html`
 **Chat shape:** 4-5 sentences listing the five companion skills + the closing attribution. NO `AskUserQuestion` here — Beat 5 is the terminus.

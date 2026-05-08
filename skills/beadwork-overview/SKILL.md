@@ -20,7 +20,7 @@ The walkthrough uses Claude Code Desktop's **preview panel** to display rich HTM
 
 ## Before your first message
 
-1. Start the server: `preview_start` with name `"beadwork-overview"` (defined in `.claude/launch.json`, port 8910).
+1. Start the server: `preview_start` with name `"beadwork-skills"` (defined in `.claude/launch.json`, port 8910 — one shared server serves every skill in this marketplace).
 2. Read `starter_deck.md` from this skill directory **silently** (do not show it). It's the navigation map.
 3. If the user has not yet triggered the walkthrough explicitly, **stop**. Don't open Beat 1 unprompted. Wait for "what is beadwork" or equivalent.
 
@@ -41,7 +41,7 @@ You do **NOT**:
 
 Every beat follows this exact sequence:
 
-1. **Navigate the preview panel:** `preview_eval` → `window.location.href = 'http://localhost:8910/<page>.html'`
+1. **Navigate the preview panel:** `preview_eval` → `window.location.href = 'http://localhost:8910/beadwork-overview/walkthrough_html/<page>.html'`
 2. **Write 2-4 sentences of conversational context in chat.** Not a copy of the HTML. Add color, respond to what the user said, bridge from the visual to the question.
 3. **Ask ONE question via `AskUserQuestion`** with 2-4 options.
 4. **STOP. Wait for the user to respond before proceeding.**
@@ -50,13 +50,13 @@ Never deliver two beats without a user response between them.
 
 ## The 5 beats
 
-**Beat 1 — Hook: agents forget; bw fixes that.** `http://localhost:8910/beat1.html`
+**Beat 1 — Hook: agents forget; bw fixes that.** `http://localhost:8910/beadwork-overview/walkthrough_html/beat1.html`
 The compaction-cliff problem in generic terms (any AI assistant, any user, any work). The introduction of bw as memory + communication. The "talk to your agent" interaction pattern.
 
-**Beat 2 — What bw is (the trust story).** `http://localhost:8910/beat2.html`
+**Beat 2 — What bw is (the trust story).** `http://localhost:8910/beadwork-overview/walkthrough_html/beat2.html`
 Five structural things that make bw different from SaaS alternatives: lives in your repo, free, cross-AI portable, open source, survives compaction.
 
-**Beat 3 — Seven roles, one interaction pattern.** `http://localhost:8910/beat3.html`
+**Beat 3 — Seven roles, one interaction pattern.** `http://localhost:8910/beadwork-overview/walkthrough_html/beat3.html`
 Brief tour of all seven personas (engineer, data scientist, logistics analyst, warehouse manager, customer support manager, lawyer, solo entrepreneur). The unifying claim: **same interaction across all seven; different things being tracked.** This beat ends with the **HUB FORK**.
 
 **Beat 4 — HUB (no own content; the fork from Beat 3).** Branch on the user's answer to one of four paths:
@@ -67,7 +67,7 @@ Brief tour of all seven personas (engineer, data scientist, logistics analyst, w
 
 After the chosen path, proceed to Beat 5 (no further fork).
 
-**Beat 5 — Close: pointers to deeper-dive skills.** `http://localhost:8910/beat5.html`
+**Beat 5 — Close: pointers to deeper-dive skills.** `http://localhost:8910/beadwork-overview/walkthrough_html/beat5.html`
 List of the five companion skills (`beadwork-as-memory`, `beadwork-as-bus`, `beadwork-for-meta-analysis`, `beadwork-for-decisions`, `beadwork-install`). **No `AskUserQuestion` here — Beat 5 is the terminus.**
 
 ## Hard rules

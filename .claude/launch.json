@@ -2,34 +2,10 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "beadwork-overview",
+      "name": "beadwork-skills",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8910", "--directory", "skills/beadwork-overview/walkthrough_html"],
+      "runtimeArgs": ["-m", "http.server", "8910", "--directory", "skills"],
       "port": 8910
-    },
-    {
-      "name": "beadwork-as-memory",
-      "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8911", "--directory", "skills/beadwork-as-memory/walkthrough_html"],
-      "port": 8911
-    },
-    {
-      "name": "beadwork-as-bus",
-      "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8912", "--directory", "skills/beadwork-as-bus/walkthrough_html"],
-      "port": 8912
-    },
-    {
-      "name": "beadwork-for-meta-analysis",
-      "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8913", "--directory", "skills/beadwork-for-meta-analysis/walkthrough_html"],
-      "port": 8913
-    },
-    {
-      "name": "beadwork-for-decisions",
-      "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8914", "--directory", "skills/beadwork-for-decisions/walkthrough_html"],
-      "port": 8914
     }
   ]
 }

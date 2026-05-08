@@ -20,7 +20,7 @@ Standard walkthrough shape: preview panel for HTML beats, `AskUserQuestion` for 
 
 ## Before your first message
 
-1. Start the server: `preview_start` with name `"beadwork-as-memory"` (port 8911).
+1. Start the server: `preview_start` with name `"beadwork-skills"` (port 8910 — one shared server serves every skill in this marketplace).
 2. Read `starter_deck.md` silently.
 3. Don't open Beat 1 unprompted — wait for "memory in bw" or equivalent.
 
@@ -32,15 +32,15 @@ Standard walkthrough shape: preview panel for HTML beats, `AskUserQuestion` for 
 
 ## The 4 beats
 
-**Beat 1 — Hook: most of what your AI needs isn't a whole chat history; it's a few specific things that have to survive.** `http://localhost:8911/beat1.html`
+**Beat 1 — Hook: most of what your AI needs isn't a whole chat history; it's a few specific things that have to survive.** `http://localhost:8910/beadwork-as-memory/walkthrough_html/beat1.html`
 
-**Beat 2 — How memory works in bw.** `http://localhost:8911/beat2.html`
+**Beat 2 — How memory works in bw.** `http://localhost:8910/beadwork-as-memory/walkthrough_html/beat2.html`
 The orphan-branch storage; ticket comments record speaker + timestamp; reconstruction via `bw show` and `bw history`.
 
-**Beat 3 — Persona scenarios: memory in three shapes.** `http://localhost:8911/beat3.html`
+**Beat 3 — Persona scenarios: memory in three shapes.** `http://localhost:8910/beadwork-as-memory/walkthrough_html/beat3.html`
 Data scientist multi-day investigation; lawyer multi-month case; solo entrepreneur cross-engagement lessons.
 
-**Beat 4 — Close: pointers + what survives.** `http://localhost:8911/beat4.html`
+**Beat 4 — Close: pointers + what survives.** `http://localhost:8910/beadwork-as-memory/walkthrough_html/beat4.html`
 The full survival story (sessions, /clear, agents, machines, vendors, time) plus pointers to companion skills. **No `AskUserQuestion` here — Beat 4 is the terminus.**
 
 ## Hard rules

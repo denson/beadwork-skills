@@ -20,7 +20,7 @@ Standard walkthrough shape: preview panel for HTML beats, `AskUserQuestion` for 
 
 ## Before your first message
 
-1. Start the server: `preview_start` with name `"beadwork-as-bus"` (port 8912).
+1. Start the server: `preview_start` with name `"beadwork-skills"` (port 8910 — one shared server serves every skill in this marketplace).
 2. Read `starter_deck.md` silently.
 3. Don't open Beat 1 unprompted — wait for "agents talking through bw" or equivalent.
 
@@ -32,15 +32,15 @@ Standard walkthrough shape: preview panel for HTML beats, `AskUserQuestion` for 
 
 ## The 4 beats
 
-**Beat 1 — Hook: agents need to talk to each other (and to you, asynchronously).** `http://localhost:8912/beat1.html`
+**Beat 1 — Hook: agents need to talk to each other (and to you, asynchronously).** `http://localhost:8910/beadwork-as-bus/walkthrough_html/beat1.html`
 
-**Beat 2 — How communication works in bw.** `http://localhost:8912/beat2.html`
+**Beat 2 — How communication works in bw.** `http://localhost:8910/beadwork-as-bus/walkthrough_html/beat2.html`
 Multiple agents read and write the same store. Comments record speaker. Conflict-free by construction (different tickets = different files; no merge driver needed).
 
-**Beat 3 — Multi-agent + cross-team scenarios.** `http://localhost:8912/beat3.html`
+**Beat 3 — Multi-agent + cross-team scenarios.** `http://localhost:8910/beadwork-as-bus/walkthrough_html/beat3.html`
 Engineer review pipeline. Scientist analysis chain. Support manager ↔ engineering. Warehouse manager ↔ vendor org.
 
-**Beat 4 — Close: pointers + the cross-vendor angle.** `http://localhost:8912/beat4.html`
+**Beat 4 — Close: pointers + the cross-vendor angle.** `http://localhost:8910/beadwork-as-bus/walkthrough_html/beat4.html`
 Cross-AI portability: agents from different vendors can write to the same store. **No `AskUserQuestion` here — Beat 4 is the terminus.**
 
 ## Hard rules
