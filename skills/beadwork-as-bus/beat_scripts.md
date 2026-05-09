@@ -104,7 +104,15 @@ Here's the shift to take away: with `bw`, your AI isn't one amnesiac generalist 
 
 ### AskUserQuestion
 
-**None.** Beat 4 is the terminus.
+> Where to next?
+
+Options (4 + auto "Other"):
+- **Install now** → exit to `beadwork-install` skill (the primary CTA).
+- **Memory deep-dive (`beadwork-as-memory`)** → switch to that skill.
+- **Audit / decision-log angle (`beadwork-for-meta-analysis` or `beadwork-for-decisions`)** → ask user which; switch to whichever.
+- **Back to the overview** → switch to `beadwork-overview`.
+
+(Auto "Other" lets the user say "stop here" or describe a different next step.)
 
 ### Image (optional)
 
@@ -114,4 +122,4 @@ If included: `walkthrough_html/images/beat4-close.jpg` — Currently shows sever
 
 - **The headline is "you have a team of specialist agents from one lab."** Cross-lab is one of two "bonus" properties listed second.
 - The other bonus property — humans-on-a-team joining via shared repo — connects this skill to the cross-human-team angle in `beadwork-overview` Beat 1's third tier.
-- No `AskUserQuestion`.
+- **`AskUserQuestion` at the end** routes to next skill — make the companion list actionable, not a dead-end.
