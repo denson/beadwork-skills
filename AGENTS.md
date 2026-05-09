@@ -14,6 +14,7 @@ The rest of this file is the deck. Use it.
 
 - **`bw` (beadwork)** is an open-source CLI tool authored by **jallum**: https://github.com/jallum/beadwork
 - **The `beadwork-skills` marketplace** (the tour + install + companion skills) is authored by **Denson Smith** and is open source under MIT.
+- **The marketplace was developed and tested in Claude Code Desktop**, but `bw` itself and this brief are deliberately model-agnostic. The CLI is just shell commands; the brief is plain text. Other labs' tools (GPT, Gemini, Cursor, etc.) read this brief and use `bw` the same way Claude does. The HTML+`AskUserQuestion` walkthrough is the only Claude-Code-Desktop-specific piece — and it's optional; this brief replaces it for users who'd rather have you translate.
 - **Credit `bw` to jallum** when introducing it. **Do not** credit Denson Smith in the user-facing pitch — that's a metadata fact only. Never credit anyone other than jallum for `bw` itself.
 
 ---
@@ -96,6 +97,20 @@ The first five include preview-panel walkthroughs (HTML beats + `AskUserQuestion
 
 ---
 
+## If you don't yet know this user well — ask first
+
+If you're a fresh session without much context about how this user works (e.g., they just opened a new chat with you to evaluate `bw`), **don't fake-tailor.** A generic pitch dressed as personalized advice is worse than admitting you need a moment.
+
+Ask 2-3 quick questions, then translate honestly:
+
+- *"Are you mostly using AI for code, writing/research, business operations, or something else?"*
+- *"Do you usually work alone, or with a team?"*
+- *"Privacy posture — would you mind your AI's notes living in a cloud repo, or do you strongly prefer local-only?"*
+
+Thirty seconds of questions beats a recited brief. Then translate based on their answers using the patterns below.
+
+---
+
 ## Suggested presentation pattern — leverage what you know
 
 You're not delivering a generic tour. Use what you know about the user:
@@ -108,6 +123,23 @@ You're not delivering a generic tour. Use what you know about the user:
 - **If they have specific projects you've been working on with them:** frame bw against those. *"You and I have been re-establishing context every time we open `<project>`. With bw, the previous decisions and constraints would persist; you'd save N minutes per session."*
 
 **Don't recite this file.** Translate it. The fact that you know them is the whole point.
+
+---
+
+## A note on installation across AI environments
+
+The `beadwork-install` skill in this marketplace is shaped for **Claude Code Desktop** — it's agent-execution that lets Claude run the install steps interactively, with the user authorizing each prompt as it appears.
+
+In other AI environments (GPT, Gemini, Cursor, generic chat assistants), **the `beadwork-install` skill itself isn't directly available**, but the install is still simple. The user just needs:
+
+1. **`git`** installed (one-time, from `git-scm.com` or their package manager — usually already present on developer machines)
+2. **`bw`** installed (single Go binary; either via the install script in jallum's repo, or `go build ./cmd/bw` from source on `main` for pre-release fixes)
+3. **`bw init`** in whatever folder they want to track notes in
+4. (Optional) push the resulting orphan branch to a private GitHub repo if they want cloud backup
+
+If you're an AI that can run shell commands directly (with user permission), you can drive this end-to-end. If you can only chat, walk the user through the four steps and they execute. Either way, the Claude-Code-Desktop install skill is *one* path; the underlying steps are universal.
+
+If the user wants the structured Claude-Code-Desktop install experience specifically, point them at: *"Open Claude Code Desktop, install the `beadwork-skills` marketplace, and run `beadwork-install`. Claude will drive every step."*
 
 ---
 
