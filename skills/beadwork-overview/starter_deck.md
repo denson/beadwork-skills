@@ -34,7 +34,12 @@ Beat 1 (universal hook + ASK)
 - **Image:** `walkthrough_html/images/beat1-hook.jpg`
 - **Navigate:** `http://localhost:8910/beadwork-overview/walkthrough_html/beat1.html?v=<timestamp>`
 - **Chat shape:** 3-4 sentences naming the three forgetting modes, the SaaS-lock-in warning lead, the three-tier escalation, and the three reassurances. See `beat_scripts.md` Beat 1.
-- **Question:** "Sound interesting?" — 4 options that each map to a destination.
+- **Question:** "Sound interesting?" — 4 options that each map to a destination:
+  - **Continue** → `beat2_everyone.html`
+  - **What's the catch?** → `beat2_everyone.html` (different chat framing)
+  - **I'm a developer** → `beat2_coder.html`
+  - **My AI knows me best — give me an AGENTS.md to hand to it** → read `<marketplace-root>/AGENTS.md`, paste in chat, exit structured tour
+  - (auto "Other" — for "skip to install" or any freeform)
 
 ---
 

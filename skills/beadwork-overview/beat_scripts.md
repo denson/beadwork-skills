@@ -39,7 +39,7 @@ Options:
 - **Continue — show me what bw actually is** → `beat2_everyone.html` (default plain-English)
 - **What's the catch? Costs / privacy / what's required** → `beat2_everyone.html` (same destination; chat framing leads with storage-modes / costs / authorization-stack)
 - **I'm a developer, give me the technical version** → `beat2_coder.html`
-- **Skip ahead — show me the install** → exit to `beadwork-install` skill
+- **My AI knows me best — give me an AGENTS.md to hand to it** → read marketplace-root `AGENTS.md`, paste its full content in chat as a copyable block, instruct the user to paste it into their daily-driver AI; exit the structured tour (auto "Other" still available for "skip to install" or other freeform)
 
 ### Image
 
@@ -60,6 +60,20 @@ Caption: *"Sessions end. Context shouldn't."*
 - The reassurance trio (don't have to learn it / can stay on your computer / free + open source) is part of the elevator pitch, not an afterthought.
 - 3-4 sentences in chat; lean shorter.
 - Cite jallum + bw with a link upfront. Credit the source.
+
+### "My AI knows me best" branch — chat framing
+
+When the user picks this option:
+
+1. **Read the marketplace-root `AGENTS.md` file.** It's at `<marketplace-root>/AGENTS.md` (one level above `skills/`).
+2. **Paste its full content in chat** inside a copy block (triple-backticks-markdown).
+3. **Add one sentence of usage instruction**, something like: *"Paste this into Claude / ChatGPT / Gemini / your usual AI. Ask it to read it and tell you whether bw would matter for you, given how you've been working."*
+4. **Exit the structured tour** — no more navigating preview pages.
+5. **Offer fallback options** as a follow-up: structured tour / `beadwork-install` skill / stop here.
+
+The philosophy you're enacting: the marketplace doesn't try to convince the user. It briefs *their* daily-driver AI, which knows them better than we ever will. The user pays with attention; their AI does the cognitive work of mapping bw onto their situation. This is itself a property of well-built AI tooling — the human shouldn't have to read the manual when their AI can.
+
+---
 
 ### "What's the catch?" branch — chat framing
 

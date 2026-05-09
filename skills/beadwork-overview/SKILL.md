@@ -74,7 +74,7 @@ After Beat 1's `AskUserQuestion`, route based on user's pick:
 | "Continue — show me what bw actually is" | `beat2_everyone.html` | Standard plain-English tour |
 | "What's the catch? Costs / privacy / what's required" | `beat2_everyone.html` | **Lead the chat with the storage-modes / costs / authorization-stack section** — the page is the same but the framing primes that content |
 | "I'm a developer, give me the technical version" | `beat2_coder.html` | SWE-flavored framing |
-| "Skip ahead — show me the install" | exit overview, switch to `beadwork-install` skill | n/a |
+| "My AI knows me best — give me an AGENTS.md to hand to it" | exit the structured tour | Read the marketplace-root `AGENTS.md` file, paste its full contents into chat in a copy block, give a one-sentence usage instruction (*"paste this into Claude / GPT / Gemini / your usual AI"*), then offer fallback options (structured tour / install / stop). The auto "Other" option is still available for "skip to install" or freeform. |
 
 After Beat 2 (either variant), proceed to Beat 3 (use cases). After Beat 3, proceed to Beat 4 (close). No further branches.
 
