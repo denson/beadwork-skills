@@ -28,7 +28,7 @@ Tone rules across all beats:
 
 ### Chat (3-4 sentences)
 
-You've probably noticed it: today's chat with your AI ends, and tomorrow's session starts blank. There's a small open-source tool called [`bw`](https://github.com/jallum/beadwork) — beadwork, by [jallum](https://github.com/jallum) — that helps with this in many cases. It does three things: gives your AI durable memory across sessions, lets **multiple AI sessions coordinate as a team of specialists** (design + implementation + review, usually sessions of the same lab's model), and lets a team of humans + their AIs all coordinate through one shared substrate. **You don't have to learn the tool — your AI does.** It can also stay entirely on your computer if you want maximum privacy.
+**AI assistants forget. A whole industry is gearing up to sell you the answer. Look at [`bw`](https://github.com/jallum/beadwork) — beadwork, by [jallum](https://github.com/jallum) — before you get locked in: it's free, open source, and might be all you need.** Three things it lets you do: gives your AI durable memory across sessions, lets multiple AI sessions coordinate as a team of specialists (design + implementation + review, usually all from the same lab's model), and lets a team of humans + their AIs share one workspace. **You don't have to learn it — your AI does** — and it can stay entirely on your computer if you want maximum privacy.
 
 ### AskUserQuestion
 
@@ -47,6 +47,7 @@ Caption: *"Sessions end. Context shouldn't."*
 
 ### Tone + length notes
 
+- **The lead is a SaaS-lock-in warning, not a feature pitch.** "AI assistants forget. A whole industry is gearing up to sell you the answer. Look at bw before you get locked in — it's free, open source, and might be all you need." This is the load-bearing manifesto for the entire walkthrough; everything else is supporting evidence.
 - The **three-tier escalation** lands here. Don't drop any of the three. Specifically:
   - **Tier 1 — memory across time:** one AI session reads what an earlier session wrote.
   - **Tier 2 — a team of agents coordinating.** This is **multi-session coordination, usually within the same lab** (multiple Claude sessions, or multiple Gemini sessions) acting as specialist agents — design, implementation, review. **Cross-lab interop (Claude + Gemini sharing one store) is a real but secondary case** — mention it as "and the same mechanism works across vendors too" rather than leading with it.
