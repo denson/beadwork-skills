@@ -98,7 +98,15 @@ What `bw` memory survives, in full: sessions ending. `/clear` calls. Agent resta
 
 ### AskUserQuestion
 
-**None.** Beat 4 is the terminus. End and stop.
+> Where to next?
+
+Options (4 + auto "Other"):
+- **Install now** → exit to `beadwork-install` skill (the primary CTA).
+- **Multi-agent / team coordination (`beadwork-as-bus`)** → switch to that skill.
+- **Audit / decision-log angle (`beadwork-for-meta-analysis` or `beadwork-for-decisions`)** → ask user which; switch to whichever.
+- **Back to the overview** → switch to `beadwork-overview`.
+
+(Auto "Other" lets the user say "stop here" or describe a different next step.)
 
 ### Image (optional — Beat 4 may run without an image)
 
@@ -110,4 +118,4 @@ In practice, Beat 4 may render as HTML-only (text + styled pointer card via CSS)
 
 - Wrap-up. Forward-pointing.
 - The "evolution preserved" framing is non-obvious and worth the closing position.
-- No `AskUserQuestion`.
+- **`AskUserQuestion` at the end** routes to next skill — make the companion list actionable, not a dead-end.

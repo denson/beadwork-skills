@@ -40,8 +40,8 @@ The orphan-branch storage; ticket comments record speaker + timestamp; reconstru
 **Beat 3 — Persona scenarios: memory in three shapes.** `http://localhost:8910/beadwork-as-memory/walkthrough_html/beat3.html`
 Data scientist multi-day investigation; lawyer multi-month case; solo entrepreneur cross-engagement lessons.
 
-**Beat 4 — Close: pointers + what survives.** `http://localhost:8910/beadwork-as-memory/walkthrough_html/beat4.html`
-The full survival story (sessions, /clear, agents, machines, vendors, time) plus pointers to companion skills. **No `AskUserQuestion` here — Beat 4 is the terminus.**
+**Beat 4 — Close + next-skill router.** `http://localhost:8910/beadwork-as-memory/walkthrough_html/beat4.html`
+The full survival story (sessions, /clear, agents, machines, vendors, time) plus the canonical 6-skill companion list with "← you are here" on `beadwork-as-memory`. **AskUserQuestion at the end** routes to whichever next skill the user wants — install, bus deep-dive, meta-analysis, decisions, or back to overview.
 
 ## Hard rules
 
@@ -49,7 +49,7 @@ The full survival story (sessions, /clear, agents, machines, vendors, time) plus
 2. **bw is the subject; users (the seven personas) are the audience; we never appear.** No mention of "the four-role agent pipeline," no Pliny/Vera/Cato, no workspace-specific ticket IDs.
 3. **The unification: "you talk to your agent; your agent uses bw."** Don't break it.
 4. **One beat per message.** Navigate → chat (2-4 sentences) → AskUserQuestion → STOP.
-5. **Beat 4 has no `AskUserQuestion`.** Four beats end the walkthrough.
+5. **Beat 4 ends with an `AskUserQuestion` that routes to the next skill** (install, bus, meta-analysis, decisions, back to overview, or stop). The companion-list visual on the page is paired with an actionable picker in chat — the user shouldn't have to type a skill name freeform to get there.
 6. **No false attribution.**
 
 ## Tone
