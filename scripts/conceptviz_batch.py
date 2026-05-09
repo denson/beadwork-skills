@@ -362,9 +362,8 @@ PROMPTS: list[PromptSpec] = [
             "BOTTOM ROW (2 cards):\n"
             "4. A decision-tree icon — label \"beadwork-for-decisions.\"\n"
             "5. A wrench icon — label \"beadwork-install.\"\n\n"
-            "Below the grid: a small caption in italic reading \"open source. "
-            "authored by Denson Smith. bw itself by jallum (github.com/jallum/"
-            "beadwork).\"\n\n"
+            "Below the grid: a small caption in italic reading \"open source, "
+            "MIT-licensed. bw by jallum (github.com/jallum/beadwork).\"\n\n"
             "Caption: \"Five companion skills.\""
         ),
     ),
@@ -675,8 +674,8 @@ PROMPTS: list[PromptSpec] = [
             "3. network icon — \"beadwork-as-bus\"\n"
             "4. decision-tree icon — \"beadwork-for-decisions\"\n"
             "5. wrench icon — \"beadwork-install\"\n\n"
-            "BOTTOM: a small caption in italic \"open source. Denson Smith. "
-            "bw itself by jallum.\"\n\n"
+            "BOTTOM: a small caption in italic \"open source, MIT-licensed. "
+            "bw by jallum (github.com/jallum/beadwork).\"\n\n"
             "Caption: \"Meta-analysis is just another agent reading the "
             "substrate.\""
         ),
@@ -793,8 +792,8 @@ PROMPTS: list[PromptSpec] = [
             "3. network icon — \"beadwork-as-bus\"\n"
             "4. magnifying-glass icon — \"beadwork-for-meta-analysis\"\n"
             "5. wrench icon — \"beadwork-install\"\n\n"
-            "BOTTOM: a small caption in italic \"open source. Denson Smith. "
-            "bw itself by jallum.\"\n\n"
+            "BOTTOM: a small caption in italic \"open source, MIT-licensed. "
+            "bw by jallum (github.com/jallum/beadwork).\"\n\n"
             "Caption: \"Any decision worth remembering is a ticket.\""
         ),
     ),
