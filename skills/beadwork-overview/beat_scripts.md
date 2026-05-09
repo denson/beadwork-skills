@@ -28,7 +28,7 @@ Tone rules across all beats:
 
 ### Chat (3-4 sentences)
 
-**AI assistants forget. A whole industry is gearing up to sell you the answer. Look at [`bw`](https://github.com/jallum/beadwork) — beadwork, by [jallum](https://github.com/jallum) — before you get locked in: it's free, open source, and might be all you need.** Three things it lets you do: gives your AI durable memory across sessions, lets multiple AI sessions coordinate as a team of specialists (design + implementation + review, usually all from the same lab's model), and lets a team of humans + their AIs share one workspace. **You don't have to learn it — your AI does** — and it can stay entirely on your computer if you want maximum privacy.
+**AI assistants forget — chats end, second sessions don't know about the first, and even mid-session details get lost (Claude Code's compaction summarizes when context fills; OpenAI and Gemini models drift gradually as the chat grows).** A whole industry is gearing up to sell you the answer. **Look at [`bw`](https://github.com/jallum/beadwork) (beadwork) before you get locked in: it's free, open source, and might be all you need.** Three things it does: durable memory across sessions, multi-session coordination as a team of specialists (usually all from the same lab), and humans-plus-agents sharing one workspace. **You don't have to learn it — your AI does.**
 
 ### AskUserQuestion
 
@@ -48,6 +48,8 @@ Caption: *"Sessions end. Context shouldn't."*
 ### Tone + length notes
 
 - **The lead is a SaaS-lock-in warning, not a feature pitch.** "AI assistants forget. A whole industry is gearing up to sell you the answer. Look at bw before you get locked in — it's free, open source, and might be all you need." This is the load-bearing manifesto for the entire walkthrough; everything else is supporting evidence.
+- **Three forgetting modes named explicitly:** (1) session ends → next chat starts blank, (2) second concurrent session of the same AI → doesn't know about the first, (3) mid-session forgetting (Claude Code's *compaction*; OpenAI/Gemini's gradual drift as context fills). Worth saying all three; users have hit at least one.
+- **Lead callout drops "by jallum" text.** The repo link (github.com/jallum/beadwork) carries the attribution implicitly via the URL. Visible "by jallum" text reads as pitchy double-credit in the headline.
 - The **three-tier escalation** lands here. Don't drop any of the three. Specifically:
   - **Tier 1 — memory across time:** one AI session reads what an earlier session wrote.
   - **Tier 2 — a team of agents coordinating.** This is **multi-session coordination, usually within the same lab** (multiple Claude sessions, or multiple Gemini sessions) acting as specialist agents — design, implementation, review. **Cross-lab interop (Claude + Gemini sharing one store) is a real but secondary case** — mention it as "and the same mechanism works across vendors too" rather than leading with it.

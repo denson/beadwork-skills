@@ -24,10 +24,12 @@
     <h1>AI assistants forget.</h1>
 
     <div class="lead-callout">
-      <p><strong>A whole industry is gearing up to sell you the answer.</strong> Look at <a href="https://github.com/jallum/beadwork"><code>bw</code></a> &mdash; beadwork, by <a href="https://github.com/jallum">jallum</a> &mdash; before you get locked in. It's free, open source, and might be all you need.</p>
+      <p><strong>A whole industry is gearing up to sell you the answer.</strong> Look at <a href="https://github.com/jallum/beadwork"><code>bw</code></a> (beadwork) before you get locked in. It's free, open source, and might be all you need.</p>
     </div>
 
     <p>You've probably noticed: today's chat with your AI ends, and tomorrow's session starts blank. Open a second session of the same AI today and it doesn't know about the first either. You spend the first ten minutes of every fresh session re-explaining context you already explained yesterday.</p>
+
+    <p>And it happens <em>mid-session</em> too. Claude Code runs <strong>compaction</strong> when its context fills &mdash; summarizing the conversation so far, preserving the gist but dropping details. OpenAI and Gemini models don't compact discretely, but they lose track of important items gradually as the chat grows. Either way, your agent stops knowing things you already told it.</p>
 
     <div class="image-frame">
       <img src="images/beat1-hook.jpg" alt="A two-panel split scene. Left panel: a generic AI assistant figure looking confused, with a thought bubble reading 'wait — what was I doing?' Around the figure: scattered fragments representing forgotten context (a half-finished list, a question mark, a dimmed conversation bubble drifting away). Right panel: the same AI assistant figure looking calm and resumed, reading from a small ticket card sitting on a desk; a thought bubble reads 'right — yesterday we decided X, the next step is Y.' A small label at the bottom of the right panel reads 'context restored from bw show.'">
