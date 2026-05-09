@@ -2,42 +2,44 @@
 
 This is the **working-doc source of truth** for what each beat says. The HTML pages in `walkthrough_html/` carry the visual presentation; this file carries the words. Chat text in CCD is a 2-4 sentence summary that bridges from the HTML into the AskUserQuestion — write it in your own voice, but use the prose here as the spec.
 
-**Structure:** 5 beats with a single literacy fork between Beat 2 and Beat 3.
+**Structure:** 4 beats. Beat 2 has two sibling pages (`beat2_everyone.html` is the default; `beat2_coder.html` is the opt-in developer view).
 
 ```
-Beat 1 (universal hook)
+Beat 1 (universal hook + AskUserQuestion routing)
    ↓
-Beat 2 (literacy ASK: how do you use AI?)
-   ↓
-   ├── "writing code"     → Beat 3-coder
-   └── anything else      → Beat 3-everyone
-                              ↓
-                       Beat 4 (universal use cases — both paths converge)
-                              ↓
-                       Beat 5 (close)
+   ├── "Continue" / "What's the catch?"  → Beat 2 (beat2_everyone.html)
+   ├── "I'm a developer, technical view"  → Beat 2 (beat2_coder.html)
+   └── "Skip to install"                  → exit to beadwork-install
+                                              ↓
+                                           Beat 3 (where it helps)
+                                              ↓
+                                           Beat 4 (close)
 ```
 
-Tone rules across all beats:
-- **Never claim bw "fixes" anything.** It "helps in many cases." Use "helps" / "addresses" / "lets you" — not "fixes" / "solves."
-- **Three-tier escalation lands early:** one AI's memory across time → multiple AIs sharing notes → multi-human team coordination.
-- **The non-coder doesn't have to learn anything.** Their AI does the work. Repeat this reassurance.
+**Tone rules across all beats:**
+- **Lead with the SaaS-lock-in warning at Beat 1.** That's the load-bearing manifesto: *"AI assistants forget. A whole industry is gearing up to sell you the answer. Look at bw before you get locked in."*
+- **Never claim bw "fixes" anything.** Use "helps" / "addresses" / "lets you" — not "fixes" / "solves."
+- **Three-tier escalation lands early:** one AI's memory across time → multiple AI sessions sharing notes → multi-human team coordination.
+- **Each AskUserQuestion option maps to a specific page or destination.** Never deflect a question by asking a different question.
+- **Default to plain English.** Don't ask whether the user is a developer; assume they're not unless they tell you (via the Beat 1 option or mid-tour).
 
 ---
 
-## Beat 1 — Elevator pitch (universal hook)
+## Beat 1 — Elevator pitch (universal hook + the only branch)
 
 ### Chat (3-4 sentences)
 
 **AI assistants forget — chats end, second sessions don't know about the first, and even mid-session details get lost (Claude Code's compaction summarizes when context fills; OpenAI and Gemini models drift gradually as the chat grows).** A whole industry is gearing up to sell you the answer. **Look at [`bw`](https://github.com/jallum/beadwork) (beadwork) before you get locked in: it's free, open source, and might be all you need.** Three things it does: durable memory across sessions, multi-session coordination as a team of specialists (usually all from the same lab), and humans-plus-agents sharing one workspace. **You don't have to learn it — your AI does.**
 
-### AskUserQuestion
+### AskUserQuestion (the only branch in the walkthrough)
 
 > Sound interesting?
 
 Options:
-- **Yes, tell me more** — proceed to Beat 2 (the literacy fork).
-- **First, what's the catch?** — short detour: it's free and open source, your data stays where you tell it to (your computer or your cloud), it's a small CLI tool that ships with instructions for your AI to install. Then proceed to Beat 2.
-- **Skip ahead — show me the install** — exit overview; switch to `beadwork-install` skill.
+- **Continue — show me what bw actually is** → `beat2_everyone.html` (default plain-English)
+- **What's the catch? Costs / privacy / what's required** → `beat2_everyone.html` (same destination; chat framing leads with storage-modes / costs / authorization-stack)
+- **I'm a developer, give me the technical version** → `beat2_coder.html`
+- **Skip ahead — show me the install** → exit to `beadwork-install` skill
 
 ### Image
 
@@ -59,64 +61,23 @@ Caption: *"Sessions end. Context shouldn't."*
 - 3-4 sentences in chat; lean shorter.
 - Cite jallum + bw with a link upfront. Credit the source.
 
----
+### "What's the catch?" branch — chat framing
 
-## Beat 2 — The literacy fork
+When the user picks "What's the catch?" — navigate to `beat2_everyone.html` AND lead the chat with the cost/privacy/authorization framing rather than the standard plain-English explainer. Sample chat:
 
-### Chat (2-3 sentences)
+> Fair to ask. Three things you'd want to know:
+>
+> 1. **The substrate is git.** `bw` runs on top of git (the standard developer tool). Most computers either have it or it's a free one-time install. Your AI handles that step too if you don't have it.
+> 2. **Your data stays where you say it stays.** Local-only mode means nothing leaves your machine — no cloud account at all. Cloud mode means your GitHub repo, not someone else's SaaS server. There's no vendor in the middle.
+> 3. **It's a small command-line tool, MIT-licensed, source on GitHub.** No subscription. No telemetry. No vendor lock-in. If `bw` disappeared tomorrow, your data is still plain JSON files in a git folder on your disk.
+>
+> The page in the preview panel walks through the four storage modes (local-only, cloud backup, team cloud, public) with the costs spelled out, and what you're authorizing your AI to do.
 
-Quick question before going deeper. The next page splits two ways: a "you're a developer, you know git" version and a plain-English version that explains everything from scratch. **Same tool, same story — just different vocabulary.**
-
-### AskUserQuestion
-
-> How do you mainly use AI?
-
-Options:
-- **Writing code** — software development, scripts, infra, automation. → routes to **Beat 3-coder.**
-- **Writing, research, learning** — drafting, analysis, study, summaries. → routes to **Beat 3-everyone.**
-- **Business or personal projects** — operations, customers, finance, legal, life admin. → routes to **Beat 3-everyone.**
-- **Something else** — a mix, or none of the above. → routes to **Beat 3-everyone.**
-
-### Image
-
-No ConceptViz image — the HTML uses CSS-only audience cards as the visual focus. The question is the centerpiece.
-
-### Tone + length notes
-
-- This is a transition beat. Short. Light. The question is the focus.
-- **The default for non-"writing code" answers is the everyone fork.** Don't try to be clever; if there's any ambiguity, route to everyone — it's the more inclusive starting point.
+Then proceed with the standard Beat 2 (everyone) AskUserQuestion.
 
 ---
 
-## Beat 3-coder — What bw is, SWE-flavored
-
-### Chat (4-5 sentences)
-
-Skipping the long version since you're a developer. **Storage:** orphan branch in a git repo, plain JSON files. **Install:** single Go binary, one-line curl or build from source. **Cross-AI portable:** anything that can shell out to `bw show` reads the same store. **License:** MIT, jallum's project. **And the killer feature: it survives compaction** — tickets and comments persist across session boundaries, agent restarts, machine swaps. The three-tier escalation in your terms: persistent context for one session graph → multi-agent async pipelines → push the orphan branch to a shared remote and the team's agents read/write the same store via standard PR/review workflow.
-
-### AskUserQuestion
-
-> Want to see where this kind of memory + coordination earns its keep?
-
-Options:
-- **Yes, show me where it helps** — proceed to Beat 4.
-- **First — install path?** — short detour: bw is jallum's; install via `install.sh` from the repo or `go build` from source. Then proceed to Beat 4.
-
-### Image
-
-`walkthrough_html/images/beat2-trust.jpg` (reused) — folder labeled "your repo / your disk" with project files top, "beadwork (orphan branch)" compartment bottom containing tickets. Multiple AI vendor icons reading/writing into the bw compartment. Label outside: *"no SaaS, no vendor servers, no signup."*
-
-Caption: *"Lives where your code lives."*
-
-### Tone + length notes
-
-- Tight. SWE knows the words. Don't over-explain.
-- The cross-AI portability point is under-told in the wider market — emphasize.
-- "Survives compaction" is jallum's headline feature — call it out.
-
----
-
-## Beat 3-everyone — What bw is, plain-English
+## Beat 2 (everyone) — What bw is, plain-English
 
 ### Chat (4-6 sentences)
 
@@ -127,14 +88,14 @@ Plain-English version. **Git** is a free, very-reliable tool that's been around 
 > Storage mode preference, or skip ahead?
 
 Options:
-- **My computer only — maximum privacy, no online account** — note the preference; reassure them this is the simplest free mode; proceed to Beat 4.
-- **Cloud backup so my laptop dying isn't a disaster** — note the preference; mention this is GitHub Pro (~$4/month); proceed to Beat 4.
-- **Shared with my team** — note the preference; mention GitHub Team (~$4/person/month) for the polished experience; proceed to Beat 4.
-- **Show me where this helps first; I'll pick later** — proceed to Beat 4 without a storage-mode commitment.
+- **My computer only — maximum privacy, no online account** — note the preference; reassure them this is the simplest free mode; proceed to Beat 3.
+- **Cloud backup so my laptop dying isn't a disaster** — note the preference; mention this is GitHub Pro (~$4/month); proceed to Beat 3.
+- **Shared with my team** — note the preference; mention GitHub Team (~$4/person/month) for the polished experience; proceed to Beat 3.
+- **Show me where this helps first; I'll pick later** — proceed to Beat 3 without a storage-mode commitment.
 
 ### Image
 
-`walkthrough_html/images/beat2-trust.jpg` (reused, framed differently in chat) — same folder + bw + multiple AIs diagram; the "no SaaS" label still applies; in plain-English context, frame it as "this all lives in a folder on your computer."
+`walkthrough_html/images/beat2-trust.jpg` (reused — but framed in chat as "lives in a folder on your computer").
 
 Caption: *"Lives in a folder on your computer."*
 
@@ -151,18 +112,46 @@ Caption: *"Lives in a folder on your computer."*
 
 ---
 
-## Beat 4 — Where this kind of memory helps (universal use cases)
+## Beat 2 (coder) — What bw is, SWE-flavored (opt-in)
+
+### Chat (4-5 sentences)
+
+Skipping the long version since you're a developer. **Storage:** orphan branch in a git repo, plain JSON files. **Install:** single Go binary, one-line curl or build from source. **Cross-AI portable:** anything that can shell out to `bw show` reads the same store. **License:** MIT, jallum's project. **Killer feature:** survives compaction — tickets and comments persist across session boundaries, agent restarts, machine swaps. The three-tier escalation in your terms: persistent context for one session graph → multi-agent async pipelines → push the orphan branch to a shared remote and the team's agents read/write the same store via standard PR/review.
+
+### AskUserQuestion
+
+> Want to see where this kind of memory + coordination earns its keep?
+
+Options:
+- **Yes, show me where it helps** — proceed to Beat 3.
+- **First — install path?** — short detour on install.sh vs build-from-source. Then proceed to Beat 3.
+
+### Image
+
+`walkthrough_html/images/beat2-trust.jpg` (reused).
+
+Caption: *"Lives where your code lives."*
+
+### Tone + length notes
+
+- Tight. SWE knows the words. Don't over-explain.
+- The cross-AI portability point is under-told in the wider market — emphasize.
+- "Survives compaction" is jallum's headline feature — call it out.
+
+---
+
+## Beat 3 — Where this kind of memory helps (universal use cases)
 
 ### Chat (4-6 sentences)
 
-This is where both paths converge. The same tool works for very different jobs because the underlying need — *"my AI should remember things and my AIs should be able to share notes"* — shows up everywhere. Quick tour of seven shapes: **engineer** running multi-agent PR review with a synthesizer agent on top; **data scientist** keeping a multi-session investigation that a methodology auditor can review months later; **logistics analyst** with vendor scorecards that explain abandoned approaches; **warehouse manager** with day/night shift handoffs and cross-organization vendor coordination; **support manager** with engineering + manager AIs writing to one escalation ticket; **lawyer** with privilege determinations preserved verbatim for opposing counsel nine months later; **solo entrepreneur** with every business decision logged, ready for tax-time defense. **Same interaction in every case** — you talk to your AI, the AI uses bw on your behalf. What differs is what each role tracks, not how they interact with the tool.
+This is where everyone converges. The same tool works for very different jobs because the underlying need — *"my AI should remember things and my AIs should be able to share notes"* — shows up everywhere. Quick tour of seven shapes: **engineer** running multi-agent PR review with a synthesizer agent on top; **data scientist** keeping a multi-session investigation that a methodology auditor can review months later; **logistics analyst** with vendor scorecards that explain abandoned approaches; **warehouse manager** with day/night shift handoffs and cross-organization vendor coordination; **support manager** with engineering + manager AIs writing to one escalation ticket; **lawyer** with privilege determinations preserved verbatim for opposing counsel nine months later; **solo entrepreneur** with every business decision logged, ready for tax-time defense. **Same interaction in every case** — you talk to your AI, the AI uses bw on your behalf. What differs is what each role tracks, not how they interact with the tool.
 
 ### AskUserQuestion
 
 > Want pointers to deeper-dive skills?
 
 Options:
-- **Yes — show me the companion skills** — proceed to Beat 5.
+- **Yes — show me the companion skills** — proceed to Beat 4.
 - **Just the install** — exit overview; switch to `beadwork-install` skill.
 
 ### Image
@@ -173,32 +162,34 @@ Caption: *"Same interaction in every case."*
 
 ### Tone + length notes
 
-- Both forks land here, so the prose can't lean too hard on either coder vocabulary or non-coder explanation. Stay neutral; rely on the personas to do the work.
+- Both Beat 2 paths land here, so the prose can't lean too hard on either coder vocabulary or non-coder explanation. Stay neutral; rely on the personas to do the work.
 - The **team angle** (warehouse manager + support manager especially) reinforces the third tier of the escalation — no need to repeat the framing, just let the examples carry it.
 - **Don't oversell.** Each persona gets one phrase.
 
 ---
 
-## Beat 5 — Where to go from here
+## Beat 4 — Close
 
 ### Chat (3-4 sentences)
 
-This was the overview. Five companion skills go deeper on specific use-case angles, plus an install skill that drives setup end-to-end. **`beadwork-as-memory`** for the durable-agent-memory deep-dive. **`beadwork-as-bus`** for multi-agent + multi-team + multi-org communication patterns. **`beadwork-for-meta-analysis`** for running an agent over the bw history of *other agents*. **`beadwork-for-decisions`** for decision logs / audit trails. **`beadwork-install`** drives the install end-to-end — your AI runs it for you. All open source, MIT-licensed. `bw` itself is [jallum](https://github.com/jallum)'s project at [github.com/jallum/beadwork](https://github.com/jallum/beadwork).
+That was the overview. Five companion skills go deeper on specific use-case angles, plus an install skill that drives setup end-to-end. The companion list on the page shows all six (with **"← you are here"** on `beadwork-overview`); the punchy install row at the bottom is the natural next step: *"install now; your AI does the work. Then stop re-explaining."* All open source, MIT-licensed. `bw` itself is [jallum](https://github.com/jallum)'s project at [github.com/jallum/beadwork](https://github.com/jallum/beadwork).
 
 ### AskUserQuestion
 
-**None.** Beat 5 is the terminus. End with the message above and stop.
+**None.** Beat 4 is the terminus. End with the message above and stop.
 
 ### Image
 
 `walkthrough_html/images/beat5-close.jpg` — five companion-skill cards in a 3-2 grid (memory, bus, meta-analysis, decisions, install). Bottom caption: *"open source, MIT-licensed. bw by jallum (github.com/jallum/beadwork)."*
+
+(Note: image filename retains "beat5" prefix from the previous numbering. Cosmetic only; image content matches Beat 4's role as the close.)
 
 Caption: *"Five companion skills."*
 
 ### Tone + length notes
 
 - Wrap-up. Forward-pointing.
-- 3-4 sentences plus the skill list.
+- 3-4 sentences plus the skill list (which lives in the HTML, not the chat).
 - No `AskUserQuestion`.
 - **The closing attribution credits jallum + bw only.** Do NOT credit Denson Smith in the user-facing prose. The metadata authorship (LICENSE, plugin.json, marketplace.json, etc.) stays Denson Smith — that's the immutable rule — but the walkthrough prose itself only credits jallum as the author of `bw` the tool.
 - One sentence reserved for the non-coder reassurance: *"if you're not a coder, the install skill walks your AI through everything — you don't need to know git or run commands yourself."*
