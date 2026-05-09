@@ -115,7 +115,13 @@ The pattern, in one sentence: **any decision worth remembering is a candidate fo
 
 ### AskUserQuestion
 
-**None.** Beat 4 is the terminus.
+> Where to next?
+
+Options (2 + auto "Other"):
+- **Back to overview** → switch to `beadwork-overview`.
+- **Next: beadwork-install** → exit the tour and run the install skill (the canonical next step after decisions).
+
+The auto "Other" option lets the user say *"jump to memory,"* *"stop,"* or any specific skill. The companion list on the page shows all six.
 
 ### Image
 
@@ -127,4 +133,4 @@ Caption: *"Any decision worth remembering is a ticket."*
 
 - Wrap-up. Slightly formal close.
 - The "no new tooling" framing is the strategic close — bw isn't a decision-log product; it's a general substrate that happens to do decision logs well.
-- No `AskUserQuestion`.
+- **`AskUserQuestion` at the end** routes to next skill (2 options + auto Other) — make the companion list actionable.

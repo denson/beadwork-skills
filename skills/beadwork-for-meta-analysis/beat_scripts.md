@@ -108,7 +108,13 @@ The structural advantage worth naming explicitly: meta-analysis works on `bw` be
 
 ### AskUserQuestion
 
-**None.** Beat 4 is the terminus.
+> Where to next?
+
+Options (2 + auto "Other"):
+- **Back to overview** → switch to `beadwork-overview`.
+- **Next: beadwork-for-decisions** → continue the canonical tour to the decision-log deep-dive.
+
+The auto "Other" option lets the user say *"install now,"* *"jump to memory,"* *"stop,"* or any specific skill. The companion list on the page shows all six.
 
 ### Image
 
@@ -120,4 +126,4 @@ Caption: *"Meta-analysis is just another agent reading the substrate."*
 
 - Wrap-up. Forward-pointing.
 - The "wherever you can produce signed/timestamped/structured agent comms" framing is the strategic close — bw is one implementation; the principle is broader.
-- No `AskUserQuestion`.
+- **`AskUserQuestion` at the end** routes to next skill (2 options + auto Other) — make the companion list actionable.

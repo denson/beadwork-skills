@@ -63,7 +63,7 @@ Universal hook for all audiences. **Lead is a SaaS-lock-in warning:** *"AI assis
 Seven persona snapshots showing the same memory + agent-coordination pattern across very different jobs (engineer, data scientist, logistics analyst, warehouse manager, support manager, lawyer, solo entrepreneur). Same interaction in every case; what differs is what each role tracks.
 
 **Beat 4 — Close + next-skill router.** `walkthrough_html/beat4.html`
-The canonical 6-skill companion list with a "← you are here" pill on **`beadwork-overview`**. CTA-style install row: *"install now; your AI does the work. Then stop re-explaining."* **AskUserQuestion at the end** routes the user to whichever next-skill they want to tour, or to install — the companion list is a real fork, not a dead-end.
+The canonical 6-skill companion list with a "← you are here" pill on **`beadwork-overview`**. CTA-style install row: *"install now; your AI does the work. Then stop re-explaining."* **AskUserQuestion at the end has 2 options + auto Other:** *"Next: beadwork-as-memory"* (advance the canonical tour) and *"Stop"* (end here). Other handles "install now," "jump to a specific skill," etc.
 
 ## Routing rules (the only branch is at Beat 1)
 
@@ -92,7 +92,7 @@ If a user is mid-tour on the everyone path and says "I'm a developer, can you gi
 8. **Default to plain English.** Don't ask the user whether they're a developer. If they are, they'll say so or pick the technical option in Beat 1. Plain English is inclusive of both audiences.
 9. **One beat per message.** Navigate preview, write chat text, ask question, STOP.
 10. **Keep chat text to 2-4 sentences plus the question.** The HTML carries the detail.
-11. **Beat 4 ends with an `AskUserQuestion` that routes to the next skill** (or to install, or to "stop here"). The companion-list visual on the page is paired with an actionable picker in chat — the user shouldn't have to type a skill name freeform to get there.
+11. **Beat 4 ends with a simple 2-option `AskUserQuestion`** — *"Next: <next-skill-in-canonical-order>"* + *"Stop"* (or *"Back to overview"* on the four sister skills' close beats). The auto "Other" option handles install jumps, freeform skill picks, or anything else. **Canonical next-order:** `overview → memory → bus → meta-analysis → decisions → install`. The companion-list visual on the page shows all six explicitly; the AskUserQuestion is the keystroke-saving default for "advance" and "exit."
 12. **No false attribution.** `bw` is jallum's — credit explicitly in prose and metadata. This walkthrough's *metadata* attributes to Denson Smith (LICENSE, plugin.json, etc., all immutable); the *prose* drops self-credit. Never put jallum or anyone else in author/owner/copyright fields of artifacts Denson built — that is the immutable rule and the bigger safety concern.
 
 ## Resources in this skill directory

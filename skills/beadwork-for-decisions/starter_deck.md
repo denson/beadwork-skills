@@ -41,4 +41,4 @@ Navigation map. Read silently before Beat 1. All hard rules from `SKILL.md` appl
 **File:** `walkthrough_html/beat4.html`
 **Image:** `walkthrough_html/images/beat4-close.jpg`
 **Navigate:** `http://localhost:8910/beadwork-for-decisions/walkthrough_html/beat4.html`
-**Chat shape:** 4-5 sentences on the "any decision worth remembering = a ticket" pattern + four companion skills. NO `AskUserQuestion` — Beat 4 is the terminus.
+**Chat shape:** 4-5 sentences on the "any decision worth remembering = a ticket" pattern + the canonical 6-skill companion list (with "← you are here" on decisions). **`AskUserQuestion` at the end has 2 options + auto Other:** "Back to overview" / "Next: beadwork-install" / Other.

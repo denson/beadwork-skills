@@ -41,4 +41,4 @@ Navigation map. Read silently before Beat 1. All hard rules from `SKILL.md` appl
 **File:** `walkthrough_html/beat4.html`
 **Image:** `walkthrough_html/images/beat4-close.jpg`
 **Navigate:** `http://localhost:8910/beadwork-for-meta-analysis/walkthrough_html/beat4.html`
-**Chat shape:** 4-5 sentences on the structural advantage + four companion skills. NO `AskUserQuestion` — Beat 4 is the terminus.
+**Chat shape:** 4-5 sentences on the structural advantage + the canonical 6-skill companion list (with "← you are here" on meta-analysis). **`AskUserQuestion` at the end has 2 options + auto Other:** "Back to overview" / "Next: beadwork-for-decisions" / Other.

@@ -42,7 +42,7 @@ A decision is a ticket with a specific shape: title = the decision, description 
 Engineer architecture-decision record. Lawyer privilege log (court-defensible). Solo entrepreneur tax-decisions ledger.
 
 **Beat 4 — Close: the pattern + pointers.** `http://localhost:8910/beadwork-for-decisions/walkthrough_html/beat4.html`
-Any decision worth remembering is a candidate for a bw ticket. The "ticket" shape is structured-enough notes-to-future-self with the rationale preserved. **No `AskUserQuestion` here — Beat 4 is the terminus.**
+Any decision worth remembering is a candidate for a bw ticket. The "ticket" shape is structured-enough notes-to-future-self with the rationale preserved. **AskUserQuestion has 2 options + auto Other:** *"Back to overview"* and *"Next: beadwork-install"* (exits the tour and runs the install skill — the natural CTA after the decisions deep-dive). Other handles specific-skill jumps / stop.
 
 ## Hard rules
 
@@ -50,7 +50,7 @@ Any decision worth remembering is a candidate for a bw ticket. The "ticket" shap
 2. **bw is the subject; users (the seven personas) are the audience; we never appear.** No mention of "the four-role agent pipeline," no Pliny/Vera/Cato, no workspace-specific ticket IDs.
 3. **The unification: "you talk to your agent; your agent uses bw."** Don't break it.
 4. **One beat per message.** Navigate → chat → AskUserQuestion → STOP.
-5. **Beat 4 has no `AskUserQuestion`.**
+5. **Beat 4 ends with a simple 2-option `AskUserQuestion`** — *"Back to overview"* + *"Next: beadwork-install"* (the canonical-tour terminus is the install skill). Auto "Other" handles specific-skill picks or stop. **Canonical next-order:** `overview → memory → bus → meta-analysis → decisions → install`.
 6. **No false attribution.**
 
 ## Tone

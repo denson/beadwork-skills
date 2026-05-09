@@ -41,4 +41,4 @@ Navigation map for the presenter agent. Read silently before Beat 1. All hard ru
 **File:** `walkthrough_html/beat4.html`
 **Image:** `walkthrough_html/images/beat4-close.jpg` (optional — Beat 4 may render HTML-only)
 **Navigate:** `http://localhost:8910/beadwork-as-memory/walkthrough_html/beat4.html`
-**Chat shape:** 4-5 sentences listing what survives + the canonical 6-skill companion list (with "← you are here" on as-memory). **`AskUserQuestion` at the end** routes to the next skill (install / bus / audit-decisions / overview / stop).
+**Chat shape:** 4-5 sentences listing what survives + the canonical 6-skill companion list (with "← you are here" on as-memory). **`AskUserQuestion` at the end has 2 options + auto Other:** "Back to overview" / "Next: beadwork-as-bus" / Other (for install / specific skills / stop).

@@ -100,13 +100,11 @@ What `bw` memory survives, in full: sessions ending. `/clear` calls. Agent resta
 
 > Where to next?
 
-Options (4 + auto "Other"):
-- **Install now** → exit to `beadwork-install` skill (the primary CTA).
-- **Multi-agent / team coordination (`beadwork-as-bus`)** → switch to that skill.
-- **Audit / decision-log angle (`beadwork-for-meta-analysis` or `beadwork-for-decisions`)** → ask user which; switch to whichever.
-- **Back to the overview** → switch to `beadwork-overview`.
+Options (2 + auto "Other"):
+- **Back to overview** → switch to `beadwork-overview`.
+- **Next: beadwork-as-bus** → continue the canonical tour to the multi-agent communication deep-dive.
 
-(Auto "Other" lets the user say "stop here" or describe a different next step.)
+The auto "Other" option lets the user say *"install now,"* *"jump to decisions,"* *"stop,"* or any specific skill. The companion list on the page shows all six.
 
 ### Image (optional — Beat 4 may run without an image)
 

@@ -178,15 +178,11 @@ That was the overview. Five companion skills go deeper on specific use-case angl
 
 > Where to next?
 
-Options (4 + auto "Other"):
-- **Install now** → exit overview, switch to `beadwork-install` skill (the primary CTA).
-- **Memory deep-dive (`beadwork-as-memory`)** → switch to that skill.
-- **Multi-agent / team coordination (`beadwork-as-bus`)** → switch to that skill.
-- **Audit / decision-log angle (`beadwork-for-meta-analysis` or `beadwork-for-decisions`)** → ask user which of the two; switch to whichever.
+Options (2 + auto "Other"):
+- **Next: beadwork-as-memory** → continue the canonical tour to the memory deep-dive.
+- **Stop** → end the tour here.
 
-(The auto "Other" option lets the user say "stop here" or describe a different next step.)
-
-Beat 4 is no longer a strict terminus — but the AskUserQuestion is the *only* trailing prompt; the rest of Beat 4 (chat copy, page) is the close. The companion list on the page shows all six options visually with "← you are here" on overview; the AskUserQuestion makes them actionable.
+The auto "Other" option lets the user say *"install now,"* *"jump to bus,"* or any specific skill name. The companion list on the page shows all six explicitly (with "← you are here" on overview); the AskUserQuestion is the 1-click default for *advance* or *exit*.
 
 ### Image
 

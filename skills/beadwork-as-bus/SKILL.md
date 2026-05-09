@@ -42,7 +42,7 @@ Multiple agents read and write the same store. Comments record speaker. Conflict
 Four shapes: engineer review pipeline (within-job multi-agent), scientist analysis chain (across-days multi-agent), support manager ↔ engineering (cross-team), warehouse manager ↔ vendor org (cross-org).
 
 **Beat 4 — Close: you have a team.** `http://localhost:8910/beadwork-as-bus/walkthrough_html/beat4.html`
-The take-away: with bw, your AI isn't one amnesiac generalist — it's one member of a team of specialists from your lab. Two bonuses listed second: humans-on-a-team can join the same workspace; cross-lab works too. **AskUserQuestion at the end** routes to the next skill (install / memory / audit-decisions / overview / stop).
+The take-away: with bw, your AI isn't one amnesiac generalist — it's one member of a team of specialists from your lab. Two bonuses listed second: humans-on-a-team can join the same workspace; cross-lab works too. **AskUserQuestion has 2 options + auto Other:** *"Back to overview"* and *"Next: beadwork-for-meta-analysis"*. Other handles install / specific-skill jumps / stop.
 
 ## Hard rules
 
@@ -52,7 +52,7 @@ The take-away: with bw, your AI isn't one amnesiac generalist — it's one membe
 4. **Lead with same-lab multi-session as the headline.** A team of specialist agents from one lab (design + implementation + review) is what most users will actually run. **Cross-lab interop (Claude + Gemini sharing one store) is a real but secondary case** — mention it as "and the same mechanism works across labs too," not as the lead. Most users live in one ecosystem.
 5. **Don't claim bw "fixes" anything.** It "helps" / "lets you" / "addresses." Same tone rule as `beadwork-overview`.
 6. **One beat per message.** Navigate → chat → AskUserQuestion → STOP.
-7. **Beat 4 ends with an `AskUserQuestion` that routes to the next skill** (install, memory, audit-decisions, back to overview, or stop). The companion-list visual on the page is paired with an actionable picker in chat — the user shouldn't have to type a skill name freeform to get there.
+7. **Beat 4 ends with a simple 2-option `AskUserQuestion`** — *"Back to overview"* + *"Next: beadwork-for-meta-analysis"* (the canonical-tour next step). Auto "Other" handles install jumps, specific-skill picks, or stop. **Canonical next-order:** `overview → memory → bus → meta-analysis → decisions → install`.
 8. **No false attribution.**
 
 ## Tone

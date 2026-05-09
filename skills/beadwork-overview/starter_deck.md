@@ -73,7 +73,7 @@ Beat 1 (universal hook + ASK)
 - **File:** `walkthrough_html/beat4.html`
 - **Image:** `walkthrough_html/images/beat5-close.jpg` (filename retains old "beat5" prefix; image content matches the close)
 - **Navigate:** `http://localhost:8910/beadwork-overview/walkthrough_html/beat4.html?v=<timestamp>`
-- **Chat shape:** 3-4 sentences. The companion-skills list with "← you are here" on `beadwork-overview` lives in the HTML; the punchy install row at the bottom is the natural CTA. **`AskUserQuestion` at the end** routes to the next skill (install / memory / bus / audit), making the companion list actionable rather than a dead-end.
+- **Chat shape:** 3-4 sentences. The companion-skills list with "← you are here" on `beadwork-overview` lives in the HTML; the punchy install row at the bottom is the natural CTA. **`AskUserQuestion` at the end has 2 options + auto Other:** "Next: beadwork-as-memory" / "Stop" / Other (for install jump or any specific skill).
 
 ---
 

@@ -106,13 +106,11 @@ Here's the shift to take away: with `bw`, your AI isn't one amnesiac generalist 
 
 > Where to next?
 
-Options (4 + auto "Other"):
-- **Install now** → exit to `beadwork-install` skill (the primary CTA).
-- **Memory deep-dive (`beadwork-as-memory`)** → switch to that skill.
-- **Audit / decision-log angle (`beadwork-for-meta-analysis` or `beadwork-for-decisions`)** → ask user which; switch to whichever.
-- **Back to the overview** → switch to `beadwork-overview`.
+Options (2 + auto "Other"):
+- **Back to overview** → switch to `beadwork-overview`.
+- **Next: beadwork-for-meta-analysis** → continue the canonical tour to the meta-analysis deep-dive.
 
-(Auto "Other" lets the user say "stop here" or describe a different next step.)
+The auto "Other" option lets the user say *"install now,"* *"jump to decisions,"* *"stop,"* or any specific skill. The companion list on the page shows all six.
 
 ### Image (optional)
 

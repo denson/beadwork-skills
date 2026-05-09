@@ -43,4 +43,4 @@ Navigation map for the presenter agent. Read silently before Beat 1. All hard ru
 **File:** `walkthrough_html/beat4.html`
 **Image:** `walkthrough_html/images/beat4-close.jpg`
 **Navigate:** `http://localhost:8910/beadwork-as-bus/walkthrough_html/beat4.html`
-**Chat shape:** 4-5 sentences. The take-away: your AI is now one member of a team of specialist agents from your lab. Two bonuses listed: humans-on-a-team can join via shared repo; cross-lab interop works too. Plus the canonical 6-skill companion list (with "← you are here" on as-bus). **`AskUserQuestion` at the end** routes to the next skill (install / memory / audit-decisions / overview / stop).
+**Chat shape:** 4-5 sentences. The take-away: your AI is now one member of a team of specialist agents from your lab. Two bonuses listed: humans-on-a-team can join via shared repo; cross-lab interop works too. Plus the canonical 6-skill companion list (with "← you are here" on as-bus). **`AskUserQuestion` at the end has 2 options + auto Other:** "Back to overview" / "Next: beadwork-for-meta-analysis" / Other.

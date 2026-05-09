@@ -42,7 +42,7 @@ Structured signed-and-timestamped comments. `bw show` returns the full thread; `
 Engineer conflict-finder over multi-agent code review. Data scientist methodology auditor over an analysis pipeline. Lawyer cross-case consistency check over twelve months of document review.
 
 **Beat 4 — Close: why this generalizes + pointers.** `http://localhost:8910/beadwork-for-meta-analysis/walkthrough_html/beat4.html`
-The structural advantage: signed-and-timestamped-and-structured agent communications make meta-analysis tractable. bw is the cheapest way to get that substrate. **No `AskUserQuestion` here — Beat 4 is the terminus.**
+The structural advantage: signed-and-timestamped-and-structured agent communications make meta-analysis tractable. bw is the cheapest way to get that substrate. **AskUserQuestion has 2 options + auto Other:** *"Back to overview"* and *"Next: beadwork-for-decisions"*. Other handles install / specific-skill jumps / stop.
 
 ## Hard rules
 
@@ -50,7 +50,7 @@ The structural advantage: signed-and-timestamped-and-structured agent communicat
 2. **bw is the subject; users (the seven personas) are the audience; we never appear.** No mention of "the four-role agent pipeline," no Pliny/Vera/Cato, no workspace-specific ticket IDs.
 3. **The unification: "you talk to your agent; your agent uses bw."** Don't break it.
 4. **One beat per message.** Navigate → chat → AskUserQuestion → STOP.
-5. **Beat 4 has no `AskUserQuestion`.**
+5. **Beat 4 ends with a simple 2-option `AskUserQuestion`** — *"Back to overview"* + *"Next: beadwork-for-decisions"* (the canonical-tour next step). Auto "Other" handles install jumps, specific-skill picks, or stop. **Canonical next-order:** `overview → memory → bus → meta-analysis → decisions → install`.
 6. **No false attribution.**
 
 ## Tone
