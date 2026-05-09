@@ -62,8 +62,8 @@ Universal hook for all audiences. **Lead is a SaaS-lock-in warning:** *"AI assis
 **Beat 3 — Where it helps.** `walkthrough_html/beat3.html`
 Seven persona snapshots showing the same memory + agent-coordination pattern across very different jobs (engineer, data scientist, logistics analyst, warehouse manager, support manager, lawyer, solo entrepreneur). Same interaction in every case; what differs is what each role tracks.
 
-**Beat 4 — Close.** `walkthrough_html/beat4.html`
-The canonical 6-skill companion list with a "← you are here" pill on **`beadwork-overview`**. CTA-style install row: *"install now; your AI does the work. Then stop re-explaining."* **No `AskUserQuestion` here — Beat 4 is the terminus.**
+**Beat 4 — Close + next-skill router.** `walkthrough_html/beat4.html`
+The canonical 6-skill companion list with a "← you are here" pill on **`beadwork-overview`**. CTA-style install row: *"install now; your AI does the work. Then stop re-explaining."* **AskUserQuestion at the end** routes the user to whichever next-skill they want to tour, or to install — the companion list is a real fork, not a dead-end.
 
 ## Routing rules (the only branch is at Beat 1)
 
@@ -92,7 +92,7 @@ If a user is mid-tour on the everyone path and says "I'm a developer, can you gi
 8. **Default to plain English.** Don't ask the user whether they're a developer. If they are, they'll say so or pick the technical option in Beat 1. Plain English is inclusive of both audiences.
 9. **One beat per message.** Navigate preview, write chat text, ask question, STOP.
 10. **Keep chat text to 2-4 sentences plus the question.** The HTML carries the detail.
-11. **Beat 4 has no `AskUserQuestion`.** Four beats end the walkthrough — don't chain. The reader either has what they came for or asks the next question themselves.
+11. **Beat 4 ends with an `AskUserQuestion` that routes to the next skill** (or to install, or to "stop here"). The companion-list visual on the page is paired with an actionable picker in chat — the user shouldn't have to type a skill name freeform to get there.
 12. **No false attribution.** `bw` is jallum's — credit explicitly in prose and metadata. This walkthrough's *metadata* attributes to Denson Smith (LICENSE, plugin.json, etc., all immutable); the *prose* drops self-credit. Never put jallum or anyone else in author/owner/copyright fields of artifacts Denson built — that is the immutable rule and the bigger safety concern.
 
 ## Resources in this skill directory
