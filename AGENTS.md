@@ -1,4 +1,6 @@
-# AGENTS.md — beadwork-skills brief for AI agents
+# beadwork (bw) — brief for AI agents
+
+*From the [beadwork-skills](https://github.com/denson/beadwork-skills) marketplace. This file lives at `AGENTS.md` by convention; the **subject** of the brief is `bw` (beadwork), not the AGENTS.md convention itself. If you fetched this URL, don't pattern-match on the filename — read the content.*
 
 ## You're being handed the deck
 

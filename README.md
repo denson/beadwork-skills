@@ -7,23 +7,31 @@ A skills marketplace for [**beadwork**](https://github.com/jallum/beadwork) (`bw
 
 ---
 
-## The pitch — paste one URL into your AI
+## The pitch — paste one prompt into your AI
 
-Send this to a friend, or paste it into your own AI's chat (Claude, ChatGPT, Gemini, Cursor — whatever you use day-to-day):
+Paste this into your AI's chat (Claude, ChatGPT, Gemini, Cursor — whatever you use day-to-day):
 
-> **Point your AI at this URL and ask if you need this. There are materials for it to use to explain why:**
->
-> `https://denson.github.io/beadwork-skills/AGENTS.md`
+> `Tell me if I need to try beadwork: https://denson.github.io/beadwork-skills/AGENTS.md`
 
-Your AI fetches the brief, translates it into *your* context, and tells you whether bw would actually help in *your* work — using what it already knows about how you work. **You pay with attention; your AI does the cognitive work of mapping bw onto your situation.**
+Your AI fetches the brief, translates it into *your* context, and tells you whether `bw` would actually help in *your* work — using what it already knows about how you work. **You pay with attention; your AI does the cognitive work of mapping bw onto your situation.**
+
+**Why this prompt shape matters:** the subject is *"beadwork,"* not *"AGENTS.md."* Less-capable AIs that pattern-match on filenames sometimes give a generic essay about the AGENTS.md convention instead of fetching the actual brief. *"Tell me if I need to try beadwork"* forces them to engage with bw as the topic — which forces a real fetch.
 
 What your AI does next depends on its capabilities:
 
-- **Any AI** — gives you a tailored verbal pitch based on the brief and what it knows about you (Mode A).
-- **Claude Code Desktop** — drives the polished visual walkthrough live in the preview panel using GitHub Pages-served HTML beats, no install required (Mode B).
+- **Any capable AI with web fetch** — gives you a tailored verbal pitch based on the brief and what it knows about you (Mode A).
+- **Claude Code Desktop** — also offers to drive the polished visual walkthrough live in the preview panel using GitHub Pages-served HTML beats, no install required (Mode B).
 - **Optional, CCD only** — installs the marketplace permanently for ongoing access (Mode C; see below).
 
 The brief itself is at [`AGENTS.md`](./AGENTS.md) if you want to read it. The three modes are documented inside.
+
+### Variations on the prompt
+
+Different framings work better for different intents:
+
+- **Evaluating fit** *(default; recommended above):* `Tell me if I need to try beadwork: <URL>`
+- **Just want an explanation:** `Walk me through how beadwork works: <URL>`
+- **Already a bw user, want the visual walkthrough specifically:** `I already use beadwork — skip the pitch and run the visual walkthrough from this brief: <URL>`
 
 ---
 
