@@ -4,7 +4,7 @@
   "skill": "beadwork-for-meta-analysis",
   "quality": "2k",
   "aspectRatio": "16:9",
-  "task_id": "a9EPPmdA0PbFxgifV0ACI",
+  "task_id": "BkPObE3S8Ipfh2nmE1Jh5",
   "saved_files": [
     "beat4-close.jpg"
   ],
@@ -12,10 +12,10 @@
     "status": "completed",
     "images": [
       {
-        "url": "https://r2.conceptviz.app/images/Pq3zEc9m9Ek0d6PQxUi9DSiYkSQBUkGr/a9EPPmdA0PbFxgifV0ACI/0-025acf11dbcf1ca5.jpg",
-        "prompt": "A clean closing card. CENTER TOP: a stylized structured ticket card (with the now-familiar TITLE plus comments-with-author-and-timestamp shape) being read by a magnifying-glass icon labeled \"any agent can read this.\" BELOW the ticket: a horizontal label/banner reading \"signed + timestamped + structured = analyzable.\" BELOW THE BANNER: five small companion-skill icons arranged horizontally with their names underneath: 1. compass icon — \"beadwork-overview\" 2. clock + brain icon — \"beadwork-as-memory\" 3. network icon — \"beadwork-as-bus\" 4. decision-tree icon — \"beadwork-for-decisions\" 5. wrench icon — \"beadwork-install\" BOTTOM: a small caption in italic \"open source. Denson Smith. bw itself by jallum.\" Caption: \"Meta-analysis is just another agent reading the substrate.\" These images are for the beadwork-for-meta-analysis presenter skill — a deep-dive on running an agent over the bw (beadwork — github.com/jallum/beadwork) history of OTHER agents to audit, check methodology, or synthesize. Concrete personas in the scenarios: engineer (multi-agent code review with conflict-finder), data scientist (analysis pipeline with methodology auditor), lawyer (cross-case consistency check). Colorblind-friendly, no hex codes. Style: flat design, editorial illustration, simple shapes, bold colors on a light warm-gray background. Think 'product strategy deck illustration,' not whiteboard sketch. Generic AI-assistant figures (NOT vendor-branded; do not include any specific agent names like Pliny, Vera, Cato, Ada, or any company logo).",
-        "imageHash": "025acf11dbcf1ca54df638aff047b4006c15075cf402480184277ebb5fa082b9",
-        "storageKey": "images/Pq3zEc9m9Ek0d6PQxUi9DSiYkSQBUkGr/a9EPPmdA0PbFxgifV0ACI/0-025acf11dbcf1ca5.jpg"
+        "url": "https://r2.conceptviz.app/images/Pq3zEc9m9Ek0d6PQxUi9DSiYkSQBUkGr/BkPObE3S8Ipfh2nmE1Jh5/0-213b794856fa137e.jpg",
+        "prompt": "A clean closing card. CENTER TOP: a stylized structured ticket card (with the now-familiar TITLE plus comments-with-author-and-timestamp shape) being read by a magnifying-glass icon labeled \"any agent can read this.\" BELOW the ticket: a horizontal label/banner reading \"signed + timestamped + structured = analyzable.\" BELOW THE BANNER: five small companion-skill icons arranged horizontally with their names underneath: 1. compass icon — \"beadwork-overview\" 2. clock + brain icon — \"beadwork-as-memory\" 3. network icon — \"beadwork-as-bus\" 4. decision-tree icon — \"beadwork-for-decisions\" 5. wrench icon — \"beadwork-install\" BOTTOM: a small caption in italic \"open source, MIT-licensed. bw by jallum (github.com/jallum/beadwork).\" Caption: \"Meta-analysis is just another agent reading the substrate.\" These images are for the beadwork-for-meta-analysis presenter skill — a deep-dive on running an agent over the bw (beadwork — github.com/jallum/beadwork) history of OTHER agents to audit, check methodology, or synthesize. Concrete personas in the scenarios: engineer (multi-agent code review with conflict-finder), data scientist (analysis pipeline with methodology auditor), lawyer (cross-case consistency check). Colorblind-friendly, no hex codes. Style: flat design, editorial illustration, simple shapes, bold colors on a light warm-gray background. Think 'product strategy deck illustration,' not whiteboard sketch. Generic AI-assistant figures (NOT vendor-branded; do not include any specific agent names like Pliny, Vera, Cato, Ada, or any company logo).",
+        "imageHash": "213b794856fa137e718f712bf8539b8bef07cdc251f9cb0ed899a4d8fbed6e72",
+        "storageKey": "images/Pq3zEc9m9Ek0d6PQxUi9DSiYkSQBUkGr/BkPObE3S8Ipfh2nmE1Jh5/0-213b794856fa137e.jpg"
       }
     ]
   }

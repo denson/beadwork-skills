@@ -114,8 +114,6 @@ The structural advantage worth naming explicitly: meta-analysis works on `bw` be
 
 `walkthrough_html/images/beat4-close.jpg` — A clean closing card. Center top: a stylized structured ticket (with the now-familiar TITLE + comments-with-author-and-timestamp shape) being read by a magnifying-glass icon labeled **"any agent can read this"**. Below the ticket, a label: *"signed + timestamped + structured = analyzable."* Around the ticket, four small companion-skill icons arranged horizontally with their names: `beadwork-overview`, `beadwork-as-memory`, `beadwork-as-bus`, `beadwork-for-decisions`, plus `beadwork-install`. Bottom: a small caption reading *"open source, MIT-licensed. bw by jallum (github.com/jallum/beadwork)."*
 
-**NOTE:** The rendered image as of 2026-05-08 still shows the older caption *"open source. Denson Smith. bw itself by jallum."* — visual contradicts spec. Regenerate to match the spec when convenient.
-
 Caption: *"Meta-analysis is just another agent reading the substrate."*
 
 ### Tone notes

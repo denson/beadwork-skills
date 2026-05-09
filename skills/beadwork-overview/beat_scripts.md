@@ -188,9 +188,7 @@ This was the overview. Five companion skills go deeper on specific use-case angl
 
 ### Image
 
-`walkthrough_html/images/beat5-close.jpg` — five companion-skill cards in a 3-2 grid (memory, bus, meta-analysis, decisions, install). Bottom caption (desired): *"open source, MIT-licensed. bw by jallum (github.com/jallum/beadwork)."*
-
-**NOTE:** The rendered image as of 2026-05-08 shows the older caption *"open source. authored by Denson Smith. bw itself by jallum."* — visual contradicts the no-self-credit rule. Regenerate to match the spec when convenient.
+`walkthrough_html/images/beat5-close.jpg` — five companion-skill cards in a 3-2 grid (memory, bus, meta-analysis, decisions, install). Bottom caption: *"open source, MIT-licensed. bw by jallum (github.com/jallum/beadwork)."*
 
 Caption: *"Five companion skills."*
 
