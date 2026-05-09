@@ -126,6 +126,42 @@ You're not delivering a generic tour. Use what you know about the user:
 
 ---
 
+## If the user asks for the structured visual tour
+
+The marketplace's first five skills (overview, memory, bus, meta-analysis, decisions) include HTML walkthroughs designed for **Claude Code Desktop's preview panel** — `AskUserQuestion` cards in chat paired with rich HTML beats (with images) on a side panel. You probably can't drive a preview panel directly — that's a CCD-specific capability — but you have alternatives, in order of fidelity:
+
+### Option 1 — Inline HTML rendering (best fidelity if you can do it)
+
+If your environment supports HTML rendering (Claude.ai with artifacts, ChatGPT with canvas / HTML preview, browser-based AI assistants), fetch each beat HTML from the public marketplace and render as an inline artifact:
+
+```
+https://raw.githubusercontent.com/denson/beadwork-skills/main/skills/<skill-name>/walkthrough_html/<beat-file>.html
+```
+
+Beat naming convention: `beat1.html`, `beat2.html` (or `beat2_everyone.html` / `beat2_coder.html` for the overview), `beat3.html`, `beat4.html`, etc. The HTML files are self-contained — they pull a sibling `style.css` from the same directory. Deliver chat copy alongside; ask the user where to go next; navigate to the next beat the same way.
+
+### Option 2 — URL handoff with chat-side narration
+
+If you have web access but can't render HTML inline: paste the GitHub URL for each beat; the user opens it in their browser; you deliver the chat copy in your own session and ask the next-step question. Same flow as CCD; different rendering surface.
+
+### Option 3 — Verbal-only walkthrough
+
+If you can only chat: walk the user through using *just this brief*. You have everything you need:
+
+- The **three forgetting modes** (session ends / concurrent sessions / mid-session compaction-or-drift) is Beat 1's hook.
+- The **three-tier escalation** (memory across time / specialist agent team / human-team coordination) is the body of Beat 1.
+- The **four storage modes** with pricing is Beat 2.
+- The **persona snapshots** (engineer / data scientist / logistics analyst / warehouse manager / support manager / lawyer / solo entrepreneur) is Beat 3 — fill in concrete examples from the user's context.
+- The **install path + companion-skill list** is Beat 4 (the close).
+
+Just deliver them in chat in order, asking where to go next at each transition. No images, but the content lands.
+
+### Option 4 — Hand it back to Claude Code Desktop
+
+If the user really wants the polished visual tour specifically (HTML beats + preview panel + AskUserQuestion cards), recommend they install Claude Code Desktop, install the `beadwork-skills` marketplace, and run `beadwork-overview`. The preview panel was built for this; nothing else matches it natively.
+
+---
+
 ## A note on installation across AI environments
 
 The `beadwork-install` skill in this marketplace is shaped for **Claude Code Desktop** — it's agent-execution that lets Claude run the install steps interactively, with the user authorizing each prompt as it appears.
