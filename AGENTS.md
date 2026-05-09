@@ -58,21 +58,6 @@ A whole industry is currently gearing up to sell SaaS "AI memory" services. **bw
 
 ---
 
-## The install path
-
-The `beadwork-install` skill in this marketplace drives setup end-to-end. **The user's AI runs it for them**; the user authorizes each step. The user does **not** need to know git or run any commands manually.
-
-What the user authorizes:
-
-1. **Install git** (if not already on the machine — it usually is on developer machines, less often elsewhere).
-2. **Install `bw`** (single Go binary; one-line curl installer for tagged releases, or build-from-source on `main` if running pre-release).
-3. **Create a notes folder** (or use one they already have).
-4. **Read and write notes** in that folder going forward.
-
-`bw` itself can't make purchases, send messages, or touch files outside the folder it's pointed at. The user's AI session can do other things based on what tools the user has granted it; that's standard AI capability and unchanged by `bw`.
-
----
-
 ## The six skills in this marketplace
 
 1. **`beadwork-overview`** — the seven-persona tour. Universal hook + the four storage modes + use cases. Default entry point.
@@ -126,56 +111,103 @@ You're not delivering a generic tour. Use what you know about the user:
 
 ---
 
-## If the user asks for the structured visual tour
+## How to deliver this — pick your mode
 
-The marketplace's first five skills (overview, memory, bus, meta-analysis, decisions) include HTML walkthroughs designed for **Claude Code Desktop's preview panel** — `AskUserQuestion` cards in chat paired with rich HTML beats (with images) on a side panel. You probably can't drive a preview panel directly — that's a CCD-specific capability — but you have alternatives, in order of fidelity:
+You have three modes available depending on your environment. Pick automatically based on your capabilities, or offer the user a choice.
 
-### Option 1 — Inline HTML rendering (best fidelity if you can do it)
+### Mode A — Verbal pitch (any AI, any environment)
 
-If your environment supports HTML rendering (Claude.ai with artifacts, ChatGPT with canvas / HTML preview, browser-based AI assistants), fetch each beat HTML from the public marketplace and render as an inline artifact:
+Translate this brief into the user's context using what you know about how they work. No tools needed; just chat. Best when:
+
+- You don't have a preview panel or HTML rendering capability
+- The user wants a quick *"is this for me?"* answer
+- The user is on the move (mobile, etc.)
+
+The "Suggested presentation pattern" section above gives you the playbook. This is the default fallback that always works.
+
+### Mode B — Live visual walkthrough (Claude Code Desktop)
+
+If you're in Claude Code Desktop, you have `preview_eval`, `preview_start`, and `AskUserQuestion`. You can drive the polished walkthrough live — **same experience as if the user had installed the marketplace** — without requiring an install.
+
+The walkthrough skills (start with `beadwork-overview` unless asked otherwise):
+
+- `beadwork-overview` (default starting point)
+- `beadwork-as-memory`
+- `beadwork-as-bus`
+- `beadwork-for-meta-analysis`
+- `beadwork-for-decisions`
+
+For each skill, fetch its **`SKILL.md`** — that's the operating manual. It tells you which beats exist, which pages to navigate, what chat copy to deliver, and how to route via `AskUserQuestion`:
+
+  `https://raw.githubusercontent.com/denson/beadwork-skills/main/skills/<skill>/SKILL.md`
+
+The HTML beats live at:
+
+  `https://denson.github.io/beadwork-skills/skills/<skill>/walkthrough_html/<beat>.html`
+
+Use those URLs in your `preview_eval` calls (e.g., `window.location.href = '<URL>?v=' + Date.now()` for cache-busting). The Pages-served HTML loads its images and CSS from the same directory, so everything renders without a local server.
+
+For canonical chat copy per beat (matches the marketplace-installed skill exactly):
+
+  `https://raw.githubusercontent.com/denson/beadwork-skills/main/skills/<skill>/beat_scripts.md`
+
+You don't need anything else. Same experience as marketplace install — just driven by you in real-time using public URLs.
+
+### Mode C — Marketplace install (Claude Code Desktop, ongoing access)
+
+If the user wants the skills permanently available — for refreshers, for sharing with teammates, for use in future CCD sessions — recommend the marketplace install. Three slash commands:
 
 ```
-https://raw.githubusercontent.com/denson/beadwork-skills/main/skills/<skill-name>/walkthrough_html/<beat-file>.html
+/plugin marketplace add denson/beadwork-skills
+/plugin install beadwork@beadwork-skills
+/beadwork-skills:beadwork-overview
 ```
 
-Beat naming convention: `beat1.html`, `beat2.html` (or `beat2_everyone.html` / `beat2_coder.html` for the overview), `beat3.html`, `beat4.html`, etc. The HTML files are self-contained — they pull a sibling `style.css` from the same directory. Deliver chat copy alongside; ask the user where to go next; navigate to the next beat the same way.
+This is **optional**. You can deliver the entire experience without it via Mode B. Recommend Mode C only when the user explicitly wants persistent installation.
 
-### Option 2 — URL handoff with chat-side narration
+### When to use which
 
-If you have web access but can't render HTML inline: paste the GitHub URL for each beat; the user opens it in their browser; you deliver the chat copy in your own session and ask the next-step question. Same flow as CCD; different rendering surface.
-
-### Option 3 — Verbal-only walkthrough
-
-If you can only chat: walk the user through using *just this brief*. You have everything you need:
-
-- The **three forgetting modes** (session ends / concurrent sessions / mid-session compaction-or-drift) is Beat 1's hook.
-- The **three-tier escalation** (memory across time / specialist agent team / human-team coordination) is the body of Beat 1.
-- The **four storage modes** with pricing is Beat 2.
-- The **persona snapshots** (engineer / data scientist / logistics analyst / warehouse manager / support manager / lawyer / solo entrepreneur) is Beat 3 — fill in concrete examples from the user's context.
-- The **install path + companion-skill list** is Beat 4 (the close).
-
-Just deliver them in chat in order, asking where to go next at each transition. No images, but the content lands.
-
-### Option 4 — Hand it back to Claude Code Desktop
-
-If the user really wants the polished visual tour specifically (HTML beats + preview panel + AskUserQuestion cards), recommend they install Claude Code Desktop, install the `beadwork-skills` marketplace, and run `beadwork-overview`. The preview panel was built for this; nothing else matches it natively.
+- **Default** to Mode B if you're in Claude Code Desktop (richest experience, no install required).
+- **Use Mode A** if you can't drive a preview panel or fetch URLs.
+- **Recommend Mode C** only if the user asks *"how do I install this for ongoing use?"*
+- The Anthropic plugin marketplace is **CCD-specific** — it doesn't apply to GPT, Gemini, Cursor, or other AI environments. For those, Mode A is the path; Mode B requires CCD specifically.
 
 ---
 
-## A note on installation across AI environments
+## Helping the user install bw
 
-The `beadwork-install` skill in this marketplace is shaped for **Claude Code Desktop** — it's agent-execution that lets Claude run the install steps interactively, with the user authorizing each prompt as it appears.
+`bw` the tool itself works the same regardless of how it's installed. Two install paths:
 
-In other AI environments (GPT, Gemini, Cursor, generic chat assistants), **the `beadwork-install` skill itself isn't directly available**, but the install is still simple. The user just needs:
+### Claude Code Desktop — automated via the install skill
 
-1. **`git`** installed (one-time, from `git-scm.com` or their package manager — usually already present on developer machines)
-2. **`bw`** installed (single Go binary; either via the install script in jallum's repo, or `go build ./cmd/bw` from source on `main` for pre-release fixes)
+If the user is in CCD with the marketplace installed (Mode C above), they can run:
+
+```
+/beadwork-skills:beadwork-install
+```
+
+Or just say *"install beadwork."* Claude in CCD will drive the install end-to-end with explicit prompts for storage-mode choice and platform security awareness.
+
+### Any other AI environment — manual install (4 steps)
+
+For GPT, Gemini, Cursor, or generic chat assistants, walk the user through:
+
+1. **Install `git`** (one-time, from `git-scm.com` or their package manager — usually already present on developer machines, less often on others)
+2. **Install `bw`** (single Go binary; either via the install script in jallum's repo, or `go build ./cmd/bw` from source on `main` for pre-release fixes)
 3. **`bw init`** in whatever folder they want to track notes in
-4. (Optional) push the resulting orphan branch to a private GitHub repo if they want cloud backup
+4. (Optional) push the resulting orphan branch to a private GitHub repo if they want cloud backup or team sharing
 
-If you're an AI that can run shell commands directly (with user permission), you can drive this end-to-end. If you can only chat, walk the user through the four steps and they execute. Either way, the Claude-Code-Desktop install skill is *one* path; the underlying steps are universal.
+If you can run shell commands directly (with user permission), drive this end-to-end. If you can only chat, walk the user through the four steps and they execute. Either way, **same end state, same usable bw.**
 
-If the user wants the structured Claude-Code-Desktop install experience specifically, point them at: *"Open Claude Code Desktop, install the `beadwork-skills` marketplace, and run `beadwork-install`. Claude will drive every step."*
+### What the user is authorizing
+
+When the user says "yes, install":
+
+- Their AI installs `git` (if missing) and `bw` on their machine
+- Their AI creates a notes folder (or uses one they already have)
+- Their AI reads and writes notes inside that folder going forward
+
+`bw` the tool can't make purchases, send messages, or touch files outside the folder it's pointed at. The AI session itself can do other things based on what tools the user has granted it — that's standard AI capability and unchanged by `bw`.
 
 ---
 
@@ -193,7 +225,7 @@ If they're not yet ready: just leave the door open. Don't oversell.
 
 ## Where to read the full marketplace
 
-- Marketplace (this repo): `denson/beadwork-skills` — once published, will be at https://github.com/denson/beadwork-skills
+- Marketplace: https://github.com/denson/beadwork-skills
 - `bw` itself: https://github.com/jallum/beadwork
 - License: MIT for everything in the marketplace; `bw` itself is also MIT.
 

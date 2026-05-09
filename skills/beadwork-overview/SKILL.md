@@ -20,9 +20,10 @@ The walkthrough uses Claude Code Desktop's **preview panel** to display rich HTM
 
 ## Before your first message
 
-1. Start the server: `preview_start` with name `"beadwork-skills"` (defined in `.claude/launch.json`, port 8910 — one shared server serves every skill in this marketplace).
-2. Read `starter_deck.md` from this skill directory **silently** (do not show it). It's the navigation map.
-3. If the user has not yet triggered the walkthrough explicitly, **stop**. Don't open Beat 1 unprompted. Wait for "what is beadwork" or "do I need this" or equivalent.
+1. Read `starter_deck.md` from this skill directory **silently** (do not show it). It's the navigation map.
+2. If the user has not yet triggered the walkthrough explicitly, **stop**. Don't open Beat 1 unprompted. Wait for "what is beadwork" or "do I need this" or equivalent.
+
+**No server setup needed.** The walkthrough HTML beats are served from GitHub Pages at `https://denson.github.io/beadwork-skills/skills/beadwork-overview/walkthrough_html/`. The preview panel navigates directly to those URLs; images and CSS load relative to the page automatically. For local HTML development with faster iteration, see "Local development" at the bottom of this file.
 
 ## Source of truth for prose
 
@@ -41,7 +42,7 @@ You do **NOT**:
 
 Every beat follows this exact sequence:
 
-1. **Navigate the preview panel:** `preview_eval` → `window.location.href = 'http://localhost:8910/beadwork-overview/walkthrough_html/<page>.html?v=' + Date.now()` (the cache-bust query string ensures the user sees fresh content after edits).
+1. **Navigate the preview panel:** `preview_eval` → `window.location.href = 'https://denson.github.io/beadwork-skills/skills/beadwork-overview/walkthrough_html/<page>.html?v=' + Date.now()` (the cache-bust query string ensures the user sees fresh content after edits).
 2. **Write 2-4 sentences of conversational context in chat.** Not a copy of the HTML. Add color, respond to what the user said, bridge from the visual to the question.
 3. **Ask ONE question via `AskUserQuestion`** with 2-4 options. **Each option must map to a specific page or destination — never deflect a question with a different question.**
 4. **STOP. Wait for the user to respond before proceeding.**
@@ -105,3 +106,12 @@ If a user is mid-tour on the everyone path and says "I'm a developer, can you gi
 ## Tone
 
 Conversational, concrete, honest. **Describe; don't pitch.** The reader could be any of the seven personas — the framing should land regardless. The default everyone path uses plain English (explains git, repos, CLI in friendly terms). The `beat2_coder.html` opt-in uses developer vocabulary. **Cite jallum + bw with a link upfront.** The product speaks for itself once seen.
+
+## Local development of HTML beats
+
+For agents editing the HTML files locally and iterating, an alternative dev-time path uses a local Python server in place of the Pages URLs:
+
+1. `preview_start` with name `"beadwork-skills"` (defined in `.claude/launch.json`, port 8910 — one shared server for all five walkthrough skills)
+2. In `preview_eval` calls, use `http://localhost:8910/beadwork-overview/walkthrough_html/<page>.html?v=' + Date.now()` instead of the Pages URL
+
+This avoids waiting for a GitHub Pages rebuild after each HTML edit. Pages URLs are canonical for end users; localhost is a dev-time convenience.

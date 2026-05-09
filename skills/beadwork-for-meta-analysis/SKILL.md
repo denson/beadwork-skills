@@ -20,9 +20,10 @@ Standard walkthrough shape: preview panel for HTML beats, `AskUserQuestion` for 
 
 ## Before your first message
 
-1. Start the server: `preview_start` with name `"beadwork-skills"` (port 8910 — one shared server serves every skill in this marketplace).
-2. Read `starter_deck.md` silently.
-3. Don't open Beat 1 unprompted — wait for "agent reading agents", "bw meta-analysis", or equivalent.
+1. Read `starter_deck.md` silently.
+2. Don't open Beat 1 unprompted — wait for "agent reading agents", "bw meta-analysis", or equivalent.
+
+**No server setup needed.** Walkthrough HTML beats are served from GitHub Pages at `https://denson.github.io/beadwork-skills/skills/beadwork-for-meta-analysis/walkthrough_html/`. The preview panel navigates directly to those URLs. For local HTML development, see "Local development" at the bottom.
 
 ## Source of truth
 
@@ -32,16 +33,16 @@ Standard walkthrough shape: preview panel for HTML beats, `AskUserQuestion` for 
 
 ## The 4 beats
 
-**Beat 1 — Hook: agents make mistakes; chat history can't help you find them.** `http://localhost:8910/beadwork-for-meta-analysis/walkthrough_html/beat1.html`
+**Beat 1 — Hook: agents make mistakes; chat history can't help you find them.** `https://denson.github.io/beadwork-skills/skills/beadwork-for-meta-analysis/walkthrough_html/beat1.html`
 The premise: in any non-trivial agent workflow, agents make mistakes. Chat history is unstructured stream-of-consciousness — an audit agent can't reliably find drift, contradictions, or methodology gaps in chat. bw can.
 
-**Beat 2 — How meta-analysis works in bw.** `http://localhost:8910/beadwork-for-meta-analysis/walkthrough_html/beat2.html`
+**Beat 2 — How meta-analysis works in bw.** `https://denson.github.io/beadwork-skills/skills/beadwork-for-meta-analysis/walkthrough_html/beat2.html`
 Structured signed-and-timestamped comments. `bw show` returns the full thread; `bw list` returns ranges. An agent reading those gets exactly the substrate needed for analysis — author, time, structure, no chat noise.
 
-**Beat 3 — Persona scenarios.** `http://localhost:8910/beadwork-for-meta-analysis/walkthrough_html/beat3.html`
+**Beat 3 — Persona scenarios.** `https://denson.github.io/beadwork-skills/skills/beadwork-for-meta-analysis/walkthrough_html/beat3.html`
 Engineer conflict-finder over multi-agent code review. Data scientist methodology auditor over an analysis pipeline. Lawyer cross-case consistency check over twelve months of document review.
 
-**Beat 4 — Close: why this generalizes + pointers.** `http://localhost:8910/beadwork-for-meta-analysis/walkthrough_html/beat4.html`
+**Beat 4 — Close: why this generalizes + pointers.** `https://denson.github.io/beadwork-skills/skills/beadwork-for-meta-analysis/walkthrough_html/beat4.html`
 The structural advantage: signed-and-timestamped-and-structured agent communications make meta-analysis tractable. bw is the cheapest way to get that substrate. **AskUserQuestion has 2 options + auto Other:** *"Back to overview"* and *"Next: beadwork-for-decisions"*. Other handles install / specific-skill jumps / stop.
 
 ## Hard rules
@@ -56,3 +57,12 @@ The structural advantage: signed-and-timestamped-and-structured agent communicat
 ## Tone
 
 Direct, slightly more abstract than memory or bus. The reader has likely been through `beadwork-overview` (or one of the other use-case skills) and knows what bw is. This skill is the **structural-advantage angle**: bw is uniquely well-suited for meta-analysis because its comments are signed, timestamped, and structured. Chat isn't. Show why this matters with concrete persona scenarios; don't pitch.
+
+## Local development of HTML beats
+
+For agents editing the HTML files locally and iterating, an alternative dev-time path uses a local Python server in place of the Pages URLs:
+
+1. `preview_start` with name `"beadwork-skills"` (defined in `.claude/launch.json`, port 8910 — one shared server for all five walkthrough skills)
+2. In `preview_eval` calls, use `http://localhost:8910/beadwork-for-meta-analysis/walkthrough_html/<page>.html?v=' + Date.now()` instead of the Pages URL
+
+Pages URLs are canonical for end users; localhost is a dev-time convenience.

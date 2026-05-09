@@ -32,7 +32,7 @@ Beat 1 (universal hook + ASK)
 
 - **File:** `walkthrough_html/beat1.html`
 - **Image:** `walkthrough_html/images/beat1-hook.jpg`
-- **Navigate:** `http://localhost:8910/beadwork-overview/walkthrough_html/beat1.html?v=<timestamp>`
+- **Navigate:** `https://denson.github.io/beadwork-skills/skills/beadwork-overview/walkthrough_html/beat1.html?v=<timestamp>`
 - **Chat shape:** 3-4 sentences naming the three forgetting modes, the SaaS-lock-in warning lead, the three-tier escalation, and the three reassurances. See `beat_scripts.md` Beat 1.
 - **Question:** "Sound interesting?" — 4 options that each map to a destination:
   - **Continue** → `beat2_everyone.html`
@@ -49,7 +49,7 @@ Beat 1 (universal hook + ASK)
 
 - **File:** `walkthrough_html/beat2_everyone.html`
 - **Image:** `walkthrough_html/images/beat2-trust.jpg` (reused — framed in chat as "lives in a folder on your computer")
-- **Navigate:** `http://localhost:8910/beadwork-overview/walkthrough_html/beat2_everyone.html?v=<timestamp>`
+- **Navigate:** `https://denson.github.io/beadwork-skills/skills/beadwork-overview/walkthrough_html/beat2_everyone.html?v=<timestamp>`
 - **Chat shape:** 4-6 sentences explaining git first, then what bw does on top of git, then the four storage modes with empirically-correct pricing, then the authorization stack. See `beat_scripts.md` Beat 2 (everyone).
 - **Question:** "Storage mode preference, or skip ahead?" — 4 options, all proceed to Beat 3.
 
@@ -57,7 +57,7 @@ Beat 1 (universal hook + ASK)
 
 - **File:** `walkthrough_html/beat2_coder.html`
 - **Image:** `walkthrough_html/images/beat2-trust.jpg` (reused)
-- **Navigate:** `http://localhost:8910/beadwork-overview/walkthrough_html/beat2_coder.html?v=<timestamp>`
+- **Navigate:** `https://denson.github.io/beadwork-skills/skills/beadwork-overview/walkthrough_html/beat2_coder.html?v=<timestamp>`
 - **Chat shape:** 4-5 sentences with developer vocabulary. Storage = orphan branch + JSON. Single Go binary. Cross-AI portable. MIT-licensed. Survives compaction. See `beat_scripts.md` Beat 2 (coder).
 - **Question:** "Want to see where this kind of memory + coordination earns its keep?" — 2 options, both proceed to Beat 3.
 
@@ -67,7 +67,7 @@ Beat 1 (universal hook + ASK)
 
 - **File:** `walkthrough_html/beat3.html`
 - **Image:** `walkthrough_html/images/beat3-personas.jpg` (seven-persona grid — filename matches new beat numbering)
-- **Navigate:** `http://localhost:8910/beadwork-overview/walkthrough_html/beat3.html?v=<timestamp>`
+- **Navigate:** `https://denson.github.io/beadwork-skills/skills/beadwork-overview/walkthrough_html/beat3.html?v=<timestamp>`
 - **Chat shape:** 4-6 sentences walking the seven persona snapshots quickly. Stay neutral on coder/non-coder vocabulary so both forks land cleanly here. See `beat_scripts.md` Beat 3.
 - **Question:** "Want pointers to deeper-dive skills?" — 2 options.
 
@@ -77,7 +77,7 @@ Beat 1 (universal hook + ASK)
 
 - **File:** `walkthrough_html/beat4.html`
 - **Image:** `walkthrough_html/images/beat5-close.jpg` (filename retains old "beat5" prefix; image content matches the close)
-- **Navigate:** `http://localhost:8910/beadwork-overview/walkthrough_html/beat4.html?v=<timestamp>`
+- **Navigate:** `https://denson.github.io/beadwork-skills/skills/beadwork-overview/walkthrough_html/beat4.html?v=<timestamp>`
 - **Chat shape:** 3-4 sentences. The companion-skills list with "← you are here" on `beadwork-overview` lives in the HTML; the punchy install row at the bottom is the natural CTA. **`AskUserQuestion` at the end has 2 options + auto Other:** "Next: beadwork-as-memory" / "Stop" / Other (for install jump or any specific skill).
 
 ---

@@ -1,28 +1,35 @@
 # beadwork-skills
 
-A Claude Code marketplace for [**beadwork**](https://github.com/jallum/beadwork) (`bw`) — git-native AI memory and agent-to-agent coordination, written by [**jallum**](https://github.com/jallum).
+A skills marketplace for [**beadwork**](https://github.com/jallum/beadwork) (`bw`) — git-native AI memory and agent-to-agent coordination, by [**jallum**](https://github.com/jallum).
 
 > **AI assistants forget.** A whole industry is gearing up to sell you the answer.
 > Look at `bw` before you get locked in — it's free, open source, and might be all you need.
 
 ---
 
-## Two ways to start
+## The pitch — paste one URL into your AI
 
-### (1) If you have a daily-driver AI you trust — *one-liner*
+Send this to a friend, or paste it into your own AI's chat (Claude, ChatGPT, Gemini, Cursor — whatever you use day-to-day):
 
-Copy-paste this into your usual AI (Claude, ChatGPT, Gemini, Cursor, etc.):
+> **Point your AI at this URL and ask if you need this. There are materials for it to use to explain why:**
+>
+> `https://denson.github.io/beadwork-skills/AGENTS.md`
 
-> **Read this and tell me whether `bw` matters for me, given how you've been working with me:**
-> `https://raw.githubusercontent.com/denson/beadwork-skills/main/AGENTS.md`
+Your AI fetches the brief, translates it into *your* context, and tells you whether bw would actually help in *your* work — using what it already knows about how you work. **You pay with attention; your AI does the cognitive work of mapping bw onto your situation.**
 
-Your AI fetches the brief, translates it into your context, and tells you whether bw would actually help in your work — based on what it already knows about you. **You pay with attention; your AI does the cognitive work.**
+What your AI does next depends on its capabilities:
 
-(Why this works: the brief is the deck; your AI is the influencer who knows you. See [`AGENTS.md`](./AGENTS.md) for the deck itself.)
+- **Any AI** — gives you a tailored verbal pitch based on the brief and what it knows about you (Mode A).
+- **Claude Code Desktop** — drives the polished visual walkthrough live in the preview panel using GitHub Pages-served HTML beats, no install required (Mode B).
+- **Optional, CCD only** — installs the marketplace permanently for ongoing access (Mode C; see below).
 
-### (2) If you want a guided visual tour — *Claude Code Desktop*
+The brief itself is at [`AGENTS.md`](./AGENTS.md) if you want to read it. The three modes are documented inside.
 
-Paste these three commands in Claude Code Desktop:
+---
+
+## Want it permanently in Claude Code Desktop?
+
+For ongoing access to the skills (refreshers, sharing with teammates, future invocations), three slash commands install everything:
 
 ```
 /plugin marketplace add denson/beadwork-skills
@@ -30,7 +37,7 @@ Paste these three commands in Claude Code Desktop:
 /beadwork-skills:beadwork-overview
 ```
 
-The third command runs the overview walkthrough — six rich HTML beats with images and clickable choices. About 5 minutes.
+The marketplace is **Anthropic-specific** (Claude Code Desktop). For other AI environments, the URL paste above gives you the same experience without the install.
 
 ---
 

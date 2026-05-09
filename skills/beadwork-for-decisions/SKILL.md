@@ -20,9 +20,10 @@ Standard walkthrough shape: preview panel for HTML beats, `AskUserQuestion` for 
 
 ## Before your first message
 
-1. Start the server: `preview_start` with name `"beadwork-skills"` (port 8910 — one shared server serves every skill in this marketplace).
-2. Read `starter_deck.md` silently.
-3. Don't open Beat 1 unprompted — wait for "decision log", "ADR", "audit trail", or equivalent.
+1. Read `starter_deck.md` silently.
+2. Don't open Beat 1 unprompted — wait for "decision log", "ADR", "audit trail", or equivalent.
+
+**No server setup needed.** Walkthrough HTML beats are served from GitHub Pages at `https://denson.github.io/beadwork-skills/skills/beadwork-for-decisions/walkthrough_html/`. The preview panel navigates directly to those URLs. For local HTML development, see "Local development" at the bottom.
 
 ## Source of truth
 
@@ -32,16 +33,16 @@ Standard walkthrough shape: preview panel for HTML beats, `AskUserQuestion` for 
 
 ## The 4 beats
 
-**Beat 1 — Hook: decisions are the spine of any work; the "why" tends to evaporate.** `http://localhost:8910/beadwork-for-decisions/walkthrough_html/beat1.html`
+**Beat 1 — Hook: decisions are the spine of any work; the "why" tends to evaporate.** `https://denson.github.io/beadwork-skills/skills/beadwork-for-decisions/walkthrough_html/beat1.html`
 The premise: every project accumulates decisions. The *what* of each decision is usually preserved (the code shipped, the redaction was applied, the expense was paid). The *why* tends to evaporate — into Slack threads that expire, into people's brains who leave, into chat sessions that compact.
 
-**Beat 2 — How decisions work in bw.** `http://localhost:8910/beadwork-for-decisions/walkthrough_html/beat2.html`
+**Beat 2 — How decisions work in bw.** `https://denson.github.io/beadwork-skills/skills/beadwork-for-decisions/walkthrough_html/beat2.html`
 A decision is a ticket with a specific shape: title = the decision, description = the question and options, comments = the discussion (multiple voices, signed and timestamped), close-comment = verdict + rationale. Standard ADR format mapped onto bw's existing shape. No new tooling.
 
-**Beat 3 — Persona scenarios.** `http://localhost:8910/beadwork-for-decisions/walkthrough_html/beat3.html`
+**Beat 3 — Persona scenarios.** `https://denson.github.io/beadwork-skills/skills/beadwork-for-decisions/walkthrough_html/beat3.html`
 Engineer architecture-decision record. Lawyer privilege log (court-defensible). Solo entrepreneur tax-decisions ledger.
 
-**Beat 4 — Close: the pattern + pointers.** `http://localhost:8910/beadwork-for-decisions/walkthrough_html/beat4.html`
+**Beat 4 — Close: the pattern + pointers.** `https://denson.github.io/beadwork-skills/skills/beadwork-for-decisions/walkthrough_html/beat4.html`
 Any decision worth remembering is a candidate for a bw ticket. The "ticket" shape is structured-enough notes-to-future-self with the rationale preserved. **AskUserQuestion has 2 options + auto Other:** *"Back to overview"* and *"Next: beadwork-install"* (exits the tour and runs the install skill — the natural CTA after the decisions deep-dive). Other handles specific-skill jumps / stop.
 
 ## Hard rules
@@ -56,3 +57,12 @@ Any decision worth remembering is a candidate for a bw ticket. The "ticket" shap
 ## Tone
 
 Direct, slightly more formal than the other skills (decisions tend to want gravity). The reader has likely been through `beadwork-overview` and at least one of memory / bus / meta-analysis. This skill is the **decision-substrate angle**: bw's ticket-with-comments shape happens to be exactly what an ADR / privilege log / audit-defensible expense ledger needs. No new structure to learn.
+
+## Local development of HTML beats
+
+For agents editing the HTML files locally and iterating, an alternative dev-time path uses a local Python server in place of the Pages URLs:
+
+1. `preview_start` with name `"beadwork-skills"` (defined in `.claude/launch.json`, port 8910 — one shared server for all five walkthrough skills)
+2. In `preview_eval` calls, use `http://localhost:8910/beadwork-for-decisions/walkthrough_html/<page>.html?v=' + Date.now()` instead of the Pages URL
+
+Pages URLs are canonical for end users; localhost is a dev-time convenience.

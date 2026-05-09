@@ -20,9 +20,10 @@ Standard walkthrough shape: preview panel for HTML beats, `AskUserQuestion` for 
 
 ## Before your first message
 
-1. Start the server: `preview_start` with name `"beadwork-skills"` (port 8910 — one shared server serves every skill in this marketplace).
-2. Read `starter_deck.md` silently.
-3. Don't open Beat 1 unprompted — wait for "agents talking through bw" or "team of agents" or equivalent.
+1. Read `starter_deck.md` silently.
+2. Don't open Beat 1 unprompted — wait for "agents talking through bw" or "team of agents" or equivalent.
+
+**No server setup needed.** Walkthrough HTML beats are served from GitHub Pages at `https://denson.github.io/beadwork-skills/skills/beadwork-as-bus/walkthrough_html/`. The preview panel navigates directly to those URLs. For local HTML development, see "Local development" at the bottom.
 
 ## Source of truth
 
@@ -32,16 +33,16 @@ Standard walkthrough shape: preview panel for HTML beats, `AskUserQuestion` for 
 
 ## The 4 beats
 
-**Beat 1 — Hook: a team of specialist agents, sharing one workspace.** `http://localhost:8910/beadwork-as-bus/walkthrough_html/beat1.html`
+**Beat 1 — Hook: a team of specialist agents, sharing one workspace.** `https://denson.github.io/beadwork-skills/skills/beadwork-as-bus/walkthrough_html/beat1.html`
 Multi-session same-lab is the headline (a designer agent, an implementer agent, a reviewer agent — usually all Claude or all Gemini, in different roles). Cross-lab interop is mentioned in passing only.
 
-**Beat 2 — How communication works in bw.** `http://localhost:8910/beadwork-as-bus/walkthrough_html/beat2.html`
+**Beat 2 — How communication works in bw.** `https://denson.github.io/beadwork-skills/skills/beadwork-as-bus/walkthrough_html/beat2.html`
 Multiple agents read and write the same store. Comments record speaker. Conflict-free by construction (different tickets = different files; no merge driver needed). Cross-lab interop sits in a parenthetical inside the "substrate is just shell" callout — not as a headline.
 
-**Beat 3 — Multi-agent + cross-team scenarios.** `http://localhost:8910/beadwork-as-bus/walkthrough_html/beat3.html`
+**Beat 3 — Multi-agent + cross-team scenarios.** `https://denson.github.io/beadwork-skills/skills/beadwork-as-bus/walkthrough_html/beat3.html`
 Four shapes: engineer review pipeline (within-job multi-agent), scientist analysis chain (across-days multi-agent), support manager ↔ engineering (cross-team), warehouse manager ↔ vendor org (cross-org).
 
-**Beat 4 — Close: you have a team.** `http://localhost:8910/beadwork-as-bus/walkthrough_html/beat4.html`
+**Beat 4 — Close: you have a team.** `https://denson.github.io/beadwork-skills/skills/beadwork-as-bus/walkthrough_html/beat4.html`
 The take-away: with bw, your AI isn't one amnesiac generalist — it's one member of a team of specialists from your lab. Two bonuses listed second: humans-on-a-team can join the same workspace; cross-lab works too. **AskUserQuestion has 2 options + auto Other:** *"Back to overview"* and *"Next: beadwork-for-meta-analysis"*. Other handles install / specific-skill jumps / stop.
 
 ## Hard rules
@@ -58,3 +59,12 @@ The take-away: with bw, your AI isn't one amnesiac generalist — it's one membe
 ## Tone
 
 Direct, concrete. The reader has likely come from `beadwork-overview` or `beadwork-as-memory`. This skill is the multi-agent angle — coordination across agent sessions of the same model (the common case), and the related properties (cross-team coordination, cross-org coordination, and as a bonus, cross-lab interop).
+
+## Local development of HTML beats
+
+For agents editing the HTML files locally and iterating, an alternative dev-time path uses a local Python server in place of the Pages URLs:
+
+1. `preview_start` with name `"beadwork-skills"` (defined in `.claude/launch.json`, port 8910 — one shared server for all five walkthrough skills)
+2. In `preview_eval` calls, use `http://localhost:8910/beadwork-as-bus/walkthrough_html/<page>.html?v=' + Date.now()` instead of the Pages URL
+
+Pages URLs are canonical for end users; localhost is a dev-time convenience.

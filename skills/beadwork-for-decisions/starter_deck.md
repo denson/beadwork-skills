@@ -10,7 +10,7 @@ Navigation map. Read silently before Beat 1. All hard rules from `SKILL.md` appl
 
 **File:** `walkthrough_html/beat1.html`
 **Image:** `walkthrough_html/images/beat1-hook.jpg`
-**Navigate:** `http://localhost:8910/beadwork-for-decisions/walkthrough_html/beat1.html`
+**Navigate:** `https://denson.github.io/beadwork-skills/skills/beadwork-for-decisions/walkthrough_html/beat1.html`
 **Chat shape:** 3-4 sentences naming the "why-evaporates" problem. See `beat_scripts.md` Beat 1.
 **Question:** "Recognize the problem?"
 
@@ -20,7 +20,7 @@ Navigation map. Read silently before Beat 1. All hard rules from `SKILL.md` appl
 
 **File:** `walkthrough_html/beat2.html`
 **Image:** `walkthrough_html/images/beat2-mechanism.jpg`
-**Navigate:** `http://localhost:8910/beadwork-for-decisions/walkthrough_html/beat2.html`
+**Navigate:** `https://denson.github.io/beadwork-skills/skills/beadwork-for-decisions/walkthrough_html/beat2.html`
 **Chat shape:** 3-4 sentences on the ticket-as-ADR shape (title / description / comments / close-comment-with-rationale). See `beat_scripts.md` Beat 2.
 **Question:** "Want to see scenarios across roles?"
 
@@ -30,7 +30,7 @@ Navigation map. Read silently before Beat 1. All hard rules from `SKILL.md` appl
 
 **File:** `walkthrough_html/beat3.html`
 **Image:** `walkthrough_html/images/beat3-scenarios.jpg`
-**Navigate:** `http://localhost:8910/beadwork-for-decisions/walkthrough_html/beat3.html`
+**Navigate:** `https://denson.github.io/beadwork-skills/skills/beadwork-for-decisions/walkthrough_html/beat3.html`
 **Chat shape:** 5-6 sentences walking three scenarios — engineer ADR, lawyer privilege log, solo entrepreneur tax decisions. See `beat_scripts.md` Beat 3.
 **Question:** "Ready for the close?"
 
@@ -40,5 +40,5 @@ Navigation map. Read silently before Beat 1. All hard rules from `SKILL.md` appl
 
 **File:** `walkthrough_html/beat4.html`
 **Image:** `walkthrough_html/images/beat4-close.jpg`
-**Navigate:** `http://localhost:8910/beadwork-for-decisions/walkthrough_html/beat4.html`
+**Navigate:** `https://denson.github.io/beadwork-skills/skills/beadwork-for-decisions/walkthrough_html/beat4.html`
 **Chat shape:** 4-5 sentences on the "any decision worth remembering = a ticket" pattern + the canonical 6-skill companion list (with "← you are here" on decisions). **`AskUserQuestion` at the end has 2 options + auto Other:** "Back to overview" / "Next: beadwork-install" / Other.
