@@ -45,6 +45,8 @@ A whole industry is currently gearing up to sell SaaS "AI memory" services. **bw
 2. **Multiple AI sessions coordinating as a team of specialists.** Design + implementation + review sessions share one workspace and build on each other's work. **Most often these are sessions of the same lab's model** (multiple Claude or multiple Gemini), each playing a specialist role. Cross-lab interop also works (any agent that can shell out participates) but is **secondary** — most users live in one ecosystem.
 3. **Teams of humans + their AIs sharing a workspace.** Push the orphan branch to a private cloud repo; teammates' agents read and write the same store as the user's agent. One substrate that holds memory for one person, for a team of agents, or for a whole team of humans-plus-agents.
 
+**Across repos (not just one).** `bw` resolves ticket ids across repositories and keeps a host-local registry of the repos it knows about (`bw registry list`), with per-repo prefix aliases so ids stay unambiguous. So tiers 2 and 3 aren't confined to a single repo — a multi-agent or team setup can coordinate work that spans several repositories.
+
 ---
 
 ## Storage modes (be honest about pricing)
