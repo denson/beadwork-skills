@@ -7,9 +7,15 @@
   "id": "bws-vk0.6",
   "labels": [],
   "parent": "bws-vk0",
+  "comments": [
+    {
+      "text": "Evaluated: attach earns a light mention in decisions only (evidence + rationale together for lawyer/tax personas). Landed at 34c1de0c79d73fbd84415156d16d3d97f6d87cde: plain-language line in Beat 2 prose + beat2.html (in sync), no CLI name, no AGENTS change, image unchanged.",
+      "timestamp": "2026-05-29T23:09:02Z"
+    }
+  ],
   "priority": 3,
   "status": "in_progress",
   "title": "Evaluate covering bw attach (attachments #119)",
   "type": "task",
-  "updated_at": "2026-05-29T23:07:40Z"
+  "updated_at": "2026-05-29T23:09:02Z"
 }
