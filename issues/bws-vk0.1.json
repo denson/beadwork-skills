@@ -2,6 +2,7 @@
   "assignee": "denson",
   "blocked_by": [],
   "blocks": [],
+  "closed_at": "2026-05-29T19:45:24Z",
   "created": "2026-05-29T19:37:03Z",
   "description": "Read AGENTS.md + all six skills and compare against bw v0.13.0.\n\nFeatures shipped since the 2026-05-09 doc commit:\n- bw recap (#122) — recent activity, tree/JSON renderers, cross-repo fan-out\n- cross-repo id resolution + bw config set prefix w/ alias tracking (#123)\n- host-local repository registry / bw registry list|prune (#125)\n- ticket attachments / bw attach (#119)\n- global YAML config (#124)\n- surface ready children when epic root in_progress (#118)\n\nProduce a per-file/section gap list and spin off one child ticket per concrete edit.\nAcceptance: gap list posted as a comment on this ticket.",
   "id": "bws-vk0.1",
@@ -14,7 +15,7 @@
     }
   ],
   "priority": 1,
-  "status": "in_progress",
+  "status": "closed",
   "title": "Drift audit: AGENTS.md + 6 skills vs bw v0.13.0",
   "type": "task",
   "updated_at": "2026-05-29T19:45:24Z"
