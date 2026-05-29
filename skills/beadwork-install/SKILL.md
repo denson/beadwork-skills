@@ -1,6 +1,6 @@
 ---
 name: beadwork-install
-description: "Install and configure beadwork (bw — github.com/jallum/beadwork) in a git repo. Adapts to bw release state: uses install.sh if a release containing PR #117 is available, builds from source on main otherwise. Handles Go toolchain prerequisite. Surfaces platform security prompts (UAC, sudo, Gatekeeper) before they fire so non-technical users aren't surprised. Drives storage-mode choice (local-only / private cloud solo / team cloud / public) with explicit warning about public-repo exposure and accurate GitHub pricing context. Triggers: install bw, install beadwork, set up beadwork, set up bw, configure bw, initialize beadwork, add bw to this project, get beadwork running."
+description: "Install and configure beadwork (bw — github.com/jallum/beadwork) in a git repo. Installs the prebuilt release binary (v0.13.0+): install.sh one-liner on macOS/Linux, release .zip on Windows (install.sh is POSIX-only). No build-from-source or Go toolchain needed — the old go-git worktree bug (PR #117) ships fixed in every release since v0.13.0. Surfaces platform security prompts (UAC, sudo, Gatekeeper, SmartScreen) before they fire so non-technical users aren't surprised. Drives storage-mode choice (local-only / private cloud solo / team cloud / public) with explicit warning about public-repo exposure and accurate GitHub pricing context. Triggers: install bw, install beadwork, set up beadwork, set up bw, configure bw, initialize beadwork, add bw to this project, get beadwork running."
 ---
 
 # beadwork-install — Drive the install end-to-end
@@ -14,18 +14,18 @@ This skill has two modes:
 
 ---
 
-## Banner — install path adapts to bw release state
+## Banner — install the prebuilt release binary
 
-`bw` is in active development. As of this skill's authoring (2026-05-08), the latest tagged release is **v0.12.3** (2026-04-12) and contains a real bug with the go-git library that bites users running bw in repos where `git worktree` has been used. **PR #117** (merged to bw `main` 2026-04-17) fixes it, but no tagged release contains the fix yet.
+`bw` ships prebuilt binaries with every tagged release. **Install those — do not build from source.** The go-git worktree bug that used to require a from-source build (old PR #117, which bit users in repos where `git worktree` had been used) has been fixed in every release since **v0.13.0 (2026-05-12)**. Installing the latest release is the correct path for everyone.
 
-This skill **adapts based on bw release state at runtime**:
+Install method depends on OS, because jallum's `install.sh` is POSIX-only:
 
-- **If the latest tagged release is v0.12.4 or higher** (which will contain PR #117): the agent uses the simple `install.sh` one-curl path. Same install, no Go toolchain needed.
-- **If the latest is still v0.12.3**: the agent builds bw from source on `main` to avoid the bug. Adds Go toolchain prerequisite + a few extra steps.
+- **macOS / Linux** → the `install.sh` one-liner. It auto-detects OS/arch, fetches the latest release, and installs the binary. No Go toolchain.
+- **Windows** → download the release `.zip` asset and put `bw.exe` on PATH. `install.sh` does **not** support Windows (it exits on any non-Linux/Darwin `uname`).
 
-Both paths produce a working bw binary. **The from-source path is empirically verified** as of 2026-05-08.
+Building from source is now an **optional advanced path** only for users who specifically want an unreleased fix from `main` (see the footnote at the end). It is not part of the normal install.
 
-The skill author monitors jallum's repo + Discord and will revise this skill to remove the from-source path once v0.12.4+ is no longer relevant. Until then, the dual-path logic below ensures the right path runs without manual intervention.
+> Maintenance note: this skill is kept current against jallum's releases + Discord by the steward loop (see the repo `CLAUDE.md`). If a release newer than v0.13.0 changes the install surface, file a ticket under epic `bws-vk0`.
 
 ---
 
@@ -33,279 +33,85 @@ The skill author monitors jallum's repo + Discord and will revise this skill to 
 
 Before proceeding, determine who you're helping:
 
-- **AI agent executing autonomously** — another LLM or automated system. Use the **AI path** sections. Be terse. No explanations unless something fails.
-- **Human at the keyboard** — a person. Use the **Human path** sections. Explain each step. Ask before each significant choice.
+- **AI agent executing autonomously** — another LLM or automated system. Use the **AI path** blocks. Be terse. No explanations unless something fails.
+- **Human at the keyboard** — a person. Use the **Human path** blocks. Explain each step. Ask before each significant choice.
 
 If unclear, ask: *"Are you setting this up yourself, or should I run the commands?"*
 
 ---
 
-## Step 1 — Detect bw release state
+## Step 1 — Install the `bw` binary
 
-### AI path
+Pick the block for the user's OS. All paths end at the same place: a working `bw` on PATH, version **v0.13.0 or higher**.
 
-```bash
-LATEST=$(curl -fsSL https://api.github.com/repos/jallum/beadwork/releases/latest 2>/dev/null \
-         | grep -m1 '"tag_name"' \
-         | sed 's/.*"v\?\([^"]*\)".*/\1/')
-echo "Latest bw release tag: ${LATEST:-unknown}"
-```
+### macOS / Linux — `install.sh`
 
-Compare `$LATEST` against `0.12.4` (semver, basic string compare works for `0.12.x` family):
+**Human path — prep the platform security prompt first.** The downloaded binary may be quarantined by Gatekeeper (macOS) or, if installing to a system directory, ask for a password (sudo). Surface this before running:
 
-- If `$LATEST` >= `0.12.4`: proceed to **Path A** (`install.sh`).
-- If `$LATEST` is `0.12.3` or unknown (API fail / no internet): proceed to **Path B** (build from source). Path B always works.
+> *macOS:* *"macOS may quarantine a freshly downloaded binary. If you see 'cannot be opened because the developer cannot be verified,' that's Gatekeeper on an unsigned binary — I can clear the quarantine flag, or you can right-click the binary and choose Open once. Installing to your user directory avoids a password prompt."*
+>
+> *Linux:* *"If bw installs to a system directory it'll ask for your sudo password. Type it and press Enter — it won't show on screen, but it's working. Installing to ~/.local/bin avoids sudo entirely."*
 
-### Human path
-
-Tell the user: *"Let me check the latest bw release."* Run the curl. If `>= 0.12.4`, say *"Good news — there's a release with the worktree fix. We'll use the simple curl install."* Otherwise: *"The latest release (v0.12.3) has a bug that affects users running bw across git worktrees. I'll build from source instead — same end result, just a couple extra steps."*
-
----
-
-# Path A — install via `install.sh` (when v0.12.4+ is the latest tag)
-
-## Step A1 — Run the install script
-
-### AI path
+**AI path:**
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/jallum/beadwork/main/install.sh | sh
 bw --version
 ```
 
-Verify the version reads v0.12.4 or higher.
-
-### Human path
-
-Tell the user: *"I'll install bw via jallum's install script. It downloads a single binary."* Run the curl, report the version.
-
-**Skip to Step 5 — Pick a host repo.**
-
----
-
-# Path B — build from source (current canonical path until v0.12.4+ ships)
-
-## Step B1 — Install Go toolchain (prerequisite)
-
-bw requires Go 1.24.4+ per its `go.mod`. First, check if Go is installed:
+`install.sh` prefers `~/.local/bin` when it's on PATH (no sudo), else falls back to `/usr/local/bin` (sudo). To force a user-local, no-sudo install:
 
 ```bash
-go version
+INSTALL_DIR="$HOME/.local/bin" curl -fsSL https://raw.githubusercontent.com/jallum/beadwork/main/install.sh | sh
 ```
 
-If Go is installed and version is 1.24.4+: skip to **Step B2**.
-
-If Go is missing: install it. **Before running the install command**, prep the user for the platform security prompt that will appear. Non-technical users abandon installs when these prompts surprise them.
-
-### Windows (winget)
-
-**Surface this verbatim before running the install command:**
-
-> *"Windows will show a security prompt asking permission to install. The publisher should say 'GoLang' (or 'Microsoft' for winget itself). This is normal — Windows protects you from unsigned installers. Click 'Yes' to proceed.*
->
-> *If the publisher field shows something unexpected (not 'GoLang' or 'Microsoft'), stop and tell me — that would indicate a tampered installer."*
-
-Then run:
+Verify the version reads **0.13.0 or higher**. If `which bw` finds nothing afterward, ensure the install dir is on PATH:
 
 ```bash
-winget install -e --id GoLang.Go --silent --accept-package-agreements --accept-source-agreements
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc   # or ~/.zshrc
 ```
 
-After install, current shell may not have updated PATH. Either open a new shell, or for the current shell:
+**Skip to Step 2.**
+
+### Windows — release `.zip`
+
+`install.sh` does not run on Windows. Install the prebuilt `bw.exe` from the release zip into a user-local directory (no admin needed).
+
+**Human path — prep the security prompt first:**
+
+> *"`bw` is an unsigned open-source binary. Windows SmartScreen or Defender may warn the first time it runs. That's expected for unsigned tools — you can choose 'More info → Run anyway,' or I can confirm the download came from jallum's official GitHub release. Installing to your user folder means no admin prompt."*
+
+**AI path (Git Bash / WSL-style shell):**
 
 ```bash
-export PATH="/c/Program Files/Go/bin:$PATH"
-```
+# Detect the latest release version
+VERSION=$(curl -fsSL https://api.github.com/repos/jallum/beadwork/releases/latest \
+          | grep '"tag_name"' | sed 's/.*"v\(.*\)".*/\1/')
+echo "latest bw release: ${VERSION:-unknown}"
 
-Verify:
-
-```bash
-go version
-```
-
-### macOS (Homebrew preferred)
-
-**Surface this verbatim before running:**
-
-> *"On macOS, when Homebrew installs Go, the Terminal will ask for your Mac login password. Type it and press Enter — the password won't appear on screen as you type, but it's working. This is Homebrew installing to a protected directory."*
-
-Then run:
-
-```bash
-brew install go
-```
-
-If Homebrew isn't installed, fall back to the official installer from `https://go.dev/dl/`. Note that pkg-installed binaries trigger Gatekeeper on first run; right-click → **Open** bypasses it once.
-
-Verify:
-
-```bash
-go version
-```
-
-### Linux (apt / dnf / pacman)
-
-**Surface this verbatim before running:**
-
-> *"Linux will ask for your sudo password. Type it and press Enter — the password won't appear on screen as you type, but it's working."*
-
-Then run the appropriate one:
-
-```bash
-sudo apt install golang-go     # Debian / Ubuntu
-sudo dnf install golang        # Fedora / RHEL
-sudo pacman -S go              # Arch
-```
-
-If the package version is older than 1.24.4, install from `https://go.dev/dl/` tarball instead.
-
-Verify:
-
-```bash
-go version
-```
-
-## Step B2 — Clone bw main
-
-### AI path
-
-```bash
-rm -rf /tmp/beadwork-main
-git clone --depth 1 https://github.com/jallum/beadwork.git /tmp/beadwork-main
-ls /tmp/beadwork-main/internal/repo/extfilter.go
-```
-
-The presence of `internal/repo/extfilter.go` confirms PR #117's `extFilteringStorer` is in the source. If the file is missing, the clone is stale or wrong — re-clone fresh.
-
-### Human path
-
-Tell the user: *"I'll clone bw's main branch to a temporary directory."* Run the clone. Confirm `extfilter.go` exists.
-
-## Step B3 — Build with version-string injection
-
-bw's source hardcodes the version string as `0.12.3` (since main hasn't been bumped post-PR-#117). To avoid confusing the resulting binary with the released v0.12.3, inject the commit hash at build time so the binary self-identifies:
-
-### AI path
-
-Detect platform binary extension:
-
-```bash
-cd /tmp/beadwork-main
-COMMIT=$(git rev-parse --short HEAD)
-
-# Windows: produces .exe
-# macOS / Linux: no extension
-case "$OSTYPE" in
-  msys*|cygwin*|win*) BIN=/tmp/bw-main.exe ;;
-  *)                  BIN=/tmp/bw-main ;;
-esac
-
-go build -ldflags="-X main.version=main+${COMMIT}" -o "$BIN" ./cmd/bw
-```
-
-The first build downloads ~10 dependency packages. Allow ~30-60 seconds depending on network.
-
-### Human path
-
-Tell the user: *"Building bw from source. The first build takes about 30-60 seconds — Go downloads dependencies."* Run the build.
-
-## Step B4 — Backup existing bw + install new binary
-
-User-local install paths avoid sudo/UAC for the bw binary itself. Only the Go prereq required elevated permissions.
-
-| OS | Path |
-|---|---|
-| Windows | `~/bin/bw.exe` (e.g. `/c/Users/<you>/bin/bw.exe`) |
-| macOS / Linux | `~/.local/bin/bw` |
-
-### AI path (Windows)
-
-```bash
+ARCH=amd64   # use arm64 only on Windows-on-ARM machines
 mkdir -p ~/bin
-if [ -f ~/bin/bw.exe ]; then
-  cp ~/bin/bw.exe ~/bin/bw-prior.exe
-fi
-cp /tmp/bw-main.exe ~/bin/bw.exe
-```
 
-### AI path (macOS / Linux)
+curl -fsSL -o /tmp/bw.zip \
+  "https://github.com/jallum/beadwork/releases/download/v${VERSION}/beadwork_${VERSION}_windows_${ARCH}.zip"
+unzip -o /tmp/bw.zip -d /tmp/bw-extract
 
-```bash
-mkdir -p ~/.local/bin
-if [ -f ~/.local/bin/bw ]; then
-  cp ~/.local/bin/bw ~/.local/bin/bw-prior
-fi
-cp /tmp/bw-main ~/.local/bin/bw
-chmod +x ~/.local/bin/bw
-```
+# Back up any prior binary, then install
+[ -f ~/bin/bw.exe ] && cp ~/bin/bw.exe ~/bin/bw-prior.exe
+cp /tmp/bw-extract/bw.exe ~/bin/bw.exe
 
-Verify the user-local directory is on PATH:
-
-```bash
-which bw
-```
-
-If `which bw` returns nothing or points elsewhere, add the user-local directory to PATH:
-
-```bash
-# Windows / Git Bash:
-echo 'export PATH="$HOME/bin:$PATH"' >> ~/.bashrc
-
-# macOS / Linux:
-echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
-```
-
-Re-source the shell config or open a new shell.
-
-### Human path
-
-Same commands; explain that bw is installing to a user-local directory so no admin permission is needed.
-
-## Step B5 — Verify
-
-```bash
+# Ensure ~/bin is on PATH
+which bw >/dev/null 2>&1 || echo 'export PATH="$HOME/bin:$PATH"' >> ~/.bashrc
 bw --version
 ```
 
-Expected output: `bw main+<commit-sha>` (e.g. `bw main+dc1c4be4`) — the ldflags injection from Step B3 makes the binary self-identify as a from-source build, distinguishing it from the released v0.12.3.
+Re-source the shell (or open a new one) if `bw` isn't found immediately. Verify the version reads **0.13.0 or higher**.
 
-If the output reads `bw 0.12.3` (no `main+` prefix), the binary is the release, not the from-source build. Re-check **Step B4** — the cp may have failed or `which bw` may be pointing at the wrong binary.
-
-## Step B6 — Smoke test (mandatory)
-
-This step empirically confirms the worktreeConfig fix is in the running binary. **Do not skip** — `go build` exiting 0 is necessary but not sufficient evidence that the fix works.
-
-```bash
-# Pick any git repo — empty test repo works fine
-mkdir -p /tmp/bw-smoke-test
-cd /tmp/bw-smoke-test
-git init -q
-
-# Introduce the broken pattern (the exact config Claude Code's worktree harness writes)
-git config extensions.worktreeconfig true
-
-# Run bw prime — should succeed under the fix
-bw prime
-SMOKE_EXIT=$?
-
-# Clean up the test repo's broken pattern (irrelevant here, just hygiene)
-git config --unset extensions.worktreeconfig
-
-if [ $SMOKE_EXIT -eq 0 ]; then
-  echo "SMOKE TEST PASSED — bw fix is in place."
-else
-  echo "SMOKE TEST FAILED — got the v0.12.3 binary somehow. Re-check Step B4 and B5."
-  exit 1
-fi
-```
-
-Failure here means the user has the buggy v0.12.3 binary on PATH despite the build appearing to succeed. Common cause: the user's shell PATH found a different `bw` binary first. `which bw` will reveal it.
+**Skip to Step 2.**
 
 ---
 
-# Steps 5-10: same regardless of which path was taken
-
-## Step 5 — Pick a host repo
+## Step 2 — Pick a host repo
 
 `bw` lives inside a git repo. Ask the user:
 
@@ -323,11 +129,11 @@ If the user picks (2):
 mkdir ~/bw-personal && cd ~/bw-personal && git init
 ```
 
-For (1), `cd` into the existing repo before continuing.
+For (1), `cd` into the existing repo before continuing. For (3), repeat **Steps 2–6** for each repo.
 
-For (3), repeat **Steps 5-10** for each repo.
+---
 
-## Step 6 — Decide storage mode (the load-bearing decision)
+## Step 3 — Decide storage mode (the load-bearing decision)
 
 This is the choice that affects who can read your tickets. **Surface this explicitly. Do not skip the warning.**
 
@@ -352,7 +158,9 @@ Ask the user:
 
 Wait for explicit confirmation before proceeding with public mode. **If the user is unsure, default to local-only** — they can add a remote later. Adding a remote is reversible; making private tickets accidentally public is much harder to recover from.
 
-## Step 7 — Run `bw init`
+---
+
+## Step 4 — Run `bw init`
 
 ### AI path
 
@@ -365,7 +173,9 @@ git branch | grep beadwork
 
 Tell the user: *"Now I'll create the beadwork branch in your repo. This is a special git branch that holds the ticket data — it's never merged into your main code, so it doesn't affect any of your project files."* Then run `bw init`.
 
-## Step 8 — Run `bw onboard`
+---
+
+## Step 5 — Run `bw onboard`
 
 ### AI path
 
@@ -373,15 +183,15 @@ Tell the user: *"Now I'll create the beadwork branch in your repo. This is a spe
 bw onboard
 ```
 
-This prints a bootstrap snippet for `CLAUDE.md` / `GEMINI.md` / agent instructions. Capture the output.
-
-If the user has a `CLAUDE.md` (or wants one), append the snippet to it after a section header like `## Beadwork (work tracking)`.
+This prints a bootstrap snippet for `CLAUDE.md` / `GEMINI.md` / agent instructions. Capture the output. If the user has a `CLAUDE.md` (or wants one), append the snippet after a header like `## Beadwork (work tracking)`.
 
 ### Human path
 
 Tell the user: *"I'm going to print a snippet that tells future Claude Code sessions and other AI agents how to use bw. It mentions `bw prime` so they pick up the right context at session start."* Run `bw onboard`, show the output, ask: *"Want me to add this to your CLAUDE.md so it loads automatically?"*
 
-## Step 9 — Verify with test ticket
+---
+
+## Step 6 — Verify with a test ticket
 
 ### AI path
 
@@ -394,11 +204,13 @@ bw close "$TEST_ID"
 
 ### Human path
 
-Tell the user: *"Let me create a test ticket so you can see it works."* Run create + list. Show output: *"There's your first ticket. We'll close it now since it's just a test."* Close it.
+Tell the user: *"Let me create a test ticket so you can see it works."* Run create + list. Show the output: *"There's your first ticket. We'll close it now since it's just a test."* Close it.
 
-## Step 10 — Optional: configure remote sync
+---
 
-This step only applies if the user picked **Private GitHub remote** or **Public GitHub remote** in Step 6.
+## Step 7 — Optional: configure remote sync
+
+Only applies if the user picked **private cloud**, **team cloud**, or **public** in Step 3.
 
 ### AI path
 
@@ -418,7 +230,7 @@ bw is set up. The user can now:
 
 - Create tickets: `bw create "title" -t task -p 1`
 - Comment: `bw comment <id> "..."`
-- List: `bw list`
+- List: `bw list` · Find next work: `bw ready`
 - Close: `bw close <id>`
 - Sync: `bw sync` (if a remote is configured)
 - See full help: `bw --help`
@@ -433,18 +245,35 @@ If they want to learn more, point them at the marketplace's other skills:
 
 ---
 
+## Footnote — build from source (advanced / optional)
+
+Only needed if the user specifically wants an **unreleased** fix or feature from `main` that isn't in a tagged release yet. The normal install (Step 1) is always preferred.
+
+Requires the Go toolchain (1.24.4+ per bw's `go.mod`):
+
+```bash
+git clone --depth 1 https://github.com/jallum/beadwork.git /tmp/beadwork-main
+cd /tmp/beadwork-main
+go build -ldflags="-X main.version=main+$(git rev-parse --short HEAD)" -o ~/bin/bw ./cmd/bw   # ~/bin/bw.exe on Windows
+bw --version   # self-identifies as main+<commit>
+```
+
+For anything beyond this, point the user at jallum's `README.md` / `CONTRIBUTING.md` rather than guessing build steps.
+
+---
+
 ## Hard rules
 
-1. **Never push the beadwork branch to a public repo without explicit user confirmation.** The privacy warning in Step 6 must be surfaced verbatim, and the user must explicitly confirm "yes I want this public" before proceeding with public-mode setup. **If the user is unsure, default to local-only.**
+1. **Never push the beadwork branch to a public repo without explicit user confirmation.** The privacy warning in Step 3 must be surfaced verbatim, and the user must explicitly confirm before public-mode setup. **If the user is unsure, default to local-only.**
 
-2. **Always prep the user for platform security prompts BEFORE running installers.** UAC on Windows, sudo on macOS/Linux, Gatekeeper on macOS direct downloads. The skill copy in **Step B1** is verbatim, not optional. Non-technical users abandon installs when prompts surprise them. The agent's job is to remove that surprise.
+2. **Always prep the user for platform security prompts BEFORE running installers.** Gatekeeper (macOS), sudo (Linux), SmartScreen/Defender (Windows). The prep copy in Step 1 is the model — non-technical users abandon installs when prompts surprise them. The agent's job is to remove that surprise.
 
-3. **The smoke test in Step B6 is mandatory.** It empirically distinguishes "I have the fix" from "I have the bug." `go build` exiting 0 is necessary but not sufficient. Don't skip; don't assume.
+3. **Install the prebuilt release binary; do not build from source by default.** The worktree bug that once required a from-source build is fixed in every release since v0.13.0. Build-from-source is the optional footnote, only for unreleased `main` fixes — never the default path.
 
-4. **Don't invent install URLs or release locations.** The canonical install is `curl -fsSL https://raw.githubusercontent.com/jallum/beadwork/main/install.sh | sh` for tagged releases (Path A), or build from source per **Path B** otherwise. Manual binary downloads from `https://github.com/jallum/beadwork/releases`. If a user asks for an alternative install path, point them at the bw README rather than guess.
+4. **Don't invent install URLs or release locations.** Canonical: `curl -fsSL https://raw.githubusercontent.com/jallum/beadwork/main/install.sh | sh` (macOS/Linux); the `beadwork_<version>_windows_<arch>.zip` release asset (Windows); manual binaries at `https://github.com/jallum/beadwork/releases`. If a user asks for an alternative, point them at the bw README rather than guess.
 
-5. **Metadata authorship is Denson Smith (immutable)** — this skill, the marketplace, and all backend metadata files. **Do NOT credit Denson Smith in user-facing prose during install** (the walkthroughs that talk to the user). **`bw` itself is jallum's** at `https://github.com/jallum/beadwork`; that source citation is required.
+5. **Metadata authorship is Denson Smith (immutable)** — this skill, the marketplace, and all backend metadata files. **Do NOT credit Denson Smith in user-facing prose during install.** **`bw` itself is jallum's** at `https://github.com/jallum/beadwork`; that source citation is required.
 
-6. **Don't skip the storage-mode question.** Even if the user seems impatient, **Step 6** is load-bearing. Default to local-only if they really won't pick.
+6. **Don't skip the storage-mode question.** Even if the user seems impatient, **Step 3** is load-bearing. Default to local-only if they won't pick.
 
 7. **Default to user-local install paths** (`~/bin`, `~/.local/bin`). System paths (`/usr/local/bin`, `C:\Program Files`) require sudo/UAC and serve no purpose for a personal-use binary.
