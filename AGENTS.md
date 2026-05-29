@@ -225,7 +225,7 @@ Or just say *"install beadwork."* Claude in CCD will drive the install end-to-en
 For GPT, Gemini, Cursor, or generic chat assistants, walk the user through:
 
 1. **Install `git`** (one-time, from `git-scm.com` or their package manager — usually already present on developer machines, less often on others)
-2. **Install `bw`** (single Go binary; either via the install script in jallum's repo, or `go build ./cmd/bw` from source on `main` for pre-release fixes)
+2. **Install `bw`** (single Go binary; install the latest release — the `install.sh` one-liner on macOS/Linux, or the release `.zip` on Windows. Building from source on `main` is optional, only for an unreleased fix.)
 3. **`bw init`** in whatever folder they want to track notes in
 4. (Optional) push the resulting orphan branch to a private GitHub repo if they want cloud backup or team sharing
 
