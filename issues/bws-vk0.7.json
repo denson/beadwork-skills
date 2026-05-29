@@ -1,0 +1,15 @@
+{
+  "assignee": "",
+  "blocked_by": [],
+  "blocks": [],
+  "created": "2026-05-29T20:22:51Z",
+  "description": "SOURCE: hardening pass 2026-05-29 (multi-layer sync discipline added to CLAUDE.md + steward task).\nWHY: walkthrough content lives in 3 layers (beat_scripts.md prose / walkthrough_html/beat\u003cN\u003e.html visual / SKILL.md nav) that can silently drift. The hazard may already have bitten before the discipline existed.\nTASK: across all 5 walkthrough skills (overview, as-memory, as-bus, for-meta-analysis, for-decisions) verify each beat's prose in beat_scripts.md matches its walkthrough_html/beat\u003cN\u003e.html and its SKILL.md one-line summary. (overview has beat2_everyone.html + beat2_coder.html.)\nACCEPTANCE: a per-skill per-beat sync report posted as a comment; any drift found is fixed in-place or spun off as its own child ticket (with all affected layers enumerated).",
+  "id": "bws-vk0.7",
+  "labels": [],
+  "parent": "bws-vk0",
+  "priority": 2,
+  "status": "open",
+  "title": "Verify walkthrough layer-sync (beat_scripts \u003c-\u003e HTML \u003c-\u003e SKILL) across 5 skills",
+  "type": "task",
+  "updated_at": "2026-05-29T20:22:51Z"
+}
