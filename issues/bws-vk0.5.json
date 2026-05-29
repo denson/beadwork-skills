@@ -2,6 +2,7 @@
   "assignee": "denson",
   "blocked_by": [],
   "blocks": [],
+  "closed_at": "2026-05-29T20:17:08Z",
   "created": "2026-05-29T19:45:24Z",
   "description": "SOURCE: jallum/beadwork v0.13.0 (2026-05-12) + drift audit bws-vk0.1.\nWHAT CHANGED: v0.13.0 is now the latest tagged release and CONTAINS the worktree fix PR #117 (dc1c4be). The install skill's core premise (latest=v0.12.3, fix only on main, build from source) is obsolete.\nFILE: skills/beadwork-install/SKILL.md\nPROPOSED EDIT:\n- Make Path A (curl install.sh) the single default; verify version \u003e= 0.13.0.\n- Remove/retire Path B (Go toolchain prereq, clone main, ldflags injection, Step B6 smoke test), or demote to a tiny \"build from source (advanced/optional)\" footnote.\n- Delete the v0.12.3 / PR-#117 banner and the 0.12.4 threshold logic.\n- Refresh date stamps (authored/verified 2026-05-08) and \"as of\" language.\n- Re-verify install.sh URL + expected bw --version against the live repo before committing.\nACCEPTANCE: a fresh read installs v0.13.0 via install.sh with no build-from-source detour; no \"v0.12.3 is latest\" references remain; smoke-test scaffolding removed or clearly optional.\nAUTHORSHIP: skill metadata stays Denson Smith; bw credited to jallum.",
   "id": "bws-vk0.5",
@@ -14,7 +15,7 @@
     }
   ],
   "priority": 1,
-  "status": "in_progress",
+  "status": "closed",
   "title": "Rewrite beadwork-install for v0.13.0 (drop build-from-source)",
   "type": "task",
   "updated_at": "2026-05-29T20:17:08Z"
