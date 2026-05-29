@@ -15,11 +15,15 @@
     {
       "text": "LAYER ENUMERATION (per CLAUDE.md walkthrough sync rule). Files this ticket touches:\n- skills/beadwork-for-meta-analysis/beat_scripts.md  (Beat 2 prose — CANONICAL, edit first; add bw recap alongside bw show/list)\n- skills/beadwork-for-meta-analysis/walkthrough_html/beat2.html  (visual carrier — must match prose; served live via Pages)\n- skills/beadwork-for-meta-analysis/SKILL.md  (Beat 2 one-line summary, if it changes)\n- SECONDARY (optional): same beat_scripts.md + walkthrough_html/beat2.html + SKILL.md triple in beadwork-as-memory, if recap earns a mention there.\nACCEPTANCE (updated): bw recap appears consistently across ALL touched layers, updated in ONE commit; no layer left stale.",
       "timestamp": "2026-05-29T20:22:51Z"
+    },
+    {
+      "text": "Landed on main at eca94fabc9464652a057795ec77f11ac29d60557: bw recap added to meta-analysis Beat 2 (prose + beat2.html bullet + SKILL.md summary, in sync). Image unchanged; as-memory skipped (not a memory-recall feature).",
+      "timestamp": "2026-05-29T23:05:43Z"
     }
   ],
   "priority": 2,
   "status": "open",
   "title": "Cover bw recap in docs/skills",
   "type": "task",
-  "updated_at": "2026-05-29T20:22:51Z"
+  "updated_at": "2026-05-29T23:05:43Z"
 }
