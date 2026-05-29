@@ -1,0 +1,14 @@
+{
+  "assignee": "",
+  "blocked_by": [],
+  "blocks": [],
+  "created": "2026-05-29T19:37:03Z",
+  "description": "Standing epic for the beadwork-skills maintenance loop.\n\nSources monitored each week:\n- jallum/beadwork (tool) via gh: releases, commits, merged PRs, changelog\n- Beadwork Discord #general via Chrome: workflow / author / ecosystem signal\n- denson/beadwork-skills (this repo) via git + live published AGENTS.md\n\nWhen the tool or community surfaces a change, file a child ticket here with: source, what changed, which doc/skill + section, proposed edit, acceptance check.\n\nDiscipline: author = Denson Smith; jallum = tool author. Ticket branch is LOCAL-ONLY (never pushed).",
+  "id": "bws-vk0",
+  "labels": [],
+  "priority": 1,
+  "status": "open",
+  "title": "Steward: keep beadwork-skills current with bw + community",
+  "type": "epic",
+  "updated_at": "2026-05-29T19:37:03Z"
+}
