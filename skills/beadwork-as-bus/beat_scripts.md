@@ -76,7 +76,7 @@ Options:
 
 ### Image
 
-`walkthrough_html/images/beat3-scenarios.jpg` — Four small panels arranged in a 2x2 grid, each showing one scenario.
+`walkthrough_html/images/beat3-scenarios.png` — Four small panels arranged in a 2x2 grid, each showing one scenario.
 
 TOP-LEFT (Engineer): PR-42 review ticket with three structured-verdict comments and an engineer's AI synthesizing.
 
