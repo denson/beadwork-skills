@@ -7,9 +7,15 @@
   "id": "bws-vk0.2",
   "labels": [],
   "parent": "bws-vk0",
+  "comments": [
+    {
+      "text": "Audit (bws-vk0.1) refined scope: primary target = beadwork-for-meta-analysis Beat 2 (add bw recap alongside bw show/list; note --all cross-repo + --json). Secondary: optional one-line mention in beadwork-as-memory.",
+      "timestamp": "2026-05-29T19:45:24Z"
+    }
+  ],
   "priority": 2,
   "status": "open",
   "title": "Cover bw recap in docs/skills",
   "type": "task",
-  "updated_at": "2026-05-29T19:37:04Z"
+  "updated_at": "2026-05-29T19:45:24Z"
 }
