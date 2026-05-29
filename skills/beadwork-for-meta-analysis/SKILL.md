@@ -37,7 +37,7 @@ Standard walkthrough shape: preview panel for HTML beats, `AskUserQuestion` for 
 The premise: in any non-trivial agent workflow, agents make mistakes. Chat history is unstructured stream-of-consciousness — an audit agent can't reliably find drift, contradictions, or methodology gaps in chat. bw can.
 
 **Beat 2 — How meta-analysis works in bw.** `https://denson.github.io/beadwork-skills/skills/beadwork-for-meta-analysis/walkthrough_html/beat2.html`
-Structured signed-and-timestamped comments. `bw show` returns the full thread; `bw list` returns ranges. An agent reading those gets exactly the substrate needed for analysis — author, time, structure, no chat noise.
+Structured signed-and-timestamped comments. `bw show` returns the full thread; `bw list` returns ranges; `bw recap` summarizes recent cross-ticket activity. An agent reading those gets exactly the substrate needed for analysis — author, time, structure, no chat noise.
 
 **Beat 3 — Persona scenarios.** `https://denson.github.io/beadwork-skills/skills/beadwork-for-meta-analysis/walkthrough_html/beat3.html`
 Engineer conflict-finder over multi-agent code review. Data scientist methodology auditor over an analysis pipeline. Lawyer cross-case consistency check over twelve months of document review.

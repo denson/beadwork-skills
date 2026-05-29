@@ -43,7 +43,7 @@ Caption: *"Same work. Different substrate. Only one is auditable."*
 
 ### Chat (3-4 sentences)
 
-A meta-analysis agent doesn't watch agents work. It reads what they wrote afterward. `bw show <ticket>` returns the full thread for one ticket — title, description, every comment in order, every author, every timestamp. `bw list` returns ranges of tickets matching filters (status, type, label, date range). The audit agent feeds those into its prompt and asks questions a single agent can't answer alone: *"did agents A and B apply the same criteria across these 12 reviews?"*, *"is there drift on naming convention over the last quarter?"*, *"agent C said X; agent D's comment two days later contradicts it — flag for human review."* Same git-backed substrate as memory and the bus; new analysis layer on top.
+A meta-analysis agent doesn't watch agents work. It reads what they wrote afterward. `bw show <ticket>` returns the full thread for one ticket — title, description, every comment in order, every author, every timestamp. `bw list` returns ranges of tickets matching filters (status, type, label, date range). `bw recap` summarizes recent activity across many tickets at once — condensed, one line per issue, with `--all` rolling it up across every repo the agent knows about — so the auditor can scan what moved without opening each ticket. The audit agent feeds those into its prompt and asks questions a single agent can't answer alone: *"did agents A and B apply the same criteria across these 12 reviews?"*, *"is there drift on naming convention over the last quarter?"*, *"agent C said X; agent D's comment two days later contradicts it — flag for human review."* Same git-backed substrate as memory and the bus; new analysis layer on top.
 
 ### AskUserQuestion
 
