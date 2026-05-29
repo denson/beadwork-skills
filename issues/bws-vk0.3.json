@@ -1,0 +1,15 @@
+{
+  "assignee": "",
+  "blocked_by": [],
+  "blocks": [],
+  "created": "2026-05-29T19:37:04Z",
+  "description": "Cross-repo id resolution + prefix aliases (#123) and the host-local repository registry / bw registry list|prune (#125) strengthen the multi-AI / cross-repo coordination story. Update beadwork-as-bus (multi-agent comms) and the \"three tiers\" section of AGENTS.md.\nAcceptance: cross-repo coordination reflects the registry + alias model.",
+  "id": "bws-vk0.3",
+  "labels": [],
+  "parent": "bws-vk0",
+  "priority": 2,
+  "status": "open",
+  "title": "Refresh cross-repo / registry story (#123, #125)",
+  "type": "task",
+  "updated_at": "2026-05-29T19:37:04Z"
+}
