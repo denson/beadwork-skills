@@ -1,0 +1,15 @@
+{
+  "assignee": "",
+  "blocked_by": [],
+  "blocks": [],
+  "created": "2026-05-29T19:37:04Z",
+  "description": "Verify the AGENTS.md storage-modes/pricing table and any version references are accurate as of bw v0.13.0.\nAcceptance: claims confirmed or corrected against the current tool.",
+  "id": "bws-vk0.4",
+  "labels": [],
+  "parent": "bws-vk0",
+  "priority": 2,
+  "status": "open",
+  "title": "Verify version + storage-mode/pricing claims vs v0.13.0",
+  "type": "task",
+  "updated_at": "2026-05-29T19:37:04Z"
+}
