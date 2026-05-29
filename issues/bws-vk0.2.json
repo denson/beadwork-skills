@@ -1,0 +1,15 @@
+{
+  "assignee": "",
+  "blocked_by": [],
+  "blocks": [],
+  "created": "2026-05-29T19:37:04Z",
+  "description": "bw recap (new in v0.13.0, #122) shows recent activity across issues with tree/JSON renderers + cross-repo fan-out. Decide where it belongs (likely beadwork-for-meta-analysis and/or beadwork-overview) and add coverage.\nAcceptance: recap described in the relevant skill(s) with an example.",
+  "id": "bws-vk0.2",
+  "labels": [],
+  "parent": "bws-vk0",
+  "priority": 2,
+  "status": "open",
+  "title": "Cover bw recap in docs/skills",
+  "type": "task",
+  "updated_at": "2026-05-29T19:37:04Z"
+}
