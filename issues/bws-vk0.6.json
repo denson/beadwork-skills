@@ -1,5 +1,5 @@
 {
-  "assignee": "",
+  "assignee": "denson",
   "blocked_by": [],
   "blocks": [],
   "created": "2026-05-29T19:45:24Z",
@@ -8,8 +8,8 @@
   "labels": [],
   "parent": "bws-vk0",
   "priority": 3,
-  "status": "open",
+  "status": "in_progress",
   "title": "Evaluate covering bw attach (attachments #119)",
   "type": "task",
-  "updated_at": "2026-05-29T19:45:24Z"
+  "updated_at": "2026-05-29T23:07:40Z"
 }
