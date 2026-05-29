@@ -7,9 +7,15 @@
   "id": "bws-vk0.7",
   "labels": [],
   "parent": "bws-vk0",
+  "comments": [
+    {
+      "text": "LAYER-SYNC AUDIT COMPLETE (bws-vk0.7) — 5 walkthrough skills x 3 layers (beat_scripts.md / SKILL.md / walkthrough_html), rendered close images verified directly.\n\nRESULT: layers substantively IN SYNC on content, routing, personas, pricing. 2 minor drifts:\n\n[A] alt-text vs image authorship mismatch — 3 skills (overview, for-meta-analysis, for-decisions).\n- Close-beat \u003cimg\u003e alt attribute describes a caption crediting \"Denson Smith\":\n  - skills/beadwork-overview/walkthrough_html/beat4.html L19: \"...open source. authored by Denson Smith. bw itself by jallum...\"\n  - skills/beadwork-for-meta-analysis/walkthrough_html/beat4.html L17: \"...open source. Denson Smith. bw itself by jallum.\"\n  - skills/beadwork-for-decisions/walkthrough_html/beat4.html L17: \"...open source. Denson Smith. bw itself by jallum.\"\n- BUT the actual rendered images (overview beat5-close.jpg, others beat4-close.jpg) credit jallum ONLY: \"open source, MIT-licensed. bw by jallum (github.com/jallum/beadwork)\". beat_scripts.md image-spec is jallum-only too, and each on-page callout is jallum-only.\n- So the alt-text is inaccurate and contradicts the image + beat_scripts.md + the skill's user-facing no-self-credit rule. Impact LOW (alt-text only; sighted users see the correct caption).\n- FIX: correct each alt caption clause to \"open source, MIT-licensed. bw by jallum (github.com/jallum/beadwork).\" (HTML aligned to already-correct canonical prose; no beat_scripts.md change.)\n\n[B] stale image extension in prose — beadwork-as-bus.\n- skills/beadwork-as-bus/beat_scripts.md documents the Beat 3 image as beat3-scenarios.jpg; actual asset + HTML use beat3-scenarios.png. FIX: prose .jpg -\u003e .png.\n\nCLEAN: beadwork-as-memory; and all content/routing/persona/pricing across all 5 skills.\n\nBoth fixes are mechanical alignments to the already-correct layer. Pending go-ahead (authorship-adjacent), then fix + commit + push.",
+      "timestamp": "2026-05-29T20:35:33Z"
+    }
+  ],
   "priority": 2,
   "status": "in_progress",
   "title": "Verify walkthrough layer-sync (beat_scripts \u003c-\u003e HTML \u003c-\u003e SKILL) across 5 skills",
   "type": "task",
-  "updated_at": "2026-05-29T20:31:21Z"
+  "updated_at": "2026-05-29T20:35:33Z"
 }
