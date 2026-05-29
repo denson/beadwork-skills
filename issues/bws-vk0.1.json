@@ -7,9 +7,15 @@
   "id": "bws-vk0.1",
   "labels": [],
   "parent": "bws-vk0",
+  "comments": [
+    {
+      "text": "DRIFT AUDIT COMPLETE — AGENTS.md + README + 6 skills vs bw v0.13.0 (audited 2026-05-29).\n\n=== HIGH PRIORITY ===\n[1] skills/beadwork-install/SKILL.md is materially STALE and now partly WRONG.\n- Premise throughout: \"latest release is v0.12.3 (2026-04-12); the worktree fix (PR #117) is only on main; build from source.\" \n- Reality: v0.13.0 shipped 2026-05-12 and CONTAINS PR #117 (dc1c4be \"Ignore worktreeConfig extension when opening repos (#117)\" appears in the v0.13.0 changelog).\n- Consequence: Path A (install.sh) is now the correct default. The entire Path B (Go toolchain, clone main, ldflags version injection, mandatory smoke test) is obsolete scaffolding. The 0.12.4 version-threshold compare is moot. The banner's own stated removal condition (\"revise once v0.12.4+ is no longer relevant\") is now TRUE. Author/verified date stamps (2026-05-08) are stale.\n\n=== MEDIUM ===\n[2] bw recap (#122, new in v0.13.0): \"summarize activity across issues,\" --all cross-repo fan-out, --json. Directly relevant to beadwork-for-meta-analysis Beat 2 (currently cites only bw show / bw list). -\u003e bws-vk0.2.\n[3] Cross-repo id resolution + prefix aliases (#123) + host-local registry / bw registry list|prune (#125) strengthen the cross-team/cross-org story in beadwork-as-bus Beat 3 and tiers 2-3 of AGENTS.md. -\u003e bws-vk0.3.\n\n=== LOW ===\n[4] Storage-modes/pricing tables (AGENTS.md, README, overview, install) re-verified ACCURATE (GitHub pricing, four modes) — no change needed, EXCEPT AGENTS.md ~line 226 (\"go build from source for pre-release fixes\") should soften now the fix is released. -\u003e bws-vk0.4.\n[5] bw attach / ticket attachments (#119) not covered anywhere; could strengthen audit-trail use cases (attach evidence to a decision ticket). -\u003e new low-pri child.\n\n=== NO DRIFT (confirmed current) ===\n- beadwork-as-memory, -as-bus, -for-meta-analysis, -for-decisions reference only stable commands (bw show / history / list / create / comment / close) — all valid in v0.13.0. Persona/pitch prose is evergreen.\n- AGENTS.md core pitch, three-tier model, six-skill list; README: current.\n\nEdit tickets spawned as children of bws-vk0. Closing this audit ticket.",
+      "timestamp": "2026-05-29T19:45:24Z"
+    }
+  ],
   "priority": 1,
   "status": "in_progress",
   "title": "Drift audit: AGENTS.md + 6 skills vs bw v0.13.0",
   "type": "task",
-  "updated_at": "2026-05-29T19:43:04Z"
+  "updated_at": "2026-05-29T19:45:24Z"
 }
