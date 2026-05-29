@@ -7,9 +7,15 @@
   "id": "bws-vk0.4",
   "labels": [],
   "parent": "bws-vk0",
+  "comments": [
+    {
+      "text": "Audit (bws-vk0.1) finding: storage-modes/pricing re-verified ACCURATE as of v0.13.0 — no change needed. Only concrete edit: soften AGENTS.md ~line 226 'go build from source for pre-release fixes' now the worktree fix is released. Low priority; mostly a confirm.",
+      "timestamp": "2026-05-29T19:45:25Z"
+    }
+  ],
   "priority": 2,
   "status": "open",
   "title": "Verify version + storage-mode/pricing claims vs v0.13.0",
   "type": "task",
-  "updated_at": "2026-05-29T19:37:04Z"
+  "updated_at": "2026-05-29T19:45:25Z"
 }
