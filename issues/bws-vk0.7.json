@@ -1,5 +1,5 @@
 {
-  "assignee": "",
+  "assignee": "denson",
   "blocked_by": [],
   "blocks": [],
   "created": "2026-05-29T20:22:51Z",
@@ -8,8 +8,8 @@
   "labels": [],
   "parent": "bws-vk0",
   "priority": 2,
-  "status": "open",
+  "status": "in_progress",
   "title": "Verify walkthrough layer-sync (beat_scripts \u003c-\u003e HTML \u003c-\u003e SKILL) across 5 skills",
   "type": "task",
-  "updated_at": "2026-05-29T20:22:51Z"
+  "updated_at": "2026-05-29T20:31:21Z"
 }
