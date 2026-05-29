@@ -11,11 +11,15 @@
     {
       "text": "Audit (bws-vk0.1) finding: storage-modes/pricing re-verified ACCURATE as of v0.13.0 — no change needed. Only concrete edit: soften AGENTS.md ~line 226 'go build from source for pre-release fixes' now the worktree fix is released. Low priority; mostly a confirm.",
       "timestamp": "2026-05-29T19:45:25Z"
+    },
+    {
+      "text": "Landed at c68db1e605545cc3056504eca3de914dec85a5fb: AGENTS.md manual-install bullet now defaults to release binary (source build optional), matching the install-skill rewrite. Storage/pricing tables verified accurate vs v0.13.0 — no change.",
+      "timestamp": "2026-05-29T22:07:24Z"
     }
   ],
   "priority": 2,
   "status": "in_progress",
   "title": "Verify version + storage-mode/pricing claims vs v0.13.0",
   "type": "task",
-  "updated_at": "2026-05-29T20:48:11Z"
+  "updated_at": "2026-05-29T22:07:24Z"
 }
