@@ -11,11 +11,15 @@
     {
       "text": "Audit (bws-vk0.1) refined scope: beadwork-as-bus Beat 3 (cross-team/cross-org) + AGENTS.md tiers 2-3. Hook: cross-repo id resolution + prefix aliases (#123) and host-local registry / bw registry (#125) give bw first-class multi-repo coordination — exactly the cross-team/cross-org story.",
       "timestamp": "2026-05-29T19:45:25Z"
+    },
+    {
+      "text": "LAYER ENUMERATION (per CLAUDE.md walkthrough sync rule). Files this ticket touches:\n- skills/beadwork-as-bus/beat_scripts.md  (Beat 3 cross-team/cross-org prose — CANONICAL, edit first)\n- skills/beadwork-as-bus/walkthrough_html/beat3.html  (visual carrier — must match)\n- skills/beadwork-as-bus/SKILL.md  (Beat 3 summary, if it changes)\n- AGENTS.md  (tiers 2-3 — single file, no layers)\nHOOK: cross-repo id resolution + prefix aliases (#123) and host-local registry / bw registry list|prune (#125) = first-class multi-repo coordination = the cross-team/cross-org story.\nACCEPTANCE (updated): bus Beat 3 layers (prose + HTML [+ SKILL.md]) consistent in ONE commit; AGENTS tiers updated.",
+      "timestamp": "2026-05-29T20:22:51Z"
     }
   ],
   "priority": 2,
   "status": "open",
   "title": "Refresh cross-repo / registry story (#123, #125)",
   "type": "task",
-  "updated_at": "2026-05-29T19:45:25Z"
+  "updated_at": "2026-05-29T20:22:51Z"
 }
