@@ -7,9 +7,15 @@
   "id": "bws-vk0.5",
   "labels": [],
   "parent": "bws-vk0",
+  "comments": [
+    {
+      "text": "Landed on main at fbf6ad7182e7e748d527d22a2bdfe09720de231c and pushed. Rewrote install skill for v0.13.0: dropped build-from-source default, added Windows .zip path, demoted source build to footnote.",
+      "timestamp": "2026-05-29T20:17:08Z"
+    }
+  ],
   "priority": 1,
   "status": "in_progress",
   "title": "Rewrite beadwork-install for v0.13.0 (drop build-from-source)",
   "type": "task",
-  "updated_at": "2026-05-29T20:00:47Z"
+  "updated_at": "2026-05-29T20:17:08Z"
 }
