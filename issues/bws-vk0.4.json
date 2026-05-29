@@ -2,6 +2,7 @@
   "assignee": "denson",
   "blocked_by": [],
   "blocks": [],
+  "closed_at": "2026-05-29T22:07:24Z",
   "created": "2026-05-29T19:37:04Z",
   "description": "Verify the AGENTS.md storage-modes/pricing table and any version references are accurate as of bw v0.13.0.\nAcceptance: claims confirmed or corrected against the current tool.",
   "id": "bws-vk0.4",
@@ -18,7 +19,7 @@
     }
   ],
   "priority": 2,
-  "status": "in_progress",
+  "status": "closed",
   "title": "Verify version + storage-mode/pricing claims vs v0.13.0",
   "type": "task",
   "updated_at": "2026-05-29T22:07:24Z"
