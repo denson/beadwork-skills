@@ -1,5 +1,5 @@
 {
-  "assignee": "",
+  "assignee": "denson",
   "blocked_by": [],
   "blocks": [],
   "created": "2026-05-29T19:37:04Z",
@@ -18,8 +18,8 @@
     }
   ],
   "priority": 2,
-  "status": "open",
+  "status": "in_progress",
   "title": "Refresh cross-repo / registry story (#123, #125)",
   "type": "task",
-  "updated_at": "2026-05-29T20:22:51Z"
+  "updated_at": "2026-05-29T20:44:16Z"
 }
