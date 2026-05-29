@@ -1,5 +1,5 @@
 {
-  "assignee": "",
+  "assignee": "denson",
   "blocked_by": [],
   "blocks": [],
   "created": "2026-05-29T19:37:03Z",
@@ -8,8 +8,8 @@
   "labels": [],
   "parent": "bws-vk0",
   "priority": 1,
-  "status": "open",
+  "status": "in_progress",
   "title": "Drift audit: AGENTS.md + 6 skills vs bw v0.13.0",
   "type": "task",
-  "updated_at": "2026-05-29T19:37:03Z"
+  "updated_at": "2026-05-29T19:43:04Z"
 }
