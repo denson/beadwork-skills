@@ -15,11 +15,15 @@
     {
       "text": "LAYER ENUMERATION (per CLAUDE.md walkthrough sync rule). Files this ticket touches:\n- skills/beadwork-as-bus/beat_scripts.md  (Beat 3 cross-team/cross-org prose — CANONICAL, edit first)\n- skills/beadwork-as-bus/walkthrough_html/beat3.html  (visual carrier — must match)\n- skills/beadwork-as-bus/SKILL.md  (Beat 3 summary, if it changes)\n- AGENTS.md  (tiers 2-3 — single file, no layers)\nHOOK: cross-repo id resolution + prefix aliases (#123) and host-local registry / bw registry list|prune (#125) = first-class multi-repo coordination = the cross-team/cross-org story.\nACCEPTANCE (updated): bus Beat 3 layers (prose + HTML [+ SKILL.md]) consistent in ONE commit; AGENTS tiers updated.",
       "timestamp": "2026-05-29T20:22:51Z"
+    },
+    {
+      "text": "Landed on main at 1bdb5a3ba625de9da37c7ff2e72ffee0043e510f: AGENTS.md tiers gained cross-repo mechanics (id resolution, registry, prefix aliases); as-bus Beat 3 prose+HTML gained plain-language cross-project theme (in sync). SKILL.md unchanged; no image change.",
+      "timestamp": "2026-05-29T20:47:41Z"
     }
   ],
   "priority": 2,
   "status": "in_progress",
   "title": "Refresh cross-repo / registry story (#123, #125)",
   "type": "task",
-  "updated_at": "2026-05-29T20:44:16Z"
+  "updated_at": "2026-05-29T20:47:41Z"
 }
