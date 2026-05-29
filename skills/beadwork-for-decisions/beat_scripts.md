@@ -42,7 +42,7 @@ Caption: *"What decisions look like in six months."*
 
 ### Chat (3-4 sentences)
 
-A decision is just a `bw` ticket with a specific shape. **Title:** the decision. **Description:** the question + the options being considered. **Comments:** the discussion — different voices, signed and timestamped as the conversation evolves over hours, days, weeks. **Close-comment:** the verdict + the rationale, written by whoever made the call. Status flips from open (still discussing) to closed (decision made). Standard ADR format mapped onto bw's existing shape — no new tooling, no new schema, no separate decision-log database. Six months later, the next person runs `bw show <ticket-id>` and gets the entire decision thread back.
+A decision is just a `bw` ticket with a specific shape. **Title:** the decision. **Description:** the question + the options being considered. **Comments:** the discussion — different voices, signed and timestamped as the conversation evolves over hours, days, weeks. **Close-comment:** the verdict + the rationale, written by whoever made the call. Status flips from open (still discussing) to closed (decision made). Standard ADR format mapped onto bw's existing shape — no new tooling, no new schema, no separate decision-log database. And when a decision rests on a document — a contract, a spec, a receipt — you can attach it to the same ticket, so the rationale and the evidence it rests on stay together. Six months later, the next person runs `bw show <ticket-id>` and gets the entire decision thread back.
 
 ### AskUserQuestion
 
