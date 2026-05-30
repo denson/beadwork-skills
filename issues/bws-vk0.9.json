@@ -2,6 +2,7 @@
   "assignee": "",
   "blocked_by": [],
   "blocks": [],
+  "closed_at": "2026-05-30T19:52:36Z",
   "created": "2026-05-30T19:52:36Z",
   "description": "",
   "id": "bws-vk0.9",
@@ -14,7 +15,7 @@
     }
   ],
   "priority": 2,
-  "status": "open",
+  "status": "closed",
   "title": "HTML brief (brief.html) + distribution fix: paste-text handoff, README de-stale/de-sales",
   "type": "task",
   "updated_at": "2026-05-30T19:52:36Z"
