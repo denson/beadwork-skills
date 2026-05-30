@@ -1,0 +1,15 @@
+{
+  "assignee": "",
+  "blocked_by": [],
+  "blocks": [],
+  "created": "2026-05-30T20:05:12Z",
+  "description": "",
+  "id": "bws-vk0.10",
+  "labels": [],
+  "parent": "bws-vk0",
+  "priority": 3,
+  "status": "open",
+  "title": "Gemini web can't fetch our Pages URLs — parked; ship targets = OpenAI + Claude",
+  "type": "task",
+  "updated_at": "2026-05-30T20:05:12Z"
+}
