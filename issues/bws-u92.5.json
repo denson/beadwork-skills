@@ -2,14 +2,16 @@
   "assignee": "denson",
   "blocked_by": [],
   "blocks": [],
+  "closed_at": "2026-05-30T02:41:11Z",
+  "close_reason": "Drafted as guides/g5-why-git-matters.html. Reframed: 'For your AI, git is a SHARED notebook' (agent-native medium; remember/hand-off; comfortable format; searches 1000 pages faster than you search 1; shared so agents AND people pass work+context through it). Three honest user-facing properties (consistent dated record / nothing slips away / see how you got here). Court-defensibility + tamper-proof claims walked back per no-overclaim rule (CLAUDE.md principle #3). Text-only. Reviewed + approved by PRINCIPAL in preview pane 2026-05-29.",
   "created": "2026-05-30T01:32:28Z",
   "description": "",
   "id": "bws-u92.5",
   "labels": [],
   "parent": "bws-u92",
   "priority": 2,
-  "status": "in_progress",
+  "status": "closed",
   "title": "G5 — Why it is just git underneath (even if you never touch git)",
   "type": "task",
-  "updated_at": "2026-05-30T01:52:29Z"
+  "updated_at": "2026-05-30T02:41:11Z"
 }
