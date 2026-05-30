@@ -2,14 +2,16 @@
   "assignee": "denson",
   "blocked_by": [],
   "blocks": [],
+  "closed_at": "2026-05-30T01:52:29Z",
+  "close_reason": "Drafted as guides/g4-where-your-data-lives.html. Four storage modes framed by who-can-see-it (local-only default / private cloud ~$4mo / team ~$4/person-mo / public free) with honest pricing; strong verbatim-faithful public-repo warning; agent-facing default-to-local-only guidance for privacy-sensitive work; offline-in-the-room feature + laptop-dies trade-off. Text-only table, no image. Reviewed + approved by PRINCIPAL in preview pane 2026-05-29 (good to go).",
   "created": "2026-05-30T01:32:28Z",
   "description": "",
   "id": "bws-u92.4",
   "labels": [],
   "parent": "bws-u92",
   "priority": 2,
-  "status": "in_progress",
+  "status": "closed",
   "title": "G4 — Where your data lives (private by default)",
   "type": "task",
-  "updated_at": "2026-05-30T01:44:00Z"
+  "updated_at": "2026-05-30T01:52:29Z"
 }
