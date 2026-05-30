@@ -1,0 +1,15 @@
+{
+  "assignee": "",
+  "blocked_by": [],
+  "blocks": [],
+  "created": "2026-05-30T04:35:53Z",
+  "description": "",
+  "id": "bws-oxr.6",
+  "labels": [],
+  "parent": "bws-oxr",
+  "priority": 2,
+  "status": "open",
+  "title": "Make beadwork-install agent-agnostic (de-Claude + point at G8)",
+  "type": "task",
+  "updated_at": "2026-05-30T04:35:53Z"
+}
