@@ -2,14 +2,16 @@
   "assignee": "denson",
   "blocked_by": [],
   "blocks": [],
+  "closed_at": "2026-05-30T03:17:53Z",
+  "close_reason": "Drafted as guides/g7-first-session-glossary.html; net-new. 3-step 'what your first time looks like' (you talk; your AI does setup+writing) + plain glossary (git/repo/commit/branch/sync/ticket), 5 of 6 tagged 'your AI handles it'. Approved by PRINCIPAL in preview pane 2026-05-29 (moved on to setup).",
   "created": "2026-05-30T01:32:28Z",
   "description": "",
   "id": "bws-u92.7",
   "labels": [],
   "parent": "bws-u92",
   "priority": 3,
-  "status": "in_progress",
+  "status": "closed",
   "title": "G7 — Your first session + a glossary",
   "type": "task",
-  "updated_at": "2026-05-30T03:07:13Z"
+  "updated_at": "2026-05-30T03:17:53Z"
 }
