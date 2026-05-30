@@ -1,0 +1,15 @@
+{
+  "assignee": "",
+  "blocked_by": [],
+  "blocks": [],
+  "created": "2026-05-30T03:28:07Z",
+  "description": "Coder-facing BRIDGE guide (the set's coder exception to the non-coder default).\n\n1. 3-column Rosetta table: Standard git task | With beadwork as a coder | The everyday non-coder version.\n2. List: what beadwork + AI do that git alone cannot (plain-language operation; signed/timestamped reasoning threads; an agent that reads+synthesizes the whole history / meta-analysis; bw recap cross-repo; dependency/epic + bw ready work-readiness; decision-log shape out of the box).\n3. Kicker: coders already have git for code; beadwork earns its place for their NON-code work (decisions, research, side/business/household) — most coders who try it there keep it. No overclaim.",
+  "id": "bws-u92.9",
+  "labels": [],
+  "parent": "bws-u92",
+  "priority": 2,
+  "status": "open",
+  "title": "G9 — If you already know git (git \u003c-\u003e beadwork \u003c-\u003e everyday)",
+  "type": "task",
+  "updated_at": "2026-05-30T03:28:07Z"
+}
