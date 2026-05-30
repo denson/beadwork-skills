@@ -1,6 +1,6 @@
 {
   "name": "beadwork-skills",
-  "description": "Claude Code skills for beadwork (bw — github.com/jallum/beadwork): walkthroughs explaining what bw is and how seven kinds of users use it through their AI assistants for agent memory and agent-to-agent communication, plus an install skill driven by Claude Code.",
+  "description": "Skills + plain-language guides for beadwork (bw — github.com/jallum/beadwork): help any AI explain what bw is and whether it fits — durable, private, git-native memory and agent-to-agent coordination for any work, not just code — plus an install skill that drives setup. The content (guides + AGENTS.md brief) is agent-agnostic; packaged here as Claude Code skills.",
   "owner": {
     "name": "Denson Smith"
   },
@@ -8,7 +8,7 @@
     {
       "name": "beadwork",
       "source": "./",
-      "description": "Six skills: beadwork-overview (the seven-persona tour with SaaS-lock-in lead), beadwork-as-memory (durable memory deep-dive), beadwork-as-bus (multi-session specialist team coordination), beadwork-for-meta-analysis (an agent reading other agents' work), beadwork-for-decisions (decision logs / audit trails), beadwork-install (drives setup end-to-end).",
+      "description": "Six thin, agent-agnostic skills that point at plain-language guides: beadwork-overview (introduce bw, judge fit), beadwork-as-memory (durable cross-session memory), beadwork-as-bus (multi-agent / team coordination), beadwork-for-meta-analysis (one agent auditing other agents' recorded work), beadwork-for-decisions (decision logs / audit trails), beadwork-install (drives setup end-to-end).",
       "version": "0.0.1",
       "author": {
         "name": "Denson Smith"
