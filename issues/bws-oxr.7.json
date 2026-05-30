@@ -1,0 +1,15 @@
+{
+  "assignee": "",
+  "blocked_by": [],
+  "blocks": [],
+  "created": "2026-05-30T04:35:53Z",
+  "description": "",
+  "id": "bws-oxr.7",
+  "labels": [],
+  "parent": "bws-oxr",
+  "priority": 2,
+  "status": "open",
+  "title": "Author agent-agnostic meta-analysis guide (g10)",
+  "type": "task",
+  "updated_at": "2026-05-30T04:35:53Z"
+}
