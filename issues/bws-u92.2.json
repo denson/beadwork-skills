@@ -2,14 +2,16 @@
   "assignee": "denson",
   "blocked_by": [],
   "blocks": [],
+  "closed_at": "2026-05-30T01:38:00Z",
+  "close_reason": "Drafted as guides/g2-you-talk-your-ai.html; net-new. Agent-facing per governing principle: human↔AI division (You/Your-AI split in pure CSS, no image), positive framing (no 'you don't need to code'), no CTA, honest CLI-underneath fit note. Reviewed + approved by PRINCIPAL in preview pane 2026-05-29.",
   "created": "2026-05-30T01:32:27Z",
   "description": "",
   "id": "bws-u92.2",
   "labels": [],
   "parent": "bws-u92",
   "priority": 2,
-  "status": "in_progress",
+  "status": "closed",
   "title": "G2 — You talk to your AI; it runs beadwork",
   "type": "task",
-  "updated_at": "2026-05-30T01:33:20Z"
+  "updated_at": "2026-05-30T01:38:00Z"
 }
