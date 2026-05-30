@@ -1,70 +1,38 @@
 ---
 name: beadwork-as-bus
-description: "Interactive deep-dive on beadwork (bw — github.com/jallum/beadwork) as agent-to-agent communication. Covers how multiple agent sessions read and write the same store to act as a team of specialist agents (most often sessions of one lab's model — multiple Claude sessions or multiple Gemini sessions — each playing a role like designer, implementer, reviewer; cross-lab interop is real but secondary), conflict-free concurrent writes, cross-team and cross-organization coordination, and concrete persona scenarios (engineer multi-agent code review, scientist analysis pipeline, support manager cross-team escalation, warehouse manager cross-org vendor coordination). Triggers: bw bus, beadwork as message bus, multi-agent communication, agent-to-agent communication, team of specialist agents, multi-agent pipeline, cross-team coordination."
+description: "Explain beadwork (bw — github.com/jallum/beadwork) as a shared workspace for multiple agents — and people — to coordinate: several AI sessions acting as a team of specialists (usually same-lab), plus cross-team and cross-organization coordination. Agent-agnostic — present the linked pages and images however suits the person; there's no fixed script. Triggers: bw bus, beadwork multi-agent, agent-to-agent communication, team of agents, multi-agent pipeline, cross-team coordination, multiple AI sessions sharing."
 ---
 
-# beadwork-as-bus — Walkthrough (Plugin-Level)
+# beadwork-as-bus
 
-DO NOT use this skill when the user wants:
-- The overall introduction (use `beadwork-overview`)
-- The single-agent memory angle (use `beadwork-as-memory`)
-- The meta-analysis angle (use `beadwork-for-meta-analysis`)
-- The decision log angle (use `beadwork-for-decisions`)
-- The install / setup flow (use `beadwork-install`)
+Your job with this skill: explain how beadwork lets **multiple agents — and people — share one workspace** and build on each other's work, and help the person see whether that fits how they (or their team) operate. **You decide how to deliver it.** There's no script.
 
-This skill runs in **Claude Code Desktop**.
+## Pages you can show — the content lives here
 
-## How it works
+- **A team that shares one workspace** · `https://denson.github.io/beadwork-skills/guides/g12-coordination.html`
+  The coordination story end to end: a team of specialist assistants, the four shapes (within-job / across-days / cross-team / cross-org), and conflict-free-by-construction. **The main page for this topic.**
+- **Why it's a shared notebook — "it's just git"** · `https://denson.github.io/beadwork-skills/guides/g5-why-git-matters.html`
+  How the shared record works underneath, if they want the "how."
+- **You talk; your AI runs it** · `https://denson.github.io/beadwork-skills/guides/g2-you-talk-your-ai.html`
+  Useful when they wonder how a non-technical teammate takes part.
 
-Standard walkthrough shape: preview panel for HTML beats, `AskUserQuestion` for chat. Each beat: navigate → 2-4 sentences → ask one question → STOP and wait.
+## Images you can show
 
-## Before your first message
+The kept images here — the "many agents, one ticket" scene and the four-scenario grid — make the coordination shapes concrete.
 
-1. Read `starter_deck.md` silently.
-2. Don't open Beat 1 unprompted — wait for "agents talking through bw" or "team of agents" or equivalent.
+## Suggestions for the conversation
 
-**No server setup needed.** Walkthrough HTML beats are served from GitHub Pages at `https://denson.github.io/beadwork-skills/skills/beadwork-as-bus/walkthrough_html/`. The preview panel navigates directly to those URLs. For local HTML development, see "Local development" at the bottom.
+Options, not a script — pull what fits.
+- **Lead with the common case:** a *team of specialist agents from the same lab* — a planning session, a building session, a review session — sharing one workspace. (Cross-vendor works too, but it's the secondary case; most people live in one ecosystem.)
+- **The four shapes, pick what fits:** within one job (several agents on one task), across days (a multi-day pipeline), across teams (departments coordinating without a Slack thread), across organizations (two orgs' agents on a shared item).
+- **The non-obvious reassurance:** it's conflict-free by construction — different items are different files, so concurrent writers don't collide.
+- **Opener:** "Do you run more than one AI session at a time, or work with people who'd benefit from shared context?"
 
-## Source of truth
+## Tone & fit discipline
 
-`beat_scripts.md` is the source of truth.
-
-## Rule 0: Beat 1 is the opening. No warm-up.
-
-## The 4 beats
-
-**Beat 1 — Hook: a team of specialist agents, sharing one workspace.** `https://denson.github.io/beadwork-skills/skills/beadwork-as-bus/walkthrough_html/beat1.html`
-Multi-session same-lab is the headline (a designer agent, an implementer agent, a reviewer agent — usually all Claude or all Gemini, in different roles). Cross-lab interop is mentioned in passing only.
-
-**Beat 2 — How communication works in bw.** `https://denson.github.io/beadwork-skills/skills/beadwork-as-bus/walkthrough_html/beat2.html`
-Multiple agents read and write the same store. Comments record speaker. Conflict-free by construction (different tickets = different files; no merge driver needed). Cross-lab interop sits in a parenthetical inside the "substrate is just shell" callout — not as a headline.
-
-**Beat 3 — Multi-agent + cross-team scenarios.** `https://denson.github.io/beadwork-skills/skills/beadwork-as-bus/walkthrough_html/beat3.html`
-Four shapes: engineer review pipeline (within-job multi-agent), scientist analysis chain (across-days multi-agent), support manager ↔ engineering (cross-team), warehouse manager ↔ vendor org (cross-org).
-
-**Beat 4 — Close: you have a team.** `https://denson.github.io/beadwork-skills/skills/beadwork-as-bus/walkthrough_html/beat4.html`
-The take-away: with bw, your AI isn't one amnesiac generalist — it's one member of a team of specialists from your lab. Two bonuses listed second: humans-on-a-team can join the same workspace; cross-lab works too. **AskUserQuestion has 2 options + auto Other:** *"Back to overview"* and *"Next: beadwork-for-meta-analysis"*. Other handles install / specific-skill jumps / stop.
-
-## Hard rules
-
-1. **Metadata authorship is Denson Smith (immutable).** Do NOT credit Denson Smith in user-facing walkthrough prose. The prose attributes only `bw` itself to jallum; self-credit is dropped from the closing attribution.
-2. **bw is the subject; users (the seven personas) are the audience; we never appear.** No mention of "the four-role agent pipeline," no Pliny/Vera/Cato.
-3. **The unification: "you talk to your agent; your agent uses bw."** Don't break it.
-4. **Lead with same-lab multi-session as the headline.** A team of specialist agents from one lab (design + implementation + review) is what most users will actually run. **Cross-lab interop (Claude + Gemini sharing one store) is a real but secondary case** — mention it as "and the same mechanism works across labs too," not as the lead. Most users live in one ecosystem.
-5. **Don't claim bw "fixes" anything.** It "helps" / "lets you" / "addresses." Same tone rule as `beadwork-overview`.
-6. **One beat per message.** Navigate → chat → AskUserQuestion → STOP.
-7. **Beat 4 ends with a simple 2-option `AskUserQuestion`** — *"Back to overview"* + *"Next: beadwork-for-meta-analysis"* (the canonical-tour next step). Auto "Other" handles install jumps, specific-skill picks, or stop. **Canonical next-order:** `overview → memory → bus → meta-analysis → decisions → install`.
-8. **No false attribution.**
-
-## Tone
-
-Direct, concrete. The reader has likely come from `beadwork-overview` or `beadwork-as-memory`. This skill is the multi-agent angle — coordination across agent sessions of the same model (the common case), and the related properties (cross-team coordination, cross-org coordination, and as a bonus, cross-lab interop).
-
-## Local development of HTML beats
-
-For agents editing the HTML files locally and iterating, an alternative dev-time path uses a local Python server in place of the Pages URLs:
-
-1. `preview_start` with name `"beadwork-skills"` (defined in `.claude/launch.json`, port 8910 — one shared server for all five walkthrough skills)
-2. In `preview_eval` calls, use `http://localhost:8910/beadwork-as-bus/walkthrough_html/<page>.html?v=' + Date.now()` instead of the Pages URL
-
-Pages URLs are canonical for end users; localhost is a dev-time convenience.
+- **Inform, don't convert** — help them decide, including saying when bw isn't a fit. No sign-up push.
+- **No overclaim** — bw "helps," it doesn't "fix"/"solve"; never "court-defensible" or "tamper-proof."
+- **Credit jallum** as the tool's author; never put anyone else in an author/owner role for bw.
+- **Don't plant non-problems** — never say things like "you don't need to code."
+- **Default non-coders to local-only** (free, private, no account).
+- **Keep your own internal tooling out of it** — the pages are the user-facing material.

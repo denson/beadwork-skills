@@ -5,7 +5,7 @@ description: "Install and configure beadwork (bw — github.com/jallum/beadwork)
 
 # beadwork-install — Drive the install end-to-end
 
-Use this skill when the user wants `bw` (beadwork — github.com/jallum/beadwork) installed and configured in a git repo. **Agent-execution shape**: Claude Code reads this skill and drives the install on the user's behalf. The user makes a few yes/no choices; Claude does the rest.
+Use this skill when the user wants `bw` (beadwork — github.com/jallum/beadwork) installed and configured in a git repo. **Agent-execution shape**: your AI reads this skill and drives the install on the user's behalf. The user makes a few yes/no choices; the agent does the rest. (To set expectations first — especially the Windows security prompts — you can show the user the plain-language page `https://denson.github.io/beadwork-skills/guides/g8-getting-set-up.html`.)
 
 This skill has two modes:
 
@@ -187,7 +187,7 @@ This prints a bootstrap snippet for `CLAUDE.md` / `GEMINI.md` / agent instructio
 
 ### Human path
 
-Tell the user: *"I'm going to print a snippet that tells future Claude Code sessions and other AI agents how to use bw. It mentions `bw prime` so they pick up the right context at session start."* Run `bw onboard`, show the output, ask: *"Want me to add this to your CLAUDE.md so it loads automatically?"*
+Tell the user: *"I'm going to print a snippet that tells future AI sessions and agents how to use bw. It mentions `bw prime` so they pick up the right context at session start."* Run `bw onboard`, show the output, ask: *"Want me to add this to your agent's instructions file (CLAUDE.md, GEMINI.md, or equivalent) so it loads automatically?"*
 
 ---
 

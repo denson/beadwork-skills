@@ -1,117 +1,59 @@
 ---
 name: beadwork-overview
-description: "Interactive overview of beadwork (bw — github.com/jallum/beadwork). Universal elevator pitch (AI assistants forget; here's a tool that helps before you get locked into a SaaS memory vendor), then the plain-English explanation of git + the four storage modes (local-only free; cloud backup paid; team cloud paid; public free) + what the user authorizes. Defaults to plain-English; software-engineer audiences can opt in to the technical version. Triggers: what is beadwork, what is bw, beadwork overview, why bw, why beadwork, who uses bw, beadwork tour, explain beadwork, walk me through beadwork, do I need beadwork."
+description: "Introduce beadwork (bw — github.com/jallum/beadwork) to someone and help them judge whether it fits — durable, private, agent-run memory and coordination for any work, not just code. Agent-agnostic: you present the linked pages and images however suits the person; there's no fixed script. Triggers: what is beadwork, what is bw, beadwork overview, why bw, why beadwork, do I need beadwork, explain beadwork, walk me through beadwork, who uses bw, beadwork tour."
 ---
 
-# beadwork-overview — Walkthrough (Plugin-Level)
+# beadwork-overview
 
-DO NOT use this skill when the user wants:
-- The detailed memory deep-dive (use `beadwork-as-memory`)
-- The agent-to-agent communication deep-dive (use `beadwork-as-bus`)
-- The meta-analysis deep-dive (use `beadwork-for-meta-analysis`)
-- The decision log / audit trail deep-dive (use `beadwork-for-decisions`)
-- The install / setup flow (use `beadwork-install`)
+Your job with this skill: introduce **beadwork (bw)** to the person you're talking to and help them judge whether it would actually help *them*, in their terms. **You decide how to deliver it** — open a page for them, show an image, or just explain it in your own words. There is no script and no fixed order. The substance lives in the pages below; read them, then use whatever fits.
 
-This skill runs in **Claude Code Desktop**. It does not work in Cowork — the preview panel + `AskUserQuestion` shape that holds the walkthrough together isn't reliably available there.
+## Pages you can show — the content lives here
 
-## How it works
+All are self-contained and open in any browser:
 
-The walkthrough uses Claude Code Desktop's **preview panel** to display rich HTML beats (with images), while questions go in the chat via `AskUserQuestion`. A local Python HTTP server serves static files from `walkthrough_html/`. Each beat: navigate the preview → write 2-4 sentences in chat → ask one question → STOP and wait. Never two beats without a user response between them.
+- **The hook — "AI assistants forget"** · `https://denson.github.io/beadwork-skills/guides/g1-is-bw-for-you.html`
+  Why bw exists: the one chat you keep running degrades (Claude *compacts* abruptly; ChatGPT/Gemini *drift* gradually and unevenly), what bw does about it, and three reassurances. The best opener for "is this for me?"
+- **Where it helps — worked examples** · `https://denson.github.io/beadwork-skills/guides/g3-what-it-can-do.html`
+  bw across real non-coding work (data analyst, lawyer, small-business owner, cross-org), on a week → year → cross-organization spread. Use when they need to see *their* kind of work in it.
+- **Where your data lives — privacy & cost** · `https://denson.github.io/beadwork-skills/guides/g4-where-your-data-lives.html`
+  The four storage modes with honest pricing, local-only as the default, and the public-repo warning. Lead here if they ask "what's the catch / what does it cost / is it private?"
 
-## Before your first message
+When their interest points deeper, hand off to the matching page:
+- you talk; your AI runs it · `…/guides/g2-you-talk-your-ai.html`
+- why "it's just git" — the shared notebook · `…/guides/g5-why-git-matters.html`
+- just tracking my own work, no ceremony · `…/guides/g6-no-ceremony.html`
+- first session + a glossary · `…/guides/g7-first-session-glossary.html`
+- getting set up (incl. Windows friction) · `…/guides/g8-getting-set-up.html`
+- if they already know git · `…/guides/g9-three-ways.html`
 
-1. Read `starter_deck.md` from this skill directory **silently** (do not show it). It's the navigation map.
-2. If the user has not yet triggered the walkthrough explicitly, **stop**. Don't open Beat 1 unprompted. Wait for "what is beadwork" or "do I need this" or equivalent.
+## Images you can show
 
-**No server setup needed.** The walkthrough HTML beats are served from GitHub Pages at `https://denson.github.io/beadwork-skills/skills/beadwork-overview/walkthrough_html/`. The preview panel navigates directly to those URLs; images and CSS load relative to the page automatically. For local HTML development with faster iteration, see "Local development" at the bottom of this file.
+Each page carries its own visuals. You can also surface a single image on its own when it lands the point faster — e.g. the "Without bw / With bw" forgetting scene on the hook page.
 
-## Source of truth for prose
+## Suggestions for the conversation
 
-The full beat prose lives at `beat_scripts.md` in this directory. **`beat_scripts.md` is the source of truth for what each beat says** — `starter_deck.md` is the navigation map, the HTML pages are the visual carriers, and the chat text you write is a 2-4 sentence summary in your own voice that bridges from the HTML into the question.
+These are options, not a script — pull what fits the person. Show a page, paste a link, or just explain; you don't have to use the pages at all if talking it through is cleaner.
 
-## Rule 0: Beat 1 is the opening. Period.
+**Openers you might use:**
+- "Want the plain version, or the catch — what it costs and where your data lives?"
+- "Are you mostly using AI for code, writing/research, running a business, or something else?"
+- "Working solo, or with other people?"
+- "Would you rather I explain it, or hand a brief to your own AI to read?" (see the last bullet below)
 
-Your first user-facing message is Beat 1. No warm-up, no overview, no introduction. Beat 1 IS the opening.
+**Adapt to who they are:**
+- **Not a coder / general** → plain language; lead with the hook (G1); default them to local-only on storage (G4).
+- **"What's the catch?"** → lead with storage & cost (G4): local-only is free and private, cloud is your own repo (no SaaS middleman), MIT/open-source, no lock-in.
+- **A developer** → the git angle lands fastest — show the "if you already know git" page (G9).
+- **"My AI knows me best"** → hand them the brief to paste into their own assistant: `https://denson.github.io/beadwork-skills/AGENTS.md`. Their AI reads it and translates bw to their situation.
 
-You do **NOT**:
-- Write your own overview before Beat 1
-- Dump paragraphs about beadwork or what the walkthrough will cover
-- Invent persona details, ticket conventions, or commands beyond what's in `beat_scripts.md`
+**Angles to draw on (match the person to the nearest):** engineer, data scientist, logistics/ops analyst, warehouse/operations manager, customer-support manager, lawyer, solo entrepreneur. Worked examples for several of these are on the "where it helps" page (G3) — point there rather than re-telling them here.
 
-## How to structure each beat — MANDATORY
+## Tone & fit discipline
 
-Every beat follows this exact sequence:
-
-1. **Navigate the preview panel:** `preview_eval` → `window.location.href = 'https://denson.github.io/beadwork-skills/skills/beadwork-overview/walkthrough_html/<page>.html?v=' + Date.now()` (the cache-bust query string ensures the user sees fresh content after edits).
-2. **Write 2-4 sentences of conversational context in chat.** Not a copy of the HTML. Add color, respond to what the user said, bridge from the visual to the question.
-3. **Ask ONE question via `AskUserQuestion`** with 2-4 options. **Each option must map to a specific page or destination — never deflect a question with a different question.**
-4. **STOP. Wait for the user to respond before proceeding.**
-
-Never deliver two beats without a user response between them.
-
-## The beat structure
-
-This walkthrough has **4 beats** (5 if the user opts into the developer-flavored Beat 2 sibling).
-
-**Beat 1 — Elevator pitch.** `walkthrough_html/beat1.html`
-Universal hook for all audiences. **Lead is a SaaS-lock-in warning:** *"AI assistants forget. A whole industry is gearing up to sell you the answer. Look at `bw` before you get locked in — it's free, open source, and might be all you need."* Followed by the three forgetting modes (session ends, second concurrent session, mid-session compaction/drift), the three-tier escalation (memory across sessions / multi-session same-lab specialist team / cross-human team), and three reassurances (don't have to learn it / can stay on your computer / free + open source).
-
-**Beat 2 — What bw is.** Two pages, user picks at Beat 1:
-- `walkthrough_html/beat2_everyone.html` — **default plain-English version.** Explains what git is from scratch, what bw does on top of git, four storage modes with honest pricing (local-only free / cloud backup ~$4/mo GitHub Pro / team cloud ~$4/person/mo GitHub Team / public free), and what the user is authorizing their AI to do (install git, install bw, create a notes folder, read/write inside it).
-- `walkthrough_html/beat2_coder.html` — **opt-in developer view.** Tight SWE pitch: orphan branch storage, single Go binary, cross-AI portable, MIT-licensed, survives compaction. Three-tier escalation in dev terms.
-
-**Beat 3 — Where it helps.** `walkthrough_html/beat3.html`
-Seven persona snapshots showing the same memory + agent-coordination pattern across very different jobs (engineer, data scientist, logistics analyst, warehouse manager, support manager, lawyer, solo entrepreneur). Same interaction in every case; what differs is what each role tracks.
-
-**Beat 4 — Close + next-skill router.** `walkthrough_html/beat4.html`
-The canonical 6-skill companion list with a "← you are here" pill on **`beadwork-overview`**. CTA-style install row: *"install now; your AI does the work. Then stop re-explaining."* **AskUserQuestion at the end has 2 options + auto Other:** *"Next: beadwork-as-memory"* (advance the canonical tour) and *"Stop"* (end here). Other handles "install now," "jump to a specific skill," etc.
-
-## Routing rules (the only branch is at Beat 1)
-
-After Beat 1's `AskUserQuestion`, route based on user's pick:
-
-| User picks | Next page | Chat framing emphasis |
-|---|---|---|
-| "Continue — show me what bw actually is" | `beat2_everyone.html` | Standard plain-English tour |
-| "What's the catch? Costs / privacy / what's required" | `beat2_everyone.html` | **Lead the chat with the storage-modes / costs / authorization-stack section** — the page is the same but the framing primes that content |
-| "I'm a developer, give me the technical version" | `beat2_coder.html` | SWE-flavored framing |
-| "My AI knows me best — give me an AGENTS.md to hand to it" | exit the structured tour | Read the marketplace-root `AGENTS.md` file, paste its full contents into chat in a copy block, give a one-sentence usage instruction (*"paste this into Claude / GPT / Gemini / your usual AI"*), then offer fallback options (structured tour / install / stop). The auto "Other" option is still available for "skip to install" or freeform. |
-
-After Beat 2 (either variant), proceed to Beat 3 (use cases). After Beat 3, proceed to Beat 4 (close). No further branches.
-
-If a user is mid-tour on the everyone path and says "I'm a developer, can you give me the technical version?" — navigate to `beat2_coder.html` and continue.
-
-## Hard rules
-
-1. **Metadata authorship is Denson Smith (immutable).** All marketplace metadata, `plugin.json`, `LICENSE`, `SKILL.md` author fields, etc. credit Denson Smith and never anyone else. **But in user-facing walkthrough prose, do NOT credit Denson Smith.** The closing attribution mentions only jallum + `bw`. Source citation (jallum) is required; self-credit in prose is dropped.
-2. **bw is the subject; users (the seven personas) are the audience; we never appear.** No mention of "the four-role agent pipeline," "Pliny / Ada / Vera / Cato," our specific ticket-ID conventions (e.g. `vyo.16`, `ariadne--xft.7`), our specific friction points, or our agent-team field-report patterns. The seven personas are the lens; bw is the tool; we are nowhere in the prose.
-3. **The unifying pitch is "you talk to your agent."** The user almost never types `bw` directly. Software engineers are a partial exception (some still dip into the CLI), but that's trending toward agent-mediated like everything else. Acknowledge without making it the focus.
-4. **Don't claim bw "fixes" anything.** It "helps in many cases." It "addresses." It "lets you." Not "fixes" or "solves." Same goes for the deep-dive skills.
-5. **The three-tier escalation is load-bearing.** Memory across time → **a team of agents coordinating (usually same-lab, multi-session)** → memory across humans-on-a-team. Hit all three early; don't bury the team angle. **Lead tier 2 with same-lab multi-session ("a team of specialists from the same lab"), not with cross-vendor interop** — most users live in one ecosystem; cross-lab is a real but secondary case.
-6. **Storage-mode framing for non-coders.** The headline option is **local-only on one computer, free, no online account at all.** Surface this first and clearly — many users will stop right there. **Cloud backup (laptop-crash survival + cross-device sync) is framed as a paid GitHub plan (~$4/month for personal, ~$4/person/month for team)** — this is the simplest path for a non-coder. (Empirical footnote for the curious: free GitHub accounts technically support private repos too, but for non-coders the paid plan is the smoother setup; don't over-explain in chat.) **For coders (`beat2_coder.html`),** the empirical reality (free covers solo private cloud) is fine to state directly.
-7. **Each AskUserQuestion option maps to a specific page or destination.** Never deflect "what's the catch?" by asking a different question. The user's choice should determine where the tour goes next.
-8. **Default to plain English.** Don't ask the user whether they're a developer. If they are, they'll say so or pick the technical option in Beat 1. Plain English is inclusive of both audiences.
-9. **One beat per message.** Navigate preview, write chat text, ask question, STOP.
-10. **Keep chat text to 2-4 sentences plus the question.** The HTML carries the detail.
-11. **Beat 4 ends with a simple 2-option `AskUserQuestion`** — *"Next: <next-skill-in-canonical-order>"* + *"Stop"* (or *"Back to overview"* on the four sister skills' close beats). The auto "Other" option handles install jumps, freeform skill picks, or anything else. **Canonical next-order:** `overview → memory → bus → meta-analysis → decisions → install`. The companion-list visual on the page shows all six explicitly; the AskUserQuestion is the keystroke-saving default for "advance" and "exit."
-12. **No false attribution.** `bw` is jallum's — credit explicitly in prose and metadata. This walkthrough's *metadata* attributes to Denson Smith (LICENSE, plugin.json, etc., all immutable); the *prose* drops self-credit. Never put jallum or anyone else in author/owner/copyright fields of artifacts Denson built — that is the immutable rule and the bigger safety concern.
-
-## Resources in this skill directory
-
-- `starter_deck.md` — beat-by-beat navigation map (read silently before Beat 1).
-- `beat_scripts.md` — source-of-truth prose for every beat, image, and tone notes.
-- `walkthrough_html/` — rendered HTML beats served by the local HTTP server (port 8910).
-- `assets/images/` — image source files referenced from `walkthrough_html/`.
-
-## Tone
-
-Conversational, concrete, honest. **Describe; don't pitch.** The reader could be any of the seven personas — the framing should land regardless. The default everyone path uses plain English (explains git, repos, CLI in friendly terms). The `beat2_coder.html` opt-in uses developer vocabulary. **Cite jallum + bw with a link upfront.** The product speaks for itself once seen.
-
-## Local development of HTML beats
-
-For agents editing the HTML files locally and iterating, an alternative dev-time path uses a local Python server in place of the Pages URLs:
-
-1. `preview_start` with name `"beadwork-skills"` (defined in `.claude/launch.json`, port 8910 — one shared server for all five walkthrough skills)
-2. In `preview_eval` calls, use `http://localhost:8910/beadwork-overview/walkthrough_html/<page>.html?v=' + Date.now()` instead of the Pages URL
-
-This avoids waiting for a GitHub Pages rebuild after each HTML edit. Pages URLs are canonical for end users; localhost is a dev-time convenience.
+- **Lead with the honest stance, not a feature list:** AI assistants forget; an industry is lining up to sell you the fix; look at bw before you get locked in — it's free, open source, and might be all you need.
+- **Inform, don't convert.** Your job is to help them decide — *including telling them when bw isn't a fit.* No sign-up push, no closing the sale.
+- **No overclaim.** bw keeps consistent, dated records — not "court-defensible," not "tamper-proof"; it doesn't "fix" or "solve," it "helps."
+- **Credit jallum** as the tool's author when it comes up. Never put anyone else in an author/owner role for bw.
+- **Don't plant non-problems** — never say things like "you don't need to code" (it only makes coding feel like a prerequisite).
+- **Default non-coders to local-only** (free, private, no account).
+- **Keep your own working details out of it** — the pages are the user-facing material; don't narrate internal tooling, agent-team structure, or ticket IDs.

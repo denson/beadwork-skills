@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Memory that survives — beadwork</title>
+  <meta name="description" content="Beadwork as durable memory: the few things that have to survive, what they survive (sessions, machines, vendor swaps, time), and the path-not-just-state property.">
+  <style>
+    :root { --ink:#0f172a; --body:#1e293b; --muted:#475569; --bg:#f7f5f0; --card:#fff; --line:#e2e8f0; --accent:#0f766e; }
+    * { box-sizing: border-box; }
+    body { margin:0; background:var(--bg); color:var(--body); font:17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .container { max-width:760px; margin:0 auto; padding:2.5rem 1.5rem 4rem; }
+    .eyebrow { font-size:0.8rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted); font-weight:600; margin-bottom:0.75rem; }
+    h1 { color:var(--ink); font-size:2.05rem; line-height:1.16; margin:0 0 1rem; }
+    p { margin:0 0 1rem; }
+    a { color:var(--accent); }
+    code { background:#eef2f7; padding:0.1em 0.35em; border-radius:4px; font-size:0.92em; }
+    .lead { font-size:1.08rem; margin-bottom:1.75rem; }
+    .example { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:1.25rem 1.5rem; margin:0 0 1.1rem; }
+    .example h2 { font-size:1.12rem; color:var(--ink); margin:0 0 0.5rem; }
+    .example p { margin:0; }
+    .horizon { display:inline-block; font-size:0.72rem; text-transform:uppercase; letter-spacing:0.07em; font-weight:700; color:var(--accent); background:#e6f4f1; border-radius:999px; padding:0.2rem 0.6rem; margin-bottom:0.6rem; }
+    .callout { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:1.25rem 1.5rem; margin:2rem 0 0; }
+    .callout > p:first-child { margin-top:0; } .callout p:last-child { margin-bottom:0; }
+    footer { margin-top:3rem; padding-top:1.25rem; border-top:1px solid var(--line); color:var(--muted); font-size:0.9rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="eyebrow">beadwork &middot; durable memory</div>
+    <h1>Memory that actually survives.</h1>
+
+    <p class="lead">Most of what your AI needs across time isn't the whole conversation — it's a <em>few specific things</em> that have to survive: the decision you reached, the constraint you hit, the blocker you noted, the half-finished plan. Beadwork is where your assistant writes those down, so the next session — next week, next machine, even a different AI — picks them up instead of starting blank.</p>
+
+    <p>Those notes survive a lot: the chat ending, a context reset, an app restart, switching computers, switching AI vendors, and plain time. And because the record keeps the whole timeline, you can see <em>how</em> you got somewhere — the path, not just the latest state. Most "AI memory" tools keep only the current state; this keeps the trail.</p>
+
+    <div class="example">
+      <span class="horizon">An hour, not three weeks</span>
+      <h2>A lawyer's case, picked up mid-stream</h2>
+      <p>A matter opens in March and settles in November. Someone new joins in September; their assistant reads the case record from the start — discovery, depositions, the decisions made — and they're up to speed in an hour instead of three weeks.</p>
+    </div>
+
+    <div class="example">
+      <span class="horizon">Over a week</span>
+      <h2>An analyst's investigation writes its own memo</h2>
+      <p>A metric anomaly takes a week to chase. Each day's findings go into the record. On day seven, the assistant writes the stakeholder memo straight from that trail — grounded in what actually happened, not reconstructed from a fading chat.</p>
+    </div>
+
+    <div class="example">
+      <span class="horizon">Across engagements</span>
+      <h2>A solo founder's lessons carry forward</h2>
+      <p>A client engagement in spring, a similar one in fall. The assistant surfaces the relevant prior lessons — "you tried this in spring; here's what worked and what didn't" — instead of relearning them.</p>
+    </div>
+
+    <div class="callout">
+      <p>The honest flip side: if you only ever have one short conversation, there's nothing to carry forward. This earns its place when context needs to outlive the chat — across days, machines, or people.</p>
+      <p>For <em>how</em> the record holds together, see <a href="g5-why-git-matters.html">why "it's just git" matters</a>.</p>
+    </div>
+
+    <footer>
+      <p><code>bw</code> (beadwork) is an open-source tool by <a href="https://github.com/jallum/beadwork">jallum</a>. This guide is part of a plain-language set for using it without writing code.</p>
+    </footer>
+  </div>
+<script src="toc.js"></script>
+</body>
+</html>

@@ -1,67 +1,36 @@
 ---
 name: beadwork-as-memory
-description: "Interactive deep-dive on beadwork (bw — github.com/jallum/beadwork) as durable agent memory. Covers how the orphan-branch storage works, what survives across sessions / restarts / machines / years, and concrete persona scenarios (data scientist long-running investigation, lawyer case file resumption, solo entrepreneur lessons-across-engagements). Triggers: bw memory, beadwork memory, agent memory, durable AI memory, how does bw remember things, bw across sessions."
+description: "Explain beadwork (bw — github.com/jallum/beadwork) as durable memory for an AI: what survives across sessions, restarts, machines, vendor swaps, and time, and how the record reconstructs context months later. Agent-agnostic — present the linked pages and images however suits the person; there's no fixed script. Triggers: bw memory, beadwork memory, agent memory, durable AI memory, how does bw remember, bw across sessions, does my AI forget, keep context between sessions."
 ---
 
-# beadwork-as-memory — Walkthrough (Plugin-Level)
+# beadwork-as-memory
 
-DO NOT use this skill when the user wants:
-- The overall introduction (use `beadwork-overview`)
-- The agent-to-agent communication angle (use `beadwork-as-bus`)
-- The meta-analysis angle (use `beadwork-for-meta-analysis`)
-- The decision log / audit trail angle (use `beadwork-for-decisions`)
-- The install / setup flow (use `beadwork-install`)
+Your job with this skill: explain how beadwork gives an AI **durable memory**, and help the person see whether it solves a problem they actually have. **You decide how to deliver it** — show a page, show an image, or just talk it through. There's no script.
 
-This skill runs in **Claude Code Desktop**.
+## Pages you can show — the content lives here
 
-## How it works
+- **Durable memory — what survives** · `https://denson.github.io/beadwork-skills/guides/g11-memory.html`
+  The memory story end to end: the few things that must survive, what they survive (sessions, machines, vendor swaps, time), the path-not-just-state property, and worked continuity examples. **The main page for this topic.**
+- **Why the record holds — "it's just git"** · `https://denson.github.io/beadwork-skills/guides/g5-why-git-matters.html`
+  The underlying durability in plain terms, if they want the "how."
 
-Standard walkthrough shape: preview panel for HTML beats, `AskUserQuestion` for chat. Each beat: navigate → 2-4 sentences → ask one question → STOP and wait.
+## Images you can show
 
-## Before your first message
+The kept images in this skill's `walkthrough_html/images/` — the two-sessions-with-a-gap scene, and the ticket-with-dated-comments diagram — land the "memory persists in the record" point fast.
 
-1. Read `starter_deck.md` silently.
-2. Don't open Beat 1 unprompted — wait for "memory in bw" or equivalent.
+## Suggestions for the conversation
 
-**No server setup needed.** Walkthrough HTML beats are served from GitHub Pages at `https://denson.github.io/beadwork-skills/skills/beadwork-as-memory/walkthrough_html/`. The preview panel navigates directly to those URLs. For local HTML development, see "Local development" at the bottom.
+Options, not a script — pull what fits.
+- **The reframe that lands:** memory isn't the whole chat history — it's a *few specific things that have to survive*: the decision you reached, the constraint you hit, the blocker you noted, the half-finished plan. bw is where the AI writes those down.
+- **Match the time-horizon to the person:** a week (an analyst's multi-day investigation), a year (a case someone new picks up), across engagements (lessons carried from one client to the next).
+- **The underrated point:** most "AI memory" tools keep only the current state; bw keeps the whole timeline, so you can reconstruct the path you took.
+- **Opener:** "What do you find yourself re-explaining every time you open a new session?"
 
-## Source of truth
+## Tone & fit discipline
 
-`beat_scripts.md` is the source of truth.
-
-## Rule 0: Beat 1 is the opening. No warm-up.
-
-## The 4 beats
-
-**Beat 1 — Hook: most of what your AI needs isn't a whole chat history; it's a few specific things that have to survive.** `https://denson.github.io/beadwork-skills/skills/beadwork-as-memory/walkthrough_html/beat1.html`
-
-**Beat 2 — How memory works in bw.** `https://denson.github.io/beadwork-skills/skills/beadwork-as-memory/walkthrough_html/beat2.html`
-The orphan-branch storage; ticket comments record speaker + timestamp; reconstruction via `bw show` and `bw history`.
-
-**Beat 3 — Persona scenarios: memory in three shapes.** `https://denson.github.io/beadwork-skills/skills/beadwork-as-memory/walkthrough_html/beat3.html`
-Data scientist multi-day investigation; lawyer multi-month case; solo entrepreneur cross-engagement lessons.
-
-**Beat 4 — Close + next-skill router.** `https://denson.github.io/beadwork-skills/skills/beadwork-as-memory/walkthrough_html/beat4.html`
-The full survival story (sessions, /clear, agents, machines, vendors, time) plus the canonical 6-skill companion list with "← you are here" on `beadwork-as-memory`. **AskUserQuestion has 2 options + auto Other:** *"Back to overview"* and *"Next: beadwork-as-bus"*. Other handles install / specific-skill jumps / stop.
-
-## Hard rules
-
-1. **Authorship: Denson Smith.** `bw` is jallum's tool; credit explicitly.
-2. **bw is the subject; users (the seven personas) are the audience; we never appear.** No mention of "the four-role agent pipeline," no Pliny/Vera/Cato, no workspace-specific ticket IDs.
-3. **The unification: "you talk to your agent; your agent uses bw."** Don't break it.
-4. **One beat per message.** Navigate → chat (2-4 sentences) → AskUserQuestion → STOP.
-5. **Beat 4 ends with a simple 2-option `AskUserQuestion`** — *"Back to overview"* + *"Next: beadwork-as-bus"* (the canonical-tour next step). Auto "Other" handles install jumps, specific-skill picks, or stop. **Canonical next-order:** `overview → memory → bus → meta-analysis → decisions → install`.
-6. **No false attribution.**
-
-## Tone
-
-Direct, concrete. The reader has likely come from `beadwork-overview` and already knows what bw is. This skill goes deeper on the memory angle without re-explaining the basics.
-
-## Local development of HTML beats
-
-For agents editing the HTML files locally and iterating, an alternative dev-time path uses a local Python server in place of the Pages URLs:
-
-1. `preview_start` with name `"beadwork-skills"` (defined in `.claude/launch.json`, port 8910 — one shared server for all five walkthrough skills)
-2. In `preview_eval` calls, use `http://localhost:8910/beadwork-as-memory/walkthrough_html/<page>.html?v=' + Date.now()` instead of the Pages URL
-
-Pages URLs are canonical for end users; localhost is a dev-time convenience.
+- **Inform, don't convert** — help them decide, including saying when bw isn't a fit. No sign-up push.
+- **No overclaim** — bw keeps a consistent, dated record; it "helps," it doesn't "fix" memory; never "tamper-proof."
+- **Credit jallum** as the tool's author; never put anyone else in an author/owner role for bw.
+- **Don't plant non-problems** — never say things like "you don't need to code."
+- **Default non-coders to local-only** (free, private, no account).
+- **Keep your own internal tooling out of it** — the pages are the user-facing material.

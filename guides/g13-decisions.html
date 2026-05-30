@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Decisions, with the "why" kept — beadwork</title>
+  <meta name="description" content="Beadwork as a decision log: a decision is a record with a familiar shape — title, options, discussion, verdict + reasoning — so the why survives.">
+  <style>
+    :root { --ink:#0f172a; --body:#1e293b; --muted:#475569; --bg:#f7f5f0; --card:#fff; --line:#e2e8f0; --accent:#0f766e; }
+    * { box-sizing: border-box; }
+    body { margin:0; background:var(--bg); color:var(--body); font:17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .container { max-width:760px; margin:0 auto; padding:2.5rem 1.5rem 4rem; }
+    .eyebrow { font-size:0.8rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted); font-weight:600; margin-bottom:0.75rem; }
+    h1 { color:var(--ink); font-size:2.05rem; line-height:1.16; margin:0 0 1rem; }
+    p { margin:0 0 1rem; }
+    a { color:var(--accent); }
+    code { background:#eef2f7; padding:0.1em 0.35em; border-radius:4px; font-size:0.92em; }
+    .lead { font-size:1.08rem; margin-bottom:1.5rem; }
+    .shape { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:0.4rem 1.4rem; margin:0 0 1.75rem; }
+    .shape .row { padding:0.7rem 0; border-bottom:1px solid var(--line); }
+    .shape .row:last-child { border-bottom:none; }
+    .part { font-weight:700; color:var(--ink); }
+    .example { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:1.25rem 1.5rem; margin:0 0 1.1rem; }
+    .example h2 { font-size:1.12rem; color:var(--ink); margin:0 0 0.5rem; }
+    .example p { margin:0; }
+    .callout { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:1.25rem 1.5rem; margin:2rem 0 0; }
+    .callout > p:first-child { margin-top:0; } .callout p:last-child { margin-bottom:0; }
+    footer { margin-top:3rem; padding-top:1.25rem; border-top:1px solid var(--line); color:var(--muted); font-size:0.9rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="eyebrow">beadwork &middot; decisions</div>
+    <h1>Decisions, with the "why" kept.</h1>
+
+    <p class="lead">A decision in beadwork is just a record with a shape you already understand. Nothing new to learn — and six months on, "why did we decide that?" has an answer.</p>
+
+    <div class="shape">
+      <div class="row"><span class="part">Title</span> — the decision itself ("Auth: Auth0 vs in-house").</div>
+      <div class="row"><span class="part">Description</span> — the question and the options on the table.</div>
+      <div class="row"><span class="part">Comments</span> — the back-and-forth, each one signed and dated.</div>
+      <div class="row"><span class="part">Closing note</span> — the verdict and the reasoning behind it.</div>
+    </div>
+
+    <div class="example">
+      <h2>An engineer's architecture call</h2>
+      <p>"REST vs gRPC for the orders service." The options get weighed in comments, the call is made with its reasoning. Six months later a new engineer asks "why gRPC?" — and the original thread answers, trade-offs and all, instead of being lost to a Slack history.</p>
+    </div>
+
+    <p>The same shape carries other kinds of decisions just as well — a lawyer's privilege log (each redaction recorded with its reasoning) or a small business's expense choices at tax time ("MailerLite over ConvertKit, cheaper at our list size"). Worked versions of those are on the <a href="g3-what-it-can-do.html">examples page</a>.</p>
+
+    <div class="callout">
+      <p>It's a genuine way to keep consistent, dated records, and there's good evidence it does that well — but it won't make a record bulletproof if someone sets out to dispute it, and it isn't a legal guarantee. What it gives you is the steady answer to "why," in one place, with dates and authors intact.</p>
+    </div>
+
+    <footer>
+      <p><code>bw</code> (beadwork) is an open-source tool by <a href="https://github.com/jallum/beadwork">jallum</a>. This guide is part of a plain-language set for using it without writing code.</p>
+    </footer>
+  </div>
+<script src="toc.js"></script>
+</body>
+</html>

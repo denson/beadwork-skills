@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Have one agent check the others' work — beadwork</title>
+  <meta name="description" content="Point an agent at the recorded work of other agents — across one project or many — to catch drift, contradictions, and gaps a single agent can't see in itself.">
+  <style>
+    :root {
+      --ink: #0f172a; --body: #1e293b; --muted: #475569;
+      --bg: #f7f5f0; --card: #ffffff; --line: #e2e8f0;
+      --accent: #0f766e;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--body); font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .container { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+    .eyebrow { font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin-bottom: 0.75rem; }
+    h1 { color: var(--ink); font-size: 2.05rem; line-height: 1.16; margin: 0 0 1rem; }
+    p { margin: 0 0 1rem; }
+    a { color: var(--accent); }
+    code { background: #eef2f7; padding: 0.1em 0.35em; border-radius: 4px; font-size: 0.92em; }
+    .lead { font-size: 1.08rem; margin-bottom: 1.75rem; }
+    .example { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 0 0 1.1rem; }
+    .example h2 { font-size: 1.12rem; color: var(--ink); margin: 0 0 0.5rem; }
+    .example p { margin: 0 0 0.6rem; }
+    .catch { margin: 0; font-weight: 600; color: var(--ink); }
+    .catch::before { content: "→ "; color: var(--accent); }
+    .callout { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0 0; }
+    .callout > p:first-child { margin-top: 0; }
+    .callout p:last-child { margin-bottom: 0; }
+    footer { margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="eyebrow">beadwork &middot; meta-analysis</div>
+    <h1>Have one agent check the others' work.</h1>
+
+    <p class="lead">Agents make mistakes — they drift off a convention, apply different standards to similar tasks, miss what a peer just flagged. The cheap way to catch it is to point <em>another</em> agent at the work itself: the recorded decisions and verdicts, not the chat that produced them. A chat log can't be audited well — it's one long stream, the speaker is implicit, the timing is muddy, most of it is noise. Beadwork's records can: every entry is signed, timestamped, and structured. That's the substrate an auditing agent needs.</p>
+
+    <p>The audit agent doesn't watch the others work — it reads what they wrote afterward, over one project or across many at once, and asks questions no single agent can answer about its own work: <em>Did two agents apply the same criteria across a dozen similar tasks? Has a convention drifted over the quarter? Did a later note quietly contradict an earlier one?</em></p>
+
+    <div class="example">
+      <h2>An engineer's review pipeline</h2>
+      <p>Three review agents — security, style, test-coverage — each post a verdict on the same change. A fourth, reading all three, flags it: "security wants strict CORS headers; style wants them stripped — these contradict."</p>
+      <p class="catch">The conflict surfaces before it ships, not after.</p>
+    </div>
+
+    <div class="example">
+      <h2>A data analyst's pipeline</h2>
+      <p>A cleaner, then a tester, then a visualizer — each writes its step to the record. An auditing agent reads the chain: "the tester ran on the full population, but the cleaner had filtered to active users — that's a gap."</p>
+      <p class="catch">A subtlety a chat log would bury.</p>
+    </div>
+
+    <div class="example">
+      <h2>A lawyer across many cases</h2>
+      <p>An audit agent reads a year of document-review records spanning many matters and checks whether privilege calls were made consistently from one agent to the next — the kind of uniformity that's hard to eyeball across that much work.</p>
+      <p class="catch">Consistency across cases, which only a cross-case read catches.</p>
+    </div>
+
+    <div class="callout">
+      <p>The auditor is just another agent, reading the substrate every prior agent produced — over one project or across many. What makes it work is that the records are signed, timestamped, and structured; a chat history isn't.</p>
+      <p>And the honest flip side: if your work is a single short session with nothing to cross-check, there's nothing to meta-analyze. This earns its place once several agents or sessions have left a record worth auditing.</p>
+    </div>
+
+    <footer>
+      <p><code>bw</code> (beadwork) is an open-source tool by <a href="https://github.com/jallum/beadwork">jallum</a>. This guide is part of a plain-language set for using it without writing code.</p>
+    </footer>
+  </div>
+<script src="toc.js"></script>
+</body>
+</html>
