@@ -2,14 +2,16 @@
   "assignee": "",
   "blocked_by": [],
   "blocks": [],
+  "closed_at": "2026-05-30T01:32:28Z",
+  "close_reason": "Drafted as guides/g1-is-bw-for-you.html. Reframed problem statement (agents have memory now; the forever-chat degrades; Claude compacts/sudden vs ChatGPT/Gemini gradual-but-uneven/unpredictable). Existing beat1-hook image reused as-is. Reviewed + approved by PRINCIPAL in preview pane 2026-05-29.",
   "created": "2026-05-30T01:32:27Z",
   "description": "",
   "id": "bws-u92.1",
   "labels": [],
   "parent": "bws-u92",
   "priority": 1,
-  "status": "open",
+  "status": "closed",
   "title": "G1 — Is beadwork for you? (AI assistants forget)",
   "type": "task",
-  "updated_at": "2026-05-30T01:32:27Z"
+  "updated_at": "2026-05-30T01:32:28Z"
 }
