@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Getting set up — what to expect — beadwork</title>
+  <meta name="description" content="Setting beadwork up is a few one-time steps your assistant runs. Here's what to expect — including the Windows security prompts — so nothing catches you off guard.">
+  <style>
+    :root {
+      --ink: #0f172a; --body: #1e293b; --muted: #475569;
+      --bg: #f7f5f0; --card: #ffffff; --line: #e2e8f0;
+      --amber-bg: #fef3c7; --amber-edge: #d97706;
+      --accent: #0f766e;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--body); font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .container { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+    .eyebrow { font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin-bottom: 0.75rem; }
+    h1 { color: var(--ink); font-size: 2.05rem; line-height: 1.16; margin: 0 0 1rem; }
+    h2 { color: var(--ink); font-size: 1.2rem; margin: 2.1rem 0 0.85rem; }
+    p { margin: 0 0 1rem; }
+    a { color: var(--accent); }
+    code { background: #eef2f7; padding: 0.1em 0.35em; border-radius: 4px; font-size: 0.92em; }
+    .lead { font-size: 1.08rem; margin-bottom: 1.5rem; }
+    .steps { list-style: none; counter-reset: step; padding: 0; margin: 1rem 0 0.5rem; }
+    .steps li { counter-increment: step; position: relative; padding: 0 0 0.9rem 2.6rem; }
+    .steps li::before { content: counter(step); position: absolute; left: 0; top: 0; width: 1.8rem; height: 1.8rem; border-radius: 50%; background: var(--accent); color: #fff; font-weight: 700; font-size: 0.95rem; display: flex; align-items: center; justify-content: center; }
+    .heads-up { background: var(--amber-bg); border-left: 4px solid var(--amber-edge); border-radius: 0 8px 8px 0; padding: 1rem 1.25rem; margin: 1.25rem 0; }
+    .heads-up p { margin: 0 0 0.6rem; color: var(--ink); }
+    .heads-up p:last-child { margin-bottom: 0; }
+    .callout { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0 0; }
+    .callout > p:first-child { margin-top: 0; }
+    .callout p:last-child { margin-bottom: 0; }
+    footer { margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="eyebrow">beadwork &middot; a guide for everyone</div>
+    <h1>Getting set up &mdash; what to expect.</h1>
+
+    <p class="lead">Setting beadwork up is a handful of one-time steps, and your assistant does the actual work — you just approve a couple of things along the way. Here's what to expect, so nothing catches you off guard.</p>
+
+    <h2>What your assistant does</h2>
+    <ol class="steps">
+      <li>Installs <strong>git</strong>, if your computer doesn't already have it.</li>
+      <li>Installs <strong>beadwork</strong> — a small program.</li>
+      <li>Makes a <strong>folder for your notes</strong>.</li>
+      <li>Connects a <strong>cloud account</strong> — only if you chose backup or sharing back in "where your data lives."</li>
+    </ol>
+    <p>You okay each step as it comes; your assistant runs it.</p>
+
+    <h2>On Windows, expect a security prompt or two</h2>
+    <div class="heads-up">
+      <p>When a new tool is installed or run for the first time, Windows usually shows a warning — a <strong>"Windows protected your PC"</strong> box, or <strong>"Do you want to allow this app to make changes?"</strong> That's Windows being careful about a tool it hasn't seen before, <em>not</em> a sign anything's wrong.</p>
+      <p>And it isn't a leap of faith. <strong>Git</strong> is one of the most widely used tools in all of software — it's on the machines of the large majority of programmers worldwide. And <strong>beadwork is a fully open project</strong>: your assistant can read its actual source and confirm it's the genuine, safe thing before it installs anything.</p>
+      <p>Your assistant will tell you which prompt is coming and that it's safe to allow — you click through, and you're done. (On a Mac it's similar: you may be asked for your login password once, or to confirm opening the program.)</p>
+    </div>
+
+    <h2>What you're allowing</h2>
+    <p>The whole permission surface is small: install git (if it's missing), install beadwork, make a notes folder, and read and write inside it. Beadwork can't make purchases, send messages, or touch anything outside that folder.</p>
+
+    <h2>If a step balks</h2>
+    <p>Setup is where the occasional hiccup lives. If something stalls — a step that errors, a prompt you didn't expect, a download that didn't land — just tell your assistant what you saw. It can almost always sort it out, and the steps are reversible. Once you're past setup, trouble is rare: working on your own you won't hit the kind of conflicts teams do, and nothing is ever silently lost.</p>
+
+    <div class="callout">
+      <p>All told it's a few minutes, mostly your assistant working. The friction, when there's any, is your computer being cautious — not beadwork being broken.</p>
+    </div>
+
+    <footer>
+      <p><code>bw</code> (beadwork) is an open-source tool by <a href="https://github.com/jallum/beadwork">jallum</a>. This guide is part of a plain-language set for using it without writing code.</p>
+    </footer>
+  </div>
+</body>
+</html>

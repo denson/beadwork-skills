@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Where your data lives — beadwork</title>
+  <meta name="description" content="Beadwork's storage options, with honest costs. The default is your own computer — nothing uploaded, no account.">
+  <style>
+    :root {
+      --ink: #0f172a; --body: #1e293b; --muted: #475569;
+      --bg: #f7f5f0; --card: #ffffff; --line: #e2e8f0;
+      --amber-bg: #fef3c7; --amber-edge: #d97706;
+      --warn-bg: #fee2e2; --warn-edge: #dc2626;
+      --accent: #0f766e;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--body); font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .container { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+    .eyebrow { font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin-bottom: 0.75rem; }
+    h1 { color: var(--ink); font-size: 2.1rem; line-height: 1.15; margin: 0 0 1rem; }
+    p { margin: 0 0 1rem; }
+    a { color: var(--accent); }
+    code { background: #eef2f7; padding: 0.1em 0.35em; border-radius: 4px; font-size: 0.92em; }
+    .lead { font-size: 1.08rem; margin-bottom: 1.75rem; }
+    table { width: 100%; border-collapse: collapse; margin: 0 0 1.5rem; font-size: 0.97rem; }
+    th, td { text-align: left; padding: 0.7rem 0.8rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+    th { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+    tbody tr:first-child { background: #e6f4f1; }
+    .mode { font-weight: 600; color: var(--ink); }
+    .tag { display: inline-block; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent); margin-left: 0.4rem; }
+    .warn-row .mode { color: #b91c1c; }
+    .warn-callout { background: var(--warn-bg); border-left: 4px solid var(--warn-edge); border-radius: 0 8px 8px 0; padding: 1rem 1.25rem; margin: 0 0 1.5rem; }
+    .warn-callout p { margin: 0; color: #7f1d1d; }
+    .warn-callout strong { color: #7f1d1d; }
+    .callout { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0 0; }
+    .callout > p:first-child { margin-top: 0; }
+    .callout p:last-child { margin-bottom: 0; }
+    footer { margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="eyebrow">beadwork &middot; a guide for everyone</div>
+    <h1>Where your data lives.</h1>
+
+    <p class="lead">Beadwork keeps its notes wherever you point your AI to put them. By default that's <strong>your own computer</strong> — nothing uploaded, no account. Four options, with honest costs:</p>
+
+    <table>
+      <thead>
+        <tr><th>Where it lives</th><th>Who can see it</th><th>Cost</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="mode">On your computer<span class="tag">default</span></td>
+          <td>Only you, on this machine</td>
+          <td>Free &middot; no account</td>
+        </tr>
+        <tr>
+          <td class="mode">Your private cloud</td>
+          <td>Only you, across your devices</td>
+          <td>~$4/month</td>
+        </tr>
+        <tr>
+          <td class="mode">Your team's cloud</td>
+          <td>You + the people you share with</td>
+          <td>~$4/person/month</td>
+        </tr>
+        <tr class="warn-row">
+          <td class="mode">A public repository &#9888;</td>
+          <td>Anyone on the internet</td>
+          <td>Free</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p><strong>Local-only is the headline.</strong> It's free, needs no account, and nothing ever leaves your machine — many people never need anything more. Because it needs no connection, it works on a plane or in a clinic, and the notes stay in the room. The one trade-off: if the laptop dies, the notes go with it, which is the reason to add backup.</p>
+
+    <div class="warn-callout">
+      <p>&#9888; <strong>Public means public.</strong> Choosing a public repository makes your tickets, comments, and decision history visible to <strong>anyone on the internet</strong> — including draft ideas, client details, or anything sensitive that lands in a note. Pick it only for genuinely public projects. If you're unsure, stay local-only: you can always add backup later, but making private notes public is hard to undo.</p>
+    </div>
+
+    <div class="callout">
+      <p>If privacy is the whole point — legal, medical, financial, or anything sensitive — <strong>local-only is the right default.</strong> Backup and sharing are choices you add on purpose, not the place to start.</p>
+    </div>
+
+    <footer>
+      <p><code>bw</code> (beadwork) is an open-source tool by <a href="https://github.com/jallum/beadwork">jallum</a>. This guide is part of a plain-language set for using it without writing code.</p>
+    </footer>
+  </div>
+</body>
+</html>

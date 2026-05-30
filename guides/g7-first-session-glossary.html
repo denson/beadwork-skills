@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your first time with beadwork — beadwork</title>
+  <meta name="description" content="What getting started actually looks like — your assistant does the setup and the writing, you just talk. Plus a plain-language glossary.">
+  <style>
+    :root {
+      --ink: #0f172a; --body: #1e293b; --muted: #475569;
+      --bg: #f7f5f0; --card: #ffffff; --line: #e2e8f0;
+      --accent: #0f766e;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--body); font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .container { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+    .eyebrow { font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin-bottom: 0.75rem; }
+    h1 { color: var(--ink); font-size: 2.05rem; line-height: 1.16; margin: 0 0 1rem; }
+    h2 { color: var(--ink); font-size: 1.25rem; margin: 2.25rem 0 1rem; }
+    p { margin: 0 0 1rem; }
+    a { color: var(--accent); }
+    code { background: #eef2f7; padding: 0.1em 0.35em; border-radius: 4px; font-size: 0.92em; }
+    .lead { font-size: 1.08rem; margin-bottom: 1.75rem; }
+    .steps { list-style: none; counter-reset: step; padding: 0; margin: 1.5rem 0; }
+    .steps li { counter-increment: step; position: relative; padding: 0 0 1.1rem 2.6rem; }
+    .steps li::before { content: counter(step); position: absolute; left: 0; top: 0; width: 1.8rem; height: 1.8rem; border-radius: 50%; background: var(--accent); color: #fff; font-weight: 700; font-size: 0.95rem; display: flex; align-items: center; justify-content: center; }
+    .glossary { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 0.4rem 1.4rem; margin: 1rem 0 0; }
+    .glossary .row { padding: 0.8rem 0; border-bottom: 1px solid var(--line); }
+    .glossary .row:last-child { border-bottom: none; }
+    .term { font-weight: 700; color: var(--ink); }
+    .handles { color: var(--accent); font-size: 0.9rem; }
+    footer { margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="eyebrow">beadwork &middot; a guide for everyone</div>
+    <h1>Your first time with beadwork.</h1>
+
+    <p class="lead">Here's what getting started actually looks like — for you. Your assistant does the setup and the writing; your part is to talk.</p>
+
+    <ol class="steps">
+      <li>You say you'd like to start keeping track of something — <em>"let's use beadwork for this project."</em></li>
+      <li>Your assistant gets it ready. You might okay a step or two — installing it, choosing where your notes live — and it handles the rest.</li>
+      <li>From then on, you just talk. It writes down what's worth keeping and reads it back whenever you ask: <em>"what did we decide?"</em>, <em>"what's left?"</em></li>
+    </ol>
+
+    <p>That's the whole first session. You never type a command, and there's nothing to configure by hand.</p>
+
+    <h2>A few words you might hear</h2>
+    <p>You can ignore every one of these — they're here only if you're curious what a word means. Your assistant deals with all of them.</p>
+
+    <div class="glossary">
+      <div class="row"><span class="term">git</span> — a free, very reliable tool for keeping a dated history of changes. <span class="handles">Your AI installs and runs it.</span></div>
+      <div class="row"><span class="term">repository (or "repo")</span> — the folder your notes live in. <span class="handles">Your AI creates it.</span></div>
+      <div class="row"><span class="term">commit</span> — one saved change, stamped with a date. <span class="handles">Your AI makes these as it writes.</span></div>
+      <div class="row"><span class="term">branch</span> — a separate lane; beadwork keeps its notes on their own lane so they never mix with your other files. <span class="handles">Your AI manages it.</span></div>
+      <div class="row"><span class="term">sync</span> — copying your notes to and from the cloud, only if you chose a cloud option. <span class="handles">Your AI runs it.</span></div>
+      <div class="row"><span class="term">ticket</span> — beadwork's name for a single item: a decision, a task, or a question, with its own notes and history.</div>
+    </div>
+
+    <footer>
+      <p><code>bw</code> (beadwork) is an open-source tool by <a href="https://github.com/jallum/beadwork">jallum</a>. This guide is part of a plain-language set for using it without writing code.</p>
+    </footer>
+  </div>
+</body>
+</html>

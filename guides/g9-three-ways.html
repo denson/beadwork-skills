@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The same tool, three ways — beadwork</title>
+  <meta name="description" content="The cooler things beadwork does — by hand for a coder, with an agent helping, and for a non-coder just talking.">
+  <style>
+    :root {
+      --ink: #0f172a; --body: #1e293b; --muted: #475569;
+      --bg: #f7f5f0; --card: #ffffff; --line: #e2e8f0;
+      --accent: #0f766e;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--body); font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .container { max-width: 960px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+    .eyebrow { font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin-bottom: 0.75rem; }
+    h1 { color: var(--ink); font-size: 2.05rem; line-height: 1.16; margin: 0 0 1rem; }
+    p { margin: 0 0 1rem; }
+    a { color: var(--accent); }
+    code { background: #eef2f7; padding: 0.08em 0.3em; border-radius: 4px; font-size: 0.88em; }
+    .lead { font-size: 1.08rem; margin-bottom: 1.75rem; }
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; margin: 0 0 1rem; font-size: 0.9rem; min-width: 680px; }
+    th, td { text-align: left; padding: 0.7rem 0.75rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+    th { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); }
+    th.agent, td.agent { background: #e6f4f1; }
+    td.cap { font-weight: 700; color: var(--ink); white-space: nowrap; }
+    .callout { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2.25rem 0 0; }
+    .callout p { margin: 0; }
+    footer { margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="eyebrow">beadwork &middot; a guide for everyone</div>
+    <h1>The same tool, three ways.</h1>
+
+    <p class="lead">Beadwork is a command-line tool, so a coder can drive it by hand. Put an agent on top and the same things get easier and more powerful — and that's exactly the path a non-coder takes, too: they just talk. Here are the cooler things it does, across all three.</p>
+
+    <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>What you're doing</th>
+          <th>Coder, by hand</th>
+          <th class="agent">Coder, with an agent</th>
+          <th>Non-coder, with an agent</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="cap">Log a decision</td>
+          <td><code>bw create</code> the ticket, <code>bw comment</code> the options and reasoning, <code>bw close</code> with the verdict.</td>
+          <td class="agent">"We're going with X over Y because Z" — it writes the ticket, the reasoning, and the verdict as you work.</td>
+          <td>Tell your assistant the decision in plain words; it's recorded, with the date.</td>
+        </tr>
+        <tr>
+          <td class="cap">See what's next</td>
+          <td>Wire dependencies with <code>bw dep add</code>, then <code>bw ready</code> lists what's unblocked.</td>
+          <td class="agent">It keeps the dependency map and tells you the next thing to pick up — and you can still run <code>bw ready</code> yourself anytime to check.</td>
+          <td>"What can I actually start today?" — answered from the plan.</td>
+        </tr>
+        <tr>
+          <td class="cap">Catch up after time away</td>
+          <td><code>bw recap --all</code> — a cross-repo digest of what changed.</td>
+          <td class="agent">"What moved while I was out?" — it summarizes and flags what needs you.</td>
+          <td>"What happened on my projects this week?" — a plain summary.</td>
+        </tr>
+        <tr>
+          <td class="cap">Get the "why" back</td>
+          <td><code>bw show</code> / <code>bw history</code> — the full thread and how it evolved.</td>
+          <td class="agent">"Why did we land on this?" — it reconstructs the thread and explains it.</td>
+          <td>"How did we decide that?" — the story, in plain language.</td>
+        </tr>
+        <tr>
+          <td class="cap">Run a team of specialists</td>
+          <td><code>bw sync</code> to share the store; coordinate through tickets yourself.</td>
+          <td class="agent">Design / implement / review agents hand off through tickets — a pipeline that runs while you're away.</td>
+          <td>Your assistant and a teammate's assistant coordinate on a shared item — no meeting.</td>
+        </tr>
+        <tr>
+          <td class="cap">Audit the work</td>
+          <td>Read the tickets, or <code>bw export</code> and slice the data yourself.</td>
+          <td class="agent">An agent reads the whole history — finds contradictions, checks methodology, writes the summary.</td>
+          <td>"Did anything we decided contradict itself?" — it checks and tells you.</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="callout">
+      <p>If you write code, you can already do the left column by hand. The middle and right columns are where beadwork earns its place — the agent doing the bookkeeping, and the same power available for all the non-code work your tools never touched. Most coders who try it there keep it for exactly that.</p>
+    </div>
+
+    <footer>
+      <p><code>bw</code> (beadwork) is an open-source tool by <a href="https://github.com/jallum/beadwork">jallum</a>. This guide is part of a plain-language set for using it without writing code.</p>
+    </footer>
+  </div>
+</body>
+</html>

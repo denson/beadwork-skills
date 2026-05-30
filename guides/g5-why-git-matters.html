@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Why "it's just git" matters — beadwork</title>
+  <meta name="description" content="Beadwork keeps its notes using git. You never touch it — but git is your AI's native notebook, and it keeps a consistent, dated record.">
+  <style>
+    :root {
+      --ink: #0f172a; --body: #1e293b; --muted: #475569;
+      --bg: #f7f5f0; --card: #ffffff; --line: #e2e8f0;
+      --accent: #0f766e;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--body); font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .container { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+    .eyebrow { font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin-bottom: 0.75rem; }
+    h1 { color: var(--ink); font-size: 2.0rem; line-height: 1.18; margin: 0 0 1rem; }
+    p { margin: 0 0 1rem; }
+    a { color: var(--accent); }
+    code { background: #eef2f7; padding: 0.1em 0.35em; border-radius: 4px; font-size: 0.92em; }
+    .lead { font-size: 1.08rem; margin-bottom: 2rem; }
+    .feature { background: #e6f4f1; border: 1px solid #cfe8e2; border-radius: 10px; padding: 1.25rem 1.5rem; margin: 0 0 1.5rem; }
+    .feature h2 { font-size: 1.12rem; color: var(--ink); margin: 0 0 0.5rem; }
+    .feature p { margin: 0; }
+    .subhead { font-weight: 600; color: var(--ink); margin: 0 0 1rem; }
+    .point { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 1.1rem 1.4rem; margin: 0 0 1rem; }
+    .point h3 { font-size: 1.05rem; color: var(--ink); margin: 0 0 0.4rem; }
+    .point p { margin: 0; }
+    .callout { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0 0; }
+    .callout > p:first-child { margin-top: 0; }
+    .callout p:last-child { margin-bottom: 0; }
+    footer { margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="eyebrow">beadwork &middot; a guide for everyone</div>
+    <h1>Why "it's just git" matters &mdash; even if you never touch git.</h1>
+
+    <p class="lead">Beadwork keeps its notes using <strong>git</strong> — a free, very reliable tool that's been around nearly twenty years. Programmers use it for code; beadwork uses it because it's the most trustworthy place we have to put notes. You will never touch it: your AI installs and runs git for you. What makes it a surprisingly good fit is one thing for your AI, and three for you.</p>
+
+    <div class="feature">
+      <h2>For your AI, git is a shared notebook</h2>
+      <p>AI assistants are trained on mountains of code — and code's entire history lives in git. So for your assistant, git is the most natural place there is to jot something down to pick up later. The format is <em>comfortable</em> to it the way a familiar notebook is to you — except it can find one thing across a thousand pages in an instant.</p>
+      <p>And the notebook is <em>shared</em>, not private. The same notes can be handed to the next assistant taking over, or read and written by you, your teammates, and their assistants. It's how agents and people pass work and context to each other — one steady place everyone writes to and reads from.</p>
+    </div>
+
+    <p class="subhead">And because those notes live in git, they pick up three properties worth knowing:</p>
+
+    <div class="point">
+      <h3>It keeps a consistent, dated record</h3>
+      <p>Every entry is its own step, with a date and an author. You get a steady, chronological trail you can point back to — not a memory that quietly reshapes itself as the conversation rolls on.</p>
+    </div>
+
+    <div class="point">
+      <h3>Nothing slips away unnoticed</h3>
+      <p>A long chat quietly compacts or drifts, and things you said just vanish. Notes kept this way don't. They stay put until you change them on purpose — and that change is recorded too.</p>
+    </div>
+
+    <div class="point">
+      <h3>You can see how you got here, not just where you are</h3>
+      <p>Most "AI memory" tools keep only the current state — a whiteboard wiped and rewritten. Beadwork keeps the whole timeline, so anyone can retrace the path: what was tried, what was rejected, and why.</p>
+    </div>
+
+    <div class="callout">
+      <p>This is what lets a lawyer keep a consistent privilege log, or a small-business owner keep a clean expense trail — every decision recorded with its reasoning and date, in one steady place. It won't make a record bulletproof if someone sets out to dispute it — plenty could still be argued — but it's a genuine way to keep consistent records, and there's good evidence it does that well.</p>
+      <p>You don't need to understand any of this to benefit from it — it's plumbing your AI handles end to end. It just means your notes hold together in a way an ordinary document or a chat history doesn't.</p>
+    </div>
+
+    <footer>
+      <p><code>bw</code> (beadwork) is an open-source tool by <a href="https://github.com/jallum/beadwork">jallum</a>. This guide is part of a plain-language set for using it without writing code.</p>
+    </footer>
+  </div>
+</body>
+</html>

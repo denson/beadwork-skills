@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>What beadwork looks like in real work — beadwork</title>
+  <meta name="description" content="Beadwork across very different kinds of non-coding work — from a week-long investigation to coordination across organizations.">
+  <style>
+    :root {
+      --ink: #0f172a; --body: #1e293b; --muted: #475569;
+      --bg: #f7f5f0; --card: #ffffff; --line: #e2e8f0;
+      --amber-bg: #fef3c7; --amber-edge: #d97706;
+      --accent: #0f766e;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--body); font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .container { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+    .eyebrow { font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin-bottom: 0.75rem; }
+    h1 { color: var(--ink); font-size: 2.1rem; line-height: 1.15; margin: 0 0 1rem; }
+    p { margin: 0 0 1rem; }
+    code { background: #eef2f7; padding: 0.1em 0.35em; border-radius: 4px; font-size: 0.92em; }
+    a { color: var(--accent); }
+    .lead { font-size: 1.08rem; margin-bottom: 2rem; }
+    .example { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 0 0 1.1rem; }
+    .horizon { display: inline-block; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.07em; font-weight: 700; color: var(--accent); background: #e6f4f1; border-radius: 999px; padding: 0.2rem 0.6rem; margin-bottom: 0.6rem; }
+    .example h2 { font-size: 1.15rem; color: var(--ink); margin: 0 0 0.5rem; }
+    .example p { margin: 0 0 0.75rem; }
+    .payoff { margin: 0; font-weight: 600; color: var(--ink); }
+    .payoff::before { content: "→ "; color: var(--accent); }
+    .callout { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 2rem 0 0; }
+    .callout > p:first-child { margin-top: 0; }
+    .callout p:last-child { margin-bottom: 0; }
+    footer { margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="eyebrow">beadwork &middot; a guide for everyone</div>
+    <h1>What it looks like in real work.</h1>
+
+    <p class="lead">Beadwork gives your AI a durable place to keep the things that matter — decisions, context, coordination. Here's what that looks like across very different kinds of work, from a single week to across whole organizations.</p>
+
+    <div class="example">
+      <span class="horizon">Over a week</span>
+      <h2>A data analyst chasing an anomaly</h2>
+      <p>An investigation into a strange metric runs all week. Each day, the assistant notes what it checked, what came back, and the next thing to test. On day seven, it writes the stakeholder summary by reading its own trail — grounded in the actual investigation, not reconstructed from a fading chat.</p>
+      <p class="payoff">The record becomes the report.</p>
+    </div>
+
+    <div class="example">
+      <span class="horizon">Over a year</span>
+      <h2>A lawyer keeping a privilege log</h2>
+      <p>Every redaction is logged as a decision: the rule, the reasoning, who made the call, the date. Nine months later, opposing counsel challenges one — the assistant pulls it up and produces the original determination, word for word, with the reasoning intact.</p>
+      <p class="payoff">A consistent, dated record of every call.</p>
+    </div>
+
+    <div class="example">
+      <span class="horizon">Across engagements</span>
+      <h2>A solo business owner at tax time</h2>
+      <p>Each expense gets a line of reasoning when it's made — "MailerLite over ConvertKit; cheaper at our list size." At tax time, the assistant pulls the year's decisions and formats them for the accountant.</p>
+      <p class="payoff">An auditable history, without separate accounting software.</p>
+    </div>
+
+    <div class="example">
+      <span class="horizon">Across organizations</span>
+      <h2>A warehouse manager and an outside vendor</h2>
+      <p>A logistics partner's AI posts pickup schedules to a ticket both sides share; the manager's AI confirms them or proposes alternatives. Two organizations coordinating on their own time — with a full record and no shared chat thread to maintain.</p>
+      <p class="payoff">Coordination that survives, across a boundary.</p>
+    </div>
+
+    <div class="callout">
+      <p>Same tool, four shapes &mdash; a week, a year, across engagements, across organizations. The one that fits is whichever is closest to your work.</p>
+      <p>And the honest flip side: if your work doesn't accumulate decisions, context, or hand-offs worth keeping, beadwork won't add much. It earns its place where the "why" and the "what we figured out" need to outlive the conversation.</p>
+    </div>
+
+    <footer>
+      <p><code>bw</code> (beadwork) is an open-source tool by <a href="https://github.com/jallum/beadwork">jallum</a>. This guide is part of a plain-language set for using it without writing code.</p>
+    </footer>
+  </div>
+</body>
+</html>
