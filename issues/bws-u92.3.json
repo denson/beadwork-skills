@@ -9,9 +9,15 @@
   "id": "bws-u92.3",
   "labels": [],
   "parent": "bws-u92",
+  "comments": [
+    {
+      "text": "Follow-up fix (court-claim walkback, PRINCIPAL 2026-05-29): changed lawyer payoff 'Court-defensible by construction.' -\u003e 'A consistent, dated record of every call.' Beadwork keeps consistent records (evidence it does) but is not a court-admissibility/legal guarantee. No-overclaim rule added to CLAUDE.md governing principle (#3). G3 body otherwise unchanged + still approved.",
+      "timestamp": "2026-05-30T02:10:58Z"
+    }
+  ],
   "priority": 2,
   "status": "closed",
   "title": "G3 — What beadwork can do for you (worked non-coding examples)",
   "type": "task",
-  "updated_at": "2026-05-30T01:44:00Z"
+  "updated_at": "2026-05-30T02:10:58Z"
 }
