@@ -7,9 +7,15 @@
   "id": "bws-vk0.8",
   "labels": [],
   "parent": "bws-vk0",
+  "comments": [
+    {
+      "text": "Post-conversion enhancements + brief realignment, all shipped to main and verified live.\n\nGuides (13):\n- Shared top nav via guides/toc.js — Back / Home / Next, sticky, single-sourced page order; works in portrait (replaced an earlier side-rail that broke narrow).\n- Per-topic eyebrow labels (was the generic \"a guide for everyone\").\n- Open Graph + Twitter Card meta on all 13 (shared hook image) so a shared guide link renders a preview card; og:image verified 200.\n\nAGENTS.md (was stale vs the converted architecture):\n- Killed dead URLs (walkthrough_html/\u003cbeat\u003e.html and beat_scripts.md — 404 after the beats were retired).\n- Reframed Mode B from CCD-only beats to a universal capability ladder: drive the page live / offer the link (with preview card) / explain in own words.\n- De-salesed agent-facing vocabulary (pitch, manifesto, killer feature, CTA -\u003e explain, framing, standout, ask) so the brief models inform-don't-convert.\n- Rebuilt the skills section as an HTTPS-fetchable index: each skill described + its raw SKILL.md URL, readable by any agent WITHOUT cloning.\n- Removed the \"court-defensible\" overclaim; added an explicit no-legal/security-overclaim tone rule.\n\n5 walkthrough skills:\n- Added the same delivery ladder (\"## How to show it\").\n- Repointed image refs from a bare relative walkthrough_html/images/ path to absolute Pages URLs (no clone needed).\n\nValidation: PRINCIPAL ran AGENTS.md through a non-Claude model — it behaved as designed (advisory not sales, honest about non-fit, absorbed the no-overclaim discipline, translated to context). That run also surfaced the de-sales + no-clone improvements above, which are now shipped.\n\nCommits on main: 1e2f1cf (conversion publish + nav + eyebrows), 4a6e48f (AGENTS.md rewrite + OG cards), e8d6b49 (de-sales + no-clone index + delivery ladder). CLAUDE.md kept local/untracked by design.",
+      "timestamp": "2026-05-30T19:19:55Z"
+    }
+  ],
   "priority": 2,
   "status": "open",
   "title": "Post-ship polish + AGENTS.md realignment (nav, eyebrows, OG cards, de-sales, no-clone skills index, delivery ladder)",
   "type": "task",
-  "updated_at": "2026-05-30T19:19:54Z"
+  "updated_at": "2026-05-30T19:19:55Z"
 }
