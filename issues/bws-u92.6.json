@@ -2,14 +2,16 @@
   "assignee": "denson",
   "blocked_by": [],
   "blocks": [],
+  "closed_at": "2026-05-30T03:07:13Z",
+  "close_reason": "Drafted as guides/g6-no-ceremony.html; net-new. Lightweight solo path: solo = no ceremony (talk, it writes, it's there); names the team workflow (work areas/reviews/sign-off) as opt-in coordination machinery, NOT for solo — directs the reading agent not to impose worktree/branch/PR on a solo user (the audit gap). say-\u003edoes example block. No CTA, no overclaim. Reviewed + approved by PRINCIPAL in preview pane 2026-05-29.",
   "created": "2026-05-30T01:32:28Z",
   "description": "",
   "id": "bws-u92.6",
   "labels": [],
   "parent": "bws-u92",
   "priority": 2,
-  "status": "in_progress",
+  "status": "closed",
   "title": "G6 — Just tracking my own work (no git ceremony)",
   "type": "task",
-  "updated_at": "2026-05-30T02:41:11Z"
+  "updated_at": "2026-05-30T03:07:13Z"
 }
