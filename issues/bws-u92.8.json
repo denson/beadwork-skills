@@ -2,6 +2,8 @@
   "assignee": "denson",
   "blocked_by": [],
   "blocks": [],
+  "closed_at": "2026-05-30T03:28:07Z",
+  "close_reason": "Drafted as guides/g8-getting-set-up.html (reframed from 'what if something goes wrong'; troubleshooting folded in). Setup expectations + honest Windows security-prompt friction + safety reassurance (git ubiquity + beadwork open \u0026 AI-verifiable) + bounded-authorization + 'if a step balks' reassurance. Approved by PRINCIPAL in preview pane 2026-05-29.",
   "created": "2026-05-30T01:32:28Z",
   "description": "",
   "id": "bws-u92.8",
@@ -14,8 +16,8 @@
     }
   ],
   "priority": 3,
-  "status": "in_progress",
+  "status": "closed",
   "title": "Getting set up (+ what to do if a step balks)",
   "type": "task",
-  "updated_at": "2026-05-30T03:17:53Z"
+  "updated_at": "2026-05-30T03:28:07Z"
 }
