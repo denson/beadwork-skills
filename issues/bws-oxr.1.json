@@ -2,14 +2,16 @@
   "assignee": "denson",
   "blocked_by": [],
   "blocks": [],
+  "closed_at": "2026-05-30T04:30:57Z",
+  "close_reason": "beadwork-overview converted to thin agent-agnostic SKILL.md (orient -\u003e pages[guides] -\u003e images -\u003e suggestions harvested from beats -\u003e tone). Beat artifacts (beat_scripts.md, starter_deck.md, walkthrough_html/*.html, style.css) retired; images kept. Approved as the template by PRINCIPAL 2026-05-29.",
   "created": "2026-05-30T04:19:56Z",
   "description": "",
   "id": "bws-oxr.1",
   "labels": [],
   "parent": "bws-oxr",
   "priority": 1,
-  "status": "in_progress",
+  "status": "closed",
   "title": "Convert beadwork-overview SKILL.md (TEMPLATE)",
   "type": "task",
-  "updated_at": "2026-05-30T04:19:56Z"
+  "updated_at": "2026-05-30T04:30:57Z"
 }
