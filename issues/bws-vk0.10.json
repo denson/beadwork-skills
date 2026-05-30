@@ -7,6 +7,12 @@
   "id": "bws-vk0.10",
   "labels": [],
   "parent": "bws-vk0",
+  "comments": [
+    {
+      "text": "Decision (PRINCIPAL): stop chasing Gemini web's fetch failure; ship for OpenAI + Claude for now. Revisit Gemini later (\"something else for Gemini\").\n\nDiagnosis (every server-side cause eliminated):\n- GitHub Pages returns HTTP 200 to every UA tested (Googlebot, empty, GeminiBot), both Pages and raw.\n- denson.github.io/robots.txt is 404 (no robots.txt) — nothing disallowed.\n- brief.html fails identically to AGENTS.md, so it is not the filename or .md content-type.\n=\u003e The failure is internal to Gemini web's browsing; Gemini doesn't know why and CONFABULATES causes (\"GitHub blocks all AI\", \"UA filtering\", \"security handshakes\") — all empirically false. Same hallucination reflex it showed inventing fake \"reviews.\"\n\nValidated targets:\n- GPT (browsing): fetches AGENTS.md fine; behaved as designed (advisory, honest about non-fit, absorbed no-overclaim).\n- Claude: home environment.\n- Gemini web: cannot fetch; paste-the-text is the only reliable path today. The README don't-guess line was validated this session — it made Gemini ABSTAIN and ask for the paste instead of hallucinating.\n\n\"Something else for Gemini\" — future plan (not now):\n1. Test the Gemini API / AI Studio url_context tool, which DOES fetch URLs (different path from the consumer web app).\n2. Try a Gem preloaded with the brief text.\n3. Re-test consumer Gemini after Google indexes the Pages site (its browse may lean on Google's index; a freshly-published path may be unreachable until crawled).\nMeanwhile paste-the-text is the documented Gemini method in the README.",
+      "timestamp": "2026-05-30T20:05:12Z"
+    }
+  ],
   "priority": 3,
   "status": "open",
   "title": "Gemini web can't fetch our Pages URLs — parked; ship targets = OpenAI + Claude",
