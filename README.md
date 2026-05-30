@@ -7,37 +7,31 @@ A skills marketplace for [**beadwork**](https://github.com/jallum/beadwork) (`bw
 
 ---
 
-## The pitch — paste one prompt into your AI
+## Hand it to your AI
 
-Paste this into your AI's chat (Claude, ChatGPT, Gemini, Cursor — whatever you use day-to-day):
+You don't read the brief — *your AI does.* It maps `bw` onto what it already knows about how you work and tells you whether `bw` would actually help, **including if it wouldn't.** You pay with attention; your AI does the cognitive work. Two ways to hand it over:
 
-> `Tell me if I need to try beadwork: https://denson.github.io/beadwork-skills/AGENTS.md`
+- **Paste the text — works with any assistant.** Open the brief, copy it, paste it into your AI (Claude, ChatGPT, Gemini, Cursor — whatever you use) with:
+  > *Based on how I work, would beadwork help me? Be honest — don't sell it.*
 
-Your AI fetches the brief, translates it into *your* context, and tells you whether `bw` would actually help in *your* work — using what it already knows about how you work. **You pay with attention; your AI does the cognitive work of mapping bw onto your situation.**
+  Reliable whether or not your assistant can browse the web.
+- **Paste a link — if your assistant browses the web.**
+  - Web page (most browsing chatbots): `https://denson.github.io/beadwork-skills/brief.html`
+  - Raw brief (coding agents / tools that read `AGENTS.md` by convention): `https://denson.github.io/beadwork-skills/AGENTS.md`
 
-**Why this prompt shape matters:** the subject is *"beadwork,"* not *"AGENTS.md."* Less-capable AIs that pattern-match on filenames sometimes give a generic essay about the AGENTS.md convention instead of fetching the actual brief. *"Tell me if I need to try beadwork"* forces them to engage with bw as the topic — which forces a real fetch.
+  If your assistant says it can't open the link, **switch to pasting the text — don't let it guess from the name.** (Some chatbots won't fetch a file named `AGENTS.md` — it looks like untrusted agent instructions — or simply can't browse arbitrary URLs. The `brief.html` page and the paste-the-text method both sidestep that.)
 
-What your AI does next depends on its capabilities:
+## What your AI does with it
 
-- **Any capable AI with web fetch** — gives you a tailored verbal pitch based on the brief and what it knows about you (Mode A).
-- **Claude Code Desktop** — also offers to drive the polished visual walkthrough live in the preview panel using GitHub Pages-served HTML beats, no install required (Mode B).
-- **Optional, CCD only** — installs the marketplace permanently for ongoing access (Mode C; see below).
-
-The brief itself is at [`AGENTS.md`](./AGENTS.md) if you want to read it. The three modes are documented inside.
-
-### Variations on the prompt
-
-Different framings work better for different intents:
-
-- **Evaluating fit** *(default; recommended above):* `Tell me if I need to try beadwork: <URL>`
-- **Just want an explanation:** `Walk me through how beadwork works: <URL>`
-- **Already a bw user, want the visual walkthrough specifically:** `I already use beadwork — skip the pitch and run the visual walkthrough from this brief: <URL>`
+- **Read & advise — any AI.** A tailored, honest read of whether `bw` fits *your* work.
+- **Show you the guides — any AI that can open a web page.** A set of plain-language pages it can walk you through, link, or summarize. Start at [the guides](https://denson.github.io/beadwork-skills/guides/g1-is-bw-for-you.html).
+- **Set it up — any agent that can run shell commands** (Claude Code, Cursor, etc.). Drives the install end to end, or walks you through the four manual steps.
 
 ---
 
 ## Want it permanently in Claude Code Desktop?
 
-For ongoing access to the skills (refreshers, sharing with teammates, future invocations), three slash commands install everything:
+For ongoing access to the skills (refreshers, sharing with teammates, future sessions), three slash commands install everything:
 
 ```
 /plugin marketplace add denson/beadwork-skills
@@ -45,32 +39,32 @@ For ongoing access to the skills (refreshers, sharing with teammates, future inv
 /beadwork-skills:beadwork-overview
 ```
 
-The marketplace is **Anthropic-specific** (Claude Code Desktop). For other AI environments, the URL paste above gives you the same experience without the install.
+The marketplace install is **Claude-Code-Desktop-specific.** For every other environment, the brief above — `brief.html` or pasted text — gives the same content without an install.
 
 ---
 
 ## What's in the marketplace
 
-Six skills under the `beadwork-skills` plugin. The first five are walkthroughs (HTML beats + AskUserQuestion); the install skill is agent-execution.
+Six skills under the `beadwork-skills` plugin. The first five are thin, **agent-agnostic playbooks** — each points your AI at the relevant plain-language [guides](https://denson.github.io/beadwork-skills/guides/g1-is-bw-for-you.html) to show, link, or explain, and adds conversation suggestions (no fixed script). The install skill drives setup.
 
 | Skill | What it covers |
 |---|---|
-| `beadwork-overview` | Seven-persona tour. SaaS-lock-in lead, three forgetting modes, four storage modes with honest pricing, the install pointer. ~5 minutes. |
-| `beadwork-as-memory` | Durable memory deep-dive. How tickets + comments + authors + timestamps reconstruct context months later. Three time-horizons (week / year / cross-engagement). |
-| `beadwork-as-bus` | Multi-session same-lab specialist-team coordination. Within-job, across-days, cross-team, cross-organization scenarios. Cross-lab interop is a secondary property. |
-| `beadwork-for-meta-analysis` | Running an agent over the bw history of *other agents* to audit, check methodology, or synthesize. |
-| `beadwork-for-decisions` | bw as decision log / ADR / audit trail. The "why did we decide X?" answer six months later. |
-| `beadwork-install` | Drives setup end-to-end. Adapts to bw release state; surfaces platform security prompts; presents storage-mode choice with explicit warnings. |
+| `beadwork-overview` | Introduce `bw` and help someone judge fit: the hook, the four storage modes, who it's for. Default entry point. |
+| `beadwork-as-memory` | Durable memory: what survives across sessions, machines, vendor swaps, and time, and how the record reconstructs context months later. |
+| `beadwork-as-bus` | Multiple agents (and people) sharing one workspace — a team of specialists (usually same-lab), plus cross-team / cross-organization coordination. |
+| `beadwork-for-meta-analysis` | Pointing one agent at the recorded work of *other* agents to audit, check methodology, or synthesize. |
+| `beadwork-for-decisions` | `bw` as decision log / ADR / audit trail — the "why did we decide X?" answer six months later. |
+| `beadwork-install` | Drives setup end to end. Adapts to `bw`'s release state; surfaces platform security prompts; presents the storage-mode choice with explicit warnings. |
 
-After installing the marketplace, all six skills are available as `/beadwork-skills:<skill-name>` in Claude Code Desktop, or trigger automatically on phrases like *"what is beadwork"* / *"install bw"*.
+After installing, all six are available as `/beadwork-skills:<skill-name>` in Claude Code Desktop, or trigger on phrases like *"what is beadwork"* / *"install bw."*
 
 ---
 
 ## About bw
 
-`bw` is [**beadwork**](https://github.com/jallum/beadwork), an orphan-branch ticket store. It stores tickets, comments, and decision history on a dedicated git branch — never checked out, never merged into product code, just there in the repo's git database. Free, no auth, no server, no signup, single binary.
+`bw` is [**beadwork**](https://github.com/jallum/beadwork), an orphan-branch ticket store. It keeps tickets, comments, and decision history on a dedicated git branch — never checked out, never merged into product code, just there in the repo's git database. Free, no auth, no server, no signup, single binary.
 
-The killer feature: **survives compaction.** Tickets and comments persist across Claude Code session boundaries, agent restarts, machine swaps, AI vendor swaps, and time. Any AI that can shell out to `bw show` reads the same store.
+The property that matters most: **survives compaction.** Tickets and comments persist across session boundaries, agent restarts, machine swaps, AI-vendor swaps, and time. Any AI that can shell out to `bw show` reads the same store.
 
 This marketplace is built on top of `bw`; we didn't write `bw` itself. **Credit `bw` to jallum.**
 
@@ -95,4 +89,4 @@ Many users will hear *"free, on your computer, no account"* and stop reading. Th
 
 `bw` itself is also MIT, by [jallum](https://github.com/jallum).
 
-The marketplace was developed and tested in **Claude Code Desktop**, but `bw` and the [`AGENTS.md`](./AGENTS.md) brief are deliberately model-agnostic. The HTML walkthroughs are the only Claude-Code-Desktop-specific piece — and they're optional. Other labs' tools (GPT, Gemini, Cursor, etc.) can read [`AGENTS.md`](./AGENTS.md) and pitch bw to you in your context, no marketplace install required.
+The marketplace was developed and tested in **Claude Code Desktop**, but `bw`, the brief, the [guides](https://denson.github.io/beadwork-skills/guides/g1-is-bw-for-you.html), and the skills are deliberately model-agnostic. The marketplace *install* is the only Claude-Code-Desktop-specific piece — and it's optional. Other labs' tools (GPT, Gemini, Cursor, etc.) read the brief ([`brief.html`](https://denson.github.io/beadwork-skills/brief.html) or [`AGENTS.md`](./AGENTS.md)) and advise you in your context, no install required.
