@@ -2,6 +2,8 @@
   "assignee": "denson",
   "blocked_by": [],
   "blocks": [],
+  "closed_at": "2026-05-30T03:49:33Z",
+  "close_reason": "Drafted as guides/g9-three-ways.html; net-new (reframed from git-Rosetta to capability-progression). Cooler bw capabilities shown three ways: coder by-hand (CLI) -\u003e coder+agent -\u003e non-coder+agent (log a decision / see what's next / catch up / get the why / team of specialists / audit). Manual-checks-always-available note in the deps row; kicker kept. Approved by PRINCIPAL in preview pane 2026-05-29.",
   "created": "2026-05-30T03:28:07Z",
   "description": "Coder-facing BRIDGE guide (the set's coder exception to the non-coder default).\n\n1. 3-column Rosetta table: Standard git task | With beadwork as a coder | The everyday non-coder version.\n2. List: what beadwork + AI do that git alone cannot (plain-language operation; signed/timestamped reasoning threads; an agent that reads+synthesizes the whole history / meta-analysis; bw recap cross-repo; dependency/epic + bw ready work-readiness; decision-log shape out of the box).\n3. Kicker: coders already have git for code; beadwork earns its place for their NON-code work (decisions, research, side/business/household) — most coders who try it there keep it. No overclaim.",
   "id": "bws-u92.9",
@@ -14,8 +16,8 @@
     }
   ],
   "priority": 2,
-  "status": "in_progress",
+  "status": "closed",
   "title": "G9 — The same tool, three ways (by hand -\u003e with an agent -\u003e non-coder)",
   "type": "task",
-  "updated_at": "2026-05-30T03:46:31Z"
+  "updated_at": "2026-05-30T03:49:33Z"
 }
