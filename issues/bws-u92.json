@@ -1,0 +1,14 @@
+{
+  "assignee": "",
+  "blocked_by": [],
+  "blocks": [],
+  "created": "2026-05-30T01:32:27Z",
+  "description": "Plain-language, AGENT-AGNOSTIC HTML guides (in guides/) on using beadwork without writing code.\n\nGOVERNING PRINCIPLE (load-bearing; full text in repo CLAUDE.md):\n- Reader is the USER'S AGENT, not a human to convert. Inform the agent accurately — including when bw is NOT a fit — so it can honestly advise its person. NO conversion funnel: no sign-up, no install-now CTA, no marketing copy.\n- Don't plant non-problems (never \"you don't need to code\" — plants a barrier the reader didn't have).\n- Images are things the agent can SHOW the user; reuse existing images unless genuinely wrong — do not regenerate images that work.\n\nFORMAT: self-contained HTML (inline CSS, bundled images) in guides/, fetchable + showable by any agent.\nCADENCE: direct POLYBIUS+PRINCIPAL pairing, one bead at a time — draft/pull into HTML, show in preview pane, propose edits in chat, apply on approval.",
+  "id": "bws-u92",
+  "labels": [],
+  "priority": 1,
+  "status": "open",
+  "title": "Build agent-agnostic non-coder guide set (G1-G8)",
+  "type": "epic",
+  "updated_at": "2026-05-30T01:32:27Z"
+}
