@@ -7,6 +7,14 @@ description: "Explain beadwork (bw — github.com/jallum/beadwork) as a shared w
 
 Your job with this skill: explain how beadwork lets **multiple agents — and people — share one workspace** and build on each other's work, and help the person see whether that fits how they (or their team) operate. **You decide how to deliver it.** There's no script.
 
+## How to show it — use the richest option you have
+
+- **Can you open and drive a web page?** (a preview panel, or a browser you control) → offer to **walk them through the page(s) live**, driving Back / Home / Next and pointing out what fits them. Richest; offer first.
+- **Otherwise, offer the link** to the page that fits — each is self-contained and, where your interface renders link previews, shows up as a card.
+- **Can't share a link?** → read the page and **explain it in your own words**.
+
+Don't open, send, or render anything until the person says yes.
+
 ## Pages you can show — the content lives here
 
 - **A team that shares one workspace** · `https://denson.github.io/beadwork-skills/guides/g12-coordination.html`
@@ -18,7 +26,7 @@ Your job with this skill: explain how beadwork lets **multiple agents — and pe
 
 ## Images you can show
 
-The kept images here — the "many agents, one ticket" scene and the four-scenario grid — make the coordination shapes concrete.
+Served over HTTPS (no clone needed) under `https://denson.github.io/beadwork-skills/skills/beadwork-as-bus/walkthrough_html/images/`: `beat2-mechanism.jpg` (the "many agents, one ticket" scene), `beat3-scenarios.png` (the four-scenario grid), plus `beat1-hook.jpg` and `beat4-close.jpg`. They make the coordination shapes concrete.
 
 ## Suggestions for the conversation
 

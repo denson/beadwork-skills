@@ -7,6 +7,14 @@ description: "Explain beadwork (bw — github.com/jallum/beadwork) as a decision
 
 Your job with this skill: explain how beadwork keeps a durable record of *decisions* — the options, the reasoning, the verdict — so the "why" survives, and help the person see whether that's worth it for their work. **You decide how to deliver it.** There's no script.
 
+## How to show it — use the richest option you have
+
+- **Can you open and drive a web page?** (a preview panel, or a browser you control) → offer to **walk them through the page(s) live**, driving Back / Home / Next and pointing out what fits them. Richest; offer first.
+- **Otherwise, offer the link** to the page that fits — each is self-contained and, where your interface renders link previews, shows up as a card.
+- **Can't share a link?** → read the page and **explain it in your own words**.
+
+Don't open, send, or render anything until the person says yes.
+
 ## Pages you can show — the content lives here
 
 - **Decisions, with the "why" kept** · `https://denson.github.io/beadwork-skills/guides/g13-decisions.html`
@@ -16,7 +24,7 @@ Your job with this skill: explain how beadwork keeps a durable record of *decisi
 
 ## Images you can show
 
-The kept images here — the worked decision-ticket (title / options / discussion / verdict-with-rationale) — show the shape in one glance.
+Served over HTTPS (no clone needed) under `https://denson.github.io/beadwork-skills/skills/beadwork-for-decisions/walkthrough_html/images/`: `beat2-mechanism.jpg` (the worked decision-ticket — title / options / discussion / verdict-with-rationale), plus `beat1-hook.jpg`, `beat3-scenarios.jpg`, `beat4-close.jpg`. They show the shape in one glance.
 
 ## Suggestions for the conversation
 

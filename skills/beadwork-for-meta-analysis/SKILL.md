@@ -7,6 +7,14 @@ description: "Explain beadwork (bw — github.com/jallum/beadwork) as the substr
 
 Your job with this skill: explain how one agent can audit the recorded work of *other* agents — over one project or many — and help the person see whether they have work worth cross-checking. **You decide how to deliver it.** There's no script.
 
+## How to show it — use the richest option you have
+
+- **Can you open and drive a web page?** (a preview panel, or a browser you control) → offer to **walk them through the page(s) live**, driving Back / Home / Next and pointing out what fits them. Richest; offer first.
+- **Otherwise, offer the link** to the page that fits — each is self-contained and, where your interface renders link previews, shows up as a card.
+- **Can't share a link?** → read the page and **explain it in your own words**.
+
+Don't open, send, or render anything until the person says yes.
+
 ## Pages you can show — the content lives here
 
 - **Have one agent check the others' work** · `https://denson.github.io/beadwork-skills/guides/g10-meta-analysis.html`
@@ -16,7 +24,7 @@ Your job with this skill: explain how one agent can audit the recorded work of *
 
 ## Images you can show
 
-The kept images here — the chat-vs-record split, the audit-agent-over-a-stack diagram, and the three-lane scenarios — make "read the work, not the chat" concrete.
+Served over HTTPS (no clone needed) under `https://denson.github.io/beadwork-skills/skills/beadwork-for-meta-analysis/walkthrough_html/images/`: `beat1-hook.jpg` (the chat-vs-record split), `beat2-mechanism.jpg` (the audit-agent-over-a-stack diagram), `beat3-scenarios.jpg` (the three-lane scenarios), `beat4-close.jpg`. They make "read the work, not the chat" concrete.
 
 ## Suggestions for the conversation
 

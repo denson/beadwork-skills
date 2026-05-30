@@ -7,6 +7,14 @@ description: "Explain beadwork (bw — github.com/jallum/beadwork) as durable me
 
 Your job with this skill: explain how beadwork gives an AI **durable memory**, and help the person see whether it solves a problem they actually have. **You decide how to deliver it** — show a page, show an image, or just talk it through. There's no script.
 
+## How to show it — use the richest option you have
+
+- **Can you open and drive a web page?** (a preview panel, or a browser you control) → offer to **walk them through the page(s) live**, driving Back / Home / Next and pointing out what fits them. Richest; offer first.
+- **Otherwise, offer the link** to the page that fits — each is self-contained and, where your interface renders link previews, shows up as a card.
+- **Can't share a link?** → read the page and **explain it in your own words**.
+
+Don't open, send, or render anything until the person says yes.
+
 ## Pages you can show — the content lives here
 
 - **Durable memory — what survives** · `https://denson.github.io/beadwork-skills/guides/g11-memory.html`
@@ -16,7 +24,7 @@ Your job with this skill: explain how beadwork gives an AI **durable memory**, a
 
 ## Images you can show
 
-The kept images in this skill's `walkthrough_html/images/` — the two-sessions-with-a-gap scene, and the ticket-with-dated-comments diagram — land the "memory persists in the record" point fast.
+Served over HTTPS (no clone needed) under `https://denson.github.io/beadwork-skills/skills/beadwork-as-memory/walkthrough_html/images/`: `beat1-hook.jpg` (the two-sessions-with-a-gap scene), `beat2-mechanism.jpg` (the ticket-with-dated-comments diagram), `beat3-scenarios.jpg` (the time-horizon scenarios), `beat4-close.jpg`. They land the "memory persists in the record" point fast.
 
 ## Suggestions for the conversation
 

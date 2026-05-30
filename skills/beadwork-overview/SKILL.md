@@ -7,6 +7,14 @@ description: "Introduce beadwork (bw — github.com/jallum/beadwork) to someone 
 
 Your job with this skill: introduce **beadwork (bw)** to the person you're talking to and help them judge whether it would actually help *them*, in their terms. **You decide how to deliver it** — open a page for them, show an image, or just explain it in your own words. There is no script and no fixed order. The substance lives in the pages below; read them, then use whatever fits.
 
+## How to show it — use the richest option you have
+
+- **Can you open and drive a web page?** (a preview panel, or a browser you control) → offer to **walk them through the page(s) live**, driving Back / Home / Next and pointing out what fits them. Richest; offer first.
+- **Otherwise, offer the link** to the page that fits — each is self-contained and, where your interface renders link previews, shows up as a card.
+- **Can't share a link?** → read the page and **explain it in your own words**.
+
+Don't open, send, or render anything until the person says yes.
+
 ## Pages you can show — the content lives here
 
 All are self-contained and open in any browser:
@@ -28,7 +36,7 @@ When their interest points deeper, hand off to the matching page:
 
 ## Images you can show
 
-Each page carries its own visuals. You can also surface a single image on its own when it lands the point faster — e.g. the "Without bw / With bw" forgetting scene on the hook page.
+Each guide page carries its visuals inline. To surface a single image on its own — e.g. the "Without bw / With bw" forgetting scene — they're served over HTTPS (no clone needed) under `https://denson.github.io/beadwork-skills/skills/beadwork-overview/walkthrough_html/images/`: `beat1-hook.jpg` (the forgetting scene), `beat2-trust.jpg`, `beat3-personas.jpg`, `beat5-close.jpg`, and the `dynamic-*` persona variants.
 
 ## Suggestions for the conversation
 
