@@ -2,13 +2,15 @@
   "assignee": "",
   "blocked_by": [],
   "blocks": [],
+  "closed_at": "2026-05-30T04:35:53Z",
+  "close_reason": "All 6 skills now thin agent-agnostic SKILL.md pointing at the guides as the single content library; 5 walkthroughs' beats retired (images kept); install agent-agnostic; new g10 meta-analysis guide. bw updates now land as one HTML edit. Uncommitted pending PRINCIPAL review.",
   "created": "2026-05-30T04:19:56Z",
   "description": "Convert the 6 CCD walkthrough skills to agent-agnostic form. Each SKILL.md becomes THIN + agent-only: orient the agent (which pages/images exist + what each covers), inventory the showable assets, say how to use them with a user, carry tone/fit discipline. NO beat choreography, NO preview_eval/AskUserQuestion, NO content copy.\n\nThe 9 guides (guides/) are the SINGLE content HTML the skills point at; the old per-skill walkthrough_html beats + beat_scripts.md + starter_deck.md RETIRE. Content single-sourced in the guides =\u003e a beadwork update is one HTML edit (the steward loop bws-vk0 files those tickets). Skill edited only when *presentation* changes.\n\nDo beadwork-overview first as the TEMPLATE for PRINCIPAL review, then replicate to the other 5 (as-memory, as-bus, for-decisions, for-meta-analysis [needs a real agent-agnostic meta page], install).",
   "id": "bws-oxr",
   "labels": [],
   "priority": 1,
-  "status": "open",
+  "status": "closed",
   "title": "Convert beadwork skills to agent-agnostic (thin SKILL.md + guides as single content)",
   "type": "epic",
-  "updated_at": "2026-05-30T04:19:56Z"
+  "updated_at": "2026-05-30T04:35:53Z"
 }
