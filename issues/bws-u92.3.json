@@ -2,14 +2,16 @@
   "assignee": "denson",
   "blocked_by": [],
   "blocks": [],
+  "closed_at": "2026-05-30T01:44:00Z",
+  "close_reason": "Drafted as guides/g3-what-it-can-do.html; net-new composite. Four worked non-coding examples on a time-horizon spine (week: data analyst exec-memo; year: lawyer privilege log; across-engagements: solo owner tax-time; across-orgs: warehouse cross-org), pulled faithfully from decisions/memory/bus Beat 3 sources. Text-only (no image). Honest 'when it doesn't help' note per governing principle. Reviewed + approved by PRINCIPAL in preview pane 2026-05-29 (keep as is).",
   "created": "2026-05-30T01:32:28Z",
   "description": "",
   "id": "bws-u92.3",
   "labels": [],
   "parent": "bws-u92",
   "priority": 2,
-  "status": "in_progress",
+  "status": "closed",
   "title": "G3 — What beadwork can do for you (worked non-coding examples)",
   "type": "task",
-  "updated_at": "2026-05-30T01:38:00Z"
+  "updated_at": "2026-05-30T01:44:00Z"
 }
