@@ -7,6 +7,12 @@
   "id": "bws-u92.9",
   "labels": [],
   "parent": "bws-u92",
+  "comments": [
+    {
+      "text": "Reframed per PRINCIPAL 2026-05-29: dropped the git-task anchoring; now a CAPABILITY-PROGRESSION table — for the cooler bw capabilities (log a decision / see what's next / catch up / get the why / team of specialists / audit), shown three ways: coder by hand (CLI) -\u003e coder with an agent -\u003e non-coder with an agent. File renamed guides/g9-three-ways.html. Kicker kept (coders keep it for non-code work).",
+      "timestamp": "2026-05-30T03:46:31Z"
+    }
+  ],
   "priority": 2,
   "status": "in_progress",
   "title": "G9 — The same tool, three ways (by hand -\u003e with an agent -\u003e non-coder)",
