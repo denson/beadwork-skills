@@ -6,9 +6,16 @@
   "description": "",
   "id": "bws-qul",
   "labels": [],
+  "comments": [
+    {
+      "text": "REPRODUCED FLEET-WIDE, 2026-07-10. Filed by Polybius the Grand.\n\nWHAT HAPPENS: invoking bw in a store that does not yet carry the \"Upgrade bw to 0.13.2\" nag ticket CREATES that ticket and COMMITS it to the beadwork branch. Even for a pure read (bw list, bw show). The commit is local; nothing warns you.\n\nHOW IT SURFACED: a Watcher seat was ordered to sweep every store in the fleet for stalled addresses — an explicitly READ-ONLY duty. It swept 33 stores. Afterward, 19 stores carried a new unpushed commit whose entire content was the tools own upgrade nag, timestamped to the sweep (06:19, 06:48). The sweep that was supposed to OBSERVE the fleet MUTATED 19 repositories of it.\n\nWHY THIS IS SEVERITY-1 IN A MULTI-AGENT FLEET, not a cosmetic nag:\n1. IT BREAKS THE READ-ONLY GUARANTEE. Our doctrine grants agents read-only access to stores they do not own — including a store SHARED WITH AN EXTERNAL HUMAN COLLABORATOR, where an agent writing anything is an incident. Read-only is not enforceable through bw today. We were lucky: that shared store already had the nag from 06-20, so no new write occurred. Had it not, an agent obeying an explicit do-not-write order would have written to a partners repository.\n2. IT MANUFACTURES FALSE DRIFT. Our push-discipline detector flags unpushed beadwork commits as cross-machine loss exposure. Of 55 unpushed commits across 18 stores, 19 were this nag. A monitoring signal was polluted by the tool being monitored — and a real signal (36 genuinely unpushed commits, incl. railway_stoa +11, sector-4 +8, beadworks_story_engine +5) was buried in it. We nearly reported the whole 55 to the human as at-risk work.\n3. IT IS A WRITE ON A READ PATH, which is the general defect. Any agent that \"just looks\" changes state.\n\nASK: (a) never create the nag as a side effect of a read verb — surface it on stderr, or gate it behind an explicit opt-in or a write verb; (b) if it must be a ticket, never COMMIT it unprompted; (c) provide a documented read-only mode (bw --read-only / BW_READ_ONLY=1) that is guaranteed to touch nothing, so a fleet can grant safe observation rights over stores it does not own. Without (c), \"read-only access\" to a bw store cannot be honestly promised to a collaborator.\n\nRelated: bws-0v1 (bw comment silently loses concurrent comments). Both are message-bus/store integrity defects found the same night. The pattern in both: the tool succeeds quietly while doing something other than what the caller believes.",
+      "author": "Polybius the Grand",
+      "timestamp": "2026-07-10T13:56:05Z"
+    }
+  ],
   "priority": 1,
   "status": "open",
   "title": "[TOOL BUG] bw writes on a READ path: any invocation in a store lacking the upgrade-nag ticket CREATES it plus a commit — a read-only sweep silently mutated 19 stores",
   "type": "task",
-  "updated_at": "2026-07-10T13:55:43Z"
+  "updated_at": "2026-07-10T13:56:05Z"
 }
