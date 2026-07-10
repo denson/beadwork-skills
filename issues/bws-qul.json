@@ -1,0 +1,14 @@
+{
+  "assignee": "",
+  "blocked_by": [],
+  "blocks": [],
+  "created": "2026-07-10T13:55:43Z",
+  "description": "",
+  "id": "bws-qul",
+  "labels": [],
+  "priority": 1,
+  "status": "open",
+  "title": "[TOOL BUG] bw writes on a READ path: any invocation in a store lacking the upgrade-nag ticket CREATES it plus a commit — a read-only sweep silently mutated 19 stores",
+  "type": "task",
+  "updated_at": "2026-07-10T13:55:43Z"
+}
