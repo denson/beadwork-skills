@@ -1,0 +1,14 @@
+{
+  "assignee": "",
+  "blocked_by": [],
+  "blocks": [],
+  "created": "2026-07-10T11:57:36Z",
+  "description": "",
+  "id": "bws-0v1",
+  "labels": [],
+  "priority": 1,
+  "status": "open",
+  "title": "[TOOL GAP] bw comment silently loses concurrent comments: rebases your reply over comments landed since your read, no conflict/warning — needs an optimistic-concurrency (compare-and-swap) check on the ticket tip",
+  "type": "task",
+  "updated_at": "2026-07-10T11:57:36Z"
+}
