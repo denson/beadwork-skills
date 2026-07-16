@@ -1,0 +1,14 @@
+{
+  "assignee": "",
+  "blocked_by": [],
+  "blocks": [],
+  "created": "2026-07-16T18:41:47Z",
+  "description": "Field defect 2026-07-16 (weather-prospector floor, ticket wpd-v1o): a polling agent saved the beadwork tip hash as its poll baseline and diffed against it; interleaved comments from two seats RE-SEQUENCED the branch, the baseline pointed into rewritten history, and two gate-clearing FLOOR PASS comments landed below it - the poll reported nothing-new while the messages sat visible on the ticket. Same rebase mechanism as the known read-write race, reader side. Doctrine mitigation is deployed (full-tail content reads each cycle, never hash-diff against a saved tip; recorded in user memory reference_bw_message_bus_hazards #3). TOOL FIX WANTED: a stable per-comment cursor that survives rebase - e.g. monotonic comment sequence number or content-addressed comment IDs exposed via bw list/show - so pollers have a rebase-proof since-cursor; alternatively bw comment/sync emitting a rebase warning when history rewrites under a reader. Next step: steward decides cursor mechanism + lands it in bw; the compare-and-swap write check from the 2026-07-10 race ticket is the sibling fix.",
+  "id": "bws-105",
+  "labels": [],
+  "priority": 2,
+  "status": "open",
+  "title": "bw poll blindness: tip-hash baselines break on the rewriting beadwork branch",
+  "type": "task",
+  "updated_at": "2026-07-16T18:41:47Z"
+}
